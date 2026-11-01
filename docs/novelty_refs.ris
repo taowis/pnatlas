@@ -1,0 +1,1897 @@
+TY  - JOUR
+AU  - Nguyen, Minh Q
+AU  - von Buchholtz, Lars J
+AU  - Reker, Ashlie N
+AU  - Ryba, Nicholas Jp
+AU  - Davidson, Steve
+TI  - Single-nucleus transcriptomic analysis of human dorsal root ganglion neurons.
+JO  - eLife
+JA  - Elife
+PY  - 2021
+VL  - 10
+DO  - 10.7554/eLife.71752
+AN  - 34825887
+ID  - 1
+ER  - 
+
+TY  - JOUR
+AU  - Kupari, Jussi
+AU  - Usoskin, Dmitry
+AU  - Parisien, Marc
+AU  - Lou, Daohua
+AU  - Hu, Yizhou
+AU  - Fatt, Michael
+AU  - Lonnerberg, Peter
+AU  - Spangberg, Mats
+AU  - Eriksson, Bengt
+AU  - Barkas, Nikolaos
+AU  - Kharchenko, Peter V
+AU  - Lore, Karin
+AU  - Khoury, Samar
+AU  - Diatchenko, Luda
+AU  - Ernfors, Patrik
+TI  - Single cell transcriptomics of primate sensory neurons identifies cell types  associated with chronic pain.
+JO  - Nature communications
+JA  - Nat Commun
+PY  - 2021
+VL  - 12
+IS  - 1
+SP  - 1510
+DO  - 10.1038/s41467-021-21725-z
+AN  - 33686078
+ID  - 2
+ER  - 
+
+TY  - JOUR
+AU  - Tavares-Ferreira, Diana
+AU  - Shiers, Stephanie
+AU  - Ray, Pradipta R
+AU  - Wangzhou, Andi
+AU  - Jeevakumar, Vivekanand
+AU  - Sankaranarayanan, Ishwarya
+AU  - Cervantes, Anna M
+AU  - Reese, Jeffrey C
+AU  - Chamessian, Alexander
+AU  - Copits, Bryan A
+AU  - Dougherty, Patrick M
+AU  - Gereau, Robert W 4th
+AU  - Burton, Michael D
+AU  - Dussor, Gregory
+AU  - Price, Theodore J
+TI  - Spatial transcriptomics of dorsal root ganglia identifies molecular signatures of  human nociceptors.
+JO  - Science translational medicine
+JA  - Sci Transl Med
+PY  - 2022
+VL  - 14
+IS  - 632
+SP  - eabj8186
+DO  - 10.1126/scitranslmed.abj8186
+AN  - 35171654
+ID  - 3
+ER  - 
+
+TY  - JOUR
+AU  - Ray, Pradipta R
+AU  - Shiers, Stephanie
+AU  - Caruso, James P
+AU  - Tavares-Ferreira, Diana
+AU  - Sankaranarayanan, Ishwarya
+AU  - Uhelski, Megan L
+AU  - Li, Yan
+AU  - North, Robert Y
+AU  - Tatsui, Claudio
+AU  - Dussor, Gregory
+AU  - Burton, Michael D
+AU  - Dougherty, Patrick M
+AU  - Price, Theodore J
+TI  - RNA profiling of human dorsal root ganglia reveals sex differences in mechanisms  promoting neuropathic pain.
+JO  - Brain : a journal of neurology
+JA  - Brain
+PY  - 2023
+VL  - 146
+IS  - 2
+SP  - 749
+EP  - 766
+DO  - 10.1093/brain/awac266
+AN  - 35867896
+ID  - 4
+ER  - 
+
+TY  - JOUR
+AU  - Jung, Min
+AU  - Dourado, Michelle
+AU  - Maksymetz, James
+AU  - Jacobson, Amanda
+AU  - Laufer, Benjamin I
+AU  - Baca, Miriam
+AU  - Foreman, Oded
+AU  - Hackos, David H
+AU  - Riol-Blanco, Lorena
+AU  - Kaminker, Joshua S
+TI  - Cross-species transcriptomic atlas of dorsal root ganglia reveals  species-specific programs for sensory function.
+JO  - Nature communications
+JA  - Nat Commun
+PY  - 2023
+VL  - 14
+IS  - 1
+SP  - 366
+DO  - 10.1038/s41467-023-36014-0
+AN  - 36690629
+ID  - 5
+ER  - 
+
+TY  - JOUR
+AU  - Yang, Lite
+AU  - Xu, Mengyi
+AU  - Bhuiyan, Shamsuddin A
+AU  - Li, Jia
+AU  - Zhao, Jun
+AU  - Cohrs, Randall J
+AU  - Susterich, Justin T
+AU  - Signorelli, Sylvia
+AU  - Green, Ursula
+AU  - Stone, James R
+AU  - Levy, Dan
+AU  - Lennerz, Jochen K
+AU  - Renthal, William
+TI  - Human and mouse trigeminal ganglia cell atlas implicates multiple cell types in  migraine.
+JO  - Neuron
+JA  - Neuron
+PY  - 2022
+VL  - 110
+IS  - 11
+SP  - 1806
+EP  - 1821.e8
+DO  - 10.1016/j.neuron.2022.03.003
+AN  - 35349784
+ID  - 6
+ER  - 
+
+TY  - JOUR
+AU  - Bhuiyan, Shamsuddin A
+AU  - Xu, Mengyi
+AU  - Yang, Lite
+AU  - Semizoglou, Evangelia
+AU  - Bhatia, Parth
+AU  - Pantaleo, Katerina I
+AU  - Tochitsky, Ivan
+AU  - Jain, Aakanksha
+AU  - Erdogan, Burcu
+AU  - Blair, Steven
+AU  - Cat, Victor
+AU  - Mwirigi, Juliet M
+AU  - Sankaranarayanan, Ishwarya
+AU  - Tavares-Ferreira, Diana
+AU  - Green, Ursula
+AU  - McIlvried, Lisa A
+AU  - Copits, Bryan A
+AU  - Bertels, Zachariah
+AU  - Del Rosario, John S
+AU  - Widman, Allie J
+AU  - Slivicki, Richard A
+AU  - Yi, Jiwon
+AU  - Sharif-Naeini, Reza
+AU  - Woolf, Clifford J
+AU  - Lennerz, Jochen K
+AU  - Whited, Jessica L
+AU  - Price, Theodore J
+AU  - Robert W Gereau Iv
+AU  - Renthal, William
+TI  - Harmonized cross-species cell atlases of trigeminal and dorsal root ganglia.
+JO  - Science advances
+JA  - Sci Adv
+PY  - 2024
+VL  - 10
+IS  - 25
+SP  - eadj9173
+DO  - 10.1126/sciadv.adj9173
+AN  - 38905344
+ID  - 7
+ER  - 
+
+TY  - JOUR
+AU  - Yu, Huasheng
+AU  - Nagi, Saad S
+AU  - Usoskin, Dmitry
+AU  - Hu, Yizhou
+AU  - Kupari, Jussi
+AU  - Bouchatta, Otmane
+AU  - Yan, Hanying
+AU  - Cranfill, Suna Li
+AU  - Gautam, Mayank
+AU  - Su, Yijing
+AU  - Lu, You
+AU  - Wymer, James
+AU  - Glanz, Max
+AU  - Albrecht, Phillip
+AU  - Song, Hongjun
+AU  - Ming, Guo-Li
+AU  - Prouty, Stephen
+AU  - Seykora, John
+AU  - Wu, Hao
+AU  - Ma, Minghong
+AU  - Marshall, Andrew
+AU  - Rice, Frank L
+AU  - Li, Mingyao
+AU  - Olausson, Hakan
+AU  - Ernfors, Patrik
+AU  - Luo, Wenqin
+TI  - Leveraging deep single-soma RNA sequencing to explore the neural basis of human  somatosensation.
+JO  - Nature neuroscience
+JA  - Nat Neurosci
+PY  - 2024
+VL  - 27
+IS  - 12
+SP  - 2326
+EP  - 2340
+DO  - 10.1038/s41593-024-01794-1
+AN  - 39496796
+ID  - 8
+ER  - 
+
+TY  - JOUR
+AU  - Lu, Tian
+AU  - Wang, Mengdi
+AU  - Zhou, Wei
+AU  - Ni, Qi
+AU  - Yue, Yuanlei
+AU  - Wang, Wei
+AU  - Shi, Yingchao
+AU  - Liu, Zeyuan
+AU  - Li, Changlin
+AU  - Hong, Bei
+AU  - Zhou, Xin
+AU  - Zhong, Suijuan
+AU  - Wang, Kaikai
+AU  - Zeng, Bo
+AU  - Zhang, Jun
+AU  - Wang, Wei
+AU  - Zhang, Xu
+AU  - Wu, Qian
+AU  - Wang, Xiaoqun
+TI  - Decoding transcriptional identity in developing human sensory neurons and  organoid modeling.
+JO  - Cell
+JA  - Cell
+PY  - 2024
+VL  - 187
+IS  - 26
+SP  - 7374
+EP  - 7393.e28
+DO  - 10.1016/j.cell.2024.10.023
+AN  - 39536745
+ID  - 9
+ER  - 
+
+TY  - JOUR
+AU  - Arendt-Tranholm, Asta
+AU  - Sankaranarayanan, Ishwarya
+AU  - Payne, Cathryn
+AU  - Mancilla Moreno, Marisol
+AU  - Mazhar, Khadijah
+AU  - Yap, Natalie
+AU  - Chiu, Abby P
+AU  - Barry, Allison
+AU  - Patel, Pooja J
+AU  - Inturi, Nikhil N
+AU  - Tavares-Ferreira, Diana
+AU  - Amin, Anubhav
+AU  - Karandikar, Mahesh
+AU  - Jarvik, Jeffrey G
+AU  - Turner, Judith A
+AU  - Hofstetter, Christoph P
+AU  - Curatolo, Michele
+AU  - Price, Theodore J
+TI  - Transcriptome of the human C2 dorsal root ganglia in C1-2 arthrodesis surgery:  insight for neck pain.
+JO  - Brain : a journal of neurology
+JA  - Brain
+PY  - 2026
+VL  - 149
+IS  - 4
+SP  - 1349
+EP  - 1364
+DO  - 10.1093/brain/awaf370
+AN  - 41032656
+ID  - 10
+ER  - 
+
+TY  - JOUR
+AU  - Shiers, Stephanie I
+AU  - Mazhar, Khadijah
+AU  - Wangzhou, Andi
+AU  - Haberberger, Rainer
+AU  - Lesnak, Joseph B
+AU  - Ezeji, Nwasinachi A
+AU  - Sankaranarayanan, Ishwarya
+AU  - Tavares-Ferreira, Diana
+AU  - Cervantes, Anna
+AU  - Funk, Geoffrey
+AU  - Horton, Peter
+AU  - Vines, Erin
+AU  - Dussor, Gregory
+AU  - Price, Theodore J
+TI  - Nageotte nodules in human dorsal root ganglia reveal neurodegeneration in  diabetic peripheral neuropathy.
+JO  - Nature communications
+JA  - Nat Commun
+PY  - 2025
+VL  - 16
+IS  - 1
+SP  - 4168
+DO  - 10.1038/s41467-025-59538-z
+AN  - 40325011
+ID  - 11
+ER  - 
+
+TY  - JOUR
+AU  - Hall, Bradford E
+AU  - Macdonald, Emma
+AU  - Cassidy, Margaret
+AU  - Yun, Sijung
+AU  - Sapio, Matthew R
+AU  - Ray, Pradipta
+AU  - Doty, Megan
+AU  - Nara, Pranavi
+AU  - Burton, Michael D
+AU  - Shiers, Stephanie
+AU  - Ray-Chaudhury, Abhik
+AU  - Mannes, Andrew J
+AU  - Price, Theodore J
+AU  - Iadarola, Michael J
+AU  - Kulkarni, Ashok B
+TI  - Transcriptomic analysis of human sensory neurons in painful diabetic neuropathy  reveals inflammation and neuronal loss.
+JO  - Scientific reports
+JA  - Sci Rep
+PY  - 2022
+VL  - 12
+IS  - 1
+SP  - 4729
+DO  - 10.1038/s41598-022-08100-8
+AN  - 35304484
+ID  - 12
+ER  - 
+
+TY  - JOUR
+AU  - Toikumo, Sylvanus
+AU  - Parisien, Marc
+AU  - Leone, Michael J
+AU  - Srinivasan, Chaitanya
+AU  - Yu, Huasheng
+AU  - Arendt-Tranholm, Asta
+AU  - Franco-Enzastiga, Urzula
+AU  - Hofstetter, Christoph
+AU  - Curatolo, Michele
+AU  - Luo, Wenqin
+AU  - Pfenning, Andreas R
+AU  - Seal, Rebecca P
+AU  - Kember, Rachel L
+AU  - Price, Theodore J
+AU  - Diatchenko, Luda
+AU  - Waxman, Stephen G
+AU  - Kranzler, Henry R
+TI  - The cell-type-specific genetic architecture of chronic pain in brain and dorsal  root ganglia.
+JO  - The Journal of clinical investigation
+JA  - J Clin Invest
+PY  - 2025
+VL  - 135
+IS  - 24
+DO  - 10.1172/JCI197583
+AN  - 41055971
+ID  - 13
+ER  - 
+
+TY  - JOUR
+AU  - Avraham, Oshri
+AU  - Chamessian, Alexander
+AU  - Feng, Rui
+AU  - Yang, Lite
+AU  - Halevi, Alexandra E
+AU  - Moore, Amy M
+AU  - Gereau, Robert W 4th
+AU  - Cavalli, Valeria
+TI  - Profiling the molecular signature of satellite glial cells at the single cell  level reveals high similarities between rodents and humans.
+JO  - Pain
+JA  - Pain
+PY  - 2022
+VL  - 163
+IS  - 12
+SP  - 2348
+EP  - 2364
+DO  - 10.1097/j.pain.0000000000002628
+AN  - 35503034
+ID  - 14
+ER  - 
+
+TY  - JOUR
+AU  - Ahlgreen, Ole Andreas
+AU  - Hansen, Mads Wurgler
+AU  - Baake, Jonas
+AU  - Hybel, Thomas Engelbrecht
+AU  - Rossi, Rachele
+AU  - Lai, Xin
+AU  - Sankaranarayanan, Ishwarya
+AU  - Pold, Johanne Amalie
+AU  - Lin, Lin
+AU  - Reinert, Line
+AU  - Paludan, Soren Riis
+AU  - Price, Theodore John
+AU  - Pallesen, Lone Tjener
+AU  - Vaegter, Christian Bjerggaard
+TI  - Mapping Satellite Glial Cell Heterogeneity Reveals Distinct Spatial Organization  and Implies Functional Diversity in the Dorsal Root Ganglion.
+JO  - Advanced science (Weinheim, Baden-Wurttemberg, Germany)
+JA  - Adv Sci (Weinh)
+PY  - 2026
+VL  - 13
+IS  - 1
+SP  - e11569
+DO  - 10.1002/advs.202511569
+AN  - 41134052
+ID  - 15
+ER  - 
+
+TY  - JOUR
+AU  - Choi, Kyuhyung
+AU  - Lee, Kaehong
+AU  - Kang, Baeki E
+AU  - Kim, Tae-Min
+TI  - Spatially localized immune metaprograms reveal micro-niche organization in the  human Dorsal Root Ganglion.
+JO  - PloS one
+JA  - PLoS One
+PY  - 2026
+VL  - 21
+IS  - 8
+SP  - e0354750
+DO  - 10.1371/journal.pone.0354750
+AN  - 42546053
+ID  - 16
+ER  - 
+
+TY  - JOUR
+AU  - Schwabenland, Marius
+AU  - Oeztuerk, Busranur
+AU  - Blank, Thomas
+AU  - Beck, Juergen
+AU  - Bengsch, Bertram
+AU  - Prinz, Marco
+TI  - High-dimensional Spatial Immune Profiling Highlights Microglia-Like Cells in  Human Dorsal Root Ganglia.
+JO  - European journal of immunology
+JA  - Eur J Immunol
+PY  - 2026
+VL  - 56
+IS  - 5
+SP  - e70211
+DO  - 10.1002/eji.70211
+AN  - 42153599
+ID  - 17
+ER  - 
+
+TY  - JOUR
+AU  - Zhang, Donghang
+AU  - Chen, Yali
+AU  - Wei, Yiyong
+AU  - Chen, Hongjun
+AU  - Wu, Yujie
+AU  - Wu, Lin
+AU  - Li, Jin
+AU  - Ren, Qiyang
+AU  - Miao, Changhong
+AU  - Zhu, Tao
+AU  - Liu, Jin
+AU  - Ke, Bowen
+AU  - Zhou, Cheng
+TI  - Spatial transcriptomics and single-nucleus RNA sequencing reveal a transcriptomic  atlas of adult human spinal cord.
+JO  - eLife
+JA  - Elife
+PY  - 2024
+VL  - 12
+DO  - 10.7554/eLife.92046
+AN  - 38289829
+ID  - 18
+ER  - 
+
+TY  - JOUR
+AU  - Vroman, Robin
+AU  - Hunter, Rahel S
+AU  - Wood, Matthew J
+AU  - Davis, Olivia C
+AU  - Malfait, Zoe
+AU  - George, Dale S
+AU  - Ren, Dongjun
+AU  - Tavares-Ferreira, Diana
+AU  - Price, Theodore J
+AU  - Miller, Richard J
+AU  - Malfait, Anne-Marie
+AU  - Malfait, Fransiska
+AU  - Miller, Rachel E
+AU  - Syx, Delfien
+TI  - Analysis of matrisome expression patterns in murine and human dorsal root  ganglia.
+JO  - Frontiers in molecular neuroscience
+JA  - Front Mol Neurosci
+PY  - 2023
+VL  - 16
+SP  - 1232447
+DO  - 10.3389/fnmol.2023.1232447
+AN  - 37664243
+ID  - 19
+ER  - 
+
+TY  - JOUR
+AU  - Xu, Jing
+AU  - Li, Yize
+AU  - Novak, Charles
+AU  - Lee, Min
+AU  - Yan, Zihan
+AU  - Bang, Sangsu
+AU  - McGinnis, Aidan
+AU  - Chandra, Sharat
+AU  - Zhang, Vivian
+AU  - He, Wei
+AU  - Lechler, Terry
+AU  - Rodriguez Salazar, Maria Pia
+AU  - Eroglu, Cagla
+AU  - Becker, Matthew L
+AU  - Velmeshev, Dmitry
+AU  - Cheney, Richard E
+AU  - Ji, Ru-Rong
+TI  - Mitochondrial transfer from glia to neurons protects against peripheral  neuropathy.
+JO  - Nature
+JA  - Nature
+PY  - 2026
+VL  - 650
+IS  - 8103
+SP  - 951
+EP  - 960
+DO  - 10.1038/s41586-025-09896-x
+AN  - 41501451
+ID  - 20
+ER  - 
+
+TY  - JOUR
+AU  - Bhuiyan, Shamsuddin A
+AU  - Nagi, Saad S
+AU  - Sankaranarayanan, Ishwarya
+AU  - Semizoglou, Evangelia
+AU  - Usoskin, Dmitry
+AU  - Yang, Lite
+AU  - Yu, Huasheng
+AU  - Arendt-Tranholm, Asta
+AU  - Bertels, Zachariah
+AU  - Bhatia, Parth
+AU  - Bouchatta, Otmane
+AU  - Boyer, Kevin
+AU  - Cervantes, Anna
+AU  - Chalif, Joshua
+AU  - Chintalapudi, Himanshu
+AU  - Cicalo, Anthony
+AU  - Copits, Bryan
+AU  - Cronin, Caitlin
+AU  - Curatolo, Michele
+AU  - Dong, Xianjun
+AU  - Dougherty, Patrick M
+AU  - Dourson, Adam
+AU  - Funk, Geoffrey
+AU  - Gabriel, Katherin
+AU  - Griesemer, Dustin S
+AU  - Guo, Hong
+AU  - Gupta, Prashant
+AU  - Hofstetter, Christoph
+AU  - Horton, Peter
+AU  - Hsieh, Amanda
+AU  - Inturi, Nikhil Nageshwar
+AU  - Jain, Aakanksha
+AU  - Jayakar, Selwyn
+AU  - Johnston, Benjamin
+AU  - Kim, Rebecca
+AU  - Krauter, Doris
+AU  - Kupari, Jussi
+AU  - Lemen, John
+AU  - Lesnak, Joseph B
+AU  - Liu, Weiqiang
+AU  - Lopez, Iris
+AU  - Lu, Yi
+AU  - MacMillan, Hannah J
+AU  - Mazhar, Khadijah
+AU  - Meriau, Pauline
+AU  - Moffitt, Jeffrey R
+AU  - Moreno, Marisol Mancilla
+AU  - Mwirigi, Juliet M
+AU  - Naz, Huma
+AU  - O'Brein, Jayden
+AU  - Payne, Maria
+AU  - Del Rosario, John
+AU  - Rosen, Sarah F
+AU  - Shiers, Stephanie
+AU  - Simpson, Ebenezer
+AU  - Slivicki, Richard
+AU  - Stone, James R
+AU  - Tavares-Ferreira, Diana
+AU  - Uhelski, Megan
+AU  - Woolf, Clifford J
+AU  - Xu, Qingru
+AU  - Yi, Jiwon
+AU  - Yousuf, Muhammad Saad
+AU  - Zhu, Difei
+AU  - Cavalli, Valeria
+AU  - Zhao, Guoyan
+AU  - Olausson, Hakan
+AU  - Ernfors, Patrik
+AU  - Gereau, Robert W 4th
+AU  - Luo, Wenqin
+AU  - Price, Theodore J
+AU  - Renthal, William
+TI  - A Reference Atlas of the Human Dorsal Root Ganglion.
+JO  - bioRxiv : the preprint server for biology
+JA  - bioRxiv
+PY  - 2025
+DO  - 10.1101/2025.11.05.686654
+AN  - 41279342
+ID  - 21
+N1  - Preprint
+ER  - 
+
+TY  - JOUR
+AU  - Yang, Lite
+AU  - Dourson, Adam J
+AU  - Tao, Ruichen
+AU  - Boyer, Kevin
+AU  - Meriau, Pauline
+AU  - Rosario, John Del
+AU  - Yi, Jiwon
+AU  - Slivicki, Richard A
+AU  - Bertels, Zachariah
+AU  - Payne, Maria
+AU  - Mwirigi, Juliet M
+AU  - Gupta, Prashant
+AU  - Lemen, John
+AU  - Copits, Bryan A
+AU  - Zhao, Guoyan
+AU  - Cavalli, Valeria
+AU  - Chamessian, Alexandar
+AU  - Gereau, Robert W 4th
+TI  - A multi-omic atlas of human autonomic and sensory ganglia implicates cell types  in peripheral neuropathies.
+JO  - bioRxiv : the preprint server for biology
+JA  - bioRxiv
+PY  - 2025
+DO  - 10.1101/2025.09.18.677119
+AN  - 41000833
+ID  - 22
+N1  - Preprint
+ER  - 
+
+TY  - JOUR
+AU  - Zhao, Guoyan
+AU  - Boyer, Kevin
+AU  - Meriau, Pauline
+AU  - Yang, Lite
+AU  - Naz, Huma
+AU  - Rosen, Sarah
+AU  - Murray, George
+AU  - Dourson, Adam
+AU  - Mwirigi, Juliet
+AU  - Del Rosario, John
+AU  - Payne, Maria
+AU  - Gupta, Prashant
+AU  - Yi, Jiwon
+AU  - Slivicki, Richard
+AU  - Bertels, Zachariah
+AU  - Lemen, John
+AU  - Chen, Yujie
+AU  - Wang, Ting
+AU  - Chamessian, Alexander
+AU  - Copits, Bryan A
+AU  - Gereau, Robert W
+AU  - Cavalli, Valeria
+TI  - Single nucleus multiomic atlas of human dorsal root ganglia reveals the  contribution of non-neuronal cell types to pain.
+JO  - bioRxiv : the preprint server for biology
+JA  - bioRxiv
+PY  - 2025
+DO  - 10.1101/2025.09.21.677655
+AN  - 41040282
+ID  - 23
+N1  - Preprint
+ER  - 
+
+TY  - JOUR
+AU  - Sankaranarayanan, Ishwarya
+AU  - Mazhar, Khadijah
+AU  - Barry, Allison M
+AU  - Shiers, Stephanie
+AU  - Wangzhou, Andi
+AU  - Sondermann, Julia R
+AU  - Xian, Feng
+AU  - Inturi, Nikhil
+AU  - Wilde, Michael A
+AU  - Meyers, Eric C
+AU  - Lesnak, Joseph B
+AU  - O'Brien, Jayden A
+AU  - Yousuf, Muhammad Saad
+AU  - Schmidt, Manuela
+AU  - Dussor, Gregory
+AU  - Vines, Erin
+AU  - Horton, Peter
+AU  - Cervantes, Anna
+AU  - Khan, Tariq
+AU  - Funk, Geoffrey
+AU  - Tavares-Ferreira, Diana
+AU  - Dougherty, Patrick M
+AU  - Curatolo, Michele
+AU  - Price, Theodore J
+TI  - Progressive neurodegeneration in human dorsal root ganglion from diabetes to  painful neuropathy.
+JO  - bioRxiv : the preprint server for biology
+JA  - bioRxiv
+PY  - 2026
+DO  - 10.64898/2026.01.16.700028
+AN  - 41648154
+ID  - 24
+N1  - Preprint
+ER  - 
+
+TY  - JOUR
+AU  - Mazhar, Khadijah
+AU  - O'Brien, Jayden A
+AU  - Wilde, Michael A
+AU  - Srikanth, Harikrushnaa
+AU  - Wangzhou, Andi
+AU  - Pastor, Victoria
+AU  - Maina, Charlynn W
+AU  - Arefin, Nora S
+AU  - Moreno, Marisol Mancilla
+AU  - Sankanarayanan, Ishwarya
+AU  - Tavares-Ferreira, Diana
+AU  - Price, Theodore J
+TI  - Satellite microglia-like cells in human dorsal root ganglia and changes with  diabetic neuropathy.
+JO  - bioRxiv : the preprint server for biology
+JA  - bioRxiv
+PY  - 2026
+DO  - 10.64898/2026.05.12.724479
+AN  - 42182418
+ID  - 25
+N1  - Preprint
+ER  - 
+
+TY  - JOUR
+AU  - Mancilla Moreno, Marisol
+AU  - Patel, Pooja J
+AU  - Goss, Kree
+AU  - Mian, Subhaan M
+AU  - Nakisli, Sera
+AU  - Inturi, Nikhil
+AU  - Shiers, Stephanie I
+AU  - Horton, Peter
+AU  - Cervantes, Anna
+AU  - Funk, Geoffrey
+AU  - Khan, Tariq
+AU  - Vines, Erin
+AU  - Klein, Rebecca M
+AU  - Henze, Darrell A
+AU  - Tavares-Ferreira, Diana
+AU  - Price, Theodore J
+AU  - Yousuf, Muhammad Saad
+TI  - Spatial transcriptomic profiling of human paravertebral sympathetic chain ganglia  reveals diabetes-induced neuroplasticity.
+JO  - bioRxiv : the preprint server for biology
+JA  - bioRxiv
+PY  - 2025
+DO  - 10.1101/2025.06.24.661373
+AN  - 40667173
+ID  - 26
+N1  - Preprint
+ER  - 
+
+TY  - JOUR
+AU  - He, Lily S
+AU  - Bhatia, Parth
+AU  - Bhuiyan, Shamsuddin A
+AU  - Semizoglou, Evangelia
+AU  - Wang, Jiaxiang
+AU  - Li, Jia
+AU  - Nam, Joohyun
+AU  - Luo, Jay X J
+AU  - Arnhold, Chayse
+AU  - Zhu, Difei
+AU  - Xu, Mengyi
+AU  - Griesemer, Dustin
+AU  - Yong, Hyo Jeong
+AU  - Jayne, Lorna
+AU  - Gilmer, Evangeline
+AU  - Li, Qiyi
+AU  - Pantaleo, Katerina
+AU  - Yang, Lite
+AU  - Williams, Erika K
+AU  - Jayakar, Selwyn
+AU  - Wainger, Brian J
+AU  - Hrvatin, Sinisa
+AU  - Renthal, William
+TI  - Multi-omic profiling of human and mouse dorsal root ganglia enables targeted gene  delivery to nociceptors.
+JO  - bioRxiv : the preprint server for biology
+JA  - bioRxiv
+PY  - 2026
+DO  - 10.64898/2026.03.05.709931
+AN  - 41959226
+ID  - 27
+N1  - Preprint
+ER  - 
+
+TY  - JOUR
+AU  - Jankelunas, Leanne
+AU  - Bhuiyan, Shamsuddin A
+AU  - MacMillan, Hannah J
+AU  - Cecere, Thomas
+AU  - Bertke, Andrea
+AU  - Rossmeisl, John H
+AU  - Renthal, William
+AU  - Parker, Rell L
+TI  - Translational insights into canine dorsal root ganglia cell types using  cross-species comparisons.
+JO  - bioRxiv : the preprint server for biology
+JA  - bioRxiv
+PY  - 2026
+DO  - 10.64898/2026.04.14.718477
+AN  - 42039410
+ID  - 28
+N1  - Preprint
+ER  - 
+
+TY  - JOUR
+AU  - Heming, Michael
+AU  - Borsch, Anna-Lena
+AU  - Wolbert, Jolien
+AU  - Thomas, Christian
+AU  - Mausberg, Anne K
+AU  - Szepanowski, Fabian
+AU  - Eggert, Bianca
+AU  - Lu, I-Na
+AU  - Tietz, Julia
+AU  - Dienhart, Finja
+AU  - Meschnark, Maja
+AU  - Strecker, Jan-Kolja
+AU  - Glatza, Michael
+AU  - Thomas, Carolina
+AU  - Gmahl, Noemi
+AU  - Dambietz, Christine
+AU  - Muther, Michael
+AU  - Uerschels, Anne-Kathrin
+AU  - Keyvani, Kathy
+AU  - Minnerup, Jens
+AU  - Doppler, Kathrin
+AU  - Uceyler, Nurcan
+AU  - Aprea, Julieta
+AU  - Dahl, Andreas
+AU  - Stassart, Ruth
+AU  - Fledrich, Robert
+AU  - Wiendl, Heinz
+AU  - Sommer, Claudia
+AU  - Stettner, Mark
+AU  - Meyer Zu Horste, Gerd
+TI  - Multi-omic identification of perineurial hyperplasia and lipid-associated nerve  macrophages in human polyneuropathies.
+JO  - Nature communications
+JA  - Nat Commun
+PY  - 2025
+VL  - 16
+IS  - 1
+SP  - 7872
+DO  - 10.1038/s41467-025-62964-8
+AN  - 40849297
+ID  - 29
+ER  - 
+
+TY  - JOUR
+AU  - Yim, Aldrin K Y
+AU  - Wang, Peter L
+AU  - Bermingham, John R Jr
+AU  - Hackett, Amber
+AU  - Strickland, Amy
+AU  - Miller, Timothy M
+AU  - Ly, Cindy
+AU  - Mitra, Robi D
+AU  - Milbrandt, Jeffrey
+TI  - Disentangling glial diversity in peripheral nerves at single-nuclei resolution.
+JO  - Nature neuroscience
+JA  - Nat Neurosci
+PY  - 2022
+VL  - 25
+IS  - 2
+SP  - 238
+EP  - 251
+DO  - 10.1038/s41593-021-01005-1
+AN  - 35115729
+ID  - 30
+ER  - 
+
+TY  - JOUR
+AU  - Stefanovska, Dragana
+AU  - Sassu, Eliza
+AU  - Tekman, Mehmet
+AU  - Naghsh Nilchi, Amirhossein
+AU  - Haider, Severin
+AU  - Domisch, Claudia
+AU  - Hossfeld, Madelon
+AU  - Perez-Feliz, Stefanie
+AU  - Miarka, Lauritz
+AU  - Schneider-Warme, Franziska
+AU  - Arnold, Sebastian J
+AU  - Prinz, Marco
+AU  - Gruning, Bjorn
+AU  - Preissl, Sebastian
+AU  - Hortells, Luis
+TI  - Fibroblast growth factor signaling induces a chondrocyte-like state of peripheral  nerve fibroblast during aging.
+JO  - Nature communications
+JA  - Nat Commun
+PY  - 2025
+VL  - 16
+IS  - 1
+SP  - 10020
+DO  - 10.1038/s41467-025-65297-8
+AN  - 41238529
+ID  - 31
+ER  - 
+
+TY  - JOUR
+AU  - Morchio, Martina
+AU  - Sankaranarayanan, Ishwarya
+AU  - Tavares-Ferreira, Diana
+AU  - Wong, Natalie
+AU  - Atkins, Simon
+AU  - Sher, Emanuele
+AU  - Price, Theodore J
+AU  - Lambert, Daniel W
+AU  - Boissonade, Fiona M
+TI  - Spatially resolved single-cell analysis of transcriptomic changes linked with  neuropathic pain in human neuromas.
+JO  - Pain
+JA  - Pain
+PY  - 2026
+VL  - 167
+IS  - 3
+SP  - 627
+EP  - 644
+DO  - 10.1097/j.pain.0000000000003907
+AN  - 41553171
+ID  - 32
+ER  - 
+
+TY  - JOUR
+AU  - Tavares-Ferreira, Diana
+AU  - Shen, Breanna Q
+AU  - Mwirigi, Juliet M
+AU  - Shiers, Stephanie
+AU  - Sankaranarayanan, Ishwarya
+AU  - Sreerangapuri, Akshitha
+AU  - Kotamarti, Miriam B
+AU  - Inturi, Nikhil N
+AU  - Mazhar, Khadijah
+AU  - Ubogu, Eroboghene E
+AU  - Thomas, Geneva L
+AU  - Lalli, Trapper
+AU  - Rozen, Shai M
+AU  - Wukich, Dane K
+AU  - Price, Theodore J
+TI  - Cell and molecular profiles in peripheral nerves shift toward inflammatory  phenotypes in diabetic peripheral neuropathy.
+JO  - The Journal of clinical investigation
+JA  - J Clin Invest
+PY  - 2025
+VL  - 135
+IS  - 20
+DO  - 10.1172/JCI184075
+AN  - 40828619
+ID  - 33
+ER  - 
+
+TY  - JOUR
+AU  - Wolbert, Jolien
+AU  - Li, Xiaolin
+AU  - Heming, Michael
+AU  - Mausberg, Anne K
+AU  - Akkermann, Dagmar
+AU  - Frydrychowicz, Clara
+AU  - Fledrich, Robert
+AU  - Groeneweg, Linda
+AU  - Schulz, Christian
+AU  - Stettner, Mark
+AU  - Alonso Gonzalez, Noelia
+AU  - Wiendl, Heinz
+AU  - Stassart, Ruth
+AU  - Meyer Zu Horste, Gerd
+TI  - Redefining the heterogeneity of peripheral nerve cells in health and  autoimmunity.
+JO  - Proceedings of the National Academy of Sciences of the United States of America
+JA  - Proc Natl Acad Sci U S A
+PY  - 2020
+VL  - 117
+IS  - 17
+SP  - 9466
+EP  - 9476
+DO  - 10.1073/pnas.1912139117
+AN  - 32295886
+ID  - 34
+ER  - 
+
+TY  - JOUR
+AU  - Gerber, Daniel
+AU  - Pereira, Jorge A
+AU  - Gerber, Joanne
+AU  - Tan, Ge
+AU  - Dimitrieva, Slavica
+AU  - Yanguez, Emilio
+AU  - Suter, Ueli
+TI  - Transcriptional profiling of mouse peripheral nerves to the single-cell level to  build a sciatic nerve ATlas (SNAT).
+JO  - eLife
+JA  - Elife
+PY  - 2021
+VL  - 10
+DO  - 10.7554/eLife.58591
+AN  - 33890853
+ID  - 35
+ER  - 
+
+TY  - JOUR
+AU  - Hur, Junguk
+AU  - Sullivan, Kelli A
+AU  - Pande, Manjusha
+AU  - Hong, Yu
+AU  - Sima, Anders A F
+AU  - Jagadish, Hosagrahar V
+AU  - Kretzler, Matthias
+AU  - Feldman, Eva L
+TI  - The identification of gene expression profiles associated with progression of  human diabetic neuropathy.
+JO  - Brain : a journal of neurology
+JA  - Brain
+PY  - 2011
+VL  - 134
+IS  - Pt 11
+SP  - 3222
+EP  - 35
+DO  - 10.1093/brain/awr228
+AN  - 21926103
+ID  - 36
+ER  - 
+
+TY  - JOUR
+AU  - Guo, Kai
+AU  - Eid, Stephanie A
+AU  - Elzinga, Sarah E
+AU  - Pacut, Crystal
+AU  - Feldman, Eva L
+AU  - Hur, Junguk
+TI  - Genome-wide profiling of DNA methylation and gene expression identifies candidate  genes for human diabetic neuropathy.
+JO  - Clinical epigenetics
+JA  - Clin Epigenetics
+PY  - 2020
+VL  - 12
+IS  - 1
+SP  - 123
+DO  - 10.1186/s13148-020-00913-6
+AN  - 32787975
+ID  - 37
+ER  - 
+
+TY  - JOUR
+AU  - Svaren, John
+AU  - Moran, John J
+AU  - Wu, Xingyao
+AU  - Zuccarino, Riccardo
+AU  - Bacon, Chelsea
+AU  - Bai, Yunhong
+AU  - Ramesh, Raghu
+AU  - Gutmann, Laurie
+AU  - Anderson, Daniel M
+AU  - Pavelec, Derek
+AU  - Shy, Michael E
+TI  - Schwann cell transcript biomarkers for hereditary neuropathy skin biopsies.
+JO  - Annals of neurology
+JA  - Ann Neurol
+PY  - 2019
+VL  - 85
+IS  - 6
+SP  - 887
+EP  - 898
+DO  - 10.1002/ana.25480
+AN  - 30945774
+ID  - 38
+ER  - 
+
+TY  - JOUR
+AU  - Ray, Pradipta R
+AU  - Khan, Jawad
+AU  - Wangzhou, Andi
+AU  - Tavares-Ferreira, Diana
+AU  - Akopian, Armen N
+AU  - Dussor, Gregory
+AU  - Price, Theodore J
+TI  - Transcriptome Analysis of the Human Tibial Nerve Identifies Sexually Dimorphic  Expression of Genes Involved in Pain, Inflammation, and Neuro-Immunity.
+JO  - Frontiers in molecular neuroscience
+JA  - Front Mol Neurosci
+PY  - 2019
+VL  - 12
+SP  - 37
+DO  - 10.3389/fnmol.2019.00037
+AN  - 30890918
+ID  - 39
+ER  - 
+
+TY  - JOUR
+AU  - Gummadi, Sneha A
+AU  - Ju, Ryan R
+AU  - Pastor, Victoria
+AU  - Meyers, Eric C
+AU  - Rozen, Shai M
+AU  - Tavares-Ferreira, Diana
+TI  - Small RNA sequencing of human sural nerves identifies widespread microRNA  dysregulation and Schwann cell-localized miR-21-5p in diabetic peripheral neuropathy.
+JO  - bioRxiv : the preprint server for biology
+JA  - bioRxiv
+PY  - 2026
+DO  - 10.64898/2026.01.15.699768
+AN  - 41648488
+ID  - 40
+N1  - Preprint
+ER  - 
+
+TY  - JOUR
+AU  - Usoskin, Dmitry
+AU  - Furlan, Alessandro
+AU  - Islam, Saiful
+AU  - Abdo, Hind
+AU  - Lonnerberg, Peter
+AU  - Lou, Daohua
+AU  - Hjerling-Leffler, Jens
+AU  - Haeggstrom, Jesper
+AU  - Kharchenko, Olga
+AU  - Kharchenko, Peter V
+AU  - Linnarsson, Sten
+AU  - Ernfors, Patrik
+TI  - Unbiased classification of sensory neuron types by large-scale single-cell RNA  sequencing.
+JO  - Nature neuroscience
+JA  - Nat Neurosci
+PY  - 2015
+VL  - 18
+IS  - 1
+SP  - 145
+EP  - 53
+DO  - 10.1038/nn.3881
+AN  - 25420068
+ID  - 41
+ER  - 
+
+TY  - JOUR
+AU  - Sharma, Nikhil
+AU  - Flaherty, Kali
+AU  - Lezgiyeva, Karina
+AU  - Wagner, Daniel E
+AU  - Klein, Allon M
+AU  - Ginty, David D
+TI  - The emergence of transcriptional identity in somatosensory neurons.
+JO  - Nature
+JA  - Nature
+PY  - 2020
+VL  - 577
+IS  - 7790
+SP  - 392
+EP  - 398
+DO  - 10.1038/s41586-019-1900-1
+AN  - 31915380
+ID  - 42
+ER  - 
+
+TY  - JOUR
+AU  - Zeisel, Amit
+AU  - Hochgerner, Hannah
+AU  - Lonnerberg, Peter
+AU  - Johnsson, Anna
+AU  - Memic, Fatima
+AU  - van der Zwan, Job
+AU  - Haring, Martin
+AU  - Braun, Emelie
+AU  - Borm, Lars E
+AU  - La Manno, Gioele
+AU  - Codeluppi, Simone
+AU  - Furlan, Alessandro
+AU  - Lee, Kawai
+AU  - Skene, Nathan
+AU  - Harris, Kenneth D
+AU  - Hjerling-Leffler, Jens
+AU  - Arenas, Ernest
+AU  - Ernfors, Patrik
+AU  - Marklund, Ulrika
+AU  - Linnarsson, Sten
+TI  - Molecular Architecture of the Mouse Nervous System.
+JO  - Cell
+JA  - Cell
+PY  - 2018
+VL  - 174
+IS  - 4
+SP  - 999
+EP  - 1014.e22
+DO  - 10.1016/j.cell.2018.06.021
+AN  - 30096314
+ID  - 43
+ER  - 
+
+TY  - JOUR
+AU  - Qi, Lijun
+AU  - Iskols, Michael
+AU  - Shi, David
+AU  - Reddy, Pranav
+AU  - Walker, Christopher
+AU  - Lezgiyeva, Karina
+AU  - Voisin, Tiphaine
+AU  - Pawlak, Mathias
+AU  - Kuchroo, Vijay K
+AU  - Chiu, Isaac M
+AU  - Ginty, David D
+AU  - Sharma, Nikhil
+TI  - A mouse DRG genetic toolkit reveals morphological and physiological diversity of  somatosensory neuron subtypes.
+JO  - Cell
+JA  - Cell
+PY  - 2024
+VL  - 187
+IS  - 6
+SP  - 1508
+EP  - 1526.e16
+DO  - 10.1016/j.cell.2024.02.006
+AN  - 38442711
+ID  - 44
+ER  - 
+
+TY  - JOUR
+AU  - Renthal, William
+AU  - Tochitsky, Ivan
+AU  - Yang, Lite
+AU  - Cheng, Yung-Chih
+AU  - Li, Emmy
+AU  - Kawaguchi, Riki
+AU  - Geschwind, Daniel H
+AU  - Woolf, Clifford J
+TI  - Transcriptional Reprogramming of Distinct Peripheral Sensory Neuron Subtypes  after Axonal Injury.
+JO  - Neuron
+JA  - Neuron
+PY  - 2020
+VL  - 108
+IS  - 1
+SP  - 128
+EP  - 144.e9
+DO  - 10.1016/j.neuron.2020.07.026
+AN  - 32810432
+ID  - 45
+ER  - 
+
+TY  - JOUR
+AU  - Mapps, Aurelia A
+AU  - Thomsen, Michael B
+AU  - Boehm, Erica
+AU  - Zhao, Haiqing
+AU  - Hattar, Samer
+AU  - Kuruvilla, Rejji
+TI  - Diversity of satellite glia in sympathetic and sensory ganglia.
+JO  - Cell reports
+JA  - Cell Rep
+PY  - 2022
+VL  - 38
+IS  - 5
+SP  - 110328
+DO  - 10.1016/j.celrep.2022.110328
+AN  - 35108545
+ID  - 46
+ER  - 
+
+TY  - JOUR
+AU  - Donovan, Margaret K R
+AU  - D'Antonio-Chronowska, Agnieszka
+AU  - D'Antonio, Matteo
+AU  - Frazer, Kelly A
+TI  - Cellular deconvolution of GTEx tissues powers discovery of disease and cell-type  associated regulatory variants.
+JO  - Nature communications
+JA  - Nat Commun
+PY  - 2020
+VL  - 11
+IS  - 1
+SP  - 955
+DO  - 10.1038/s41467-020-14561-0
+AN  - 32075962
+ID  - 47
+ER  - 
+
+TY  - JOUR
+AU  - Kim-Hellmuth, Sarah
+AU  - Aguet, Francois
+AU  - Oliva, Meritxell
+AU  - Munoz-Aguirre, Manuel
+AU  - Kasela, Silva
+AU  - Wucher, Valentin
+AU  - Castel, Stephane E
+AU  - Hamel, Andrew R
+AU  - Vinuela, Ana
+AU  - Roberts, Amy L
+AU  - Mangul, Serghei
+AU  - Wen, Xiaoquan
+AU  - Wang, Gao
+AU  - Barbeira, Alvaro N
+AU  - Garrido-Martin, Diego
+AU  - Nadel, Brian B
+AU  - Zou, Yuxin
+AU  - Bonazzola, Rodrigo
+AU  - Quan, Jie
+AU  - Brown, Andrew
+AU  - Martinez-Perez, Angel
+AU  - Soria, Jose Manuel
+AU  - Getz, Gad
+AU  - Dermitzakis, Emmanouil T
+AU  - Small, Kerrin S
+AU  - Stephens, Matthew
+AU  - Xi, Hualin S
+AU  - Im, Hae Kyung
+AU  - Guigo, Roderic
+AU  - Segre, Ayellet V
+AU  - Stranger, Barbara E
+AU  - Ardlie, Kristin G
+AU  - Lappalainen, Tuuli
+TI  - Cell type-specific genetic regulation of gene expression across human tissues.
+JO  - Science (New York, N.Y.)
+JA  - Science
+PY  - 2020
+VL  - 369
+IS  - 6509
+DO  - 10.1126/science.aaz8528
+AN  - 32913075
+ID  - 48
+ER  - 
+
+TY  - JOUR
+AU  - Parisien, Marc
+AU  - Khoury, Samar
+AU  - Chabot-Dore, Anne-Julie
+AU  - Sotocinal, Susana G
+AU  - Slade, Gary D
+AU  - Smith, Shad B
+AU  - Fillingim, Roger B
+AU  - Ohrbach, Richard
+AU  - Greenspan, Joel D
+AU  - Maixner, William
+AU  - Mogil, Jeffrey S
+AU  - Belfer, Inna
+AU  - Diatchenko, Luda
+TI  - Effect of Human Genetic Variability on Gene Expression in Dorsal Root Ganglia and  Association with Pain Phenotypes.
+JO  - Cell reports
+JA  - Cell Rep
+PY  - 2017
+VL  - 19
+IS  - 9
+SP  - 1940
+EP  - 1952
+DO  - 10.1016/j.celrep.2017.05.018
+AN  - 28564610
+ID  - 49
+ER  - 
+
+TY  - JOUR
+AU  - Wiberg, Akira
+AU  - Ng, Michael
+AU  - Schmid, Annina B
+AU  - Smillie, Robert W
+AU  - Baskozos, Georgios
+AU  - Holmes, Michael V
+AU  - Kunnapuu, K
+AU  - Magi, R
+AU  - Bennett, David L
+AU  - Furniss, Dominic
+TI  - A genome-wide association analysis identifies 16 novel susceptibility loci for  carpal tunnel syndrome.
+JO  - Nature communications
+JA  - Nat Commun
+PY  - 2019
+VL  - 10
+IS  - 1
+SP  - 1030
+DO  - 10.1038/s41467-019-08993-6
+AN  - 30833571
+ID  - 50
+ER  - 
+
+TY  - JOUR
+AU  - Packer, Richard
+AU  - Coley, Kayesha
+AU  - Williams, Alexander T
+AU  - Shrine, Nick
+AU  - Izquierdo, Abril G
+AU  - Chen, Jing
+AU  - Batini, Chiara
+AU  - Marttila, Mikko
+AU  - Rao, Balasubramanya S
+AU  - Bratty, Raymond
+AU  - Dudbridge, Frank
+AU  - Hennah, William
+AU  - Tobin, Martin D
+TI  - Genome-wide association study of neuropathic pain phenotypes implicates loci  involved in neural cell adhesion, channels, collagen matrix formation, and immune regulation.
+JO  - Pain
+JA  - Pain
+PY  - 2026
+VL  - 167
+IS  - 2
+SP  - 284
+EP  - 296
+DO  - 10.1097/j.pain.0000000000003785
+AN  - 40899795
+ID  - 51
+ER  - 
+
+TY  - JOUR
+AU  - Broberg, Martin
+AU  - Gen, Finn
+AU  - Kalso, Eija
+AU  - Ollila, Hanna M
+TI  - Genome-wide meta-analysis identifies genetic risk loci for mono- and  polyneuropathies in 983 477 individuals.
+JO  - Human molecular genetics
+JA  - Hum Mol Genet
+PY  - 2026
+VL  - 35
+IS  - 4
+DO  - 10.1093/hmg/ddaf200
+AN  - 41518141
+ID  - 52
+ER  - 
+
+TY  - JOUR
+AU  - Johnston, Keira J A
+AU  - Adams, Mark J
+AU  - Nicholl, Barbara I
+AU  - Ward, Joey
+AU  - Strawbridge, Rona J
+AU  - Ferguson, Amy
+AU  - McIntosh, Andrew M
+AU  - Bailey, Mark E S
+AU  - Smith, Daniel J
+TI  - Genome-wide association study of multisite chronic pain in UK Biobank.
+JO  - PLoS genetics
+JA  - PLoS Genet
+PY  - 2019
+VL  - 15
+IS  - 6
+SP  - e1008164
+DO  - 10.1371/journal.pgen.1008164
+AN  - 31194737
+ID  - 53
+ER  - 
+
+TY  - JOUR
+AU  - Verma, Anurag
+AU  - Huffman, Jennifer E
+AU  - Rodriguez, Alex
+AU  - Conery, Mitchell
+AU  - Liu, Molei
+AU  - Ho, Yuk-Lam
+AU  - Kim, Youngdae
+AU  - Heise, David A
+AU  - Guare, Lindsay
+AU  - Panickan, Vidul Ayakulangara
+AU  - Garcon, Helene
+AU  - Linares, Franciel
+AU  - Costa, Lauren
+AU  - Goethert, Ian
+AU  - Tipton, Ryan
+AU  - Honerlaw, Jacqueline
+AU  - Davies, Laura
+AU  - Whitbourne, Stacey
+AU  - Cohen, Jeremy
+AU  - Posner, Daniel C
+AU  - Sangar, Rahul
+AU  - Murray, Michael
+AU  - Wang, Xuan
+AU  - Dochtermann, Daniel R
+AU  - Devineni, Poornima
+AU  - Shi, Yunling
+AU  - Nandi, Tarak Nath
+AU  - Assimes, Themistocles L
+AU  - Brunette, Charles A
+AU  - Carroll, Robert J
+AU  - Clifford, Royce
+AU  - Duvall, Scott
+AU  - Gelernter, Joel
+AU  - Hung, Adriana
+AU  - Iyengar, Sudha K
+AU  - Joseph, Jacob
+AU  - Kember, Rachel
+AU  - Kranzler, Henry
+AU  - Kripke, Colleen M
+AU  - Levey, Daniel
+AU  - Luoh, Shiuh-Wen
+AU  - Merritt, Victoria C
+AU  - Overstreet, Cassie
+AU  - Deak, Joseph D
+AU  - Grant, Struan F A
+AU  - Polimanti, Renato
+AU  - Roussos, Panos
+AU  - Shakt, Gabrielle
+AU  - Sun, Yan V
+AU  - Tsao, Noah
+AU  - Venkatesh, Sanan
+AU  - Voloudakis, Georgios
+AU  - Justice, Amy
+AU  - Begoli, Edmon
+AU  - Ramoni, Rachel
+AU  - Tourassi, Georgia
+AU  - Pyarajan, Saiju
+AU  - Tsao, Philip
+AU  - O'Donnell, Christopher J
+AU  - Muralidhar, Sumitra
+AU  - Moser, Jennifer
+AU  - Casas, Juan P
+AU  - Bick, Alexander G
+AU  - Zhou, Wei
+AU  - Cai, Tianxi
+AU  - Voight, Benjamin F
+AU  - Cho, Kelly
+AU  - Gaziano, J Michael
+AU  - Madduri, Ravi K
+AU  - Damrauer, Scott
+AU  - Liao, Katherine P
+TI  - Diversity and scale: Genetic architecture of 2068 traits in the VA Million  Veteran Program.
+JO  - Science (New York, N.Y.)
+JA  - Science
+PY  - 2024
+VL  - 385
+IS  - 6706
+SP  - eadj1182
+DO  - 10.1126/science.adj1182
+AN  - 39024449
+ID  - 54
+ER  - 
+
+TY  - JOUR
+AU  - Zorina-Lichtenwalter, Katerina
+AU  - Bango, Carmen I
+AU  - Van Oudenhove, Lukas
+AU  - Ceko, Marta
+AU  - Lindquist, Martin A
+AU  - Grotzinger, Andrew D
+AU  - Keller, Matthew C
+AU  - Friedman, Naomi P
+AU  - Wager, Tor D
+TI  - Genetic risk shared across 24 chronic pain conditions: identification and  characterization with genomic structural equation modeling.
+JO  - Pain
+JA  - Pain
+PY  - 2023
+VL  - 164
+IS  - 10
+SP  - 2239
+EP  - 2252
+DO  - 10.1097/j.pain.0000000000002922
+AN  - 37219871
+ID  - 55
+ER  - 
+
+TY  - JOUR
+AU  - Sakaue, Saori
+AU  - Kanai, Masahiro
+AU  - Tanigawa, Yosuke
+AU  - Karjalainen, Juha
+AU  - Kurki, Mitja
+AU  - Koshiba, Seizo
+AU  - Narita, Akira
+AU  - Konuma, Takahiro
+AU  - Yamamoto, Kenichi
+AU  - Akiyama, Masato
+AU  - Ishigaki, Kazuyoshi
+AU  - Suzuki, Akari
+AU  - Suzuki, Ken
+AU  - Obara, Wataru
+AU  - Yamaji, Ken
+AU  - Takahashi, Kazuhisa
+AU  - Asai, Satoshi
+AU  - Takahashi, Yasuo
+AU  - Suzuki, Takao
+AU  - Shinozaki, Nobuaki
+AU  - Yamaguchi, Hiroki
+AU  - Minami, Shiro
+AU  - Murayama, Shigeo
+AU  - Yoshimori, Kozo
+AU  - Nagayama, Satoshi
+AU  - Obata, Daisuke
+AU  - Higashiyama, Masahiko
+AU  - Masumoto, Akihide
+AU  - Koretsune, Yukihiro
+AU  - Ito, Kaoru
+AU  - Terao, Chikashi
+AU  - Yamauchi, Toshimasa
+AU  - Komuro, Issei
+AU  - Kadowaki, Takashi
+AU  - Tamiya, Gen
+AU  - Yamamoto, Masayuki
+AU  - Nakamura, Yusuke
+AU  - Kubo, Michiaki
+AU  - Murakami, Yoshinori
+AU  - Yamamoto, Kazuhiko
+AU  - Kamatani, Yoichiro
+AU  - Palotie, Aarno
+AU  - Rivas, Manuel A
+AU  - Daly, Mark J
+AU  - Matsuda, Koichi
+AU  - Okada, Yukinori
+TI  - A cross-population atlas of genetic associations for 220 human phenotypes.
+JO  - Nature genetics
+JA  - Nat Genet
+PY  - 2021
+VL  - 53
+IS  - 10
+SP  - 1415
+EP  - 1424
+DO  - 10.1038/s41588-021-00931-x
+AN  - 34594039
+ID  - 56
+ER  - 
+
+TY  - JOUR
+AU  - Patel, Benjamin
+AU  - Kleeman, Sam O
+AU  - Neavin, Drew
+AU  - Powell, Joseph
+AU  - Baskozos, Georgios
+AU  - Ng, Michael
+AU  - Ahmed, Waheed-Ul-Rahman
+AU  - Bennett, David L
+AU  - Schmid, Annina B
+AU  - Furniss, Dominic
+AU  - Wiberg, Akira
+TI  - Shared genetic susceptibility between trigger finger and carpal tunnel syndrome:  a genome-wide association study.
+JO  - The Lancet. Rheumatology
+JA  - Lancet Rheumatol
+PY  - 2022
+VL  - 4
+IS  - 8
+SP  - e556
+EP  - e565
+DO  - 10.1016/S2665-9913(22)00180-1
+AN  - 36043126
+ID  - 57
+ER  - 
+
+TY  - JOUR
+AU  - Meng, Weihua
+AU  - Deshmukh, Harshal A
+AU  - Donnelly, Louise A
+AU  - Torrance, Nicola
+AU  - Colhoun, Helen M
+AU  - Palmer, Colin N A
+AU  - Smith, Blair H
+TI  - A Genome-wide Association Study Provides Evidence of Sex-specific Involvement of  Chr1p35.1 (ZSCAN20-TLR12P) and Chr8p23.1 (HMGB1P46) With Diabetic Neuropathic Pain.
+JO  - EBioMedicine
+JA  - EBioMedicine
+PY  - 2015
+VL  - 2
+IS  - 10
+SP  - 1386
+EP  - 93
+DO  - 10.1016/j.ebiom.2015.08.001
+AN  - 26629533
+ID  - 58
+ER  - 
+
+TY  - JOUR
+AU  - Tang, Yaling
+AU  - Lenzini, Petra A
+AU  - Pop-Busui, Rodica
+AU  - Ray, Pradipta R
+AU  - Campbell, Hannah
+AU  - Perkins, Bruce A
+AU  - Callaghan, Brian
+AU  - Wagner, Michael J
+AU  - Motsinger-Reif, Alison A
+AU  - Buse, John B
+AU  - Price, Theodore J
+AU  - Mychaleckyj, Josyf C
+AU  - Cresci, Sharon
+AU  - Shah, Hetal
+AU  - Doria, Alessandro
+TI  - A Genetic Locus on Chromosome 2q24 Predicting Peripheral Neuropathy Risk in Type  2 Diabetes: Results From the ACCORD and BARI 2D Studies.
+JO  - Diabetes
+JA  - Diabetes
+PY  - 2019
+VL  - 68
+IS  - 8
+SP  - 1649
+EP  - 1662
+DO  - 10.2337/db19-0109
+AN  - 31127053
+ID  - 59
+ER  - 
+
+TY  - JOUR
+AU  - Toikumo, Sylvanus
+AU  - Davis, Christal
+AU  - Jinwala, Zeal
+AU  - Khan, Yousef
+AU  - Jennings, Mariela
+AU  - Davis, Lea
+AU  - Sanchez-Roige, Sandra
+AU  - Kember, Rachel L
+AU  - Kranzler, Henry R
+TI  - Gene discovery and pleiotropic architecture of Chronic Pain in a Genome-wide  Association Study of >1.2 million Individuals.
+JO  - medRxiv : the preprint server for health sciences
+JA  - medRxiv
+PY  - 2025
+DO  - 10.1101/2025.02.28.25323112
+AN  - 40093235
+ID  - 60
+N1  - Preprint
+ER  - 
+
+TY  - JOUR
+AU  - Fridman, Vera
+AU  - Kakar, Aastha
+AU  - Jensen, Aubrey
+AU  - Van de Vondel, Liedewei
+AU  - Wheeler, Allison
+AU  - Phillips, Lawrence S
+AU  - Zhou, Jin
+AU  - Zuchner, Stephan
+AU  - Reusch, Jane
+AU  - Raghavan, Sridharan
+TI  - Convergent human genetic evidence implicates serine biosynthesis in diabetic  peripheral neuropathy.
+JO  - medRxiv : the preprint server for health sciences
+JA  - medRxiv
+PY  - 2026
+DO  - 10.64898/2026.06.09.26355286
+AN  - 42326776
+ID  - 61
+N1  - Preprint
+ER  - 
+
+TY  - JOUR
+AU  - Eraslan, Gokcen
+AU  - Drokhlyansky, Eugene
+AU  - Anand, Shankara
+AU  - Fiskin, Evgenij
+AU  - Subramanian, Ayshwarya
+AU  - Slyper, Michal
+AU  - Wang, Jiali
+AU  - Van Wittenberghe, Nicholas
+AU  - Rouhana, John M
+AU  - Waldman, Julia
+AU  - Ashenberg, Orr
+AU  - Lek, Monkol
+AU  - Dionne, Danielle
+AU  - Win, Thet Su
+AU  - Cuoco, Michael S
+AU  - Kuksenko, Olena
+AU  - Tsankov, Alexander M
+AU  - Branton, Philip A
+AU  - Marshall, Jamie L
+AU  - Greka, Anna
+AU  - Getz, Gad
+AU  - Segre, Ayellet V
+AU  - Aguet, Francois
+AU  - Rozenblatt-Rosen, Orit
+AU  - Ardlie, Kristin G
+AU  - Regev, Aviv
+TI  - Single-nucleus cross-tissue molecular reference maps toward understanding disease  gene function.
+JO  - Science (New York, N.Y.)
+JA  - Science
+PY  - 2022
+VL  - 376
+IS  - 6594
+SP  - eabl4290
+DO  - 10.1126/science.abl4290
+AN  - 35549429
+ID  - 62
+ER  - 
+
+
+TY  - JOUR
+AU  - Meriau, Pauline
+AU  - Thomsen, M B
+AU  - Avraham, Oshri
+AU  - Trauterman, B
+AU  - Cavalli, Valeria
+TI  - An integrated single-cell atlas of peripheral glia reveals progenitor-like states and enables cross-study mapping of dorsal root ganglia
+JO  - bioRxiv
+PY  - 2026
+DO  - 10.64898/2026.01.29.702614
+AN  - no PMID (preprint, not indexed in PubMed as of 2026-11-02)
+ID  - 63
+N1  - Preprint, v2 posted 2026-07-15
+ER  - 
+
+
+TY  - JOUR
+AU  - Skuladottir, Astros Th
+AU  - Bjornsdottir, Gyda
+AU  - Ferkingstad, Egil
+AU  - Einarsson, Gudmundur
+AU  - Stefansdottir, Lilja
+AU  - Nawaz, Muhammad Sulaman
+AU  - Oddsson, Asmundur
+AU  - Olafsdottir, Thorunn A
+AU  - Saevarsdottir, Saedis
+AU  - Walters, G Bragi
+AU  - Magnusson, Sigurdur H
+AU  - Bjornsdottir, Anna
+AU  - Sveinsson, Olafur A
+AU  - Vikingsson, Arnor
+AU  - Hansen, Thomas Folkmann
+AU  - Jacobsen, Rikke Louise
+AU  - Erikstrup, Christian
+AU  - Schwinn, Michael
+AU  - Brunak, Soren
+AU  - Banasik, Karina
+AU  - Ostrowski, Sisse Rye
+AU  - Troelsen, Anders
+AU  - Henkel, Cecilie
+AU  - Pedersen, Ole Birger
+AU  - Jonsdottir, Ingileif
+AU  - Gudbjartsson, Daniel F
+AU  - Sulem, Patrick
+AU  - Thorgeirsson, Thorgeir E
+AU  - Stefansson, Hreinn
+AU  - Stefansson, Kari
+TI  - A genome-wide meta-analysis identifies 50 genetic loci associated with carpal  tunnel syndrome.
+JO  - Nature communications
+JA  - Nat Commun
+PY  - 2022
+VL  - 13
+IS  - 1
+SP  - 1598
+DO  - 10.1038/s41467-022-29133-7
+AN  - 35332129
+ID  - 64
+ER  - 
+
+TY  - JOUR
+AU  - Tao, Feifei
+AU  - Beecham, Gary W
+AU  - Rebelo, Adriana P
+AU  - Blanton, Susan H
+AU  - Moran, John J
+AU  - Lopez-Anido, Camila
+AU  - Svaren, John
+AU  - Abreu, Lisa
+AU  - Rizzo, Devon
+AU  - Kirk, Callyn A
+AU  - Wu, Xingyao
+AU  - Feely, Shawna
+AU  - Verhamme, Camiel
+AU  - Saporta, Mario A
+AU  - Herrmann, David N
+AU  - Day, John W
+AU  - Sumner, Charlotte J
+AU  - Lloyd, Thomas E
+AU  - Li, Jun
+AU  - Yum, Sabrina W
+AU  - Taroni, Franco
+AU  - Baas, Frank
+AU  - Choi, Byung-Ok
+AU  - Pareyson, Davide
+AU  - Scherer, Steven S
+AU  - Reilly, Mary M
+AU  - Shy, Michael E
+AU  - Zuchner, Stephan
+TI  - Modifier Gene Candidates in Charcot-Marie-Tooth Disease Type 1A: A Case-Only  Genome-Wide Association Study.
+JO  - Journal of neuromuscular diseases
+JA  - J Neuromuscul Dis
+PY  - 2019
+VL  - 6
+IS  - 2
+SP  - 201
+EP  - 211
+DO  - 10.3233/JND-190377
+AN  - 30958311
+ID  - 65
+ER  - 
+
+TY  - JOUR
+AU  - Jha, Mithilesh Kumar
+AU  - Han, Yingnan
+AU  - Liu, Zhipeng
+AU  - Hara, Yannis
+AU  - Langohr, Ingeborg M
+AU  - Morel, Caroline
+AU  - Maloney, Colleen L
+AU  - Piepenhagen, Peter
+AU  - Xing, Heming
+AU  - Bodea, Corneliu A
+AU  - Bangari, Dinesh S
+AU  - Mattoo, Hamid
+AU  - Hicks, Alexandra
+TI  - Type 2 cytokines pleiotropically modulate sensory nerve architecture and  neuroimmune interactions to mediate itch.
+JO  - The Journal of allergy and clinical immunology
+JA  - J Allergy Clin Immunol
+PY  - 2025
+VL  - 156
+IS  - 4
+SP  - 1066
+EP  - 1081.e12
+DO  - 10.1016/j.jaci.2025.05.011
+AN  - 40436117
+ID  - 66
+ER  - 
+

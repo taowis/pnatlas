@@ -1,0 +1,4 @@
+# Copy to config/paths.yaml (gitignored) and edit for this machine.
+data_root: /path/to/pnatlas-data       # large files live here, never in git
+pnprank_root: /path/to/pnprank-dev     # processed atlases are reused from here
+disk_limit_gb: 300                     # total disk budget under data_root; ask before exceeding

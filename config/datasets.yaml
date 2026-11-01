@@ -1,0 +1,4 @@
+# One entry per dataset. Filled in during stage 1 (data inventory and access).
+# Fields: id, layer (reference | spatial | bulk | genetics), species, tissue,
+#         technology, accession, access (open | controlled), donors, pmid, notes
+datasets: []

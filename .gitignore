@@ -1,0 +1,33 @@
+# Private, never committed (user notes and the project instruction file)
+private_notes/
+/CLAUDE.md
+.claude/
+
+# Machine-specific config
+config/paths.yaml
+
+# Data: everything except the README and small metadata
+data/*
+!data/README.md
+!data/metadata/
+!data/metadata/**
+
+# Keep empty dirs via .gitkeep
+!**/.gitkeep
+
+# Large or non-reproducible outputs
+*.h5ad
+*.h5
+*.h5mu
+*.loom
+*.rds
+*.pkl
+*.zarr/
+
+# Snakemake, Python, OS
+.snakemake/
+__pycache__/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.DS_Store

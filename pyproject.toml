@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pnatlas"
+version = "0.0.1"
+description = "Multiscale reference of the human peripheral nervous system: ganglia and nerve single-cell, spatial, bulk and genetics."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.11"
+dependencies = []  # managed by environment.yml
+
+[project.scripts]
+pnatlas = "pnatlas.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
