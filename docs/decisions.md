@@ -33,5 +33,5 @@ Each non-obvious choice, with its reason. Newest last.
 - **Random seed:** `20261102` (scaffold date).
 - **Disk budget:** 300 GB under `data_root` (same as PNPrank); ask before
   exceeding.
-- **Private notes:** `private_notes/` is a separate private repository and is
+- **Private notes:** `private_notes/` is kept locally only and is
   gitignored here.
