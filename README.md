@@ -1,11 +1,11 @@
 # pnatlas
 
-**Status:** Stage 0 (scaffold).
+**Status:** Stage 1 (data inventory and access).
 
 | Stage | Description | Status |
 |---|---|---|
-| 0 | Scaffold | in progress |
-| 1 | Data inventory and access; analysis plan frozen | not started |
+| 0 | Scaffold | done |
+| 1 | Data inventory and access; analysis plan frozen | in progress: datasets verified, plan frozen, dbGaP request pending |
 | 2 | Joint ganglia + nerve single-cell reference | not started |
 | 3 | Spatial mapping (Xenium, Visium) | not started |
 | 4 | GTEx tibial nerve deconvolution | not started |

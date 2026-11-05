@@ -41,3 +41,32 @@ Each non-obvious choice, with its reason. Newest last.
   its reasoning followed. Command output is not kept as a record. Both are part
   of the public record and go on the public release whitelist. They carry no
   dates or times of the work.
+## Stage 1 (data inventory and access)
+
+- **DRG backbone from the Bhuiyan 2025 preprint object, not rebuilt.** It has
+  126 donors; rebuilding would duplicate it. Its licence is not stated, so
+  nothing cell-level derived from it is redistributed without author
+  permission.
+- **Integration by scVI/scANVI with Harmony as the comparator, chosen by a
+  fixed scIB rule.** Written into the plan before any embedding is computed so
+  the method is not picked on downstream results.
+- **cell2location for Visium, scANVI label transfer for targeted panels.**
+  Targeted panels (100 to 472 genes) are too sparse for a deconvolution model;
+  label transfer on shared genes is the standard route.
+- **BayesPrism primary, MuSiC secondary, validated on pseudo-bulk mixtures and
+  GTEx pathology notes before any GTEx result is read.** Both are reference
+  based; the validation thresholds are fixed in the plan.
+- **Mendelian gene classes from the PNPrank truth set and PanelApp (GE 846
+  v8.38, GE 85 v1.513, AU 3070 v3.1, AU 3439 v2.0); OMIM not used.** OMIM
+  needs a licence key; PanelApp has an open API and version numbers.
+- **GWAS limited to studies with full summary statistics in the GWAS Catalog.**
+  Colocalisation needs the full statistics; studies with top hits only
+  (GCST90104786, GCST008223, GCST008530) are listed but not used.
+- **coloc priors p12 5e-6, PP.H4 above 0.8.** The default p12 of 1e-5 is known
+  to be permissive; 5e-6 is the more conservative value in common use.
+- **Cell-state interaction eQTL only as an amendment.** It needs GTEx donor
+  genotypes under dbGaP phs000424; the main line does not wait for that.
+- **Stage 6 improvement rule: beat the across-seed range of the published
+  features and a paired permutation test over cutoff years.** A single
+  AUROC difference inside the seed-to-seed spread is noise; the rule is fixed
+  before the run.

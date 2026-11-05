@@ -201,3 +201,73 @@ Written by hand from the results above; 22 entries. Check:
 ```bash
 grep -c '^  - id:' config/datasets.yaml
 ```
+
+### 1.13 sensoryomics applications, read in a browser
+
+Manual. Each application is a Shiny app on shinyapps.io and takes 10 to 20
+seconds to load.
+
+1. https://sensoryomics.shinyapps.io/human-peripheral-nerves/ (DPN nerves,
+   PMID 40828619). Home tab: buttons "Explore bulk rna-seq data", "Download
+   spatial data", "Explore microRNA data". Gene Search tab: per-gene qnTPM plots
+   for dataset 1 (6 control vs 6 DPN sural nerves, 100M reads per sample) and
+   dataset 2 (5 paired sural and tibial DPN nerves); no table download.
+   "Download spatial data" opens the public Box folder
+   https://utdallas.app.box.com/s/apafnhru6dihoi2va20wxexi40lia9b0
+   ("Visium_DPN_human_sural_nerve", 7 files, 3.6 GB):
+   `merged_obj_harmony_layerintegration_resol0.5_annotated_final.rds` (675.3 MB),
+   `sample_metadata.csv` (797 B), five Loupe files `cloupe8`, `cloupe11`,
+   `cloupe14`, `cloupe24L`, `cloupe24T` (158.8 MB to 928.3 MB).
+2. https://sensoryomics.shinyapps.io/Human-SCG/ (sympathetic chain ganglia
+   Visium, PMID 40667173). Home, Gene Search and About tabs. Gene Search shows
+   a CPM table and plots per gene; no download link anywhere.
+3. https://sensoryomics.shinyapps.io/SC_Visium_Dashboard/ is the mouse spinal
+   cord atlas of Loo 2026 (Nat Commun), not the human DRG Visium.
+4. https://sensoryomics.shinyapps.io/RNA-Data/ is the human DRG app: Home tab
+   links PMID 35171654 (Tavares-Ferreira 2022 DRG Visium) with "Download Loupe
+   Browser Files" and "Download Data", and the Ray 2023 Brain paper
+   (10.1093/brain/awac266) with a "Neuropathic Pain-TPM" tab. "Download Data"
+   opens the public Box folder
+   https://utdallas.app.box.com/s/dgs8a7vo9uu9cx6l81somaxb468hpgnz
+   ("Visium_hDRG_shared_data_PriceLab", 83 files, 34.7 GB): `H5_files/` (17),
+   `Loupe_browser_files/` (17), `H&E_images/` (16),
+   `SUPPL_files_scitranslmed.abj8186_files_s1_to_s31/` (31),
+   `README_sampleIDs.xlsx` (12.2 KB), `drg.combined.rds` (186.5 MB).
+
+Nothing was downloaded. Box folder listings can be read without an account.
+
+### 1.14 Verify genetics layer sources
+
+Env: system python3 (stdlib only).
+
+```bash
+cd "$REPO"
+python3 -I workflow/scripts/stage1_verify_genetics.py > data/metadata/genetics_sources.tsv
+wc -l data/metadata/genetics_sources.tsv
+grep -c '^  - id:' config/datasets.yaml
+```
+
+Output: `data/metadata/genetics_sources.tsv`, 38 rows (10 GWAS Catalog studies,
+5 eQTL Catalogue datasets, 1 GTEx portal query, 16 GTEx bucket files, 6 PanelApp
+panels). Check: `wc -l` gives 39; `config/datasets.yaml` has 35 entries after
+the 13 genetics entries were added by hand.
+What it queries: GWAS Catalog REST API v2 (`/studies/<GCST>`), the eQTL
+Catalogue dataset table on GitHub (the API v2 `/datasets` endpoint returns
+HTTP 410), GTEx portal API v2 (`/dataset/sample`), the `gs://adult-gtex` bucket
+listing, PanelApp GE and AU (`/api/v1/panels/<id>/`; needs a User-Agent header).
+PNPrank truth set: read from `pnprank-dev/data/truth/neuropathy_genes.tsv`, 242
+genes.
+
+### 1.15 Freeze the analysis plan
+
+Manual. `docs/analysis_plan.md` rewritten from `config/datasets.yaml`,
+`docs/datasets.md` and the stage 1 findings; the seven decisions are recorded
+in the Stage 1 section of `docs/decisions.md`. Checks:
+
+```bash
+cd "$REPO"
+grep -rn -P "\x{2014}|\x{2013}" docs config workflow
+grep -rn -E "/Users/|/home/|iz89" docs config workflow
+```
+
+Both print nothing.

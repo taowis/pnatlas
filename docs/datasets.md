@@ -52,13 +52,12 @@ Commands for every check above are in `docs/runbook/01_datasets.md`; what was fo
 | Source | What was found | Status |
 |---|---|---|
 | Zenodo 10.5281/zenodo.14226218 (Heming 2025 "PNS Atlas") | Latest version 15108216, CC BY 4.0, 36 `.qs` figure data files; no count matrices | Open; the merged nuclei object must be rebuilt from GSE285983 |
-| sensoryomics.com (UT Dallas) | 11 Shiny apps; `human-peripheral-nerves` (PMID 40828619), `Human-SCG` (PMID 40667173, preprint), `SC_Visium_Dashboard` (PMID 35171654) | Browser only; raw data in dbGaP phs001158 |
+| sensoryomics.com (UT Dallas) | 11 Shiny apps. `human-peripheral-nerves` (PMID 40828619): "Download spatial data" opens a public Box folder (3.6 GB) with the annotated DPN sural nerve Visium Seurat object and Loupe files; bulk data gene by gene only. `RNA-Data` (PMID 35171654): "Download Data" opens a public Box folder (34.7 GB) with the DRG Visium H5, Loupe and H&E files and a combined Seurat object. `Human-SCG` (PMID 40667173, preprint): CPM tables only, no download. `SC_Visium_Dashboard` is mouse spinal cord | Processed Visium data open through Box, no licence stated; raw reads in dbGaP phs001158 |
 | GSE165569 | Kupari 2021 Nat Commun, PMID 33686078 | Resolved |
 | GSE189501 | Zhang D, West China Hospital; 3 donors, DRG and spinal cord glia; no paper found | Usable with GEO citation; optional |
 
 ## Still to check
 
-- Open the three sensoryomics apps in a browser and note what can be downloaded.
 - Read the Dryad `README.md` after downloading it in a browser.
 - Genetics layer sources (GWAS Catalog, eQTL Catalogue, GTEx eQTL) are not yet
   in `config/datasets.yaml`.

@@ -138,3 +138,69 @@ not a journal article. Still unpublished.
 `config/datasets.yaml` now has 22 entries across the reference, spatial and
 bulk layers plus the macaque anchor, each with its accession, access class and
 PMID. Mouse anchors and the genetics layer (GWAS, eQTL) are not in it yet.
+
+## 1.13 What the sensoryomics apps actually offer
+
+Opened the apps in a browser. Two of them lead to public Box folders with
+processed data that the data availability statements did not mention:
+
+- The DPN nerve app's "Download spatial data" button opens a Box folder with a
+  merged, Harmony-integrated and annotated Seurat object of the DPN sural nerve
+  Visium data (675 MB), a sample metadata file and five Loupe files, 3.6 GB in
+  all. So the processed spatial data for diseased human nerve are open after
+  all; only the raw reads need dbGaP. The bulk RNA-seq (6 control vs 6 DPN
+  sural; 5 paired sural and tibial DPN) is only viewable gene by gene as qnTPM.
+- The human DRG app ("RNA-Data") links a Box folder with the Tavares-Ferreira
+  2022 DRG Visium data: 17 Space Ranger H5 files, 17 Loupe files, H and E
+  images, the 31 supplementary tables and a combined Seurat object (186 MB),
+  34.7 GB in all. This replaces "processed via portal only" in the earlier
+  table: the Visium layer from this study is open.
+- The sympathetic chain app shows CPM tables and plots per gene and has no
+  download; those data stay portal-only until the preprint is published.
+- `SC_Visium_Dashboard` is a mouse spinal cord atlas and is not relevant.
+
+Neither Box folder states a licence. As with the painseq objects, they can be
+used with citation but should not be redistributed without asking.
+
+Consequence for the plan: the human spatial layer now has open processed data
+for healthy DRG (Tavares-Ferreira Visium, 8 donors; Yu Xenium, 4 sections),
+diseased sural nerve (Heming Xenium; DPN Visium) and DRG Visium from GEO
+(Zhang, Vroman). The dbGaP request is for raw reads only and is not on the
+critical path.
+
+## 1.14 Genetics layer
+
+Verified the sources for stage 5 against the live APIs. Five GWAS with full
+summary statistics are usable: MVP hereditary and idiopathic peripheral
+neuropathy (GCST90475844), MVP type 2 diabetes with neurological complications
+(GCST90475676), diabetic neuropathy (GCST90129436), neuropathic pain
+(GCST90859373) and carpal tunnel syndrome (GCST90018813), plus multisite
+chronic pain (GCST008512) as a secondary trait. The DPN in T2D (ACCORD) and
+CMT1A modifier studies have top associations only and are not used. There is
+no GWAS for CMT itself, as expected for a monogenic disease. GTEx v10 tibial
+nerve cis-eQTL and sQTL tarballs are in the `adult-gtex` bucket (2.56 GB and
+1.96 GB); 667 donors with genotypes, 20,101 eGenes, 6,590 sGenes. The eQTL
+Catalogue has the GTEx tibial nerve datasets QTD000286 to QTD000290 (532
+samples) with SuSiE credible sets. Gene classes come from PanelApp GE panels
+846 and 85, AU panels 3070 and 3439, and the PNPrank truth set (242 genes: CMT
+59, dHMN 19, HSAN 16, syndromic 124, HSP 24). Two API quirks: the eQTL
+Catalogue API v2 is retired (HTTP 410), so the dataset table on GitHub is used;
+the GTEx open-access file metadata endpoint returns nothing for v10, so the
+bucket listing is used. The per-tissue file names inside the GTEx tarballs
+were not checked.
+
+## 1.15 Analysis plan frozen
+
+The plan now fixes, before any stage 2 code is run: which datasets go in each
+layer (embargoed and controlled raw data out until granted); donor as the unit
+of inference; scVI/scANVI vs Harmony chosen once by a fixed scIB rule;
+cell2location for Visium and scANVI label transfer for targeted panels, with
+pass/fail checks per section; BayesPrism primary and MuSiC secondary for
+GTEx, validated on pseudo-bulk from held-out Heming donors; EWCE-style
+enrichment and coloc with SuSiE for the genetics; and the stage 6 comparison
+(PNPrank published features vs PNPrank plus pnatlas features, same truth set,
+same splits and seeds, mean tier-1 AUROC as the primary metric, improvement
+only if it beats the full across-seed range of the baseline with a paired
+permutation test over cutoff years). Later changes go in the Amendments
+section. One dependency is still open: PNPrank has no submission tag yet, and
+stage 6 cannot start until it exists.
