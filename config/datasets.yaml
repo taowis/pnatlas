@@ -1,4 +1,354 @@
 # One entry per dataset. Filled in during stage 1 (data inventory and access).
 # Fields: id, layer (reference | spatial | bulk | genetics), species, tissue,
-#         technology, accession, access (open | controlled), donors, pmid, notes
-datasets: []
+#         technology, accession, access (open | controlled | embargoed | portal),
+#         donors, pmid, notes
+# Verification: GEO entries in data/metadata/geo_verification.tsv, other
+# sources in data/metadata/nongeo_access.tsv and docs/datasets.md.
+datasets:
+  # Layer 1: single-cell reference, human
+  - id: bhuiyan2025_hdrg
+    layer: reference
+    species: human
+    tissue: DRG
+    technology: snRNA-seq, scRNA-seq
+    accession: humandrg.painseq.com (Seurat object on Dropbox)
+    access: portal
+    donors: 126
+    pmid: 41279342
+    notes: preprint release; no licence stated; do not redistribute cell-level derivatives
+  - id: nguyen2021_hdrg
+    layer: reference
+    species: human
+    tissue: DRG
+    technology: snRNA-seq
+    accession: GSE168243
+    access: open
+    donors: 6
+    pmid: 34825887
+  - id: jung2023_hdrg
+    layer: reference
+    species: human
+    tissue: DRG
+    technology: snRNA-seq
+    accession: GSE201586
+    access: open
+    donors: 7
+    pmid: 36690629
+    notes: human sub-series of the cross-species series GSE201654
+  - id: yu2024_singlesoma
+    layer: reference
+    species: human
+    tissue: DRG
+    technology: single-soma Smart-seq2
+    accession: GSE249746
+    access: open
+    donors: null
+    pmid: 39496796
+  - id: zhang_hdrg_glia
+    layer: reference
+    species: human
+    tissue: DRG, spinal cord
+    technology: snRNA-seq
+    accession: GSE189501
+    access: open
+    donors: 3
+    pmid: null
+    notes: West China Hospital; no linked paper found; raw UMI matrices on GEO
+  - id: yang2025_hsg_multiome
+    layer: reference
+    species: human
+    tissue: sympathetic ganglia
+    technology: snMultiome (RNA + ATAC)
+    accession: SPARC 465, doi 10.26275/oqxx-si9h
+    access: open
+    donors: 7
+    pmid: 41000833
+    notes: CC BY 4.0
+  - id: zhao2025_hdrg_multiome
+    layer: reference
+    species: human
+    tissue: DRG
+    technology: snMultiome (RNA + ATAC)
+    accession: SPARC 464, doi 10.26275/z6bl-slmq
+    access: embargoed
+    donors: null
+    pmid: 41040282
+    notes: embargo release 2027-04-29; not in the frozen plan
+  - id: yang2022_htg
+    layer: reference
+    species: human
+    tissue: trigeminal ganglion
+    technology: snRNA-seq, snATAC-seq
+    accession: GSE197289
+    access: open
+    donors: null
+    pmid: 35349784
+  - id: heming2025_sural_snrna
+    layer: reference
+    species: human
+    tissue: sural nerve
+    technology: snRNA-seq
+    accession: GSE285983
+    access: open
+    donors: 37
+    pmid: 40849297
+    notes: 33 polyneuropathy + 4 controls; figure data on Zenodo 10.5281/zenodo.14226218 (CC BY 4.0)
+  # Layer 2: spatial, human
+  - id: heming2025_sural_xenium
+    layer: spatial
+    species: human
+    tissue: sural nerve
+    technology: Xenium
+    accession: GSE285984
+    access: open
+    donors: 8
+    pmid: 40849297
+  - id: yu2024_hdrg_xenium
+    layer: spatial
+    species: human
+    tissue: DRG
+    technology: Xenium (100-gene panel)
+    accession: GSE273557; Dryad doi 10.5061/dryad.gf1vhhmxq
+    access: open
+    donors: 4
+    pmid: 39496796
+    notes: CC0 on Dryad; browser download needed
+  - id: zhang2024_hdrg_visium
+    layer: spatial
+    species: human
+    tissue: DRG
+    technology: Visium
+    accession: GSE243073
+    access: open
+    donors: 7
+    pmid: 38289829
+    notes: sub-series of GSE243077
+  - id: vroman2023_hdrg_visium
+    layer: spatial
+    species: human
+    tissue: DRG
+    technology: Visium
+    accession: GSE215994
+    access: open
+    donors: 2
+    pmid: 37664243
+  - id: shiers2025_dpn_drg
+    layer: spatial
+    species: human
+    tissue: DRG
+    technology: spatial sequencing
+    accession: GSE295206
+    access: open
+    donors: 16
+    pmid: 40325011
+    notes: diabetes / DPN donors; raw on dbGaP phs001158
+  - id: tavaresferreira2022_hdrg_visium
+    layer: spatial
+    species: human
+    tissue: DRG
+    technology: Visium
+    accession: Box folder linked from sensoryomics.shinyapps.io/RNA-Data (utdallas.app.box.com/s/dgs8a7vo9uu9cx6l81somaxb468hpgnz); raw in dbGaP phs001158
+    access: open
+    donors: 8
+    pmid: 35171654
+    notes: Space Ranger H5 and Loupe files, H&E images, combined Seurat object (34.7 GB); no licence stated
+  - id: utdallas_dpn_nerves
+    layer: spatial
+    species: human
+    tissue: tibial and sural nerve
+    technology: spatial and bulk RNA-seq
+    accession: Box folder linked from sensoryomics.shinyapps.io/human-peripheral-nerves (utdallas.app.box.com/s/apafnhru6dihoi2va20wxexi40lia9b0); raw in dbGaP phs001158
+    access: open
+    donors: null
+    pmid: 40828619
+    notes: annotated DPN sural nerve Visium Seurat object and Loupe files (3.6 GB); bulk RNA-seq viewable per gene only; no licence stated
+  - id: utdallas_sympathetic_chain
+    layer: spatial
+    species: human
+    tissue: paravertebral sympathetic chain ganglia
+    technology: spatial transcriptomics
+    accession: sensoryomics.shinyapps.io/Human-SCG
+    access: portal
+    donors: null
+    pmid: 40667173
+    notes: preprint only; diabetes vs non-diabetes
+  # Layer 3: bulk, human
+  - id: gtex_v10_tibial
+    layer: bulk
+    species: human
+    tissue: tibial nerve
+    technology: bulk RNA-seq
+    accession: GTEx portal v10; dbGaP phs000424
+    access: open
+    donors: 670
+    pmid: null
+    notes: expression open; donor diabetes status controlled
+  - id: parisien2017_drg
+    layer: bulk
+    species: human
+    tissue: DRG
+    technology: microarray
+    accession: GSE78150, GSE78148, GSE77968
+    access: open
+    donors: 214
+    pmid: 28564610
+  - id: guo2020_sural_dpn
+    layer: bulk
+    species: human
+    tissue: sural nerve
+    technology: bulk RNA-seq
+    accession: GSE148059
+    access: open
+    donors: 77
+    pmid: 32787975
+  - id: hur2011_sural_dpn
+    layer: bulk
+    species: human
+    tissue: sural nerve
+    technology: microarray
+    accession: GSE24290
+    access: open
+    donors: 35
+    pmid: 21926103
+  # Cross-species anchors
+  - id: kupari2021_macaque_drg
+    layer: reference
+    species: macaque
+    tissue: DRG
+    technology: Smart-seq2
+    accession: GSE165569
+    access: open
+    donors: null
+    pmid: 33686078
+    notes: GEO has no linked PMID; title matches the Nat Commun paper
+  # Layer 4: genetics
+  - id: gwas_mvp_hereditary_idiopathic_pn
+    layer: genetics
+    species: human
+    tissue: null
+    technology: GWAS summary statistics
+    accession: GCST90475844
+    access: open
+    donors: 422954
+    pmid: 39024449
+    notes: MVP, European ancestry; PheCode 356; full summary statistics
+  - id: gwas_mvp_t2d_neurological
+    layer: genetics
+    species: human
+    tissue: null
+    technology: GWAS summary statistics
+    accession: GCST90475676
+    access: open
+    donors: 434644
+    pmid: 39024449
+    notes: MVP, European ancestry; PheCode 250.24; full summary statistics
+  - id: gwas_diabetic_neuropathy
+    layer: genetics
+    species: human
+    tissue: null
+    technology: GWAS summary statistics
+    accession: GCST90129436
+    access: open
+    donors: 435971
+    pmid: 37219871
+    notes: 772 cases; full summary statistics
+  - id: gwas_neuropathic_pain
+    layer: genetics
+    species: human
+    tissue: null
+    technology: GWAS summary statistics
+    accession: GCST90859373
+    access: open
+    donors: 174412
+    pmid: 40899795
+    notes: UK Biobank; full summary statistics
+  - id: gwas_carpal_tunnel
+    layer: genetics
+    species: human
+    tissue: null
+    technology: GWAS summary statistics
+    accession: GCST90018813
+    access: open
+    donors: 480201
+    pmid: 34594039
+    notes: full summary statistics; GCST007581 is the earlier UKB-only study; GCST90104786 (largest) has top associations only and is not used
+  - id: gwas_multisite_chronic_pain
+    layer: genetics
+    species: human
+    tissue: null
+    technology: GWAS summary statistics
+    accession: GCST008512
+    access: open
+    donors: 387649
+    pmid: 31194737
+    notes: full summary statistics; secondary trait
+  - id: gtex_v10_tibial_cis_qtl
+    layer: genetics
+    species: human
+    tissue: tibial nerve
+    technology: cis-eQTL and cis-sQTL
+    accession: gs://adult-gtex/bulk-qtl/v10/single-tissue-cis-qtl/GTEx_Analysis_v10_eQTL.tar and GTEx_Analysis_v10_sQTL.tar
+    access: open
+    donors: 667
+    pmid: null
+    notes: 20,101 eGenes, 6,590 sGenes; all-tissue tar files, 2.56 GB and 1.96 GB; the per-tissue file names inside the tar are UNVERIFIED until downloaded
+  - id: eqtl_catalogue_gtex_tibial
+    layer: genetics
+    species: human
+    tissue: tibial nerve
+    technology: cis-eQTL, GTEx v8 reprocessed, with SuSiE credible sets
+    accession: QTD000286 (ge); QTD000287 to QTD000290 (exon, tx, txrev, leafcutter)
+    access: open
+    donors: 532
+    pmid: null
+    notes: study QTS000015; FTP paths in data/metadata/genetics_sources.tsv
+  - id: panelapp_ge_846
+    layer: genetics
+    species: human
+    tissue: null
+    technology: curated gene panel
+    accession: PanelApp Genomics England panel 846 v8.38
+    access: open
+    donors: null
+    pmid: null
+    notes: Hereditary neuropathy or pain disorder; 376 genes, 231 green
+  - id: panelapp_ge_85
+    layer: genetics
+    species: human
+    tissue: null
+    technology: curated gene panel
+    accession: PanelApp Genomics England panel 85 v1.513
+    access: open
+    donors: null
+    pmid: null
+    notes: Hereditary neuropathy; 288 genes, 159 green
+  - id: panelapp_au_3070
+    layer: genetics
+    species: human
+    tissue: null
+    technology: curated gene panel
+    accession: PanelApp Australia panel 3070 v3.1
+    access: open
+    donors: null
+    pmid: null
+    notes: Hereditary Neuropathy; 307 genes, 249 green
+  - id: panelapp_au_3439
+    layer: genetics
+    species: human
+    tissue: null
+    technology: curated gene panel
+    accession: PanelApp Australia panel 3439 v2.0
+    access: open
+    donors: null
+    pmid: null
+    notes: Autonomic neuropathy; 19 genes, 18 green
+  - id: pnprank_truth_set
+    layer: genetics
+    species: human
+    tissue: null
+    technology: curated gene list with discovery years
+    accession: pnprank-dev data/truth/neuropathy_genes.tsv at the submission tag
+    access: open
+    donors: null
+    pmid: null
+    notes: 242 genes; categories CMT 59, dHMN 19, HSAN 16, SYND 124, HSP 24; tiers 1 (100) and 2 (142); built from PanelApp 85, 846, 165 and ClinGen
