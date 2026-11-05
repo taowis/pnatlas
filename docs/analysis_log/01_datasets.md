@@ -93,3 +93,48 @@ with a token when stage 3 needs them.
 - Manual look at GSE189501 and GSE165569.
 - Dryad README to be read after a browser download.
 - `config/datasets.yaml` is still empty and is to be filled from these results.
+
+## 1.8 Heming 2025 on Zenodo
+
+The Zenodo record (concept DOI 10.5281/zenodo.14226218, latest version
+15108216, CC BY 4.0) holds 36 `.qs` files of figure data, not the processed
+nuclei. The merged object has to be rebuilt from the GEO raw matrices
+(GSE285983_RAW.tar plus the two metadata CSVs) or taken from the earlier
+re-analysis in `pns-cmt-gene-map-natcomm2025`. The Zenodo files are still
+useful for the pseudobulk DE results and the propeller abundance tests, which
+can be compared with ours.
+
+## 1.9 sensoryomics.com
+
+The UT Dallas site is a shell around 11 Shiny applications. Three matter here:
+`human-peripheral-nerves` (processed data of the DPN tibial and sural nerve
+study, PMID 40828619, raw in dbGaP phs001158), `Human-SCG` (the sympathetic
+chain spatial preprint, PMID 40667173) and `SC_Visium_Dashboard`
+(Tavares-Ferreira DRG Visium). None of the apps can be read by a script; they
+have to be opened in a browser to see what can be downloaded. The DPN nerve
+paper's data statement confirms that the only open route to those data is the
+app, so a dbGaP request stays the way to get nuclei-level data for diseased
+nerve.
+
+## 1.10 The two GEO series without a linked paper
+
+GSE165569 is Kupari 2021 (Nat Commun, PMID 33686078); the GEO title is the
+paper title and Europe PMC links them. Resolved.
+
+GSE189501 is from Zhang Donghang's group at West China Hospital: snRNA-seq of
+glia from DRG and spinal cord of 3 donors, raw UMI matrices on GEO. No paper
+could be found; the group's eLife spinal cord atlas cites other series, and the
+only citation of the accession is a 2026 PLoS One paper that reused it. It is
+usable with a GEO citation, but 3 donors of glia only adds little to the DRG
+reference; keep it as optional.
+
+## 1.11 Sympathetic chain spatial study
+
+PMID 40667173 in the novelty check is PubMed's record of the bioRxiv preprint,
+not a journal article. Still unpublished.
+
+## 1.12 Dataset table
+
+`config/datasets.yaml` now has 22 entries across the reference, spatial and
+bulk layers plus the macaque anchor, each with its accession, access class and
+PMID. Mouse anchors and the genetics layer (GWAS, eQTL) are not in it yet.

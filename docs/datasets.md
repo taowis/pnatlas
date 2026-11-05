@@ -47,8 +47,18 @@ output `data/metadata/nongeo_access.tsv`). Nothing was downloaded except the SPA
 
 Commands for every check above are in `docs/runbook/01_datasets.md`; what was found at each step is in `docs/analysis_log/01_datasets.md`.
 
+## Other sources
+
+| Source | What was found | Status |
+|---|---|---|
+| Zenodo 10.5281/zenodo.14226218 (Heming 2025 "PNS Atlas") | Latest version 15108216, CC BY 4.0, 36 `.qs` figure data files; no count matrices | Open; the merged nuclei object must be rebuilt from GSE285983 |
+| sensoryomics.com (UT Dallas) | 11 Shiny apps; `human-peripheral-nerves` (PMID 40828619), `Human-SCG` (PMID 40667173, preprint), `SC_Visium_Dashboard` (PMID 35171654) | Browser only; raw data in dbGaP phs001158 |
+| GSE165569 | Kupari 2021 Nat Commun, PMID 33686078 | Resolved |
+| GSE189501 | Zhang D, West China Hospital; 3 donors, DRG and spinal cord glia; no paper found | Usable with GEO citation; optional |
+
 ## Still to check
 
-- Zenodo 10.5281/zenodo.14226218 (Heming 2025) and sensoryomics.com (Tavares-Ferreira Visium).
-- Manual look at GSE189501 and GSE165569.
+- Open the three sensoryomics apps in a browser and note what can be downloaded.
 - Read the Dryad `README.md` after downloading it in a browser.
+- Genetics layer sources (GWAS Catalog, eQTL Catalogue, GTEx eQTL) are not yet
+  in `config/datasets.yaml`.

@@ -129,3 +129,75 @@ Output: API download 401 (needs a Dryad API token), scripted web download 403.
 The files have to be downloaded from
 https://datadryad.org/dataset/doi:10.5061/dryad.gf1vhhmxq in a browser, or with
 a Dryad API token. Not downloaded yet.
+
+### 1.8 Zenodo record for Heming 2025
+
+```bash
+cd "$REPO"
+python3 -I workflow/scripts/stage1_lookup_sources.py zenodo 15108216
+```
+
+Output: title "PNS Atlas", concept DOI 10.5281/zenodo.14226218, CC BY 4.0, open.
+36 `.qs` files, all figure data objects (largest `perineurial_figure.qs`,
+312,674,344 bytes); no merged count matrix or Seurat object. The concept DOI
+redirects to the latest version, 15108216.
+
+### 1.9 sensoryomics.com
+
+The site is a single-page application; `curl` returns only the shell. The
+list of applications was read from its bundled script:
+
+```bash
+curl -sL https://sensoryomics.com/static/js/main.b40bede6.js \
+  | grep -o -E 'https?://[^"'"'"' )]{10,120}' | grep -i shinyapps | sort -u
+```
+
+Output: 11 shinyapps.io applications, including `human-peripheral-nerves`,
+`Human-SCG`, `SC_Visium_Dashboard`, `human-surgical-c2drg`, `RNA-Data`,
+`RNAIsoforms`, `Proteomics`. The applications themselves need a browser
+(a scripted request returns a "Please Wait" page). Not yet opened.
+
+Data availability statement of the DPN nerve paper (PMID 40828619):
+
+```bash
+python3 -I workflow/scripts/stage1_lookup_sources.py epmc-fulltext PMC12520680 'Data and code availability'
+```
+
+Output: raw RNA-seq in dbGaP phs001158; processed data at
+`sensoryomics.shinyapps.io/human-peripheral-nerves`; code on the utdal GitHub.
+
+### 1.10 Source papers of GSE189501 and GSE165569
+
+```bash
+cd "$REPO"
+for g in GSE189501 GSE165569; do
+  python3 -I workflow/scripts/stage1_lookup_sources.py geo $g
+  python3 -I workflow/scripts/stage1_lookup_sources.py epmc-accession $g
+done
+python3 -I workflow/scripts/stage1_lookup_sources.py pubmed 33686078
+python3 -I workflow/scripts/stage1_lookup_sources.py epmc-fulltext PMC10945563 'GSE[0-9]+'
+```
+
+Output: GSE165569 has the same title as Kupari 2021 Nat Commun (PMID 33686078)
+and Europe PMC lists that paper for the accession. GSE189501 (Zhang D, West
+China Hospital; 3 donors; DRG and spinal cord glia; raw UMI matrices as
+supplementary files) is cited by one 2026 PLoS One paper (PMID 42546053) but no
+source paper was found; the same group's eLife spinal cord atlas (PMID 38289829,
+PMC10945563) lists GSE103892, GSE154659 and GSE243077, not GSE189501.
+
+### 1.11 PMID of the sympathetic chain preprint
+
+```bash
+python3 -I workflow/scripts/stage1_lookup_sources.py pubmed 40667173
+```
+
+Output: PubMed's record of the bioRxiv preprint 10.1101/2025.06.24.661373 (no
+journal version). Matches the `Human-SCG` application on sensoryomics.
+
+### 1.12 Fill config/datasets.yaml
+
+Written by hand from the results above; 22 entries. Check:
+
+```bash
+grep -c '^  - id:' config/datasets.yaml
+```
