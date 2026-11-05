@@ -45,6 +45,8 @@ output `data/metadata/nongeo_access.tsv`). Nothing was downloaded except the SPA
   100 genes and 4 sections it is a small spatial layer; the Heming sural nerve
   Xenium (GSE285984) and the GEO Visium series remain the main spatial inputs.
 
+Commands for every check above are in `docs/runbook/01_datasets.md`.
+
 ## Still to check
 
 - Zenodo 10.5281/zenodo.14226218 (Heming 2025) and sensoryomics.com (Tavares-Ferreira Visium).
