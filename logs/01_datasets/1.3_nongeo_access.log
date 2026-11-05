@@ -1,0 +1,9 @@
+# commit 89ba816
+# cmd: python3 -I workflow/scripts/stage1_verify_nongeo.py > data/metadata/nongeo_access.tsv
+# exit 0
+id	source	doi	url	title	licence	embargo	embargo_release	size_bytes	n_files	published	related
+sparc_sg_multiome	SPARC	10.26275/oqxx-si9h (current: 10.26275/oqxx-si9h)	https://sparc.science/datasets/465/version/1	A single-cell multi-omic atlas of human sympathetic ganglia	Creative Commons Attribution	False		19943460393	22	2025-09-23T22:15:07.20653Z	IsSupplementedBy:10.17504/protocols.io.5jyl8q4y8l2w/v1
+sparc_drg_multiome	SPARC	10.26275/sojr-qhvm (current: 10.26275/z6bl-slmq)	https://sparc.science/datasets/464/version/1	Single nucleus multiomic atlas of human dorsal root ganglia reveals non-neuronal cell types contribution to pain	Creative Commons Attribution	True	2027-04-29	237113543567	1038	2026-05-19T01:56:36.45979Z	IsSupplementedBy:10.17504/protocols.io.5jyl8q4y8l2w/v1;IsDescribedBy:10.1101/2025.09.21.677655
+dryad_yu_xenium	Dryad	10.5061/dryad.gf1vhhmxq	https://datadryad.org/dataset/doi:10.5061/dryad.gf1vhhmxq	Spatial transcriptomic analysis of human dorsoal root ganglia neurons	https://spdx.org/licenses/CC0-1.0.html	False		12412536831	5	2024-10-25	preprint:https://doi.org/10.1101/2023.03.17.533207;primary_article:https://doi.org/10.1038/s41593-024-01794-1
+painseq_humandrg_seurat	painseq portal (Dropbox)		https://humandrg.painseq.com	seurat_object_preprint_release.Rds	none stated on portal	False		1915388302			https://www.dropbox.com/scl/fi/wx6472hewabt1vvafxet5/seurat_object_preprint_release.Rds
+painseq_harmonized_folder	painseq portal (Dropbox)		https://harmonized.painseq.com	AIpoBvGDp28rS1aDLUnzdCk	none stated on portal	False		19935643591			https://www.dropbox.com/scl/fo/x9c173p8p0wxze15c29ln/AIpoBvGDp28rS1aDLUnzdCk

@@ -1,0 +1,6 @@
+# commit 89ba816
+# cmd: Dryad README download through API and web link (no token)
+api_link /api/v2/files/3573359/download
+api_download 401
+web_download 403
+# exit 0

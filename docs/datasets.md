@@ -6,24 +6,24 @@ Where this file and the novelty check disagree, this file is the later check.
 
 ## GEO series
 
-Checked 2026-11-02 with NCBI E-utilities (`workflow/scripts/stage1_verify_geo.py`,
+Checked with NCBI E-utilities (`workflow/scripts/stage1_verify_geo.py`,
 output `data/metadata/geo_verification.tsv`). All 28 candidate series exist and
 their titles and sample counts match the novelty check. GSE189501 and GSE165569
 have no linked PMID in GEO and still need a manual look.
 
 ## Non-GEO sources
 
-Checked 2026-11-06 with DataCite, the Pennsieve discover API (SPARC), the Dryad
+Checked with DataCite, the Pennsieve discover API (SPARC), the Dryad
 API v2 and HEAD requests to the Dropbox links (`workflow/scripts/stage1_verify_nongeo.py`,
 output `data/metadata/nongeo_access.tsv`). Nothing was downloaded except the SPARC
 `subjects.xlsx` (16 KB) used to count donors.
 
 | Dataset | Location | Licence | Status | Size | What is there |
 |---|---|---|---|---|---|
-| Human sympathetic ganglia snMultiome (Yang 2025 preprint, PMID 41000833) | SPARC 465, DOI 10.26275/oqxx-si9h | CC BY 4.0 | Public since 2025-09-23; anonymous download from the SPARC S3 bucket works | 19.9 GB, 22 files | 7 donors (5 male, 2 female, 23 to 59 years). Cell Ranger ARC `filtered_feature_bc_matrix` (2.2 GB), `meta.data.csv` (12 MB), `atac_fragments.tsv.gz` (17.8 GB), SDS subject and sample sheets |
+| Human sympathetic ganglia snMultiome (Yang 2025 preprint, PMID 41000833) | SPARC 465, DOI 10.26275/oqxx-si9h | CC BY 4.0 | Public; anonymous download from the SPARC S3 bucket works | 19.9 GB, 22 files | 7 donors (5 male, 2 female, 23 to 59 years). Cell Ranger ARC `filtered_feature_bc_matrix` (2.2 GB), `meta.data.csv` (12 MB), `atac_fragments.tsv.gz` (17.8 GB), SDS subject and sample sheets |
 | Human DRG snMultiome (Zhao/Boyer 2025 preprint, PMID 41040282) | SPARC 464; DOI 10.26275/sojr-qhvm in the novelty check, Pennsieve now reports 10.26275/z6bl-slmq; both resolve to dataset 464 version 1 | CC BY 4.0 once released | Embargoed until 2027-04-29 | 237 GB, 1,038 files | Not available now. No data use agreement is attached in Pennsieve (API returns 204). Earlier access would need a request to the data owners through the SPARC portal; the terms of such a request were not checked |
 | Human DRG Xenium (Yu 2024 Nat Neurosci, PMID 39496796) | Dryad, DOI 10.5061/dryad.gf1vhhmxq (version 3, 2024-10-25) | CC0 1.0 | Public. The novelty check marked this DOI as not resolved; it does resolve | 12.4 GB, 5 files | Four Xenium output bundles (`Region_1` to `Region_4`, `.rar`), 100-gene custom panel, 1,340 manually segmented neurons, plus `README.md`. Same four samples as GEO GSE273557. File download through the API needs a Dryad API token (401 without one) and scripted web download returned 403, so download in a browser or with a token |
-| Human DRG reference atlas, preprint release (Bhuiyan 2025, PMID 41279342) | humanDRG.painseq.com (redirects to painseq.shinyapps.io/u19humandrgatlas), Seurat object `seurat_object_preprint_release.Rds` on Dropbox | None stated on the portal. The preprint itself is CC BY-NC-ND; that covers the article, not the object | Downloadable without login. No journal version yet (bioRxiv API, 2026-11-06). Raw data promised for dbGaP/SPARC | 1.92 GB | Integrated Seurat object with donor_ID, SpinalRegion, Level, Sex, Age, Platform and atlas annotation |
+| Human DRG reference atlas, preprint release (Bhuiyan 2025, PMID 41279342) | humanDRG.painseq.com (redirects to painseq.shinyapps.io/u19humandrgatlas), Seurat object `seurat_object_preprint_release.Rds` on Dropbox | None stated on the portal. The preprint itself is CC BY-NC-ND; that covers the article, not the object | Downloadable without login. No journal version yet (bioRxiv API). Raw data promised for dbGaP/SPARC | 1.92 GB | Integrated Seurat object with donor_ID, SpinalRegion, Level, Sex, Age, Platform and atlas annotation |
 | Harmonized DRG/TG atlas (Bhuiyan 2024 Sci Adv, PMID 38905344) | harmonized.painseq.com (painseq.shinyapps.io/harmonized_painseq_v1), Dropbox folder from the "Data download" tab | None stated on the portal | Downloadable without login. GEO GSE255436 holds only the new axolotl data | 19.9 GB (folder) | Full neuronal and non-neuronal objects per atlas (for example 75,928 DRG neurons from 21 datasets) and Table S4 |
 
 ## What this means for the plan
@@ -45,7 +45,7 @@ output `data/metadata/nongeo_access.tsv`). Nothing was downloaded except the SPA
   100 genes and 4 sections it is a small spatial layer; the Heming sural nerve
   Xenium (GSE285984) and the GEO Visium series remain the main spatial inputs.
 
-Commands for every check above are in `docs/runbook/01_datasets.md`.
+Commands for every check above are in `docs/runbook/01_datasets.md`, with their logs in `logs/01_datasets/`.
 
 ## Still to check
 

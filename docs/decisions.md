@@ -35,3 +35,8 @@ Each non-obvious choice, with its reason. Newest last.
   exceeding.
 - **Private notes:** `private_notes/` is kept locally only and is
   gitignored here.
+- **Runbook and logs:** every command and manual step is written in
+  `docs/runbook/` and the complete output of each step is kept in
+  `logs/<stage>/`, so the analysis can be redone by hand. Both are part of the
+  public record and go on the public release whitelist. They carry no run dates,
+  times or durations; timestamps in tool logs are removed before committing.

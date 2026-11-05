@@ -26,4 +26,4 @@ stage 2 first needs it.
 
 | File | Stage |
 |---|---|
-| [01_datasets.md](01_datasets.md) | 1. Data inventory and access |
+| [01_datasets.md](01_datasets.md) | 1. Data inventory and access (logs in `logs/01_datasets/`) |

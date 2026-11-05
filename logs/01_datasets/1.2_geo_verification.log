@@ -1,0 +1,6 @@
+# commit 89ba816
+# cmd: python3 -I workflow/scripts/stage1_verify_geo.py <28 accessions> > data/metadata/geo_verification.tsv
+# exit 0
+      29 data/metadata/geo_verification.tsv
+  28 found
+   1 status
