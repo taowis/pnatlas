@@ -2,7 +2,7 @@
 
 Each non-obvious choice, with its reason. Newest last.
 
-## 2026-11-02 — Stage 0
+## Stage 0 (scaffold, 2026-11-02)
 
 - **Scope: peripheral nervous system first, MASLD/MASH on hold.** A literature
   and data check on 2026-11-02 found each MASH layer already covered by
@@ -35,8 +35,9 @@ Each non-obvious choice, with its reason. Newest last.
   exceeding.
 - **Private notes:** `private_notes/` is kept locally only and is
   gitignored here.
-- **Runbook and logs:** every command and manual step is written in
-  `docs/runbook/` and the complete output of each step is kept in
-  `logs/<stage>/`, so the analysis can be redone by hand. Both are part of the
-  public record and go on the public release whitelist. They carry no run dates,
-  times or durations; timestamps in tool logs are removed before committing.
+- **Runbook and analysis log:** every command and manual step is written in
+  `docs/runbook/` and what was found and decided at each step is written, in
+  English, in `docs/analysis_log/`, so the analysis can be redone by hand and
+  its reasoning followed. Command output is not kept as a record. Both are part
+  of the public record and go on the public release whitelist. They carry no
+  dates or times of the work.
