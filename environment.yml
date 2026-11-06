@@ -12,12 +12,25 @@ dependencies:
   - scipy
   - pyyaml
   - pyarrow
+  - h5py
+  - matplotlib
+  - seaborn
   # single-cell
   - anndata
   - scanpy
+  - leidenalg
+  - igraph
+  - scvi-tools
+  - pytorch
+  - jax
+  - jaxlib
   # workflow
   - snakemake-minimal
   # dev
   - pytest
   - ruff
   - requests
+  - pip:
+      - harmonypy
+      - scib-metrics
+      - scrublet
