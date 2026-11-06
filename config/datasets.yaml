@@ -347,7 +347,7 @@ datasets:
     species: human
     tissue: null
     technology: curated gene list with discovery years
-    accession: pnprank-dev data/truth/neuropathy_genes.tsv at the submission tag
+    accession: pnprank-dev data/truth/neuropathy_genes.tsv at tag submitted-human-genetics (commit 8cba969)
     access: open
     donors: null
     pmid: null

@@ -202,5 +202,14 @@ enrichment and coloc with SuSiE for the genetics; and the stage 6 comparison
 same splits and seeds, mean tier-1 AUROC as the primary metric, improvement
 only if it beats the full across-seed range of the baseline with a paired
 permutation test over cutoff years). Later changes go in the Amendments
-section. One dependency is still open: PNPrank has no submission tag yet, and
-stage 6 cannot start until it exists.
+section. One dependency was still open at this point: PNPrank had no
+submission tag, and stage 6 cannot start until it exists (closed in 1.16).
+
+## 1.16 PNPrank submission tag
+
+The PNPrank manuscript (v5, file `Lai_PNPrank_neuropathy_v5_20261104.docx`)
+was submitted to Human Genetics from the state of pnprank-dev at merge commit
+8cba969 (PR 67). The only later commit on main changed documentation, not the
+manuscript, code or truth set. The annotated tag `submitted-human-genetics`
+now marks 8cba969 and is pushed, so stage 6 pins the truth set, features and
+evaluation code to that tag. The dataset table and plan section 7 name the tag.

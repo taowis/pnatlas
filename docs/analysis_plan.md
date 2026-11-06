@@ -144,7 +144,8 @@ granted.
 ## 7. Stage 6 primary comparison
 
 Fixed before it is run. Two feature sets are compared with identical
-evaluation code from the PNPrank submission tag: (A) the published PNPrank
+evaluation code from the PNPrank submission tag (`submitted-human-genetics`,
+commit 8cba969 of pnprank-dev): (A) the published PNPrank
 features; (B) the published features plus the pnatlas features (nerve
 cell-state specificity, spatial compartment scores, GTEx deconvolution
 derived nerve expression, colocalisation flags). Same truth set (PNPrank
