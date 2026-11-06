@@ -271,3 +271,20 @@ grep -rn -E "/Users/|/home/|iz89" docs config workflow
 ```
 
 Both print nothing.
+
+### 1.16 Tag the PNPrank version used for submission
+
+Run in the pnprank-dev clone (the sibling repository), not in `$REPO`. The
+commit is the merge of the last manuscript PR before submission; check it
+with `git log --oneline` and `git ls-tree -r --name-only <commit> | grep v5`.
+
+```bash
+cd ../pnprank-dev
+git tag -a submitted-human-genetics 8cba969 \
+  -m "Version submitted to Human Genetics: manuscript v5 (Lai_PNPrank_neuropathy_v5_20261104)"
+git push origin submitted-human-genetics
+git ls-remote --tags origin | grep submitted
+```
+
+Then in `$REPO` the tag name is written into `config/datasets.yaml`
+(`pnprank_truth_set`) and `docs/analysis_plan.md` section 7.
