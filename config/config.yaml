@@ -16,6 +16,7 @@ qc:
     - jung2023_hdrg
     - yang2022_htg
     - yang2025_hsg_multiome
+    - yu2024_singlesoma   # added after the first QC run; see analysis log 2.4
   whole_cell:
     - yu2024_singlesoma
   no_doublet_call:              # non-droplet protocols

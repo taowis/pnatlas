@@ -127,3 +127,33 @@ Of the 111,925 annotated Jung 2023 cells, 110,773 are present in the
 filtered Cell Ranger matrices; the remaining 1,152 are cells the authors
 kept from the raw matrices and are dropped here, since the filtered
 matrices are the input for every other 10x dataset.
+
+## 2.4 QC and the cell type map
+
+The QC thresholds were written into the config before the first run and are
+deliberately plain: 200 genes, 5 percent mitochondrial reads for nuclei (20
+for the whole-cell somata), scrublet per sample. Five datasets come with the
+authors' own filtering and annotation (Heming already carries scDblFinder
+calls, all singlets), so for those every annotated cell is kept and the
+flags are only recorded; a second filtering pass would throw away cells the
+labels depend on and make the label-transfer comparison harder to read.
+The three unannotated sets (Nguyen, Yu, Zhang) are filtered.
+
+The cell type map has three levels. `class` (neuron, glia, stromal,
+vascular, immune) is what every dataset can reach. `state` is the level used
+for genetics and deconvolution: DRG neuron families follow the painseq atlas
+(C-NP, C-PEP, A-PEP, Ab-LTMR, A-LTMR, A-Propr, C-Thermo, C-LTMR, plus the
+ATF3 injured state), nerve states follow Heming 2025 (myelinating,
+non-myelinating, repair and damage Schwann; perineurial; endoneurial and
+epineurial fibroblast; endothelial; lymphatic endothelial; mural; the
+immune types), and ganglion non-neuronal states use the same names where the
+cell type is the same (satellite glia, Schwann, fibroblast, endothelial,
+mural, macrophage). `fine` keeps the authors' own subdivisions. Trigeminal
+labels are mouse-style (NF, PEP, NP, SST, TRPM8, cLTMR): NP, SST, TRPM8 and
+cLTMR map onto atlas families, PEP stays unsplit, and NF is kept as its own
+name because the atlas splits A-LTMR differently. Sympathetic neurons have
+no DRG counterpart and keep their own state. The coarse labels in the
+Heming metadata are transferred from the mouse sciatic atlas and are wrong
+for the endothelial clusters (they come out as "adip"), so the authors'
+fine clusters are the source of the map and the transferred label is only
+kept as a column.

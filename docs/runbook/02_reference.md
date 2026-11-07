@@ -135,3 +135,43 @@ python3 -I workflow/scripts/geo_samples.py GSE168243 GSE201586 GSE249746 GSE1895
 
 Check: `results/reference/anndata_summary.tsv` has eight rows and the cell
 counts match the analysis log (2.3).
+
+### 2.4 QC and the cell type map
+
+Thresholds are fixed in the `qc` block of `config/config.yaml` before the
+first run: 200 genes minimum, 5 percent mitochondrial counts for nuclei and
+20 percent for whole cells, scrublet per sample with expected rate 0.06 on
+samples of at least 500 cells. Author-annotated datasets keep every cell and
+carry the flags; the three unannotated datasets are filtered.
+
+`config/celltype_map.tsv` is written by hand from the author label lists
+(one row per dataset and author label, with class, state and fine level);
+the label lists come from the h5ad files:
+
+```bash
+ssh "$REMOTE" 'source ~/miniconda3/etc/profile.d/conda.sh && conda activate pnatlas && cd ~/Projects/pnatlas-dev && \
+  python - <<EOF
+import anndata as ad, glob
+for f in sorted(glob.glob("data/interim/reference/*.h5ad")):
+    o = ad.read_h5ad(f, backed="r").obs
+    print("===", o["dataset"].iloc[0]); print(o["author_label_fine"].value_counts().to_string())
+EOF'
+```
+
+Run the QC, one dataset at a time, and collect the summary lines:
+
+```bash
+ssh "$REMOTE" 'source ~/miniconda3/etc/profile.d/conda.sh && conda activate pnatlas && cd ~/Projects/pnatlas-dev && \
+  ~/bin/memguard.sh start logs/memguard.log "qc_dataset|build_anndata|Rscript"; \
+  echo -e "dataset\tcells_in\tcells_out\tflag_low_genes\tflag_high_mt\tflag_doublet\tmedian_counts\tmedian_genes\tmedian_pct_mt\tpolicy" \
+    > results/reference/qc_summary.tsv; \
+  for d in nguyen2021_hdrg yu2024_singlesoma zhang_hdrg_glia yang2022_htg yang2025_hsg_multiome \
+           jung2023_hdrg bhuiyan2025_hdrg heming2025_sural_snrna; do \
+    nice -n 15 python workflow/scripts/qc_dataset.py $d --in data/interim/reference/$d.h5ad \
+      --out data/interim/reference_qc/$d.h5ad 2> logs/qc_$d.log | tail -1 >> results/reference/qc_summary.tsv; done'
+rsync -a "$REMOTE:~/Projects/pnatlas-dev/results/reference/qc_summary.tsv" results/reference/
+```
+
+Check: eight rows in `results/reference/qc_summary.tsv`; every author label
+in the h5ad files has a row in `config/celltype_map.tsv` (checked in 2.5
+when the map is applied).
