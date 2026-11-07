@@ -157,3 +157,24 @@ Heming metadata are transferred from the mouse sciatic atlas and are wrong
 for the endothelial clusters (they come out as "adip"), so the authors'
 fine clusters are the source of the map and the transferred label is only
 kept as a column.
+
+QC results (`results/reference/qc_summary.tsv`). Nuclei datasets have
+median mitochondrial fractions well under 1 percent and almost no cells
+under 200 genes. The doublet calls are modest except in the Zhang glia set,
+where scrublet flags 3,211 of 30,701 nuclei (10 percent) and they are
+removed, leaving 27,325. Nguyen loses 300 nuclei to the mitochondrial
+threshold and keeps 1,535. Among the kept-all datasets the painseq neurons
+(10,731 flagged, median 1.1 percent) and Jung 2023 (3,946 flagged) carry
+the most mitochondrial flags; neurons have more mitochondrial transcripts
+than other nuclei, the flags stay in obs and are not applied.
+
+One deviation from the thresholds as written. The Yu 2024 single somata
+have a median mitochondrial fraction of 24 percent, and the 20 percent
+whole-cell threshold would remove 808 of 1,136 cells. These are complete
+neuronal somata picked by hand and sequenced with Smart-seq2, the file on
+GEO is the authors' final set (the 1,136 cells of the paper), and a high
+mitochondrial fraction is expected for whole large neurons rather than a
+sign of damage. The dataset was moved to the keep-all group after this was
+seen, which is a change made after looking at the data and is recorded as
+such; the flags are kept in obs so the effect of the threshold can be
+checked later. No other threshold was changed.

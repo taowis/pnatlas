@@ -93,3 +93,10 @@ Each non-obvious choice, with its reason. Newest last.
   double count cells and inflate donor numbers. Jung 2023 becomes the DRG
   non-neuronal backbone; neuron subtypes follow the atlas labels. Recorded as
   plan amendment 1.
+- **QC: author-filtered datasets keep all their cells, flags recorded only;
+  Yu 2024 somata added to that group after the first QC run.** Refiltering
+  annotated data would drop cells the labels and the label-transfer
+  comparison depend on. The whole-cell mitochondrial threshold of 20
+  percent is wrong for hand-picked neuronal somata (median 24 percent) and
+  would have removed 71 percent of the authors' final set; the change was
+  made after seeing the data and is stated in the analysis log (2.4).
