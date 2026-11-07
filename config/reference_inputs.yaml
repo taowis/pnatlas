@@ -42,9 +42,36 @@ jung2023_hdrg:
     - raw/jung2023_hdrg/extracted/GSM6068110_SAM24403169_filtered_feature_bc_matrix.h5
   sample_from: file
   sample_pattern: "_(SAM\\d+)_"
-  # donor and labels come from the authors' annotated object
-  # (GSE201586_humanallcelltypes.rds.gz, converted with rds_to_mtx.R);
-  # the metadata block is filled once the object's columns are known
+  # labels from the authors' annotated object (GSE201586_humanallcelltypes.rds.gz,
+  # exported with rds_to_mtx.R); its cell names are <barcode>_<SAM>, ours <SAM>_<barcode>
+  metadata:
+    file: interim/rds/jung2023_hdrg/metadata.csv.gz
+    barcode_column: barcode
+    barcode_transform: ["^(.*)_(SAM\\d+)$", "\\2_\\1"]
+    keep_only_annotated: true
+    columns:
+      author_label: celltype
+      author_label_fine: celltype
+  # donor per sample from the GEO sample characteristics (data/metadata/geo_samples.tsv)
+  donor_map:
+    SAM24364375: Hom_1
+    SAM24364376: Hom_1
+    SAM24369441: Hom_2
+    SAM24373353: Hom_2
+    SAM24385480: Hom_2
+    SAM24385481: Hom_2
+    SAM24378656: Hom_3
+    SAM24378657: Hom_3
+    SAM24398817: Hom_4
+    SAM24398820: Hom_4
+    SAM24403169: Hom_4
+    SAM24398818: Hom_5
+    SAM24398822: Hom_5
+    SAM24403167: Hom_5
+    SAM24398819: Hom_6
+    SAM24398824: Hom_6
+    SAM24403168: Hom_6
+    SAM24403166: Hom_7
 
 yu2024_singlesoma:
   format: csv_genes_x_cells
@@ -125,5 +152,13 @@ bhuiyan2025_hdrg:
   metadata:
     file: interim/rds/bhuiyan2025_hdrg/metadata.csv.gz
     barcode_column: barcode
-    columns: {}
-  # columns filled once the Seurat object's metadata has been inspected
+    columns:
+      sample: orig.ident
+      author_label: Atlas_annotation
+      author_label_fine: Atlas_annotation
+  # The portal object is the harmonized DRG neuron atlas (53,596 neurons from
+  # nine datasets, column Dataset), not whole-tissue nuclei. orig.ident is the
+  # library for the published datasets and "SeuratProject" for most of the
+  # new U19 cells, so no donor is recoverable there; donor is set to the
+  # sample and the Dataset column is kept to exclude cells that duplicate
+  # Jung 2023, Nguyen 2021 and Tavares-Ferreira 2022.

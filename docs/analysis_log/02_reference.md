@@ -82,3 +82,13 @@ unannotated cells were removed and the memory guard logged a warning at 19
 percent free; the builder now subsets each sample to the annotated cells as
 it is read. A metadata column with mixed text and numbers also failed to
 write to h5ad; object columns are now written as text.
+
+The R export failed at first for two reasons worth recording. The two GEO
+`.rds.gz` and `.RDS.gz` files are gzip archives of files that are themselves
+gzip-compressed RDS, so `readRDS` on the path stops with "unknown input
+format"; the script now opens a second decompression layer when the first
+read fails. The painseq object is a Seurat v4-style assay, and SeuratObject
+5.5 has removed the old `slot` argument, so the counts are taken with
+`layer = "counts"`. The R environment itself (R 4.4.3, Seurat 5.5.1) could
+only be built once the Python environment build had finished, because two
+conda solves at once lock the shared repodata cache.
