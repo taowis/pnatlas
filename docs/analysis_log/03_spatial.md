@@ -57,3 +57,12 @@ The Box folders have no API without a token, but the shared-link pages
 embed the file identifiers and the shared-file download endpoint serves
 the files to a plain HTTP client, so the download is scripted like the
 GEO one and recorded in the manifest with the exact URL per file.
+
+All 28 files came down in one run and verify against the recorded md5
+sums: 10.6 GB for the Heming Xenium tar, 9.7 GB for the Shiers tar, 0.9
+GB for the Yu transcripts, 0.8 GB Vroman, 0.3 GB Zhang, 0.3 GB for the
+Tavares-Ferreira H5 files and Seurat object and 0.7 GB for the DPN nerve
+object. The server disk has 115 GB left after the download, which is
+enough for extracting the tars one dataset at a time but not for the
+Box images; those stay on Box until the anatomy checks need them.
+

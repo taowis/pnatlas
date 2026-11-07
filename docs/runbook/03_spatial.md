@@ -37,7 +37,7 @@ awk -F'\t' 'NR>1{s+=$5} END{print "total GB", s/1073741824}' data/metadata/stage
 python3 -I workflow/scripts/geo_samples.py GSE285984 GSE295206 GSE243073 GSE215994 GSE273557 > data/metadata/geo_samples_spatial.tsv
 ```
 
-29 files, 21.7 GB: the RAW tars of the five GEO series (Heming 2025 Xenium
+28 files, 21.7 GB: the RAW tars of the five GEO series (Heming 2025 Xenium
 9.9 GB, Shiers 2025 DRG Visium 9.0 GB, Yu 2024 Xenium transcripts 0.8 GB,
 Vroman 2023 and Zhang 2024 DRG Visium), the Yu 2024 neuron matrix and
 its metadata, the Shiers sample metadata, and from Box the 16 Space
@@ -65,6 +65,6 @@ ssh "$REMOTE" 'cd ~/Projects/pnatlas-dev && grep -cE "^done" logs/stage3_downloa
 rsync -a "$REMOTE:~/Projects/pnatlas-dev/data/MANIFEST.tsv" data/MANIFEST.tsv
 ```
 
-Check: the verify run prints `OK` for all 29 paths; the manifest rows
+Check: the verify run prints `OK` for all 28 paths; the manifest rows
 (url, md5, size, access date) are then copied into the dataset sections
 of `data/README.md`.
