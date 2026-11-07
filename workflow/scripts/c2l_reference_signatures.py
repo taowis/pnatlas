@@ -18,32 +18,14 @@ Usage: python workflow/scripts/c2l_reference_signatures.py --counts <reference_m
 import argparse
 import pathlib
 
-import anndata as ad
 import numpy as np
 import pandas as pd
 import scipy.sparse as sp
 import yaml
 
+from pnatlas.io import read_counts_float32
+
 UNASSIGNED = "unassigned"
-
-
-def read_counts_float32(path, cells):
-    """The merged reference is a float64 CSR of 1.1e9 non-zeros; reading it
-    through anndata takes twice that in memory. Read the arrays with h5py as
-    float32 and keep only the requested cells."""
-    import h5py
-    from anndata.io import read_elem
-    with h5py.File(path) as f:
-        obs = read_elem(f["obs"])
-        var = read_elem(f["var"])
-        rows = np.where(obs.index.isin(cells))[0]
-        indptr = f["X/indptr"][:]
-        data = f["X/data"][:].astype(np.float32)
-        indices = f["X/indices"][:]
-    x = sp.csr_matrix((data, indices, indptr), shape=(len(obs), len(var)))
-    del data, indices
-    x = x[rows]
-    return ad.AnnData(X=x, obs=obs.iloc[rows].copy(), var=var)
 
 
 def main():

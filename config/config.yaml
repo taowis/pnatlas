@@ -88,3 +88,13 @@ cell2location:
   map_max_epochs: 30000
   map_batch_size: null                  # whole section per step
   heldout_gene_fraction: 0.1            # check (b): genes left out of the mapping
+
+# Stage 3 checks (plan section 4)
+spatial_checks:
+  markers_cells_per_state: 2000         # stratified subsample for the one-vs-rest test
+  markers_min_pct: 0.25                 # gene detected in at least this fraction of the state's cells
+  markers_padj: 0.01
+  markers_top_n: 20
+  min_assigned_spots: 20                # a state is checked in a section only with this many spots or cells
+  auroc_min: 0.7                        # check (a)
+  spearman_min: 0.5                     # check (b)
