@@ -1,0 +1,20 @@
+dataset	accession	file	url	size_bytes	access
+nguyen2021_hdrg	GSE168243	GSE168243_RAW.tar	https://ftp.ncbi.nlm.nih.gov/geo/series/GSE168nnn/GSE168243/suppl/GSE168243_RAW.tar	9332326	open
+jung2023_hdrg	GSE201586	GSE201586_RAW.tar	https://ftp.ncbi.nlm.nih.gov/geo/series/GSE201nnn/GSE201586/suppl/GSE201586_RAW.tar	2147483648	open
+jung2023_hdrg	GSE201586	GSE201586_humanallcelltypes.rds.gz	https://ftp.ncbi.nlm.nih.gov/geo/series/GSE201nnn/GSE201586/suppl/GSE201586_humanallcelltypes.rds.gz	4187593113	open
+yu2024_singlesoma	GSE249746	GSE249746_Expression_matrix_raw_counts.csv.gz	https://ftp.ncbi.nlm.nih.gov/geo/series/GSE249nnn/GSE249746/suppl/GSE249746_Expression_matrix_raw_counts.csv.gz	11534336	open
+zhang_hdrg_glia	GSE189501	GSE189501_DRG_10X_raw_UMI_count_matrix.txt.gz	https://ftp.ncbi.nlm.nih.gov/geo/series/GSE189nnn/GSE189501/suppl/GSE189501_DRG_10X_raw_UMI_count_matrix.txt.gz	73400320	open
+yang2022_htg	GSE197289	GSE197289_snRNA-seq_human_barcode_meta.csv.gz	https://ftp.ncbi.nlm.nih.gov/geo/series/GSE197nnn/GSE197289/suppl/GSE197289_snRNA-seq_human_barcode_meta.csv.gz	841728	open
+yang2022_htg	GSE197289	GSE197289_snRNA-seq_human_raw_counts.RDS.gz	https://ftp.ncbi.nlm.nih.gov/geo/series/GSE197nnn/GSE197289/suppl/GSE197289_snRNA-seq_human_raw_counts.RDS.gz	182452224	open
+heming2025_sural_snrna	GSE285983	GSE285983_RAW.tar	https://ftp.ncbi.nlm.nih.gov/geo/series/GSE285nnn/GSE285983/suppl/GSE285983_RAW.tar	1395864371	open
+heming2025_sural_snrna	GSE285983	GSE285983_metadata_all.csv.gz	https://ftp.ncbi.nlm.nih.gov/geo/series/GSE285nnn/GSE285983/suppl/GSE285983_metadata_all.csv.gz	22020096	open
+heming2025_sural_snrna	GSE285983	GSE285983_metadata_ic.csv.gz	https://ftp.ncbi.nlm.nih.gov/geo/series/GSE285nnn/GSE285983/suppl/GSE285983_metadata_ic.csv.gz	809984	open
+yang2025_hsg_multiome	SPARC 465 v1	files/primary/filtered_feature_bc_matrix/barcodes.tsv.gz	https://sparc-prod-aod-discover-publish50-use1.s3.amazonaws.com/465/files/primary/filtered_feature_bc_matrix/barcodes.tsv.gz	422581	open
+yang2025_hsg_multiome	SPARC 465 v1	files/primary/filtered_feature_bc_matrix/features.tsv.gz	https://sparc-prod-aod-discover-publish50-use1.s3.amazonaws.com/465/files/primary/filtered_feature_bc_matrix/features.tsv.gz	3400616	open
+yang2025_hsg_multiome	SPARC 465 v1	files/primary/filtered_feature_bc_matrix/matrix.mtx.gz	https://sparc-prod-aod-discover-publish50-use1.s3.amazonaws.com/465/files/primary/filtered_feature_bc_matrix/matrix.mtx.gz	2168008189	open
+yang2025_hsg_multiome	SPARC 465 v1	files/primary/meta.data.csv	https://sparc-prod-aod-discover-publish50-use1.s3.amazonaws.com/465/files/primary/meta.data.csv	11996682	open
+yang2025_hsg_multiome	SPARC 465 v1	files/dataset_description.xlsx	https://sparc-prod-aod-discover-publish50-use1.s3.amazonaws.com/465/files/dataset_description.xlsx	15236	open
+yang2025_hsg_multiome	SPARC 465 v1	files/README.txt	https://sparc-prod-aod-discover-publish50-use1.s3.amazonaws.com/465/files/README.txt	808	open
+yang2025_hsg_multiome	SPARC 465 v1	files/samples.xlsx	https://sparc-prod-aod-discover-publish50-use1.s3.amazonaws.com/465/files/samples.xlsx	9795	open
+yang2025_hsg_multiome	SPARC 465 v1	files/subjects.xlsx	https://sparc-prod-aod-discover-publish50-use1.s3.amazonaws.com/465/files/subjects.xlsx	15962	open
+bhuiyan2025_hdrg	humandrg.painseq.com	seurat_object_preprint_release.Rds	https://www.dropbox.com/scl/fi/wx6472hewabt1vvafxet5/seurat_object_preprint_release.Rds?rlkey=struflwt1ql68okohdcvzosq1&dl=1	1915388302	portal

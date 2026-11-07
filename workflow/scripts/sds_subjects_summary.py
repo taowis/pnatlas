@@ -5,8 +5,8 @@ Usage: python workflow/scripts/sds_subjects_summary.py subjects.xlsx
 """
 import re
 import sys
-import zipfile
 import xml.etree.ElementTree as ET
+import zipfile
 
 NS = "{http://schemas.openxmlformats.org/spreadsheetml/2006/main}"
 
