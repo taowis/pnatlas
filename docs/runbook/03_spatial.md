@@ -68,3 +68,66 @@ rsync -a "$REMOTE:~/Projects/pnatlas-dev/data/MANIFEST.tsv" data/MANIFEST.tsv
 Check: the verify run prints `OK` for all 28 paths; the manifest rows
 (url, md5, size, access date) are then copied into the dataset sections
 of `data/README.md`.
+
+## 3.3 Section inputs
+
+List the tar members, extract the matrices, cell tables and positions
+(not the morphology images, the Loupe files or the raw matrices) and
+look at what each format holds:
+
+```bash
+ssh "$REMOTE" 'cd ~/Projects/pnatlas-dev/data/raw && \
+  for t in heming2025_sural_xenium/GSE285984_RAW.tar yu2024_hdrg_xenium/GSE273557_RAW.tar \
+           zhang2024_hdrg_visium/GSE243073_RAW.tar vroman2023_hdrg_visium/GSE215994_RAW.tar \
+           shiers2025_dpn_drg/GSE295206_RAW.tar; do echo "== $t"; tar -tvf $t | awk "{print \$3, \$6}"; done'
+ssh "$REMOTE" 'cd ~/Projects/pnatlas-dev/data/raw && \
+  mkdir -p heming2025_sural_xenium/extracted zhang2024_hdrg_visium/extracted \
+           vroman2023_hdrg_visium/extracted shiers2025_dpn_drg/extracted && \
+  tar -xf heming2025_sural_xenium/GSE285984_RAW.tar -C heming2025_sural_xenium/extracted \
+      --wildcards "*_cell_feature_matrix.h5" "*_cells.parquet.gz" && \
+  gunzip -f heming2025_sural_xenium/extracted/*.parquet.gz && \
+  tar -xf zhang2024_hdrg_visium/GSE243073_RAW.tar -C zhang2024_hdrg_visium/extracted \
+      --wildcards "*_filtered_feature_bc_matrix.tar.gz" && \
+  (cd zhang2024_hdrg_visium/extracted && for f in *.tar.gz; do \
+     mkdir -p ${f%.tar.gz} && tar -xzf $f -C ${f%.tar.gz} --strip-components=1; done) && \
+  tar -xf vroman2023_hdrg_visium/GSE215994_RAW.tar -C vroman2023_hdrg_visium/extracted \
+      --wildcards "*_filtered_feature_bc_matrix.h5" "*_tissue_hires_image.png.gz" && \
+  tar -xf shiers2025_dpn_drg/GSE295206_RAW.tar -C shiers2025_dpn_drg/extracted \
+      --wildcards "*_filtered_feature_bc_matrix.h5" "*tissue_positions*" "*NgnNeuSelections*" "*sample[0-9]*.csv.gz" && \
+  gunzip -f shiers2025_dpn_drg/extracted/*.csv.gz vroman2023_hdrg_visium/extracted/*.png.gz && \
+  for f in zhang2024_hdrg_visium/extracted/*.tar.gz; do tar -tzvf $f | awk "{print \$3, \$6}"; done && \
+  md5sum shiers2025_dpn_drg/extracted/*filtered*.h5 | awk "{print \$1}" | sort > /tmp/s.md5 && \
+  md5sum tavaresferreira2022_hdrg_visium/*.h5 | awk "{print \$1}" | sort > /tmp/t.md5 && \
+  comm -12 /tmp/s.md5 /tmp/t.md5 | wc -l'
+ssh "$REMOTE" 'source ~/miniconda3/etc/profile.d/conda.sh && conda activate pnatlas && cd ~/Projects/pnatlas-dev/data/raw && \
+  python -I -c "
+import pandas as pd, h5py, numpy as np, scanpy as sc, glob
+d = pd.read_parquet(\"heming2025_sural_xenium/extracted/GSM8714492_S01_cells.parquet\"); print(d.shape); print(d.dtypes.to_string())
+f = h5py.File(\"heming2025_sural_xenium/extracted/GSM8714492_S01_cell_feature_matrix.h5\")
+print(np.unique(f[\"matrix/features/feature_type\"][:].astype(str), return_counts=True))
+for p in sorted(glob.glob(\"*/extracted/*.h5\")) + sorted(glob.glob(\"tavaresferreira2022_hdrg_visium/*.h5\")):
+    a = sc.read_10x_h5(p, gex_only=False); print(p.split(\"/\")[-1], a.shape, a.var[\"feature_types\"].unique().tolist(), int(a.X.sum()))
+"'
+```
+
+The sample sheets that are not on GEO: the Shiers 2025 docx (samples,
+donors, batches), the Tavares-Ferreira sample sheet and the DPN nerve
+sample sheet are small and read on the laptop:
+
+```bash
+rsync -a "$REMOTE:~/Projects/pnatlas-dev/data/raw/shiers2025_dpn_drg/GSE295206_metadata_nageotteSamples.docx.gz" \
+  "$REMOTE:~/Projects/pnatlas-dev/data/raw/tavaresferreira2022_hdrg_visium/README_sampleIDs.xlsx" \
+  "$REMOTE:~/Projects/pnatlas-dev/data/raw/utdallas_dpn_nerves/sample_metadata.csv" /tmp/stage3_small/
+gunzip -f /tmp/stage3_small/GSE295206_metadata_nageotteSamples.docx.gz
+python3 -I -c "
+import zipfile, re
+x = zipfile.ZipFile('/tmp/stage3_small/GSE295206_metadata_nageotteSamples.docx').read('word/document.xml').decode()
+print(re.sub(r'<[^>]+>', '', re.sub(r'</w:tc>', '\t', re.sub(r'</w:p>', '\n', x))))"
+python3 -I -c "
+import pandas as pd
+for n, d in pd.read_excel('/tmp/stage3_small/README_sampleIDs.xlsx', sheet_name=None, header=None).items(): print(n); print(d.to_string())"
+cat /tmp/stage3_small/sample_metadata.csv
+```
+
+The per-section inputs are written to `config/spatial_inputs.yaml` and
+read by `workflow/scripts/build_spatial.py`, one h5ad per section.

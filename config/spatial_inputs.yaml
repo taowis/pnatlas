@@ -1,0 +1,98 @@
+# How each spatial dataset is read into one AnnData per section
+# (workflow/scripts/build_spatial.py). Paths are relative to data_root.
+# Donors, conditions and batches come from the GEO sample sheets
+# (data/metadata/geo_samples_spatial.tsv), the authors' sample sheets on
+# Box and the Shiers 2025 metadata docx; the analysis log (3.3) says where
+# each value was read.
+
+heming2025_sural_xenium:
+  format: xenium
+  technology: Xenium
+  tissue: sural nerve
+  compartment: nerve
+  # one donor per section; condition from the GEO "disease" field
+  # (CIDP, CIAP, vasculitic neuropathy VN, control)
+  sections:
+    S01: {h5: raw/heming2025_sural_xenium/extracted/GSM8714492_S01_cell_feature_matrix.h5, cells: raw/heming2025_sural_xenium/extracted/GSM8714492_S01_cells.parquet, donor: S01, condition: CIDP, batch: Münster}
+    S04: {h5: raw/heming2025_sural_xenium/extracted/GSM8714493_S04_cell_feature_matrix.h5, cells: raw/heming2025_sural_xenium/extracted/GSM8714493_S04_cells.parquet, donor: S04, condition: CIAP, batch: Münster}
+    S11: {h5: raw/heming2025_sural_xenium/extracted/GSM8714494_S11_cell_feature_matrix.h5, cells: raw/heming2025_sural_xenium/extracted/GSM8714494_S11_cells.parquet, donor: S11, condition: CIDP, batch: Essen}
+    S14: {h5: raw/heming2025_sural_xenium/extracted/GSM8714495_S14_cell_feature_matrix.h5, cells: raw/heming2025_sural_xenium/extracted/GSM8714495_S14_cells.parquet, donor: S14, condition: CIAP, batch: Essen}
+    S22: {h5: raw/heming2025_sural_xenium/extracted/GSM8714496_S22_cell_feature_matrix.h5, cells: raw/heming2025_sural_xenium/extracted/GSM8714496_S22_cells.parquet, donor: S22, condition: control, batch: Essen}
+    S24: {h5: raw/heming2025_sural_xenium/extracted/GSM8714497_S24_cell_feature_matrix.h5, cells: raw/heming2025_sural_xenium/extracted/GSM8714497_S24_cells.parquet, donor: S24, condition: control, batch: Essen}
+    S29: {h5: raw/heming2025_sural_xenium/extracted/GSM8714498_S29_cell_feature_matrix.h5, cells: raw/heming2025_sural_xenium/extracted/GSM8714498_S29_cells.parquet, donor: S29, condition: VN, batch: Würzburg}
+    S30: {h5: raw/heming2025_sural_xenium/extracted/GSM8714499_S30_cell_feature_matrix.h5, cells: raw/heming2025_sural_xenium/extracted/GSM8714499_S30_cells.parquet, donor: S30, condition: VN, batch: Würzburg}
+
+yu2024_hdrg_xenium:
+  format: neuron_csv
+  technology: Xenium (100-gene panel, hand-segmented neurons)
+  tissue: DRG
+  compartment: ganglion
+  condition: control
+  matrix: raw/yu2024_hdrg_xenium/GSE273557_hDRG_gene_expression_matrix.csv.gz
+  metadata: raw/yu2024_hdrg_xenium/GSE273557_hDRG_gene_expression_matrix_metadata.csv.gz
+  position_column: cell_id          # "x-y"
+  section_column: Xenium_id
+  section_pattern: "(Region_\\d)"
+  spatial_units: image pixels (from the authors' cell_id)
+  # regions from the GEO sample titles: donor 1 (2103-02139, female, 56),
+  # donor 2 (2106-05090, male, 23)
+  sections:
+    Region_1: {donor: 2103-02139, batch: slide0018220, level: L3}
+    Region_2: {donor: 2106-05090, batch: slide0018220, level: L3}
+    Region_3: {donor: 2106-05090, batch: slide0018220, level: T12}
+    Region_4: {donor: 2106-05090, batch: slide0018220, level: T12}
+
+zhang2024_hdrg_visium:
+  format: visium_mtx
+  technology: Visium
+  tissue: DRG
+  compartment: ganglion
+  condition: control
+  # no positions on GEO (the archives hold matrix, features and barcodes only)
+  sections:
+    DRG2: {dir: raw/zhang2024_hdrg_visium/extracted/GSM7778668_DRG2_filtered_feature_bc_matrix, donor: DRG2}
+    DRG3: {dir: raw/zhang2024_hdrg_visium/extracted/GSM7778669_DRG3_filtered_feature_bc_matrix, donor: DRG3}
+    DRG4: {dir: raw/zhang2024_hdrg_visium/extracted/GSM7778670_DRG4_filtered_feature_bc_matrix, donor: DRG4}
+    DRG5: {dir: raw/zhang2024_hdrg_visium/extracted/GSM7778671_DRG5_filtered_feature_bc_matrix, donor: DRG5}
+    DRG6: {dir: raw/zhang2024_hdrg_visium/extracted/GSM7778672_DRG6_filtered_feature_bc_matrix, donor: DRG6}
+    DRG7: {dir: raw/zhang2024_hdrg_visium/extracted/GSM7778673_DRG7_filtered_feature_bc_matrix, donor: DRG7}
+
+vroman2023_hdrg_visium:
+  format: visium_h5
+  technology: Visium
+  tissue: DRG
+  compartment: ganglion
+  condition: control
+  # two serial sections of one donor; no positions on GEO (Loupe files only)
+  sections:
+    DRG2a: {h5: raw/vroman2023_hdrg_visium/extracted/GSM6652504_DRG2a_filtered_feature_bc_matrix.h5, donor: VromanDRG2, batch: VromanDRG2}
+    DRG2b: {h5: raw/vroman2023_hdrg_visium/extracted/GSM6652505_DRG2b_filtered_feature_bc_matrix.h5, donor: VromanDRG2, batch: VromanDRG2}
+
+shiers2025_dpn_drg:
+  format: visium_h5
+  technology: Visium
+  tissue: DRG
+  compartment: ganglion
+  # donors, batches (Space Ranger 1.1.0 / 1.3.0 / 2.0.0) from the GEO docx;
+  # M2-1 and M2-2 are the same files as Tavares-Ferreira VM2-1 and VM2-2;
+  # the selections are the authors' Loupe annotations of Nageotte nodules
+  sections:
+    M2-1: {h5: raw/shiers2025_dpn_drg/extracted/GSM8943583_M2-1_filtered_feature_bc_matrix.h5, positions: raw/shiers2025_dpn_drg/extracted/GSM8943583_tissue_positions_list_s4r1_092d1.csv, selections: raw/shiers2025_dpn_drg/extracted/GSM8943583_sample4.csv, donor: DN0003, batch: shiers1}
+    M2-2: {h5: raw/shiers2025_dpn_drg/extracted/GSM8943584_M2-2_filtered_feature_bc_matrix.h5, positions: raw/shiers2025_dpn_drg/extracted/GSM8943584_tissue_positions_list_s8r1_090d1.csv, selections: raw/shiers2025_dpn_drg/extracted/GSM8943584_sample8.csv, donor: DN0003, batch: shiers1}
+    180714-L4-1: {h5: raw/shiers2025_dpn_drg/extracted/GSM8943585_sam-UTD-180714DHB-DRGL4-1_filtered_feature_bc_matrix.h5, positions: raw/shiers2025_dpn_drg/extracted/GSM8943585_tissue_positions_list_Frame1.csv, selections: raw/shiers2025_dpn_drg/extracted/GSM8943585_180714_DRGL4_VisFrame1_NgnNeuSelections.csv, donor: 180714DHB, batch: shiers2}
+    180714-L4-5: {h5: raw/shiers2025_dpn_drg/extracted/GSM8943586_sam-UTD-180714DHB-DRGL4-5_filtered_feature_bc_matrix.h5, positions: raw/shiers2025_dpn_drg/extracted/GSM8943586_tissue_positions_list_Frame5.csv, selections: raw/shiers2025_dpn_drg/extracted/GSM8943586_180714_DRGL4_VisFrame5_NgnNeuSelections.csv, donor: 180714DHB, batch: shiers2}
+    181030-1L4-3: {h5: raw/shiers2025_dpn_drg/extracted/GSM8943587_sam-UTD-181030DHB-1L4-3_filtered_feature_bc_matrix.h5, positions: raw/shiers2025_dpn_drg/extracted/GSM8943587_tissue_positions_list_Frame3.csv, selections: raw/shiers2025_dpn_drg/extracted/GSM8943587_181030_L4DRG1_VisFrame3_NgnNeuSelections.csv, donor: 181030DHB, batch: shiers2}
+    181030-1L4-7: {h5: raw/shiers2025_dpn_drg/extracted/GSM8943588_sam-UTD-181030DHB-1L4-7_filtered_feature_bc_matrix.h5, positions: raw/shiers2025_dpn_drg/extracted/GSM8943588_tissue_positions_list_Frame7.csv, selections: raw/shiers2025_dpn_drg/extracted/GSM8943588_181030_L4DRG1_VisFrame7_NgnNeuSelections.csv, donor: 181030DHB, batch: shiers2}
+    181030-2L4-2: {h5: raw/shiers2025_dpn_drg/extracted/GSM8943589_sam-UTD-181030DHB-2L4-2_filtered_feature_bc_matrix.h5, positions: raw/shiers2025_dpn_drg/extracted/GSM8943589_tissue_positions_list_Frame2.csv, selections: raw/shiers2025_dpn_drg/extracted/GSM8943589_181030_L4DRG2_VisFrame2_NgnNeuSelections.csv, donor: 181030DHB, batch: shiers2}
+    181030-2L4-6: {h5: raw/shiers2025_dpn_drg/extracted/GSM8943590_sam-UTD-181030DHB-2L4-6_filtered_feature_bc_matrix.h5, positions: raw/shiers2025_dpn_drg/extracted/GSM8943590_tissue_positions_list_Frame6.csv, selections: raw/shiers2025_dpn_drg/extracted/GSM8943590_181030_L4DRG2_VisFrame6_NgnNeuSelections.csv, donor: 181030DHB, batch: shiers2}
+    DN0134-S1-1: {h5: raw/shiers2025_dpn_drg/extracted/GSM8943591_sam-UTD-DN0134-DRGL3-S1-1_filtered_feature_bc_matrix.h5, positions: raw/shiers2025_dpn_drg/extracted/GSM8943591_tissue_positions_s1-1.csv, selections: raw/shiers2025_dpn_drg/extracted/GSM8943591_DN0134_L3DRG_S1-1_NgnNeuSelections.csv, donor: DN0134, batch: shiers3}
+    DN0134-S1-2: {h5: raw/shiers2025_dpn_drg/extracted/GSM8943592_sam-UTD-DN0134-DRGL3-S1-2_filtered_feature_bc_matrix.h5, positions: raw/shiers2025_dpn_drg/extracted/GSM8943592_tissue_positions_s1-2.csv, selections: raw/shiers2025_dpn_drg/extracted/GSM8943592_DN0134_L3DRG_S1-2_NgnNeuSelections.csv, donor: DN0134, batch: shiers3}
+    DN0134-S1-3: {h5: raw/shiers2025_dpn_drg/extracted/GSM8943593_sam-UTD-DN0134-DRGL3-S1-3_filtered_feature_bc_matrix.h5, positions: raw/shiers2025_dpn_drg/extracted/GSM8943593_tissue_positions_s1-3.csv, selections: raw/shiers2025_dpn_drg/extracted/GSM8943593_DN0134_L3DRG_S1-3_NgnNeuSelections.csv, donor: DN0134, batch: shiers3}
+    DN0095-S2-1: {h5: raw/shiers2025_dpn_drg/extracted/GSM8943594_sam-UTD-DN0095-DRGL3-S2-1_filtered_feature_bc_matrix.h5, positions: raw/shiers2025_dpn_drg/extracted/GSM8943594_tissue_positions_s2-1.csv, selections: raw/shiers2025_dpn_drg/extracted/GSM8943594_DN0095_L3DRG_S2-1_NgnNeuSelections.csv, donor: DN0095, batch: shiers3}
+    DN0095-S2-2: {h5: raw/shiers2025_dpn_drg/extracted/GSM8943595_sam-UTD-DN0095-DRGL3-S2-2_filtered_feature_bc_matrix.h5, positions: raw/shiers2025_dpn_drg/extracted/GSM8943595_tissue_positions_s2-2.csv, selections: raw/shiers2025_dpn_drg/extracted/GSM8943595_DN0095_L3DRG_S2-2_NgnNeuSelections.csv, donor: DN0095, batch: shiers3}
+    DN0095-S2-3: {h5: raw/shiers2025_dpn_drg/extracted/GSM8943596_sam-UTD-DN0095-DRGL3-S2-3_filtered_feature_bc_matrix.h5, positions: raw/shiers2025_dpn_drg/extracted/GSM8943596_tissue_positions_s2-3.csv, selections: raw/shiers2025_dpn_drg/extracted/GSM8943596_DN0095_L3DRG_S2-3_NgnNeuSelections.csv, donor: DN0095, batch: shiers3}
+    DN0106-S5-1: {h5: raw/shiers2025_dpn_drg/extracted/GSM8943597_sam-UTD-DN0106-DRGL-S5-1_filtered_feature_bc_matrix.h5, positions: raw/shiers2025_dpn_drg/extracted/GSM8943597_tissue_positions_s5-1.csv, selections: raw/shiers2025_dpn_drg/extracted/GSM8943597_DN0106_LDRG_S5-1_NgnNeuSelections.csv, donor: DN0106, batch: shiers3}
+    DN0106-S5-2: {h5: raw/shiers2025_dpn_drg/extracted/GSM8943598_sam-UTD-DN0106-DRGL-S5-2_filtered_feature_bc_matrix.h5, positions: raw/shiers2025_dpn_drg/extracted/GSM8943598_tissue_positions_s5-2.csv, selections: raw/shiers2025_dpn_drg/extracted/GSM8943598_DN0106_LDRG_S5-2_NgnNeuSelections.csv, donor: DN0106, batch: shiers3}
+
+# tavaresferreira2022_hdrg_visium and utdallas_dpn_nerves (seurat_export)
+# are added once the Seurat objects are exported and their image names known.

@@ -66,3 +66,53 @@ object. The server disk has 115 GB left after the download, which is
 enough for extracting the tars one dataset at a time but not for the
 Box images; those stay on Box until the anatomy checks need them.
 
+
+## 3.3 Section inputs
+
+What the archives hold, after extraction:
+
+- Heming 2025 Xenium: per section a cell feature matrix with 99 gene
+  probes (the other 442 features are control probes and codewords,
+  dropped) and a cells table with the centroid in microns, cell and
+  nucleus area and the transcript count. 4,784 to 20,286 cells per
+  section, and few transcripts per cell (a median well under 50), so
+  many cells carry almost no signal; the transfer will have to say how
+  many cells it can call at all. The 99 genes are more than the 60 the
+  plan requires for a targeted panel. Morphology images (1.4 GB to 2.8
+  GB per section) stay in the tar.
+- Yu 2024 Xenium: the GEO copy has only per-region transcript tables
+  and the neuron matrix (87 genes, 1,415 neurons, positions in the cell
+  id); the four regions are one lumbar section of donor 1 and one
+  lumbar and two thoracic sections of donor 2. The neuron matrix is
+  the stage 3 input; the transcript tables are left in the tar.
+- Zhang 2024 Visium: six sections (DRG 2 to 7, ages 47 to 59), Space
+  Ranger 1.3.1 filtered matrices with 2,000 to 3,000 spots and the
+  36,601-gene 2020-A reference. No positions anywhere (the archives
+  hold matrix, features and barcodes only; the paper gives GEO as the
+  only deposit and Loupe for the image alignment), so these sections
+  can take the deconvolution and the marker and held-out gene checks
+  but not the anatomy check.
+- Vroman 2023 Visium: two serial sections of one 96-year-old female
+  donor, filtered H5 (2,005 and 1,775 spots, a 37,481-gene reference)
+  and the high-resolution image; the only positions are inside the
+  Loupe files, which no open reader parses. Same status as Zhang: no
+  anatomy check.
+- Shiers 2025 Visium: the docx lists 16 sections from six donors (five
+  men aged 34 to 55, one woman of 48) in three batches run with Space
+  Ranger 1.1.0, 1.3.0 and 2.0.0; it carries no diabetes status, which
+  has to come from the paper. The batch 1 sections M2-1 and M2-2 are
+  byte-identical to Tavares-Ferreira VM2-1 and VM2-2 (same md5; 58,288
+  features against 36,601 for the other 14), so donor DN0003 is the
+  Tavares-Ferreira donor M2 and is used once. Each section has a
+  positions file (two header styles) and the authors' Loupe selections
+  of Nageotte nodules and the neurons around them, kept as
+  author_selection. Images and raw matrices are on the SPARC portal
+  rather than GEO and are not needed yet.
+- Tavares-Ferreira 2022 and the DPN nerve object: Seurat objects, read
+  through the R export in the next step (counts, metadata, coordinates
+  per image).
+
+Section identifiers are the authors' own where they are short (S01,
+DRG2, DRG2a, Region_1) and a donor plus slide code for Shiers. The
+batch is the sequencing centre for Heming (three centres), the Space
+Ranger batch for Shiers, and the donor otherwise.
