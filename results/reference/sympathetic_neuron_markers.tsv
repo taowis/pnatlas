@@ -1,0 +1,16 @@
+state_final	cells	markers_detected_0	markers_detected_1	markers_detected_2	markers_detected_3	TH_detected	DBH_detected	PRPH_detected
+adipocyte	51	47	4	0	0	1	1	2
+endothelial	1804	1475	265	49	15	110	74	224
+fibroblast	6481	5609	736	110	26	247	215	572
+glia unassigned	22	20	2	0	0	0	0	2
+immune unassigned	9	7	2	0	0	1	0	1
+lymphocyte	1065	1013	47	4	1	8	17	33
+macrophage	9937	9181	656	78	22	210	170	498
+mural	1084	933	129	20	2	36	28	111
+myelinating Schwann	1414	1239	139	30	6	48	52	117
+non-myelinating Schwann	3	3	0	0	0	0	0	0
+satellite glia	30670	27935	2514	177	44	700	498	1802
+stromal unassigned	20	16	3	0	1	1	2	3
+sympathetic neuron	322	126	86	71	39	123	98	124
+unassigned	65	35	14	7	9	18	13	24
+vascular unassigned	3	3	0	0	0	0	0	0

@@ -325,3 +325,113 @@ Outputs on the server: `data/interim/reference_merged.h5ad` (counts,
 embeddings, 651 MB), `data/interim/models/{scvi,scanvi}`; the first run is
 kept in `data/interim/run1` until the next step is done and will then be
 deleted. The result tables are in `results/reference/`.
+
+### 2.6 Label transfer and the state rule
+
+Every cell now has a state. Author-labelled cells keep their mapped state.
+The rest (Nguyen, Zhang, Yu and the sympathetic ganglion dataset, which
+carry no usable labels, plus the "neuron unassigned" cells of Jung 2023
+and the "immune unassigned" and "vascular unassigned" cells of the
+trigeminal set) take the majority state of their 15 nearest reference
+cells in the scANVI space, looking only at reference cells of the same
+compartment and, where the authors gave a class, of that class. A cell
+whose top state holds fewer than half of its neighbours is "<class>
+unassigned" (or "unassigned" if no class reaches half either). The rule
+is in `config/config.yaml` (`transfer`) and `docs/decisions.md`.
+
+The sympathetic ganglion needed its own rule, because the reference has
+no sympathetic neuron seed. Looking at the catecholamine genes in those
+52,950 nuclei first: TH is detected (one or more counts) in 1,503 nuclei,
+DBH in 1,168, PRPH in 3,513, both TH and DBH in 244, and a marker score
+(mean log-normalised TH, DBH, PRPH) is above 1 in 362 nuclei. The scANVI
+predictions of 2.5 put about 450 of these nuclei into neuron states, and
+those are where the marker-positive nuclei sit (among the 56 nuclei
+predicted as injured neuron, 31 have a score above 1; among the 22,338
+satellite glia, 37). The authors' own metadata counts 1,030 "Neuronal"
+cells. Neurons are rare in this nuclei preparation, and low-count nuclei
+miss any one marker, so the rule is anatomical: a sympathetic ganglion
+nucleus whose neighbours are neurons is a sympathetic neuron, and the
+marker detection in those nuclei is tabulated as the check
+(`results/reference/sympathetic_neuron_markers.tsv`).
+
+The reliability of the transfer is measured on the labelled cells
+themselves: within each compartment, the batches are split into five
+folds and each fold's cells are predicted from the other four, with all
+classes as candidates, which is the harder case of the unlabelled
+datasets. The held-out cells come from batches the reference has not
+seen, so the numbers are what to expect for a new donor.
+
+Results (`results/reference/label_transfer_summary.tsv`,
+`final_state_by_dataset.tsv`). The run takes a few minutes on the CPU
+with no memory warning. Of the 93,321 cells without a seed state, 91,245
+received one and 2,076 (2 percent) stay unassigned. By dataset:
+
+- Jung 2023 neurons (6,243): 5,095 go to the atlas families (C-NP 1,785;
+  A-PEP 987; A-LTMR (NF) 754; Ab-LTMR 368; C-PEP 342; PEP 263; A-Propr
+  253; A-LTMR 224; the rest small) and 1,148 stay "neuron unassigned",
+  with a median vote of 0.73. These nuclei sit between families more
+  often than the atlas cells do, and the two trigeminal neuron states
+  (A-LTMR (NF), PEP) compete with the atlas families for them.
+- Nguyen 2021 (1,535): 1,422 neurons across the families, a few glia and
+  immune cells, 87 unassigned.
+- Yu 2024 single somata (1,136): 1,123 placed in the neuron families
+  (A-PEP 331, Ab-LTMR 284, C-NP 221, A-Propr 124, C-PEP 95, injured 29,
+  A-LTMR 19, C-LTMR 9, C-Thermo 8), 12 "neuron unassigned". The
+  Smart-seq2 somata land inside the nuclei-based atlas families, which
+  is the integration doing its job.
+- Zhang DRG glia (27,325): fibroblast 11,185; satellite glia 7,867;
+  endothelial 2,211; myelinating Schwann 1,714; macrophage 1,648;
+  adipocyte 706; mural 657; lymphocyte 505; 119 neurons; 709 unassigned
+  at some level.
+- Trigeminal unassigned cells (4,132): the vascular cells split into
+  1,857 endothelial and 471 mural, the immune cells into 1,779
+  macrophages and 25 lymphocytes, none unassigned.
+- Sympathetic ganglion (52,950): satellite glia 30,670; macrophage 9,937;
+  fibroblast 6,481; endothelial 1,804; myelinating Schwann 1,414; mural
+  1,084; lymphocyte 1,065; sympathetic neuron 322; adipocyte 51; 119
+  unassigned. The 322 sympathetic neurons come from all six donor units.
+  Of them, 196 have at least one of TH, DBH and PRPH detected and 110 at
+  least two; TH is detected in 38 percent of them against 2.3 percent of
+  the satellite glia and 2.1 percent of the macrophages of the same
+  nuclei (`sympathetic_neuron_markers.tsv`). The authors' metadata
+  counts 1,030 "Neuronal" cells; 322 is what the embedding supports.
+  Sixteen of the 65 fully unassigned nuclei carry two or three of the
+  markers and may be neurons with mixed neighbourhoods.
+
+Held-out check (`transfer_holdout.tsv`). Predicting held-out batches
+from the rest, 98.4 percent of ganglion cells and 99.4 percent of nerve
+nuclei reach the vote threshold, and of those 95.2 and 97.8 percent get
+their own state back. The atlas neuron families are recovered at 89 to
+94 percent of assigned cells, with the confusion between neighbouring
+families (A-PEP with Ab-LTMR, C-PEP with A-PEP); the nerve states at 93
+to 99 percent except the graded Schwann states (damage Schwann 66
+percent, mostly called non-myelinating; repair Schwann 88 percent).
+Two ganglion states do not survive the check and are flagged for the
+downstream steps rather than relabelled: the Jung 2023 "Adipocyte"
+nuclei (659) are called fibroblast when their batch is held out (0 of
+659 recovered), so the ganglion adipocyte calls (Jung 659, Zhang 706,
+sympathetic ganglion 51) are a fibroblast-like population whose name
+rests on one dataset's label; and the trigeminal non-myelinating Schwann
+nuclei (702) are called satellite glia (11 percent recovered), so within
+ganglia this state is not separable from satellite glia in the embedding
+and the two should be read together there. Neither affects the nerve
+compartment, where the deconvolution reference comes from (adipocyte
+99.6 percent, non-myelinating Schwann 98.4 percent recovered).
+
+State rule (`state_rule.tsv`). All 31 final states have at least 50
+cells from at least 3 known donors, so no state has to be dropped or
+merged at this point. The DRG neuron families now have 12 to 22 known
+donors each (Jung, Nguyen, Yu, Zhang and the trigeminal set together),
+on top of the atlas cells whose donors are unknown; the sympathetic
+neuron state has 322 cells from 6 donor units (one of them a pool of
+three donors); the smallest state is granulocyte with 365 nuclei from 24
+nerve donors.
+
+Outputs: the per-cell annotation is `data/interim/reference_annotation.tsv.gz`
+on the server and in the local data root (one row per cell of the
+merged reference with the seed state, the transferred state and its vote,
+the final state and class, and the label source); the summary tables are
+in `results/reference/`. The first integration run of 2.5
+(`data/interim/run1` on the server, 681 MB) was deleted after this step;
+everything in it is superseded by the rerun and reproducible from the
+runbook.

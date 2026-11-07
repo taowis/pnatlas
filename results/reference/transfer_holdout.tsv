@@ -1,0 +1,43 @@
+compartment	level	group	n	assigned	accuracy_assigned	accuracy_all	top_confusion	top_confusion_n
+ganglion	state	A-LTMR	1327	0.966	0.935	0.904	Ab-LTMR	34
+ganglion	state	A-LTMR (NF)	2313	0.987	0.969	0.957	macrophage	45
+ganglion	state	A-PEP	10644	0.975	0.944	0.92	Ab-LTMR	140
+ganglion	state	A-Propr	3124	0.964	0.947	0.913	Ab-LTMR	71
+ganglion	state	Ab-LTMR	6744	0.964	0.937	0.904	A-PEP	135
+ganglion	state	C-LTMR	508	0.888	0.889	0.789	endothelial	35
+ganglion	state	C-NP	15863	0.959	0.928	0.89	satellite glia	611
+ganglion	state	C-PEP	7265	0.982	0.935	0.919	A-PEP	302
+ganglion	state	C-Thermo	1481	0.901	0.894	0.806	endothelial	87
+ganglion	state	PEP	1017	0.981	0.978	0.96	A-LTMR (NF)	11
+ganglion	state	adipocyte	659	0.977	0.0	0.0	fibroblast	626
+ganglion	state	endothelial	8928	0.984	0.961	0.946	satellite glia	126
+ganglion	state	fibroblast	35217	0.991	0.954	0.946	satellite glia	1173
+ganglion	state	injured neuron	813	0.889	0.871	0.775	A-PEP	57
+ganglion	state	lymphocyte	564	0.966	0.872	0.842	satellite glia	37
+ganglion	state	macrophage	12088	0.986	0.947	0.934	satellite glia	292
+ganglion	state	mural	1522	0.951	0.91	0.865	endothelial	45
+ganglion	state	myelinating Schwann	6312	0.969	0.928	0.899	satellite glia	226
+ganglion	state	non-myelinating Schwann	702	0.957	0.109	0.104	satellite glia	517
+ganglion	state	satellite glia	68561	0.996	0.982	0.979	fibroblast	660
+nerve	state	B	488	0.963	0.97	0.934	macrophage	5
+nerve	state	T/NK	3811	0.995	0.98	0.975	macrophage	15
+nerve	state	adipocyte	3793	0.995	0.996	0.991	epineurial fibroblast	4
+nerve	state	damage Schwann	5738	0.89	0.659	0.586	non-myelinating Schwann	686
+nerve	state	endoneurial fibroblast	34961	0.996	0.978	0.974	perineurial	394
+nerve	state	endothelial	41121	0.997	0.991	0.988	damage Schwann	103
+nerve	state	epineurial fibroblast	34458	0.992	0.973	0.965	perineurial	472
+nerve	state	granulocyte	365	0.951	0.934	0.888	macrophage	9
+nerve	state	lymphatic endothelial	1892	0.996	0.985	0.98	endothelial	23
+nerve	state	macrophage	14375	0.995	0.986	0.981	non-myelinating Schwann	52
+nerve	state	mast	1152	0.983	0.97	0.953	perineurial	10
+nerve	state	mural	62747	0.997	0.994	0.991	damage Schwann	68
+nerve	state	myelinating Schwann	9460	0.996	0.978	0.974	non-myelinating Schwann	142
+nerve	state	non-myelinating Schwann	60817	0.996	0.984	0.981	repair Schwann	421
+nerve	state	perineurial	83792	0.997	0.984	0.981	epineurial fibroblast	439
+nerve	state	repair Schwann	6738	0.996	0.877	0.874	non-myelinating Schwann	792
+ganglion	dataset	bhuiyan2025_hdrg	47226	0.963	0.933	0.898	satellite glia	810
+ganglion	dataset	jung2023_hdrg	104530	0.99	0.958	0.948	satellite glia	1804
+ganglion	dataset	yang2022_htg	33896	0.994	0.958	0.952	satellite glia	624
+nerve	dataset	heming2025_sural_snrna	365708	0.994	0.978	0.973	non-myelinating Schwann	1863
+ganglion	all	all	185652	0.984	0.952	0.936		0
+nerve	all	all	365708	0.994	0.978	0.973		0
