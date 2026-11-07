@@ -21,3 +21,37 @@ qc:
     - yu2024_singlesoma
   no_doublet_call:              # non-droplet protocols
     - yu2024_singlesoma
+
+# Stage 2 merge and integration (fixed before the first integration run;
+# docs/analysis_plan.md, section 3 and amendment 1)
+integration:
+  genes: intersection           # genes present in every dataset
+  # painseq atlas cells that duplicate datasets read separately here
+  exclude_painseq_sources: [Jung_2023, Nguyen_2021, Tavares-Ferriera_2022]
+  n_hvg: 3000                   # seurat_v3 on counts, balanced across datasets
+  hvg_batch_key: dataset
+  batch_key: batch              # dataset:donor, or dataset:library where the donor is unknown
+  study_key: dataset
+  label_key: state              # scANVI seed labels; "unassigned" and unlabelled cells are unknown
+  n_latent: 30
+  n_layers: 2
+  n_hidden: 128
+  gene_likelihood: nb
+  batch_size: 256
+  scvi_max_epochs: 30
+  scanvi_max_epochs: 20
+  scanvi_n_samples_per_label: 100
+  n_pcs: 50
+  harmony_vars: [batch, dataset]
+  eval_max_cells: 50000         # cells per subset for the scIB metrics
+  rule_margin: 0.05             # plan section 3
+  # tissue, compartment and protocol per dataset
+  datasets:
+    bhuiyan2025_hdrg: {tissue: DRG, compartment: ganglion, protocol: 10x nuclei}
+    jung2023_hdrg: {tissue: DRG, compartment: ganglion, protocol: 10x nuclei}
+    nguyen2021_hdrg: {tissue: DRG, compartment: ganglion, protocol: 10x nuclei}
+    zhang_hdrg_glia: {tissue: DRG, compartment: ganglion, protocol: 10x nuclei}
+    yu2024_singlesoma: {tissue: DRG, compartment: ganglion, protocol: Smart-seq2 somata}
+    yang2022_htg: {tissue: trigeminal ganglion, compartment: ganglion, protocol: 10x nuclei}
+    yang2025_hsg_multiome: {tissue: sympathetic ganglion, compartment: ganglion, protocol: 10x multiome nuclei}
+    heming2025_sural_snrna: {tissue: sural nerve, compartment: nerve, protocol: 10x nuclei}
