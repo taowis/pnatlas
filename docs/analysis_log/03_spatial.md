@@ -152,3 +152,23 @@ conditions were written, so that dataset is rebuilt with them; the
 sections of all seven datasets are then summarised in
 `results/spatial/section_summary.tsv`.
 
+
+## 3.4 Reference signatures
+
+The signatures are one negative binomial regression over the joint
+reference (642,605 cells with a named state; the 2,076 "unassigned"
+cells are left out), state_final as the label, the donor key (dataset
+and donor) as the batch and the study as a further categorical
+covariate, with cell2location's default gene filter and training
+settings (250 epochs, batches of 2,500, learning rate 0.002). States
+with the same name in both compartments (macrophage, endothelial,
+mural, adipocyte, the two Schwann states) get one signature each,
+which is what "the joint reference" in the plan means; the compartment
+of the cells behind each signature is recorded in signature_cells.tsv.
+
+The probe on 20,000 cells and 5 epochs ran in under a minute and
+peaked at 25 GB of memory, almost all of it the reference counts
+(float64, 1.1e9 non-zeros, read whole by anndata before the subset).
+The reader was changed to take the arrays with h5py as float32 and
+subset before building the object, so the full run stays well under
+the server's memory with the guard running.

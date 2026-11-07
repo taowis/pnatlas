@@ -177,3 +177,37 @@ Check: 56 sections (8 Heming, 4 Yu, 6 Zhang, 2 Vroman, 16 Shiers, 14
 Tavares-Ferreira, 6 DPN nerve); coordinates present for all but Zhang,
 Vroman and Tavares-Ferreira.
 
+
+## 3.4 Reference signatures for cell2location
+
+Parameters are the `cell2location` block of `config/config.yaml`. Probe
+first (20,000 cells, 5 epochs, under the memory guard, peak memory from
+`time -v`), then the full run detached on the GPU:
+
+```bash
+REMOTE=user@host workflow/remote/sync.sh
+ssh "$REMOTE" 'source ~/miniconda3/etc/profile.d/conda.sh && conda activate pnatlas && cd ~/Projects/pnatlas-dev && \
+  nvidia-smi --query-gpu=utilization.gpu,memory.used --format=csv,noheader && who && \
+  ~/bin/memguard.sh start logs/memguard.log "c2l_reference_signatures|c2l_map" && \
+  mkdir -p data/interim/spatial/probe && \
+  nice -n 15 /usr/bin/time -v python workflow/scripts/c2l_reference_signatures.py \
+    --counts data/interim/reference_merged.h5ad --annotation data/interim/reference_annotation.tsv.gz \
+    --out-dir data/interim/spatial/probe --subsample 20000 --max-epochs 5 > logs/c2l_signatures_probe.log 2>&1; \
+  grep -E "^cells|^loaded|^genes|^elbo|^signatures|Maximum resident|Elapsed" logs/c2l_signatures_probe.log'
+ssh "$REMOTE" 'source ~/miniconda3/etc/profile.d/conda.sh && conda activate pnatlas && cd ~/Projects/pnatlas-dev && \
+  setsid -f nohup nice -n 15 /usr/bin/time -v python workflow/scripts/c2l_reference_signatures.py \
+    --counts data/interim/reference_merged.h5ad --annotation data/interim/reference_annotation.tsv.gz \
+    --out-dir data/interim/spatial/signatures > logs/c2l_signatures.log 2>&1 < /dev/null'
+```
+
+When it ends: copy the small outputs back, remove the probe directory.
+
+```bash
+mkdir -p results/spatial/signatures
+rsync -a "$REMOTE:~/Projects/pnatlas-dev/data/interim/spatial/signatures/{signature_cells.tsv,training_history.tsv}" results/spatial/signatures/
+rsync -a "$REMOTE:~/Projects/pnatlas-dev/data/interim/spatial/signatures/reference_signatures.csv.gz" "$DATA_ROOT/interim/spatial/"
+ssh "$REMOTE" 'rm -r ~/Projects/pnatlas-dev/data/interim/spatial/probe'
+```
+
+Check: `logs/c2l_signatures.log` ends with `signatures (<genes>, 31) written`;
+the ELBO in `training_history.tsv` has flattened over the last 50 epochs.

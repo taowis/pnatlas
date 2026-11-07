@@ -27,6 +27,25 @@ import yaml
 UNASSIGNED = "unassigned"
 
 
+def read_counts_float32(path, cells):
+    """The merged reference is a float64 CSR of 1.1e9 non-zeros; reading it
+    through anndata takes twice that in memory. Read the arrays with h5py as
+    float32 and keep only the requested cells."""
+    import h5py
+    from anndata.io import read_elem
+    with h5py.File(path) as f:
+        obs = read_elem(f["obs"])
+        var = read_elem(f["var"])
+        rows = np.where(obs.index.isin(cells))[0]
+        indptr = f["X/indptr"][:]
+        data = f["X/data"][:].astype(np.float32)
+        indices = f["X/indices"][:]
+    x = sp.csr_matrix((data, indices, indptr), shape=(len(obs), len(var)))
+    del data, indices
+    x = x[rows]
+    return ad.AnnData(X=x, obs=obs.iloc[rows].copy(), var=var)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--counts", required=True)
@@ -56,10 +75,7 @@ def main():
         ann = ann.sample(n=min(args.subsample, len(ann)), random_state=seed)
     print("cells with a named state", keep.sum(), "used", len(ann), flush=True)
 
-    a = ad.read_h5ad(args.counts, backed="r")
-    idx = np.where(a.obs_names.isin(ann.index))[0]
-    a = a[idx].to_memory()
-    a.X = sp.csr_matrix(a.X).astype(np.float32)
+    a = read_counts_float32(args.counts, ann.index)
     a.obs = a.obs.join(ann[["state_final", "compartment"]].rename(columns={"compartment": "ann_compartment"}))
     a.obs["state_final"] = a.obs["state_final"].astype(str)
     a.obs["batch"] = a.obs["batch"].astype(str)
