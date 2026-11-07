@@ -98,3 +98,19 @@ spatial_checks:
   min_assigned_spots: 20                # a state is checked in a section only with this many spots or cells
   auroc_min: 0.7                        # check (a)
   spearman_min: 0.5                     # check (b)
+
+# Stage 3 label transfer for targeted panels (plan section 4)
+panel_transfer:
+  min_shared_genes: 60
+  min_prob: 0.5                         # scANVI probability below which a cell is unassigned
+  n_latent: 10                          # small models for 80 to 100 genes
+  n_layers: 1
+  n_hidden: 64
+  scvi_max_epochs: 30
+  scanvi_max_epochs: 20
+  n_samples_per_label: 100
+  query_max_epochs: 20
+  batch_size: 512
+  datasets:
+    heming2025_sural_xenium: {compartment: nerve}
+    yu2024_hdrg_xenium: {compartment: ganglion, class: neuron}   # hand-segmented neurons only

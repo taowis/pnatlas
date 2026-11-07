@@ -172,3 +172,33 @@ peaked at 25 GB of memory, almost all of it the reference counts
 The reader was changed to take the arrays with h5py as float32 and
 subset before building the object, so the full run stays well under
 the server's memory with the guard running.
+
+The full run loads the reference in about a minute (11.5 GB resident,
+17,661 genes pass the cell2location filter) and trains at about 17 s
+per epoch on the GPU, 5.6 GB of GPU memory.
+
+The plan's check (a) needs "the state's top 20 reference markers" and
+stage 2 did not produce a marker table, so one is made here from the
+reference itself: a one-vs-rest Wilcoxon test on a stratified sample of
+up to 2,000 cells per state, markers being genes with adjusted p below
+0.01 detected in at least a quarter of the state's cells, ranked by log
+fold change, top 20. The markers come from the same cells as the
+signatures but through a different statistic, so the check asks whether
+the spots that the deconvolution gives to a state are the spots that
+express that state's discriminating genes, which is what the plan
+intends. The table is committed with the results.
+
+How the Visium mapping is run per section (workflow/scripts/c2l_map.py):
+the genes shared between the section and the signatures are split with
+the project seed, a tenth held out; the rest is fitted with
+Cell2location at the plan's 30 cells per spot and detection alpha 20,
+one section per model (no batch term, since every section is its own
+model), 30,000 epochs on the whole section; the posterior 5th percentile
+of the abundance is the mapped abundance and the state with the largest
+abundance is the spot's dominant state. Check (a) is the AUROC of the
+marker score of each state in its dominant spots against the other
+spots; check (b) is the Spearman correlation over the held-out genes
+between their mean normalised expression in those spots and the state's
+signature. A state is checked in a section only with at least 20
+dominant spots, and the per-section rows are collected across sections
+for the "not mapped" rule of the plan.
