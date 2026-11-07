@@ -35,3 +35,6 @@ dependencies:
       - harmonypy
       - scib-metrics
       - scrublet
+      - cell2location==0.1.5   # spatial mapping (stage 3)
+      - pyro-ppl==1.9.0        # cell2location 0.1.5 does not import with pyro 1.9.2
+      - openpyxl               # authors' xlsx sample sheets
