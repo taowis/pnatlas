@@ -25,6 +25,7 @@ def metrics(adata, cfg, seed, n_jobs):
 
     bm = Benchmarker(
         adata, batch_key=cfg["batch_key"], label_key=cfg["label_key"], embedding_obsm_keys=EMBEDDINGS,
+        pre_integrated_embedding_obsm_key="X_pca",  # the unintegrated baseline; the file has no counts
         bio_conservation_metrics=BioConservation(isolated_labels=False, nmi_ari_cluster_labels_kmeans=True,
                                                  nmi_ari_cluster_labels_leiden=False, silhouette_label=True,
                                                  clisi_knn=False),
@@ -60,7 +61,7 @@ def main():
         for c in [cfg["batch_key"], cfg["label_key"]]:
             sub.obs[c] = sub.obs[c].astype(str).astype("category")
         res = metrics(sub, cfg, seed, a.n_jobs)
-        res = res.loc[EMBEDDINGS].copy()
+        res = res.drop(index="Metric Type", errors="ignore").copy()
         res.insert(0, "n_cells", len(idx))
         res.insert(0, "embedding", res.index)
         res.insert(0, "subset", subset)

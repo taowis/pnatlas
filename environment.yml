@@ -20,6 +20,7 @@ dependencies:
   - scanpy
   - leidenalg
   - igraph
+  - scikit-misc        # loess for seurat_v3 highly variable genes
   - scvi-tools
   - pytorch
   - jax
