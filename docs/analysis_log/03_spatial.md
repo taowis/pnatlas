@@ -116,3 +116,39 @@ Section identifiers are the authors' own where they are short (S01,
 DRG2, DRG2a, Region_1) and a donor plus slide code for Shiers. The
 batch is the sequencing centre for Heming (three centres), the Space
 Ranger batch for Shiers, and the donor otherwise.
+
+The Shiers 2025 paper (Nature Communications, 2025) states that the 16
+Visium sections come from six donors, five with diabetic peripheral
+neuropathy and one diabetic donor taking analgesics, with no non-diabetic
+donor in the Visium set; the donor numbers in the docx match those in the
+paper, so the conditions are written per donor in the config. The
+analgesic-taking diabetic donor (14 in the paper, DN0003 in the docx) is
+the Tavares-Ferreira donor M2, which means two of the Tavares-Ferreira
+"control" sections are from a diabetic donor; that is noted for the
+stage 3 interpretation and the sections are read once, from the
+Shiers copy, where the positions and the Nageotte annotations are.
+
+The two Seurat exports:
+
+- The Tavares-Ferreira combined object (Seurat 3.2.2) holds 3,952 spots
+  from eight samples, one per donor, with 26 neuron-subtype scores and
+  no images or coordinates: it is the authors' set of neuron-rich
+  barcodes, not the sections. The sections are therefore read from the
+  16 Space Ranger H5 files, 1,973 to 3,001 spots each, without
+  positions, and the two M2 sections from the Shiers copy. The Box
+  folder has the Loupe files, which would give positions, but no open
+  tool reads them; the positions may also sit on the SPARC portal, to
+  be checked when the anatomy check needs them.
+- The DPN nerve object (Seurat 5.0.2) has six images and 12,591 spots
+  with coordinates and scale factors for every spot: four diabetic
+  amputation cases (moderate or severe axonal loss) and one control
+  with two sections, plus the authors' eight-class cell type labels
+  (Schwann, perineurial, VSMC/pericyte, endothelial, ECM fibroblast,
+  immune, plasma, adipocyte), kept as author_CellType. This is the
+  second nerve spatial input and the only Visium nerve data.
+
+The first build of the five GEO datasets ran before the Shiers
+conditions were written, so that dataset is rebuilt with them; the
+sections of all seven datasets are then summarised in
+`results/spatial/section_summary.tsv`.
+

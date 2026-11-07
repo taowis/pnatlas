@@ -131,3 +131,49 @@ cat /tmp/stage3_small/sample_metadata.csv
 
 The per-section inputs are written to `config/spatial_inputs.yaml` and
 read by `workflow/scripts/build_spatial.py`, one h5ad per section.
+
+Export the two Seurat objects (counts, metadata, coordinates with scale
+factors per image) in the R environment, under the memory guard, and
+build the sections of the five GEO datasets:
+
+```bash
+REMOTE=user@host workflow/remote/sync.sh
+ssh "$REMOTE" 'source ~/miniconda3/etc/profile.d/conda.sh && cd ~/Projects/pnatlas-dev && \
+  ~/bin/memguard.sh stop; ~/bin/memguard.sh start logs/memguard.log "rds_spatial_to_mtx|Rscript|build_spatial" && \
+  conda activate pnatlas-r && mkdir -p data/interim/rds && \
+  setsid -f nohup bash -c "for p in tavaresferreira2022_hdrg_visium/drg.combined.rds \
+      utdallas_dpn_nerves/merged_obj_harmony_layerintegration_resol0.5_annotated_final.rds; do d=\${p%%/*}; \
+    nice -n 15 Rscript workflow/scripts/rds_spatial_to_mtx.R data/raw/\$p data/interim/rds/\$d \
+      > logs/rds_spatial_\$d.log 2>&1; done; echo ALLDONE >> logs/rds_spatial_utdallas_dpn_nerves.log" \
+    > /dev/null 2>&1 < /dev/null'
+ssh "$REMOTE" 'source ~/miniconda3/etc/profile.d/conda.sh && conda activate pnatlas && cd ~/Projects/pnatlas-dev && \
+  mkdir -p data/interim/spatial results/spatial && \
+  setsid -f nohup bash -c "for d in heming2025_sural_xenium yu2024_hdrg_xenium zhang2024_hdrg_visium \
+      vroman2023_hdrg_visium shiers2025_dpn_drg; do \
+    nice -n 15 python workflow/scripts/build_spatial.py \$d --data-root data --out-dir data/interim/spatial/\$d \
+      > results/spatial/sections_\$d.tsv 2> logs/build_spatial_\$d.log; echo \"EXIT \$d \$?\" >> logs/build_spatial.log; done" \
+    > /dev/null 2>&1 < /dev/null'
+```
+
+Check: `logs/build_spatial.log` has five `EXIT <dataset> 0` lines and both
+`logs/rds_spatial_<dataset>.log` end with the object summary
+(`spots_with_coordinates` equal to `spots`).
+
+Add the two Box datasets to the config from the export, rebuild Shiers
+(conditions added) and build the two, then collect one summary table:
+
+```bash
+REMOTE=user@host workflow/remote/sync.sh
+ssh "$REMOTE" 'source ~/miniconda3/etc/profile.d/conda.sh && conda activate pnatlas && cd ~/Projects/pnatlas-dev && \
+  for d in shiers2025_dpn_drg tavaresferreira2022_hdrg_visium utdallas_dpn_nerves; do \
+    nice -n 15 python workflow/scripts/build_spatial.py $d --data-root data --out-dir data/interim/spatial/$d \
+      > results/spatial/sections_$d.tsv 2> logs/build_spatial_$d.log; echo "EXIT $d $?"; done && \
+  cat results/spatial/sections_*.tsv | awk "NR==1||!/^dataset/" > results/spatial/section_summary.tsv && \
+  rm results/spatial/sections_*.tsv && du -sh data/interim/spatial'
+rsync -a "$REMOTE:~/Projects/pnatlas-dev/results/spatial/section_summary.tsv" results/spatial/
+```
+
+Check: 54 sections (8 Heming, 4 Yu, 6 Zhang, 2 Vroman, 16 Shiers, 14
+Tavares-Ferreira, 6 DPN nerve); coordinates present for all but Zhang,
+Vroman and Tavares-Ferreira.
+
