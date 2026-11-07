@@ -59,3 +59,15 @@ integration:
     yang2022_htg: {tissue: trigeminal ganglion, compartment: ganglion, protocol: 10x nuclei}
     yang2025_hsg_multiome: {tissue: sympathetic ganglion, compartment: ganglion, protocol: 10x multiome nuclei}
     heming2025_sural_snrna: {tissue: sural nerve, compartment: nerve, protocol: 10x nuclei}
+
+# Stage 2 label transfer (fixed before the run; plan section 3 for the state rule)
+transfer:
+  embedding: X_scanvi           # the embedding chosen in 2.5
+  k: 15                         # nearest reference cells, within compartment and author class
+  min_conf: 0.5                 # neighbour fraction below which a cell is "<class> unassigned"
+  n_folds: 5                    # held-out batches for the reliability check
+  sympathetic_tissue: sympathetic ganglion
+  sympathetic_state: sympathetic neuron   # neurons of that tissue; the reference has no sympathetic seed
+  sympathetic_markers: [TH, DBH, PRPH]    # tabulated as the check, not used to assign
+  state_min_cells: 50
+  state_min_donors: 3
