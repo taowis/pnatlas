@@ -1,0 +1,83 @@
+dataset	author_label_fine	author_label	class	state	fine	note
+bhuiyan2025_hdrg	C-NP.MRGPRX1/GFRA2	C-NP.MRGPRX1/GFRA2	neuron	C-NP	C-NP.MRGPRX1/GFRA2	atlas nomenclature kept as is
+bhuiyan2025_hdrg	C-NP.MRGPRX1/MRGPRX4	C-NP.MRGPRX1/MRGPRX4	neuron	C-NP	C-NP.MRGPRX1/MRGPRX4
+bhuiyan2025_hdrg	C-NP.SST	C-NP.SST	neuron	C-NP	C-NP.SST
+bhuiyan2025_hdrg	C-PEP.TAC1/CACNG5	C-PEP.TAC1/CACNG5	neuron	C-PEP	C-PEP.TAC1/CACNG5
+bhuiyan2025_hdrg	C-PEP.TAC1/CHRNA3	C-PEP.TAC1/CHRNA3	neuron	C-PEP	C-PEP.TAC1/CHRNA3
+bhuiyan2025_hdrg	C-PEP.ADORA2B	C-PEP.ADORA2B	neuron	C-PEP	C-PEP.ADORA2B
+bhuiyan2025_hdrg	A-PEP.KIT	A-PEP.KIT	neuron	A-PEP	A-PEP.KIT
+bhuiyan2025_hdrg	A-PEP.SCGN/ADRA2C	A-PEP.SCGN/ADRA2C	neuron	A-PEP	A-PEP.SCGN/ADRA2C
+bhuiyan2025_hdrg	A-PEP.CHRNA7/SLC18A3	A-PEP.CHRNA7/SLC18A3	neuron	A-PEP	A-PEP.CHRNA7/SLC18A3
+bhuiyan2025_hdrg	A-PEP.NTRK3/S100A16	A-PEP.NTRK3/S100A16	neuron	A-PEP	A-PEP.NTRK3/S100A16
+bhuiyan2025_hdrg	Ab-LTMR.CCKAR	Ab-LTMR.CCKAR	neuron	Ab-LTMR	Ab-LTMR.CCKAR
+bhuiyan2025_hdrg	Ab-LTMR.NSG2	Ab-LTMR.NSG2	neuron	Ab-LTMR	Ab-LTMR.NSG2
+bhuiyan2025_hdrg	Ab-LTMR.ETV1	Ab-LTMR.ETV1	neuron	Ab-LTMR	Ab-LTMR.ETV1
+bhuiyan2025_hdrg	Ab-LTMR.LGI2	Ab-LTMR.LGI2	neuron	Ab-LTMR	Ab-LTMR.LGI2
+bhuiyan2025_hdrg	A-LTMR.TAC3	A-LTMR.TAC3	neuron	A-LTMR	A-LTMR.TAC3
+bhuiyan2025_hdrg	A-Propr.HAPLN4	A-Propr.HAPLN4	neuron	A-Propr	A-Propr.HAPLN4
+bhuiyan2025_hdrg	A-Propr.PCDH8	A-Propr.PCDH8	neuron	A-Propr	A-Propr.PCDH8
+bhuiyan2025_hdrg	A-Propr.EPHA3	A-Propr.EPHA3	neuron	A-Propr	A-Propr.EPHA3
+bhuiyan2025_hdrg	C-Thermo.TRPM8	C-Thermo.TRPM8	neuron	C-Thermo	C-Thermo.TRPM8
+bhuiyan2025_hdrg	C-Thermo.RXFP1	C-Thermo.RXFP1	neuron	C-Thermo	C-Thermo.RXFP1
+bhuiyan2025_hdrg	C-LTMR.CDH9	C-LTMR.CDH9	neuron	C-LTMR	C-LTMR.CDH9
+bhuiyan2025_hdrg	ATF3	ATF3	neuron	injured neuron	ATF3	ATF3-high injured neurons; excluded from healthy neuron tests
+jung2023_hdrg	DRG Neuron	DRG Neuron	neuron	neuron unassigned	neuron unassigned	subtype assigned by label transfer from the atlas
+jung2023_hdrg	Satellite glia	Satellite glia	glia	satellite glia	satellite glia
+jung2023_hdrg	Myelinating Schwann cell	Myelinating Schwann cell	glia	myelinating Schwann	myelinating Schwann
+jung2023_hdrg	Fibroblast	Fibroblast	stromal	fibroblast	fibroblast	ganglion fibroblast, compartment not given
+jung2023_hdrg	Adipocyte	Adipocyte	stromal	adipocyte	adipocyte
+jung2023_hdrg	Endothelial	Endothelial	vascular	endothelial	endothelial
+jung2023_hdrg	Pericyte/Smooth muscle	Pericyte/Smooth muscle	vascular	mural	mural	pericyte and smooth muscle not separated by the authors
+jung2023_hdrg	Macrophage	Macrophage	immune	macrophage	macrophage
+jung2023_hdrg	Lymphocyte	Lymphocyte	immune	lymphocyte	lymphocyte
+yang2022_htg	NF1	neuron	neuron	A-LTMR (NF)	NF1	mouse-style trigeminal labels; NF kept as its own name
+yang2022_htg	NF2	neuron	neuron	A-LTMR (NF)	NF2
+yang2022_htg	NF3	neuron	neuron	A-LTMR (NF)	NF3
+yang2022_htg	PEP	neuron	neuron	PEP	PEP	A and C peptidergic not separated by the authors
+yang2022_htg	NP	neuron	neuron	C-NP	NP
+yang2022_htg	SST	neuron	neuron	C-NP	SST	maps to C-NP.SST
+yang2022_htg	TRPM8	neuron	neuron	C-Thermo	TRPM8	maps to C-Thermo.TRPM8
+yang2022_htg	cLTMR	neuron	neuron	C-LTMR	cLTMR
+yang2022_htg	Satglia	non-neuron	glia	satellite glia	satellite glia
+yang2022_htg	Schwann_M	non-neuron	glia	myelinating Schwann	myelinating Schwann
+yang2022_htg	Schwann_N	non-neuron	glia	non-myelinating Schwann	non-myelinating Schwann
+yang2022_htg	Fibroblast_Mgp	non-neuron	stromal	fibroblast	fibroblast MGP
+yang2022_htg	Fibroblast_Dcn	non-neuron	stromal	fibroblast	fibroblast DCN
+yang2022_htg	Fibroblast_Apod	non-neuron	stromal	fibroblast	fibroblast APOD
+yang2022_htg	Vascular	non-neuron	vascular	vascular unassigned	vascular unassigned	endothelial and mural not separated by the authors
+yang2022_htg	Immune	non-neuron	immune	immune unassigned	immune unassigned
+yang2025_hsg_multiome	Neuronal_1	Neuronal	neuron	sympathetic neuron	sympathetic neuron 1	sympathetic ganglion; no DRG counterpart
+yang2025_hsg_multiome	Neuronal_2	Neuronal	neuron	sympathetic neuron	sympathetic neuron 2
+yang2025_hsg_multiome	Satellite glial	Non-neuronal	glia	satellite glia	satellite glia
+yang2025_hsg_multiome	Schwann-my	Non-neuronal	glia	myelinating Schwann	myelinating Schwann
+yang2025_hsg_multiome	Schwann-nm	Non-neuronal	glia	non-myelinating Schwann	non-myelinating Schwann
+yang2025_hsg_multiome	Fibroblast	Non-neuronal	stromal	fibroblast	fibroblast
+yang2025_hsg_multiome	Adipocyte	Non-neuronal	stromal	adipocyte	adipocyte
+yang2025_hsg_multiome	Endothelial	Non-neuronal	vascular	endothelial	endothelial
+yang2025_hsg_multiome	Mural	Non-neuronal	vascular	mural	mural
+yang2025_hsg_multiome	Macrophage	Non-neuronal	immune	macrophage	macrophage
+yang2025_hsg_multiome	T	Non-neuronal	immune	T/NK	T
+heming2025_sural_snrna	mySC	mySC	glia	myelinating Schwann	myelinating Schwann	nerve labels follow Heming 2025
+heming2025_sural_snrna	nmSC	nmSC	glia	non-myelinating Schwann	non-myelinating Schwann
+heming2025_sural_snrna	repairSC	nmSC	glia	repair Schwann	repair Schwann
+heming2025_sural_snrna	damageSC	PnC	glia	damage Schwann	damage Schwann	authors' damage-associated Schwann cluster
+heming2025_sural_snrna	periC1	PnC	stromal	perineurial	perineurial 1
+heming2025_sural_snrna	periC2	PnC	stromal	perineurial	perineurial 2
+heming2025_sural_snrna	periC3	PnC	stromal	perineurial	perineurial 3
+heming2025_sural_snrna	endoC	EnFibro	stromal	endoneurial fibroblast	endoneurial fibroblast
+heming2025_sural_snrna	epiC	EpC	stromal	epineurial fibroblast	epineurial fibroblast
+heming2025_sural_snrna	Adipo	EpC	stromal	adipocyte	adipocyte
+heming2025_sural_snrna	artEC	adip	vascular	endothelial	arterial endothelial	transferred coarse label is wrong for endothelial clusters
+heming2025_sural_snrna	venEC	adip	vascular	endothelial	venous endothelial
+heming2025_sural_snrna	ven_capEC1	adip	vascular	endothelial	venous-capillary endothelial 1
+heming2025_sural_snrna	ven_capEC2	mvEC	vascular	endothelial	venous-capillary endothelial 2
+heming2025_sural_snrna	LEC	LEC	vascular	lymphatic endothelial	lymphatic endothelial
+heming2025_sural_snrna	PC1	vSMC	vascular	mural	pericyte 1
+heming2025_sural_snrna	PC2	PC	vascular	mural	pericyte 2
+heming2025_sural_snrna	VSMC	vSMC	vascular	mural	vascular smooth muscle
+heming2025_sural_snrna	Macro1	IC	immune	macrophage	macrophage 1
+heming2025_sural_snrna	Macro2	IC	immune	macrophage	macrophage 2
+heming2025_sural_snrna	T_NK	IC	immune	T/NK	T/NK
+heming2025_sural_snrna	B	IC	immune	B	B
+heming2025_sural_snrna	Mast	IC	immune	mast	mast
+heming2025_sural_snrna	Granulo	IC	immune	granulocyte	granulocyte
