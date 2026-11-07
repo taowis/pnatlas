@@ -401,8 +401,8 @@ received one and 2,076 (2 percent) stay unassigned. By dataset:
 Held-out check (`transfer_holdout.tsv`). Predicting held-out batches
 from the rest, 98.4 percent of ganglion cells and 99.4 percent of nerve
 nuclei reach the vote threshold, and of those 95.2 and 97.8 percent get
-their own state back. The atlas neuron families are recovered at 89 to
-94 percent of assigned cells, with the confusion between neighbouring
+their own state back. The atlas neuron families are recovered at 87 to
+95 percent of assigned cells, with the confusion between neighbouring
 families (A-PEP with Ab-LTMR, C-PEP with A-PEP); the nerve states at 93
 to 99 percent except the graded Schwann states (damage Schwann 66
 percent, mostly called non-myelinating; repair Schwann 88 percent).
