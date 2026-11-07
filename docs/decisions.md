@@ -87,3 +87,9 @@ Each non-obvious choice, with its reason. Newest last.
   keeps the same environment for code development on subsets, documentation
   and pull requests. In the repository the server is named only as "the
   server"; its address is passed at run time through `REMOTE`.
+- **The painseq object is a label source, not the donor backbone.** Its
+  metadata has no donor for most cells and it already contains the neurons of
+  three datasets read separately here, so counting it as 126 donors would
+  double count cells and inflate donor numbers. Jung 2023 becomes the DRG
+  non-neuronal backbone; neuron subtypes follow the atlas labels. Recorded as
+  plan amendment 1.

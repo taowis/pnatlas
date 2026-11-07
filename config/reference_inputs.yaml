@@ -1,0 +1,164 @@
+# How each reference-layer dataset is read into an AnnData of raw counts
+# (workflow/scripts/build_anndata.py). Paths are relative to data_root.
+# sample_pattern / donor_pattern: regex with one group, applied to the file
+# name (sample_from: file) or to the cell name. metadata.columns maps our obs
+# columns (sample, donor, author_label, author_label_fine) to the authors'
+# column names; author_label is the level the authors report in the paper,
+# author_label_fine their finest level.
+
+nguyen2021_hdrg:
+  format: csv_genes_x_cells
+  files:
+    - raw/nguyen2021_hdrg/extracted/GSM5134537_prep1.csv.gz
+    - raw/nguyen2021_hdrg/extracted/GSM5134538_prep2.csv.gz
+    - raw/nguyen2021_hdrg/extracted/GSM5134539_prep3.csv.gz
+    - raw/nguyen2021_hdrg/extracted/GSM5134540_prep4.csv.gz
+    - raw/nguyen2021_hdrg/extracted/GSM5134541_prep5.csv.gz
+    - raw/nguyen2021_hdrg/extracted/GSM5134542_prep6.csv.gz
+  sample_from: file
+  sample_pattern: "_(prep\\d)\\.csv"
+  # one preparation per donor (GEO sample descriptions)
+
+jung2023_hdrg:
+  format: tenx_h5
+  files:
+    - raw/jung2023_hdrg/extracted/GSM6068093_SAM24364375_filtered_feature_bc_matrix.h5
+    - raw/jung2023_hdrg/extracted/GSM6068094_SAM24364376_filtered_feature_bc_matrix.h5
+    - raw/jung2023_hdrg/extracted/GSM6068095_SAM24369441_filtered_feature_bc_matrix.h5
+    - raw/jung2023_hdrg/extracted/GSM6068096_SAM24373353_filtered_feature_bc_matrix.h5
+    - raw/jung2023_hdrg/extracted/GSM6068097_SAM24378656_filtered_feature_bc_matrix.h5
+    - raw/jung2023_hdrg/extracted/GSM6068098_SAM24378657_filtered_feature_bc_matrix.h5
+    - raw/jung2023_hdrg/extracted/GSM6068099_SAM24385480_filtered_feature_bc_matrix.h5
+    - raw/jung2023_hdrg/extracted/GSM6068100_SAM24385481_filtered_feature_bc_matrix.h5
+    - raw/jung2023_hdrg/extracted/GSM6068101_SAM24398817_filtered_feature_bc_matrix.h5
+    - raw/jung2023_hdrg/extracted/GSM6068102_SAM24398820_filtered_feature_bc_matrix.h5
+    - raw/jung2023_hdrg/extracted/GSM6068103_SAM24398818_filtered_feature_bc_matrix.h5
+    - raw/jung2023_hdrg/extracted/GSM6068104_SAM24398822_filtered_feature_bc_matrix.h5
+    - raw/jung2023_hdrg/extracted/GSM6068105_SAM24398819_filtered_feature_bc_matrix.h5
+    - raw/jung2023_hdrg/extracted/GSM6068106_SAM24398824_filtered_feature_bc_matrix.h5
+    - raw/jung2023_hdrg/extracted/GSM6068107_SAM24403166_filtered_feature_bc_matrix.h5
+    - raw/jung2023_hdrg/extracted/GSM6068108_SAM24403167_filtered_feature_bc_matrix.h5
+    - raw/jung2023_hdrg/extracted/GSM6068109_SAM24403168_filtered_feature_bc_matrix.h5
+    - raw/jung2023_hdrg/extracted/GSM6068110_SAM24403169_filtered_feature_bc_matrix.h5
+  sample_from: file
+  sample_pattern: "_(SAM\\d+)_"
+  # labels from the authors' annotated object (GSE201586_humanallcelltypes.rds.gz,
+  # exported with rds_to_mtx.R); its cell names are <barcode>_<SAM>, ours <SAM>_<barcode>
+  metadata:
+    file: interim/rds/jung2023_hdrg/metadata.csv.gz
+    barcode_column: barcode
+    barcode_transform: ["^(.*)_(SAM\\d+)$", "\\2_\\1"]
+    keep_only_annotated: true
+    columns:
+      author_label: celltype
+      author_label_fine: celltype
+  # donor per sample from the GEO sample characteristics (data/metadata/geo_samples.tsv)
+  donor_map:
+    SAM24364375: Hom_1
+    SAM24364376: Hom_1
+    SAM24369441: Hom_2
+    SAM24373353: Hom_2
+    SAM24385480: Hom_2
+    SAM24385481: Hom_2
+    SAM24378656: Hom_3
+    SAM24378657: Hom_3
+    SAM24398817: Hom_4
+    SAM24398820: Hom_4
+    SAM24403169: Hom_4
+    SAM24398818: Hom_5
+    SAM24398822: Hom_5
+    SAM24403167: Hom_5
+    SAM24398819: Hom_6
+    SAM24398824: Hom_6
+    SAM24403168: Hom_6
+    SAM24403166: Hom_7
+
+yu2024_singlesoma:
+  format: csv_genes_x_cells
+  files:
+    - raw/yu2024_singlesoma/GSE249746_Expression_matrix_raw_counts.csv.gz
+  sample_pattern: "^([^-]+-[^-]+)-"
+  donor_pattern: "^([^-]+)-"
+  # cell names such as N2-RL5-1: donor, ganglion, cell
+
+zhang_hdrg_glia:
+  format: csv_genes_x_cells
+  files:
+    - raw/zhang_hdrg_glia/GSE189501_DRG_10X_raw_UMI_count_matrix.txt.gz
+  sample_pattern: "^(DRG\\d+)_"
+  # one 10x run per donor (DRG1 to DRG3)
+
+yang2022_htg:
+  format: mtx_dir
+  files:
+    - interim/rds/yang2022_htg
+  prefix_barcodes: false
+  metadata:
+    file: raw/yang2022_htg/GSE197289_snRNA-seq_human_barcode_meta.csv.gz
+    barcode_column: V1
+    keep_only_annotated: true
+    columns:
+      sample: library
+      donor: donor
+      author_label: class
+      author_label_fine: subtype
+
+yang2025_hsg_multiome:
+  format: mtx_dir
+  files:
+    - raw/yang2025_hsg_multiome
+  prefix_barcodes: false
+  metadata:
+    file: raw/yang2025_hsg_multiome/meta.data.csv
+    barcode_column: cell_name
+    keep_only_annotated: true
+    columns:
+      sample: "sample id"
+      author_label: class
+      author_label_fine: Celltypes
+  # donor per library from the SDS samples.xlsx; lib-1 pools three donors
+  # (Male-1, Male-4, Male-5) and cannot be split without genotypes
+  donor_map:
+    sam-hSG-lib-1: pool_Male-1_Male-4_Male-5
+    sam-hSG-lib-2: Male-1
+    sam-hSG-lib-3: Male-2
+    sam-hSG-lib-4: Female-1
+    sam-hSG-lib-5: Male-3
+    sam-hSG-lib-6: Male-3
+    sam-hSG-lib-7: Female-2
+    sam-hSG-lib-8: Female-2
+
+heming2025_sural_snrna:
+  format: tenx_h5
+  files:
+    - "raw/heming2025_sural_snrna/extracted/*.h5"
+  sample_from: file
+  sample_pattern: "_(S\\d+)_"
+  metadata:
+    file: raw/heming2025_sural_snrna/GSE285983_metadata_all.csv.gz
+    barcode_column: barcode
+    keep_only_annotated: true
+    columns:
+      author_label: milbrandt_sciatic_label_full
+      author_label_fine: cluster
+  # one sample per donor (S01 to S37); the second metadata file
+  # (metadata_ic) is the immune-cell subclustering
+
+bhuiyan2025_hdrg:
+  format: mtx_dir
+  files:
+    - interim/rds/bhuiyan2025_hdrg
+  prefix_barcodes: false
+  metadata:
+    file: interim/rds/bhuiyan2025_hdrg/metadata.csv.gz
+    barcode_column: barcode
+    columns:
+      sample: orig.ident
+      author_label: Atlas_annotation
+      author_label_fine: Atlas_annotation
+  # The portal object is the harmonized DRG neuron atlas (53,596 neurons from
+  # nine datasets, column Dataset), not whole-tissue nuclei. orig.ident is the
+  # library for the published datasets and "SeuratProject" for most of the
+  # new U19 cells, so no donor is recoverable there; donor is set to the
+  # sample and the Dataset column is kept to exclude cells that duplicate
+  # Jung 2023, Nguyen 2021 and Tavares-Ferreira 2022.

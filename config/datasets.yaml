@@ -13,9 +13,9 @@ datasets:
     technology: snRNA-seq, scRNA-seq
     accession: humandrg.painseq.com (Seurat object on Dropbox)
     access: portal
-    donors: 126
+    donors: null
     pmid: 41279342
-    notes: preprint release; no licence stated; do not redistribute cell-level derivatives
+    notes: preprint release; no licence stated; do not redistribute cell-level derivatives. The portal object is the harmonized neuron atlas (53,596 neurons from nine datasets, 22 subtypes, donors not recoverable), used as neuron label source; see plan amendment 1
   - id: nguyen2021_hdrg
     layer: reference
     species: human

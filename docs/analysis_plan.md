@@ -164,4 +164,12 @@ baseline) is reported as such and is a finding of the paper.
 
 ## Amendments
 
-None.
+1. (Stage 2, step 2.3) The painseq humanDRG object is the harmonized DRG
+   neuron atlas (53,596 neurons, nine source datasets, 22 subtype labels,
+   no recoverable donors), not a 126-donor whole-tissue dataset. It is used
+   as the neuron label source and label-transfer reference; its cells that
+   come from Jung 2023, Nguyen 2021 and Tavares-Ferreira 2022 are excluded
+   before integration, and its remaining neurons enter with library as the
+   unit and donor marked unknown. The DRG non-neuronal backbone is Jung 2023
+   (7 donors) with Nguyen 2021 and Zhang. Section 1 is read with this
+   change; the donor rule in section 2 is unchanged.
