@@ -1,0 +1,4 @@
+model	epochs	elbo_train	elbo_validation
+scvi	30.0	975.4931640625	969.3194580078125
+scanvi	20.0	987.251708984375	976.2178344726562
+harmony			

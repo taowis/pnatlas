@@ -1,0 +1,6 @@
+dataset	cells	labels	ari_kmeans	knn_same_label	knn_same_label_chance
+bhuiyan2025_hdrg	50000	22	0.279	0.726	0.082
+jung2023_hdrg	50000	9	0.498	0.921	0.328
+yang2022_htg	38028	16	0.427	0.863	0.148
+yang2025_hsg_multiome	50000	11	0.006	0.266	0.257
+heming2025_sural_snrna	50000	24	0.619	0.901	0.092

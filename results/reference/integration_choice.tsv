@@ -1,0 +1,8 @@
+chosen	scanvi
+reason	higher mean bio conservation, batch correction within the margin
+margin	0.05
+
+embedding	batch_correction	bio_conservation	total
+X_harmony	0.6082	0.5670	0.5835
+X_scanvi	0.6026	0.6421	0.6263
+X_scvi	0.5987	0.5502	0.5696
