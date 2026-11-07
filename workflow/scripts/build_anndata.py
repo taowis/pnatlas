@@ -57,8 +57,8 @@ def _is_tenx_features(p):
 
 def _read_plain_mtx(path):
     x = sc.read_mtx(path / "matrix.mtx.gz").X.T.tocsr()
-    genes = pd.read_csv(path / "features.tsv.gz", header=None, sep="\t")[0].astype(str)
-    cells = pd.read_csv(path / "barcodes.tsv.gz", header=None, sep="\t")[0].astype(str)
+    genes = pd.read_csv(path / "features.tsv.gz", header=None, sep="\t")[0].astype(str).values
+    cells = pd.read_csv(path / "barcodes.tsv.gz", header=None, sep="\t")[0].astype(str).values
     return ad.AnnData(X=x, obs=pd.DataFrame(index=cells), var=pd.DataFrame(index=genes))
 
 
