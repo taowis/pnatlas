@@ -1,0 +1,35 @@
+state	bhuiyan2025_hdrg	heming2025_sural_snrna	jung2023_hdrg	nguyen2021_hdrg	yang2022_htg	yang2025_hsg_multiome	yu2024_singlesoma	zhang_hdrg_glia
+A-LTMR	1327	0	0	0	0	0	0	0
+A-LTMR (NF)	0	0	0	0	2313	0	0	0
+A-PEP	10644	0	0	0	0	0	0	0
+A-Propr	3124	0	0	0	0	0	0	0
+Ab-LTMR	6744	0	0	0	0	0	0	0
+B	0	488	0	0	0	0	0	0
+C-LTMR	420	0	0	0	88	0	0	0
+C-NP	15552	0	0	0	311	0	0	0
+C-PEP	7265	0	0	0	0	0	0	0
+C-Thermo	1337	0	0	0	144	0	0	0
+PEP	0	0	0	0	1017	0	0	0
+T/NK	0	3811	0	0	0	0	0	0
+adipocyte	0	3793	659	0	0	0	0	0
+damage Schwann	0	5738	0	0	0	0	0	0
+endoneurial fibroblast	0	34961	0	0	0	0	0	0
+endothelial	0	41121	8928	0	0	0	0	0
+epineurial fibroblast	0	34458	0	0	0	0	0	0
+fibroblast	0	0	18825	0	16392	0	0	0
+granulocyte	0	365	0	0	0	0	0	0
+immune unassigned	0	0	0	0	1804	0	0	0
+injured neuron	813	0	0	0	0	0	0	0
+lymphatic endothelial	0	1892	0	0	0	0	0	0
+lymphocyte	0	0	564	0	0	0	0	0
+macrophage	0	14375	12088	0	0	0	0	0
+mast	0	1152	0	0	0	0	0	0
+mural	0	62747	1522	0	0	0	0	0
+myelinating Schwann	0	9460	3676	0	2636	0	0	0
+neuron unassigned	0	0	6243	0	0	0	0	0
+non-myelinating Schwann	0	60817	0	0	702	0	0	0
+perineurial	0	83792	0	0	0	0	0	0
+repair Schwann	0	6738	0	0	0	0	0	0
+satellite glia	0	0	58268	0	10293	0	0	0
+unlabelled	0	0	0	1535	0	52950	1136	27325
+vascular unassigned	0	0	0	0	2328	0	0	0

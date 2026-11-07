@@ -100,3 +100,40 @@ Each non-obvious choice, with its reason. Newest last.
   percent is wrong for hand-picked neuronal somata (median 24 percent) and
   would have removed 71 percent of the authors' final set; the change was
   made after seeing the data and is stated in the analysis log (2.4).
+- **Merge on the genes shared by every dataset (19,420 symbols), not the
+  union.** The eight datasets were annotated with different gene sets
+  (32,214 to 61,817 symbols; union 88,803) and the extra names are version
+  specific lncRNA and clone-based identifiers. Filling them with zeros would
+  make missing annotation look like absent expression in some studies and
+  bias the batch models; the shared set holds the protein-coding genes and
+  the common non-coding ones, which is what highly variable gene selection
+  draws from anyway. The per-dataset QC files keep the full gene sets.
+- **Batch unit for integration: donor where known, library otherwise.** The
+  plan names the donor as the batch key. The painseq atlas has no donor and
+  for most of its cells no library name either (orig.ident "SeuratProject"),
+  so those cells take their atlas source study (U19_UTD, U19_HMS and so on)
+  as the unit. Study is a separate categorical covariate in scVI and a
+  second Harmony variable, so the batch unit never has to encode the
+  dataset.
+- **scANVI seed labels are the mapped states, with "unassigned" states and
+  unlabelled datasets treated as unknown.** The Jung 2023 neurons carry only
+  "DRG Neuron", and the trigeminal vascular and immune cells are not split
+  by the authors; seeding scANVI with those would teach it a label that
+  means "not annotated". Nguyen, Zhang and Yu have no author labels. These
+  cells get predictions instead and are left out of the scIB metrics, which
+  need a label per cell.
+- **scIB metrics on 50,000 labelled cells per subset.** The silhouette
+  metrics are quadratic in cell number; the nerve subset alone is 365,708
+  nuclei. A fixed-seed subsample of 50,000 cells per subset is used for all
+  three embeddings alike, so the comparison is fair even if the absolute
+  values move a little with the sample. Batch ASW is the bras metric of
+  scib-metrics 0.5, the library's batch silhouette.
+- **Yang 2025 sympathetic ganglion author labels are not used.** The labels
+  in the portal's metadata table do not follow the expression of the cells
+  they are attached to (adjusted Rand index 0.005 against a clustering of
+  the dataset, chance-level neighbour agreement, marker-positive cells
+  labelled at the dataset's base rates), although the barcodes and per-cell
+  counts match the matrix. Using them would seed scANVI with wrong labels
+  and score the ganglion metrics against noise. The dataset enters
+  unlabelled and is annotated by label transfer; the authors' labels stay
+  in `author_label` for the record. Recorded in analysis log 2.5.

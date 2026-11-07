@@ -175,3 +175,112 @@ rsync -a "$REMOTE:~/Projects/pnatlas-dev/results/reference/qc_summary.tsv" resul
 Check: eight rows in `results/reference/qc_summary.tsv`; every author label
 in the h5ad files has a row in `config/celltype_map.tsv` (checked in 2.5
 when the map is applied).
+
+### 2.5 Merge and integration
+
+Parameters are fixed in the `integration` block of `config/config.yaml`
+before the first run: genes present in every dataset, 3,000 highly
+variable genes (seurat_v3 on counts, balanced across datasets), scVI with
+`batch` (dataset:donor, or dataset:library where the donor is unknown) as
+the batch key and dataset as a categorical covariate, 30 latent
+dimensions, two layers of 128 units, negative binomial likelihood, batch
+size 256, at most 30 epochs with early stopping; scANVI from that model
+seeded with the mapped `state` labels (unassigned and unlabelled cells are
+unknown), at most 20 epochs, 100 samples per label; Harmony on 50 PCs of
+the same genes (normalised, log1p, scaled) with batch and dataset as the
+variables. The scIB metrics are computed on at most 50,000 labelled cells
+per subset.
+
+Highly variable gene selection with seurat_v3 needs scikit-misc, which was
+missing from the environment; it is added to `environment.yml` and installed
+into the existing environments on both machines before the integration:
+
+```bash
+conda install -n pnatlas -c conda-forge scikit-misc
+ssh "$REMOTE" 'source ~/miniconda3/etc/profile.d/conda.sh && conda install -y -n pnatlas -c conda-forge scikit-misc'
+conda env export -n pnatlas --no-builds | grep -v "^prefix:" > docs/runbook/environment_lock.yml
+```
+
+Commit the scripts, sync, and restart the memory guard with the job names
+of this step:
+
+```bash
+REMOTE=user@host workflow/remote/sync.sh
+ssh "$REMOTE" 'cd ~/Projects/pnatlas-dev && ~/bin/memguard.sh stop; \
+  ~/bin/memguard.sh start logs/memguard.log "merge_reference|integrate_reference|evaluate_integration"'
+```
+
+Before the merge, check that each labelled dataset's author labels follow
+the expression of their cells (k-means ARI and neighbour agreement on the
+dataset's own PCA):
+
+```bash
+ssh "$REMOTE" 'source ~/miniconda3/etc/profile.d/conda.sh && conda activate pnatlas && cd ~/Projects/pnatlas-dev && \
+  nice -n 15 python workflow/scripts/check_label_alignment.py --qc-dir data/interim/reference_qc \
+    --out results/reference/label_alignment.tsv \
+    bhuiyan2025_hdrg jung2023_hdrg yang2022_htg yang2025_hsg_multiome heming2025_sural_snrna'
+```
+
+A dataset whose labels fail this check is listed under
+`integration.labels_unusable` in `config/config.yaml` and enters the merge
+unlabelled (Yang 2025; analysis log 2.5). This check was written after a
+first integration run had exposed the problem; the first run's outputs
+were set aside and the three steps below were rerun with the setting.
+
+Merge (applies `config/celltype_map.tsv`, removes the painseq cells from
+Jung 2023, Nguyen 2021 and Tavares-Ferreira 2022, keeps the shared genes):
+
+```bash
+ssh "$REMOTE" 'cd ~/Projects/pnatlas-dev && setsid -f nohup bash -c \
+  "source ~/miniconda3/etc/profile.d/conda.sh && conda activate pnatlas && \
+   nice -n 15 python workflow/scripts/merge_reference.py --qc-dir data/interim/reference_qc \
+     --out data/interim/reference_merged.h5ad --summary-dir results/reference; echo EXIT \$?" \
+  > logs/merge_reference.log 2>&1 < /dev/null'
+# wait for EXIT 0 in logs/merge_reference.log
+```
+
+Check the GPU is free (`nvidia-smi`: no basecalling, no other user's
+job) before the integration, then:
+
+```bash
+ssh "$REMOTE" 'cd ~/Projects/pnatlas-dev && setsid -f nohup bash -c \
+  "source ~/miniconda3/etc/profile.d/conda.sh && conda activate pnatlas && \
+   nice -n 15 python workflow/scripts/integrate_reference.py --in data/interim/reference_merged.h5ad \
+     --out data/interim/reference_embeddings.h5ad --model-dir data/interim/models \
+     --summary results/reference/integration_training.tsv; echo EXIT \$?" \
+  > logs/integrate_reference.log 2>&1 < /dev/null'
+# wait for EXIT 0 in logs/integrate_reference.log
+```
+
+scIB metrics on the ganglia and nerve subsets and the choice by the rule
+of plan section 3:
+
+```bash
+ssh "$REMOTE" 'cd ~/Projects/pnatlas-dev && setsid -f nohup bash -c \
+  "source ~/miniconda3/etc/profile.d/conda.sh && conda activate pnatlas && \
+   nice -n 15 python workflow/scripts/evaluate_integration.py --in data/interim/reference_embeddings.h5ad \
+     --out-dir results/reference --n-jobs 8; echo EXIT \$?" \
+  > logs/evaluate_integration.log 2>&1 < /dev/null'
+# wait for EXIT 0 in logs/evaluate_integration.log
+rsync -a "$REMOTE:~/Projects/pnatlas-dev/results/reference/" results/reference/
+```
+
+The three steps can also be chained in one detached job:
+
+```bash
+ssh "$REMOTE" 'cd ~/Projects/pnatlas-dev && setsid -f nohup bash -c \
+  "source ~/miniconda3/etc/profile.d/conda.sh && conda activate pnatlas && \
+   nice -n 15 python workflow/scripts/merge_reference.py --qc-dir data/interim/reference_qc \
+     --out data/interim/reference_merged.h5ad --summary-dir results/reference > logs/merge_reference.log 2>&1 && \
+   nice -n 15 python workflow/scripts/integrate_reference.py --in data/interim/reference_merged.h5ad \
+     --out data/interim/reference_embeddings.h5ad --model-dir data/interim/models \
+     --summary results/reference/integration_training.tsv > logs/integrate_reference.log 2>&1 && \
+   nice -n 15 python workflow/scripts/evaluate_integration.py --in data/interim/reference_embeddings.h5ad \
+     --out-dir results/reference --n-jobs 8 > logs/evaluate_integration.log 2>&1; echo EXIT \$?" \
+  > logs/stage2_5_chain.log 2>&1 < /dev/null'
+```
+
+Check: `results/reference/merged_summary.tsv` has eight rows and the kept
+cell counts match the analysis log (2.5); `integration_training.tsv` has
+the epochs run for scVI and scANVI; `scib_metrics.tsv` has six rows (three
+embeddings by two subsets); `integration_choice.tsv` names the method.

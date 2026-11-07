@@ -178,3 +178,150 @@ sign of damage. The dataset was moved to the keep-all group after this was
 seen, which is a change made after looking at the data and is recorded as
 such; the flags are kept in obs so the effect of the threshold can be
 checked later. No other threshold was changed.
+
+### 2.5 Merge and integration
+
+The eight QC'd datasets were merged into one AnnData of raw counts. All of
+them use gene symbols, but the annotation sets differ (32,214 symbols in
+Yang 2022 to 61,817 in the painseq object) and the union of 88,803 names
+is padded with version-specific lncRNA and clone identifiers, so the merge
+keeps the 19,420 genes present in every dataset (recorded in
+`docs/decisions.md`). The cell type map was applied without a missing
+label: every author label in the h5ad files has a row in
+`config/celltype_map.tsv`, which is now checked by code
+(`src/pnatlas/labels.py`, with tests). Following amendment 1, the painseq
+cells whose source is Jung 2023 (3,071), Tavares-Ferreira 2022 (1,956) or
+Nguyen 2021 (1,343) were removed, leaving 47,226 atlas neurons; the 44,363
+of those with no library name are grouped by their atlas source study for
+the batch unit, and their donor is unknown.
+
+The merged reference has 644,681 cells, 87 batches and 65 known donors
+(`results/reference/merged_summary.tsv`). By compartment it is 278,973
+ganglion cells and 365,708 nerve nuclei; by class, 58,372 neurons, 189,753
+glia, 199,633 stromal, 121,517 vascular, 45,410 immune and 29,996
+unlabelled cells (Nguyen, Zhang and Yu, which carry no author labels). The
+state table (`merged_state_by_dataset.tsv`) shows where the labels come
+from: the DRG neuron families come almost entirely from the atlas, with
+small trigeminal contributions to C-NP, C-Thermo and C-LTMR; the 6,243 Jung
+neurons are "neuron unassigned" until label transfer; nerve states come
+only from Heming; satellite glia, fibroblast, macrophage, endothelial,
+mural and the two Schwann states are shared by two to four ganglion
+datasets, which is what the integration has to line up. The merge peaked
+at about 30 GB of memory (one warning from the memory guard, no pause).
+
+The first integration launch stopped at the highly variable gene step:
+scanpy's seurat_v3 flavour fits a loess curve with scikit-misc, which was
+not in the environment. It was added to `environment.yml`, installed on
+both machines, the lock file was refreshed and the job relaunched; nothing
+else changed.
+
+First integration run. scVI ran its 30 epochs (about 10 seconds per epoch
+on the GPU, 2.2 GB of GPU memory), scANVI its 20, and Harmony followed on
+the CPU; the job peaked at 38 GB of host memory, one memory guard warning
+at 13 percent free and no pause. The scIB metrics on 50,000 labelled cells
+per subset (`results/reference/scib_metrics.tsv`) put scANVI first by the
+rule: mean bio conservation 0.586 against 0.511 for Harmony, batch
+correction 0.569 against 0.579, within the 0.05 margin. The nerve subset
+integrates well (graph connectivity 0.95, NMI 0.82 for scANVI); the
+ganglion subset is harder (NMI 0.51, iLISI 0.04), partly because its
+labels are confounded with dataset.
+
+Looking at the scANVI predictions showed a problem with one dataset. The
+predictions agree with the seed labels for 94 percent of the atlas
+neurons, 96 percent of the nerve nuclei, 88 percent of the trigeminal
+cells and 75 percent of Jung 2023, but for only 7 percent of the
+sympathetic ganglion cells (Yang 2025), where most cells of every seeded
+state were predicted as "sympathetic neuron". A nearest-neighbour check
+gave the same picture in every embedding and in the uncorrected PCA: the
+neighbours of a sympathetic ganglion cell carry the same label mix
+whatever its own label is, and within the dataset only 26 percent of a
+cell's 15 neighbours share its label, which is what chance gives (the
+other datasets are at 83 to 95 percent). The cause is not on our side.
+The join of `meta.data.csv` to the matrix is by barcode (verified in the
+code), and the authors' nCount_RNA agrees with our per-cell count sums
+(correlation 0.9998), so each label sits on the barcode the authors gave
+it. But the expression of those cells does not follow the labels: the
+cells with TH or DBH counts, with PTPRC, with MPZ or with PECAM1 are
+labelled in the proportions of the whole dataset, every author label has
+the same marker means, and a k-means clustering of the dataset on its own
+PCA (12 clusters with clean T cell, macrophage, endothelial, mural,
+fibroblast, satellite glia and myelinating Schwann markers) has an
+adjusted Rand index of 0.005 against the author labels. The matrix is
+sound; the label column of the metadata file does not belong to the
+barcodes it is listed with, most likely a cell-order mix-up when the
+authors wrote the table. The same test on the other four labelled
+datasets is now a script (`check_label_alignment.py`, results in
+`results/reference/label_alignment.tsv`) so the problem would be caught
+at build time in future.
+
+Decision: the Yang 2025 author labels are treated as unusable
+(`integration.labels_unusable` in `config/config.yaml`; the map rows stay
+as a record of the authors' label set). The dataset enters the reference
+unlabelled, like Nguyen, Zhang and Yu, and gets its states by label
+transfer in the next step; "sympathetic neuron" will have to be identified
+from the data (TH, DBH, PRPH), and a request to the authors or SPARC for a
+corrected metadata table is worth making. Because the wrong labels had
+seeded scANVI and entered the ganglion metrics for 22 percent of the
+labelled ganglion cells, the merge, integration and evaluation were rerun
+with the dataset unlabelled; the first run's outputs were set aside on
+the server (`data/interim/run1`) and are not used. The rerun results
+follow.
+
+Label alignment check (`results/reference/label_alignment.tsv`). On their
+own PCA, the author labels of the atlas, Jung 2023, Yang 2022 and Heming
+2025 give k-means adjusted Rand indices of 0.28 to 0.62 and 73 to 92
+percent same-label neighbours (chance 8 to 33 percent); Yang 2025 gives
+0.006 and 27 percent against a chance level of 26 percent. The other four
+label sets are sound.
+
+Rerun with Yang 2025 unlabelled. The merged reference is unchanged in
+size (644,681 cells, 87 batches, 65 known donors); 551,360 cells now seed
+scANVI and 82,946 are unlabelled. scVI and scANVI ran the same epochs with
+the same validation ELBO to three figures. The metrics
+(`results/reference/scib_metrics.tsv`, 50,000 labelled cells per subset):
+
+| subset | embedding | NMI | ARI | label ASW | batch ASW | iLISI | graph conn. | batch | bio | total |
+|---|---|---|---|---|---|---|---|---|---|---|
+| ganglion | scVI | 0.574 | 0.308 | 0.528 | 0.807 | 0.029 | 0.887 | 0.574 | 0.470 | 0.512 |
+| ganglion | scANVI | 0.662 | 0.421 | 0.589 | 0.792 | 0.033 | 0.933 | 0.586 | 0.557 | 0.569 |
+| ganglion | Harmony | 0.573 | 0.419 | 0.547 | 0.812 | 0.060 | 0.846 | 0.573 | 0.513 | 0.537 |
+| nerve | scVI | 0.766 | 0.546 | 0.579 | 0.805 | 0.125 | 0.940 | 0.623 | 0.630 | 0.628 |
+| nerve | scANVI | 0.815 | 0.667 | 0.699 | 0.763 | 0.136 | 0.958 | 0.619 | 0.727 | 0.684 |
+| nerve | Harmony | 0.726 | 0.519 | 0.618 | 0.883 | 0.197 | 0.851 | 0.644 | 0.621 | 0.630 |
+
+Applying the rule to the means over the two subsets: scANVI has the
+higher bio conservation (0.642 against 0.567 for Harmony) and its batch
+correction (0.603) is within 0.05 of Harmony's (0.608), so scANVI is the
+reference embedding (`results/reference/integration_choice.tsv`). The
+ganglion metrics improved once the mislabelled cells were out (NMI 0.51
+to 0.66 for scANVI), which is the effect of the labels, not of the
+embedding. Harmony mixes batches a little more (higher iLISI and batch
+ASW) at the cost of label structure; scANVI keeps labels together, which
+is what the downstream label transfer and the deconvolution signatures
+need. iLISI is low for every method on the ganglion subset because most
+states there come from one or two datasets, so a cell's neighbours are
+from its own study by construction; graph connectivity, which asks only
+that each state form a connected neighbourhood, is 0.93 to 0.96 for
+scANVI.
+
+scANVI's own predictions agree with the seed labels for 90 percent of
+the seeded cells (93 percent atlas, 97 percent nerve, 84 percent
+trigeminal, 66 percent Jung 2023, where the authors' coarse non-neuronal
+classes split across nerve-style states). For the sympathetic ganglion
+cells the predictions now come out as 22,338 satellite glia, 9,762
+macrophages, 7,886 non-myelinating Schwann cells and 1,694 endothelial
+cells, almost exactly the counts of the authors' label set (22,868;
+9,685; 7,113; 1,871), which confirms that the authors' labels are the
+right set attached to the wrong barcodes. The predictions are kept as a
+column (`scanvi_pred`) but are not the annotation: they cross
+compartments (767 Jung neurons predicted as mast cells, Zhang glia spread
+over nerve fibroblast states), so the next step transfers labels by
+nearest neighbours in the scANVI space within the cell's own
+compartment, and assigns the sympathetic neurons and the states of the
+unlabelled DRG datasets from that.
+
+Outputs on the server: `data/interim/reference_merged.h5ad` (counts,
+2.6 GB), `data/interim/reference_embeddings.h5ad` (obs and the four
+embeddings, 651 MB), `data/interim/models/{scvi,scanvi}`; the first run is
+kept in `data/interim/run1` until the next step is done and will then be
+deleted. The result tables are in `results/reference/`.

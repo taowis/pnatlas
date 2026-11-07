@@ -6,7 +6,7 @@
 |---|---|---|
 | 0 | Scaffold | done |
 | 1 | Data inventory and access; analysis plan frozen | done (dbGaP raw-read request pending, not on the critical path) |
-| 2 | Joint ganglia + nerve single-cell reference | in progress: environment built |
+| 2 | Joint ganglia + nerve single-cell reference | in progress: datasets merged, integration run |
 | 3 | Spatial mapping (Xenium, Visium) | not started |
 | 4 | GTEx tibial nerve deconvolution | not started |
 | 5 | Genetics: neuropathy gene classes, nerve eQTL colocalisation | not started |
