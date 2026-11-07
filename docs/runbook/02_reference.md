@@ -63,3 +63,65 @@ rsync -a "$REMOTE:~/Projects/pnatlas-dev/data/MANIFEST.tsv" data/MANIFEST.tsv
 The verify run prints `OK` for all 19 paths. The manifest rows (url, md5,
 size, access date) are then copied into the dataset sections of
 `data/README.md`.
+
+### 2.3 Read every dataset into an AnnData of raw counts
+
+Environments on the server (the Python one from the same `environment.yml`
+as the laptop, the R one from `environment-r.yml`, used only to export the
+authors' Seurat and RDS objects). Run them one after the other: two conda
+solves at once share one repodata cache and the second fails with
+"database is locked".
+
+```bash
+ssh "$REMOTE" 'source ~/miniconda3/etc/profile.d/conda.sh && cd ~/Projects/pnatlas-dev && \
+  conda env create -f environment.yml -n pnatlas -y && \
+  conda activate pnatlas && pip install -e . && \
+  python -c "import torch, scvi, jax; print(torch.__version__, torch.cuda.is_available(), scvi.__version__, jax.devices())" && \
+  conda env create -f environment-r.yml -n pnatlas-r -y'
+```
+
+Prints `2.12.0 True 1.4.2 [CudaDevice(id=0)]`: the CUDA build of PyTorch is
+picked on the server, the CPU build on the laptop.
+
+Unpack the GEO RAW tars (the per-sample files inside are what the builder
+reads; the tars stay as the downloaded copy):
+
+```bash
+ssh "$REMOTE" 'cd ~/Projects/pnatlas-dev/data/raw && \
+  for d in nguyen2021_hdrg/GSE168243 jung2023_hdrg/GSE201586 heming2025_sural_snrna/GSE285983; do \
+    ds=${d%/*}; acc=${d#*/}; mkdir -p $ds/extracted && tar -xf $ds/${acc}_RAW.tar -C $ds/extracted; done'
+```
+
+Sample to donor for SPARC 465 comes from its SDS `samples.xlsx` (library
+`sam-hSG-lib-1` pools three donors); it is written into
+`config/reference_inputs.yaml` as `donor_map`. The sheet is read with the
+same stdlib parser as in step 1.5, with inline strings handled.
+
+Export the three R objects (Seurat or dgCMatrix) as matrix market plus CSV,
+with the memory guard running (the painseq object is the largest):
+
+```bash
+ssh "$REMOTE" 'source ~/miniconda3/etc/profile.d/conda.sh && cd ~/Projects/pnatlas-dev && \
+  ~/bin/memguard.sh start logs/memguard.log "build_anndata|rds_to_mtx|Rscript"; \
+  conda activate pnatlas-r && \
+  for p in bhuiyan2025_hdrg/seurat_object_preprint_release.Rds \
+           jung2023_hdrg/GSE201586_humanallcelltypes.rds.gz \
+           yang2022_htg/GSE197289_snRNA-seq_human_raw_counts.RDS.gz; do \
+    d=${p%%/*}; nice -n 15 Rscript workflow/scripts/rds_to_mtx.R data/raw/$p data/interim/rds/$d > logs/rds_to_mtx_$d.log 2>&1; \
+    cat data/interim/rds/$d/object_info.txt; done'
+```
+
+Build one h5ad per dataset (raw counts, obs columns dataset, sample, donor,
+author_label, author_label_fine and the authors' metadata as `author_*`):
+
+```bash
+ssh "$REMOTE" 'source ~/miniconda3/etc/profile.d/conda.sh && conda activate pnatlas && cd ~/Projects/pnatlas-dev && \
+  for d in nguyen2021_hdrg jung2023_hdrg yu2024_singlesoma zhang_hdrg_glia yang2022_htg \
+           yang2025_hsg_multiome heming2025_sural_snrna bhuiyan2025_hdrg; do \
+    nice -n 15 python workflow/scripts/build_anndata.py $d --data-root data \
+      --out data/interim/reference/$d.h5ad | tail -1; done' | tee results/reference/anndata_summary.tsv
+```
+
+The builder's one-line summaries (cells, genes, samples, donors, labelled
+cells per dataset) are the check; they are kept in
+`results/reference/anndata_summary.tsv`.
