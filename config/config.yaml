@@ -1,2 +1,23 @@
 # Analysis parameters. Paths go in config/paths.yaml (not committed).
 seed: 20261102
+
+# Stage 2 QC (fixed before the first QC run; see docs/analysis_plan.md, section 3)
+qc:
+  min_genes: 200              # cells below are flagged low_genes
+  max_pct_mt_nuclei: 5        # snRNA-seq (nuclei)
+  max_pct_mt_cells: 20        # whole-cell data (Smart-seq2 somata)
+  scrublet_expected_rate: 0.06
+  scrublet_min_cells_per_sample: 500   # scrublet is skipped on smaller samples
+  # datasets whose authors already filtered and annotated the cells keep every
+  # annotated cell; the flags are recorded but not applied
+  keep_author_cells:
+    - bhuiyan2025_hdrg
+    - heming2025_sural_snrna
+    - jung2023_hdrg
+    - yang2022_htg
+    - yang2025_hsg_multiome
+    - yu2024_singlesoma   # added after the first QC run; see analysis log 2.4
+  whole_cell:
+    - yu2024_singlesoma
+  no_doublet_call:              # non-droplet protocols
+    - yu2024_singlesoma

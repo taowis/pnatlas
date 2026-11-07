@@ -127,3 +127,54 @@ Of the 111,925 annotated Jung 2023 cells, 110,773 are present in the
 filtered Cell Ranger matrices; the remaining 1,152 are cells the authors
 kept from the raw matrices and are dropped here, since the filtered
 matrices are the input for every other 10x dataset.
+
+## 2.4 QC and the cell type map
+
+The QC thresholds were written into the config before the first run and are
+deliberately plain: 200 genes, 5 percent mitochondrial reads for nuclei (20
+for the whole-cell somata), scrublet per sample. Five datasets come with the
+authors' own filtering and annotation (Heming already carries scDblFinder
+calls, all singlets), so for those every annotated cell is kept and the
+flags are only recorded; a second filtering pass would throw away cells the
+labels depend on and make the label-transfer comparison harder to read.
+The three unannotated sets (Nguyen, Yu, Zhang) are filtered.
+
+The cell type map has three levels. `class` (neuron, glia, stromal,
+vascular, immune) is what every dataset can reach. `state` is the level used
+for genetics and deconvolution: DRG neuron families follow the painseq atlas
+(C-NP, C-PEP, A-PEP, Ab-LTMR, A-LTMR, A-Propr, C-Thermo, C-LTMR, plus the
+ATF3 injured state), nerve states follow Heming 2025 (myelinating,
+non-myelinating, repair and damage Schwann; perineurial; endoneurial and
+epineurial fibroblast; endothelial; lymphatic endothelial; mural; the
+immune types), and ganglion non-neuronal states use the same names where the
+cell type is the same (satellite glia, Schwann, fibroblast, endothelial,
+mural, macrophage). `fine` keeps the authors' own subdivisions. Trigeminal
+labels are mouse-style (NF, PEP, NP, SST, TRPM8, cLTMR): NP, SST, TRPM8 and
+cLTMR map onto atlas families, PEP stays unsplit, and NF is kept as its own
+name because the atlas splits A-LTMR differently. Sympathetic neurons have
+no DRG counterpart and keep their own state. The coarse labels in the
+Heming metadata are transferred from the mouse sciatic atlas and are wrong
+for the endothelial clusters (they come out as "adip"), so the authors'
+fine clusters are the source of the map and the transferred label is only
+kept as a column.
+
+QC results (`results/reference/qc_summary.tsv`). Nuclei datasets have
+median mitochondrial fractions well under 1 percent and almost no cells
+under 200 genes. The doublet calls are modest except in the Zhang glia set,
+where scrublet flags 3,211 of 30,701 nuclei (10 percent) and they are
+removed, leaving 27,325. Nguyen loses 300 nuclei to the mitochondrial
+threshold and keeps 1,535. Among the kept-all datasets the painseq neurons
+(10,731 flagged, median 1.1 percent) and Jung 2023 (3,946 flagged) carry
+the most mitochondrial flags; neurons have more mitochondrial transcripts
+than other nuclei, the flags stay in obs and are not applied.
+
+One deviation from the thresholds as written. The Yu 2024 single somata
+have a median mitochondrial fraction of 24 percent, and the 20 percent
+whole-cell threshold would remove 808 of 1,136 cells. These are complete
+neuronal somata picked by hand and sequenced with Smart-seq2, the file on
+GEO is the authors' final set (the 1,136 cells of the paper), and a high
+mitochondrial fraction is expected for whole large neurons rather than a
+sign of damage. The dataset was moved to the keep-all group after this was
+seen, which is a change made after looking at the data and is recorded as
+such; the flags are kept in obs so the effect of the threshold can be
+checked later. No other threshold was changed.

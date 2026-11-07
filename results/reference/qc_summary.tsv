@@ -1,0 +1,9 @@
+dataset	cells_in	cells_out	flag_low_genes	flag_high_mt	flag_doublet	median_counts	median_genes	median_pct_mt	policy
+nguyen2021_hdrg	1837	1535	0	300	2	4074	2320	1.81	filtered
+zhang_hdrg_glia	30701	27325	0	166	3211	3280	1799	0.04	filtered
+yang2022_htg	38028	38028	0	0	134	2348	1415	0.34	kept_all
+yang2025_hsg_multiome	52950	52950	0	0	67	3333	1737	0.03	kept_all
+jung2023_hdrg	110773	110773	5	3946	1946	2672	1588	0.24	kept_all
+bhuiyan2025_hdrg	53596	53596	0	10731	26	7928	3335	1.11	kept_all
+heming2025_sural_snrna	365708	365708	0	0	917	2353	1443	0.06	kept_all
+yu2024_singlesoma	1136	1136	0	808	0	145998	7726	23.84	kept_all
