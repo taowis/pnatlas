@@ -202,3 +202,20 @@ between their mean normalised expression in those spots and the state's
 signature. A state is checked in a section only with at least 20
 dominant spots, and the per-section rows are collected across sections
 for the "not mapped" rule of the plan.
+
+The full signature run took 72 minutes on the GPU (17 s per epoch, 250
+epochs, 5.6 GB of GPU memory) and peaked at 35 GB of system memory
+during the posterior export, which brought free memory down to 23
+percent for a few minutes (guard warnings, no pause). The training ELBO
+is flat from about epoch 100 on (0.11 percent change over the last 50
+epochs), so the default 250 epochs are enough. The signatures cover
+17,661 genes and 31 states, and their most specific genes are the
+expected ones: SLC2A1, SLC22A3 and XACT for the perineurial state, MPZ
+and PRX for myelinating Schwann cells, NPY, TH, DBH, SLC6A2 and TFAP2B
+for the sympathetic neurons, MRGPRX1, SST and NPPB for C-NP, MYH11 and
+ACTA2 for mural cells, PAMR1 and FGFR2 for endoneurial fibroblasts.
+Six state names are shared by the two compartments and carry one
+signature each (signature_cells.tsv gives the cell counts per side;
+the nerve side dominates mural, non-myelinating Schwann and
+endothelial, the ganglion side macrophage). The 20,000-cell probe
+directory was deleted on the server after the full run.
