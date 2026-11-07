@@ -173,7 +173,7 @@ ssh "$REMOTE" 'source ~/miniconda3/etc/profile.d/conda.sh && conda activate pnat
 rsync -a "$REMOTE:~/Projects/pnatlas-dev/results/spatial/section_summary.tsv" results/spatial/
 ```
 
-Check: 54 sections (8 Heming, 4 Yu, 6 Zhang, 2 Vroman, 16 Shiers, 14
+Check: 56 sections (8 Heming, 4 Yu, 6 Zhang, 2 Vroman, 16 Shiers, 14
 Tavares-Ferreira, 6 DPN nerve); coordinates present for all but Zhang,
 Vroman and Tavares-Ferreira.
 

@@ -1,0 +1,57 @@
+dataset	section	donor	condition	technology	cells	genes	median_counts	coordinates
+heming2025_sural_xenium	S01	S01	CIDP	Xenium	12513	99	20	True
+heming2025_sural_xenium	S04	S04	CIAP	Xenium	16248	99	25	True
+heming2025_sural_xenium	S11	S11	CIDP	Xenium	20286	99	34	True
+heming2025_sural_xenium	S14	S14	CIAP	Xenium	6411	99	22	True
+heming2025_sural_xenium	S22	S22	control	Xenium	4784	99	8	True
+heming2025_sural_xenium	S24	S24	control	Xenium	9899	99	17	True
+heming2025_sural_xenium	S29	S29	VN	Xenium	6858	99	18	True
+heming2025_sural_xenium	S30	S30	VN	Xenium	7592	99	12	True
+shiers2025_dpn_drg	M2-1	DN0003	diabetic	Visium	1753	58288	2281	True
+shiers2025_dpn_drg	M2-2	DN0003	diabetic	Visium	2087	58288	6288	True
+shiers2025_dpn_drg	180714-L4-1	180714DHB	DPN	Visium	3526	36601	1571	True
+shiers2025_dpn_drg	180714-L4-5	180714DHB	DPN	Visium	3586	36601	2451	True
+shiers2025_dpn_drg	181030-1L4-3	181030DHB	DPN	Visium	1967	36601	2484	True
+shiers2025_dpn_drg	181030-1L4-7	181030DHB	DPN	Visium	2911	36601	3703	True
+shiers2025_dpn_drg	181030-2L4-2	181030DHB	DPN	Visium	3535	36601	2324	True
+shiers2025_dpn_drg	181030-2L4-6	181030DHB	DPN	Visium	3396	36601	3132	True
+shiers2025_dpn_drg	DN0134-S1-1	DN0134	DPN	Visium	2701	36601	1211	True
+shiers2025_dpn_drg	DN0134-S1-2	DN0134	DPN	Visium	2412	36601	2107	True
+shiers2025_dpn_drg	DN0134-S1-3	DN0134	DPN	Visium	2833	36601	1732	True
+shiers2025_dpn_drg	DN0095-S2-1	DN0095	DPN	Visium	3089	36601	1167	True
+shiers2025_dpn_drg	DN0095-S2-2	DN0095	DPN	Visium	3273	36601	915	True
+shiers2025_dpn_drg	DN0095-S2-3	DN0095	DPN	Visium	3987	36601	1266	True
+shiers2025_dpn_drg	DN0106-S5-1	DN0106	DPN	Visium	3315	36601	510	True
+shiers2025_dpn_drg	DN0106-S5-2	DN0106	DPN	Visium	3907	36601	315	True
+tavaresferreira2022_hdrg_visium	VF1-1	TF-F1	control	Visium	1973	58288	4269	False
+tavaresferreira2022_hdrg_visium	VF1-2	TF-F1	control	Visium	2883	58288	3389	False
+tavaresferreira2022_hdrg_visium	VM1-1	TF-M1	control	Visium	2026	58288	2943	False
+tavaresferreira2022_hdrg_visium	VM1-2	TF-M1	control	Visium	2259	58288	1318	False
+tavaresferreira2022_hdrg_visium	VF2-1	TF-F2	control	Visium	2873	58288	2475	False
+tavaresferreira2022_hdrg_visium	VF2-2	TF-F2	control	Visium	2922	58288	3251	False
+tavaresferreira2022_hdrg_visium	VF3-1	TF-F3	control	Visium	2995	58288	2535	False
+tavaresferreira2022_hdrg_visium	VF3-2	TF-F3	control	Visium	2329	58288	3817	False
+tavaresferreira2022_hdrg_visium	VM3-1	TF-M3	control	Visium	2601	58288	2774	False
+tavaresferreira2022_hdrg_visium	VM3-2	TF-M3	control	Visium	3001	58288	2163	False
+tavaresferreira2022_hdrg_visium	VF4-1	TF-F4	control	Visium	2709	58288	1044	False
+tavaresferreira2022_hdrg_visium	VF4-2	TF-F4	control	Visium	2169	58288	1441	False
+tavaresferreira2022_hdrg_visium	VM4-1	TF-M4	control	Visium	2421	58288	2422	False
+tavaresferreira2022_hdrg_visium	VM4-2	TF-M4	control	Visium	2520	58288	1802	False
+utdallas_dpn_nerves	sural8	dpn8	DPN	Visium	2824	36601	2615	True
+utdallas_dpn_nerves	sural11	dpn11	DPN	Visium	2133	36601	1557	True
+utdallas_dpn_nerves	sural12	dpn12	DPN	Visium	1694	36601	1394	True
+utdallas_dpn_nerves	sural14	dpn14	DPN	Visium	2951	36601	2193	True
+utdallas_dpn_nerves	sural24l	dpn24	control	Visium	1571	36601	1189	True
+utdallas_dpn_nerves	sural24t	dpn24	control	Visium	1418	36601	1126	True
+vroman2023_hdrg_visium	DRG2a	VromanDRG2	control	Visium	2005	37481	6849	False
+vroman2023_hdrg_visium	DRG2b	VromanDRG2	control	Visium	1775	37481	5786	False
+yu2024_hdrg_xenium	Region_1	2103-02139	control	Xenium (100-gene panel, hand-segmented neurons)	436	87	4364	True
+yu2024_hdrg_xenium	Region_2	2106-05090	control	Xenium (100-gene panel, hand-segmented neurons)	375	87	3217	True
+yu2024_hdrg_xenium	Region_3	2106-05090	control	Xenium (100-gene panel, hand-segmented neurons)	298	87	3177	True
+yu2024_hdrg_xenium	Region_4	2106-05090	control	Xenium (100-gene panel, hand-segmented neurons)	306	87	4516	True
+zhang2024_hdrg_visium	DRG2	DRG2	control	Visium	2946	36601	1919	False
+zhang2024_hdrg_visium	DRG3	DRG3	control	Visium	1203	36601	4021	False
+zhang2024_hdrg_visium	DRG4	DRG4	control	Visium	839	36601	8312	False
+zhang2024_hdrg_visium	DRG5	DRG5	control	Visium	1201	36601	6845	False
+zhang2024_hdrg_visium	DRG6	DRG6	control	Visium	1118	36601	3946	False
+zhang2024_hdrg_visium	DRG7	DRG7	control	Visium	1484	36601	2918	False
