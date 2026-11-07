@@ -1,0 +1,15 @@
+name: pnatlas-r
+channels:
+  - conda-forge
+  - bioconda
+  - nodefaults
+dependencies:
+  # R side of the project: only used to read the authors' Seurat and RDS
+  # objects and write them out as matrix market plus CSV for the Python side.
+  - r-base=4.4
+  - r-seurat
+  - r-seuratobject
+  - r-matrix
+  - r-data.table
+  - r-hdf5r
+  - r-optparse

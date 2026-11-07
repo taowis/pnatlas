@@ -10,7 +10,7 @@ if [[ -n "$(git status --porcelain -- src workflow config/config.yaml config/dat
   echo "uncommitted changes in code; commit first so COMMIT is meaningful" >&2; exit 1
 fi
 ssh -o BatchMode=yes "$REMOTE" "mkdir -p $REMOTE_DIR/data/metadata $REMOTE_DIR/results $REMOTE_DIR/logs"
-rsync -a --delete src workflow tests pyproject.toml environment.yml "$REMOTE:$REMOTE_DIR/"
+rsync -a --delete src workflow tests pyproject.toml environment.yml environment-r.yml "$REMOTE:$REMOTE_DIR/"
 rsync -a config/config.yaml config/datasets.yaml config/paths.example.yaml "$REMOTE:$REMOTE_DIR/config/"
 rsync -a data/metadata/ "$REMOTE:$REMOTE_DIR/data/metadata/"
 rsync -a data/README.md "$REMOTE:$REMOTE_DIR/data/"
