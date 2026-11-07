@@ -85,6 +85,15 @@ def main():
     paths = []
     for f in cfg["files"]:
         paths += sorted(root.glob(f)) if any(ch in f for ch in "*?[") else [root / f]
+    meta = cfg.get("metadata")
+    m = None
+    if meta:
+        m = pd.read_csv(root / meta["file"])
+        key = meta.get("barcode_column", m.columns[0])
+        m[key] = m[key].astype(str)
+        if meta.get("barcode_transform"):
+            m[key] = m[key].str.replace(*meta["barcode_transform"], regex=True)
+        m = m.set_index(key)
     parts = []
     for p in paths:
         x = reader(p)
@@ -95,6 +104,9 @@ def main():
             x.obs["sample"] = sample
             if cfg.get("prefix_barcodes", True):
                 x.obs_names = [f"{sample}_{b}" for b in x.obs_names]
+        if m is not None and meta.get("keep_only_annotated", False):
+            # subset each sample before concatenation to keep memory low
+            x = x[x.obs_names.isin(m.index)].copy()
         parts.append(x)
     adata = ad.concat(parts, join="outer", fill_value=0) if len(parts) > 1 else parts[0]
     adata.obs_names_make_unique()
@@ -102,20 +114,17 @@ def main():
         # Cell Ranger ARC matrices carry ATAC peaks as well; keep the RNA features
         adata = adata[:, adata.var["feature_types"] == "Gene Expression"].copy()
 
-    meta = cfg.get("metadata")
-    if meta:
-        m = pd.read_csv(root / meta["file"])
-        key = meta.get("barcode_column", m.columns[0])
-        m[key] = m[key].astype(str)
-        if meta.get("barcode_transform"):
-            m[key] = m[key].str.replace(*meta["barcode_transform"], regex=True)
-        m = m.set_index(key)
+    if m is not None:
         if meta.get("keep_only_annotated", False):
             adata = adata[adata.obs_names.isin(m.index)].copy()
         m = m.reindex(adata.obs_names)
         m.columns = ["author_" + c for c in m.columns]
         for c in m.columns:
-            adata.obs[c] = m[c].values
+            col = m[c]
+            if col.dtype == object:
+                # mixed text and numbers cannot be written to h5ad; keep as text
+                col = col.where(col.isna(), col.astype(str))
+            adata.obs[c] = col.values
         for ours, theirs in meta.get("columns", {}).items():
             adata.obs[ours] = m["author_" + theirs].astype(str).where(m["author_" + theirs].notna(), "")
     if "sample" not in adata.obs:
