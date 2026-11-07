@@ -137,3 +137,23 @@ Each non-obvious choice, with its reason. Newest last.
   and score the ganglion metrics against noise. The dataset enters
   unlabelled and is annotated by label transfer; the authors' labels stay
   in `author_label` for the record. Recorded in analysis log 2.5.
+- **Label transfer is a nearest-neighbour vote in the scANVI space, within
+  the cell's compartment and, where the authors gave a class, within that
+  class.** scANVI's own predictions cross compartments (Jung 2023 neurons
+  predicted as mast cells, Zhang glia as nerve fibroblast states), because
+  the classifier sees every state at once. Restricting the candidate labels
+  to the ganglion or nerve states, and to the author's class for the
+  "unassigned" cells, keeps the transfer inside what the anatomy allows.
+  Fifteen neighbours and a 0.5 vote threshold follow the plan's rule for
+  the spatial mapping (label probability below 0.5 is unassigned).
+- **Neurons of the sympathetic ganglion dataset are "sympathetic neuron".**
+  The reference has no sympathetic seed cells (the authors' labels are
+  unusable, see above), so these nuclei can only land among DRG and
+  trigeminal neuron states; a sympathetic ganglion has no sensory neurons,
+  so any nucleus that sits among neurons is a sympathetic one. TH, DBH and
+  PRPH detection in those nuclei is reported as the check and is not used
+  to assign, because nuclei with few counts miss any single marker.
+- **The state rule counts known donors only.** The painseq atlas has no
+  donor, so a DRG neuron family passes the rule only through the Jung,
+  Nguyen and Yu neurons that the transfer puts into it. The pooled Yang
+  2025 library counts as one donor unit.

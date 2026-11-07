@@ -284,3 +284,67 @@ Check: `results/reference/merged_summary.tsv` has eight rows and the kept
 cell counts match the analysis log (2.5); `integration_training.tsv` has
 the epochs run for scVI and scANVI; `scib_metrics.tsv` has six rows (three
 embeddings by two subsets); `integration_choice.tsv` names the method.
+
+### 2.6 Label transfer and the state rule
+
+Parameters are fixed in the `transfer` block of `config/config.yaml`
+before the run: the scANVI embedding chosen in 2.5, 15 nearest reference
+cells, a state is taken when at least half of the neighbours carry it
+(otherwise "<class> unassigned", or "unassigned"), five held-out folds of
+batches for the reliability check, neurons of the sympathetic ganglion
+dataset are "sympathetic neuron" with TH, DBH and PRPH tabulated as the
+check, and the state rule of plan section 3 (50 cells, 3 known donors).
+
+Before fixing the sympathetic rule, the catecholamine markers of the
+sympathetic ganglion nuclei were looked at (counts of TH, DBH, PRPH and a
+few other neuron genes against the scANVI predictions of 2.5; the numbers
+are in the analysis log):
+
+```bash
+ssh "$REMOTE" 'source ~/miniconda3/etc/profile.d/conda.sh && conda activate pnatlas && cd ~/Projects/pnatlas-dev && \
+  nice -n 15 python - <<EOF
+import anndata as ad, numpy as np, pandas as pd
+e = ad.read_h5ad("data/interim/reference_embeddings.h5ad", backed="r")
+obs = e.obs; ds = obs["dataset"].astype(str); ys = np.where(ds == "yang2025_hsg_multiome")[0]
+m = ad.read_h5ad("data/interim/reference_merged.h5ad", backed="r")
+genes = ["TH", "DBH", "PRPH", "SLC6A2", "NPY", "SNAP25", "RBFOX3", "PHOX2B", "CHAT", "SCN9A"]
+sub = m[ys[0]:ys[-1] + 1, genes].to_memory()
+df = pd.DataFrame(sub.X.toarray(), columns=genes, index=sub.obs_names)
+print((df > 0).sum()); print(((df["TH"] >= 1) & (df["DBH"] >= 1)).sum())
+sc = np.log1p(df[["TH", "DBH", "PRPH"]].div(sub.obs["n_counts"].values, axis=0) * 1e4).mean(axis=1)
+print(pd.crosstab(obs.loc[sub.obs_names, "scanvi_pred"].astype(str), pd.cut(sc, [-1, 0.5, 1, 2, 3, 10])))
+EOF'
+```
+
+Commit the scripts, sync, restart the memory guard, and run the transfer
+(CPU only; exact nearest neighbours by brute force):
+
+```bash
+REMOTE=user@host workflow/remote/sync.sh
+ssh "$REMOTE" 'cd ~/Projects/pnatlas-dev && ~/bin/memguard.sh stop; \
+  ~/bin/memguard.sh start logs/memguard.log "transfer_labels"'
+ssh "$REMOTE" 'cd ~/Projects/pnatlas-dev && setsid -f nohup bash -c \
+  "source ~/miniconda3/etc/profile.d/conda.sh && conda activate pnatlas && \
+   nice -n 15 python workflow/scripts/transfer_labels.py --emb data/interim/reference_embeddings.h5ad \
+     --counts data/interim/reference_merged.h5ad --out data/interim/reference_annotation.tsv.gz \
+     --out-dir results/reference --n-jobs 8; echo EXIT \$?" \
+  > logs/transfer_labels.log 2>&1 < /dev/null'
+# wait for EXIT 0 in logs/transfer_labels.log
+rsync -a "$REMOTE:~/Projects/pnatlas-dev/results/reference/" results/reference/
+rsync -a "$REMOTE:~/Projects/pnatlas-dev/data/interim/reference_annotation.tsv.gz" "$DATA_ROOT/interim/"
+ssh "$REMOTE" 'cd ~/Projects/pnatlas-dev && ~/bin/memguard.sh stop'
+```
+
+Once the results are checked, the outputs of the first integration run of
+2.5 (set aside on the server) are removed:
+
+```bash
+ssh "$REMOTE" 'rm -r ~/Projects/pnatlas-dev/data/interim/run1'
+```
+
+Check: `results/reference/label_transfer_summary.tsv` has eight rows and
+no author-labelled cell was transferred; `transfer_holdout.tsv` has the
+"all" rows for both compartments; `state_rule.tsv` lists every final
+state with its cell and donor counts; `final_state_by_dataset.tsv` has no
+"unlabelled" row; the annotation table has one row per cell of the merged
+reference (644,681).

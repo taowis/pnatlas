@@ -1,0 +1,32 @@
+state_final	cells	known_donors	cells_donor_unknown	batches	datasets	class	passes
+satellite glia	107121	23	0	23	5	glia	True
+non-myelinating Schwann	61526	44	0	44	4	glia	True
+myelinating Schwann	18900	54	0	54	5	glia	True
+repair Schwann	6738	37	0	37	1	glia	True
+damage Schwann	5738	33	0	33	1	glia	True
+macrophage	39830	58	0	58	7	immune	True
+T/NK	3811	37	0	37	1	immune	True
+lymphocyte	2159	19	0	19	4	immune	True
+mast	1152	37	0	37	1	immune	True
+B	488	32	0	32	1	immune	True
+granulocyte	365	24	0	24	1	immune	True
+C-NP	18294	22	15552	42	6	neuron	True
+A-PEP	12349	19	10644	41	5	neuron	True
+C-PEP	8095	18	7265	36	5	neuron	True
+Ab-LTMR	7475	15	6744	34	4	neuron	True
+A-Propr	3583	15	3124	34	5	neuron	True
+A-LTMR (NF)	3105	16	0	16	4	neuron	True
+A-LTMR	1616	17	1327	33	5	neuron	True
+C-Thermo	1586	18	1337	38	6	neuron	True
+PEP	1301	14	0	14	3	neuron	True
+injured neuron	917	10	813	28	4	neuron	True
+C-LTMR	534	12	420	24	6	neuron	True
+sympathetic neuron	322	6	0	6	1	neuron	True
+perineurial	83792	37	0	37	1	stromal	True
+fibroblast	52886	22	0	22	6	stromal	True
+endoneurial fibroblast	34961	37	0	37	1	stromal	True
+epineurial fibroblast	34458	37	0	37	1	stromal	True
+adipocyte	5209	49	0	49	4	stromal	True
+mural	66481	56	0	56	5	vascular	True
+endothelial	55921	56	0	56	5	vascular	True
+lymphatic endothelial	1892	34	0	34	1	vascular	True
