@@ -70,3 +70,20 @@ Each non-obvious choice, with its reason. Newest last.
   features and a paired permutation test over cutoff years.** A single
   AUROC difference inside the seed-to-seed spread is noise; the rule is fixed
   before the run.
+
+## Stage 2 (joint ganglia and nerve reference)
+
+- **Compute placement: data download and integration on the server, Gadi for
+  the CPU-parallel stages, the laptop for development only.** The laptop
+  (16 GB, no CUDA) and the ANZAC desktop (4 cores, 15 GB, no GPU, no conda)
+  cannot run scVI on the full reference or cell2location; the server has 16
+  cores, 60 GB and a 32 GB GPU, so stages 2 and 3 run there. Its disk is the
+  limit (about 180 GB free), so only the files a stage needs are downloaded
+  and raw downloads can be staged on the desktop's large disk on the same
+  network. Gadi is kept for stages 4 and 5 (BayesPrism over 667 GTEx samples,
+  colocalisation over many loci) and as the fallback when the server's GPU is
+  in use by the sequencer, because its compute nodes have no internet, its
+  scratch is purged after 100 days and its allocation is shared. The laptop
+  keeps the same environment for code development on subsets, documentation
+  and pull requests. In the repository the server is named only as "the
+  server"; its address is passed at run time through `REMOTE`.

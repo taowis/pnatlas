@@ -20,12 +20,12 @@ SPARC = [
 DRYAD = [("dryad_yu_xenium", "10.5061/dryad.gf1vhhmxq")]
 DROPBOX = [
     ("painseq_humandrg_seurat",
-     "https://www.dropbox.com/scl/fi/wx6472hewabt1vvafxet5/seurat_object_preprint_release.Rds"
-     "?rlkey=struflwt1ql68okohdcvzosq1&dl=1",
+     ("https://www.dropbox.com/scl/fi/wx6472hewabt1vvafxet5/seurat_object_preprint_release.Rds"
+      "?rlkey=struflwt1ql68okohdcvzosq1&dl=1"),
      "https://humandrg.painseq.com"),
     ("painseq_harmonized_folder",
-     "https://www.dropbox.com/scl/fo/x9c173p8p0wxze15c29ln/AIpoBvGDp28rS1aDLUnzdCk"
-     "?rlkey=gsg6vcp5sm8e88s36ffml4uur&dl=1",
+     ("https://www.dropbox.com/scl/fo/x9c173p8p0wxze15c29ln/AIpoBvGDp28rS1aDLUnzdCk"
+      "?rlkey=gsg6vcp5sm8e88s36ffml4uur&dl=1"),
      "https://harmonized.painseq.com"),
 ]
 COLS = ["id", "source", "doi", "url", "title", "licence", "embargo", "embargo_release",

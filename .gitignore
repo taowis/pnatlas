@@ -9,6 +9,7 @@ config/paths.yaml
 # Data: everything except the README and small metadata
 data/*
 !data/README.md
+!data/MANIFEST.tsv
 !data/metadata/
 !data/metadata/**
 
