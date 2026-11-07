@@ -49,3 +49,4 @@ the full reference, cell2location) are run on the server, not on the laptop.
 |---|---|
 | [01_datasets.md](01_datasets.md) | 1. Data inventory and access |
 | [02_reference.md](02_reference.md) | 2. Joint ganglia and nerve reference |
+| [03_spatial.md](03_spatial.md) | 3. Spatial mapping |

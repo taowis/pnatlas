@@ -51,6 +51,8 @@ def source_of(accession):
         return "GEO"
     if accession.startswith("SPARC"):
         return "SPARC"
+    if accession.startswith("Box"):
+        return "Box (UT Dallas)"
     return "painseq portal (Dropbox)"
 
 
