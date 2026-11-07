@@ -16,7 +16,11 @@ if (length(args) != 2) stop("usage: rds_to_mtx.R <input.rds> <outdir>")
 inp <- args[1]; out <- args[2]
 dir.create(out, showWarnings = FALSE, recursive = TRUE)
 
-obj <- readRDS(inp)
+# GEO gzips files that are already gzip-compressed RDS, so a second
+# decompression layer is tried when the first read fails.
+obj <- tryCatch(readRDS(inp), error = function(e) {
+  con <- gzcon(gzfile(inp, "rb")); on.exit(close(con)); readRDS(con)
+})
 info <- c(paste("class", paste(class(obj), collapse = ",")))
 
 if (inherits(obj, "Seurat")) {
@@ -32,7 +36,7 @@ if (inherits(obj, "Seurat")) {
     if (sum(grepl("^counts", layers)) > 1) obj[[assay]] <- JoinLayers(a)
     counts <- LayerData(obj[[assay]], layer = "counts")
   } else {
-    counts <- GetAssayData(a, slot = "counts")
+    counts <- GetAssayData(a, layer = "counts")
   }
   meta <- obj@meta.data
   meta <- cbind(barcode = rownames(meta), meta)
