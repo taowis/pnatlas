@@ -17,7 +17,7 @@ import anndata as ad
 import pandas as pd
 import yaml
 
-from pnatlas.labels import LEVELS, apply_celltype_map, read_celltype_map
+from pnatlas.labels import LEVELS, UNLABELLED, apply_celltype_map, read_celltype_map
 
 KEEP_OBS = ["dataset", "sample", "donor", "author_label", "author_label_fine", "n_counts", "n_genes",
             "pct_mt", "pct_ribo", "flag_low_genes", "flag_high_mt", "doublet_score", "flag_doublet",
@@ -38,6 +38,9 @@ def load_one(path, ds, cfg, cmap):
     for c in ["sample", "donor", "author_label", "author_label_fine"]:
         obs[c] = obs[c].astype(str)
     obs[LEVELS] = apply_celltype_map(obs, cmap)[LEVELS]
+    if ds in cfg.get("labels_unusable", []):
+        # the authors' labels are kept in author_label* but do not seed anything
+        obs[LEVELS] = UNLABELLED
     info = cfg["datasets"][ds]
     obs["tissue"], obs["compartment"], obs["protocol"] = info["tissue"], info["compartment"], info["protocol"]
     known = obs["donor"] != "unknown"
@@ -75,7 +78,8 @@ def main():
     for c in ["dataset", "sample", "donor", "batch", "tissue", "compartment", "protocol"] + LEVELS:
         merged.obs[c] = merged.obs[c].astype("category")
     merged.uns["merge"] = {"genes": cfg["genes"], "n_genes": len(genes),
-                           "exclude_painseq_sources": cfg["exclude_painseq_sources"]}
+                           "exclude_painseq_sources": cfg["exclude_painseq_sources"],
+                           "labels_unusable": cfg.get("labels_unusable", [])}
     pathlib.Path(a.out).parent.mkdir(parents=True, exist_ok=True)
     merged.write_h5ad(a.out, compression="gzip")
 

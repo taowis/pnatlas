@@ -26,6 +26,10 @@ qc:
 # docs/analysis_plan.md, section 3 and amendment 1)
 integration:
   genes: intersection           # genes present in every dataset
+  # author labels that do not follow the expression of the cells they are
+  # attached to (results/reference/label_alignment.tsv; analysis log 2.5);
+  # these datasets enter unlabelled and get their states by label transfer
+  labels_unusable: [yang2025_hsg_multiome]
   # painseq atlas cells that duplicate datasets read separately here
   exclude_painseq_sources: [Jung_2023, Nguyen_2021, Tavares-Ferriera_2022]
   n_hvg: 3000                   # seurat_v3 on counts, balanced across datasets
