@@ -122,3 +122,8 @@ reference with the library as their donor-level unit, flagged as donor
 unknown so they are left out of donor-level tests. The DRG non-neuronal
 backbone is Jung 2023 (7 donors) with Nguyen 2021 and Zhang. This changes
 section 1 of the plan and is recorded as the first amendment.
+
+Of the 111,925 annotated Jung 2023 cells, 110,773 are present in the
+filtered Cell Ranger matrices; the remaining 1,152 are cells the authors
+kept from the raw matrices and are dropped here, since the filtered
+matrices are the input for every other 10x dataset.

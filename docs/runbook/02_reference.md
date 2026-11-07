@@ -112,16 +112,26 @@ ssh "$REMOTE" 'source ~/miniconda3/etc/profile.d/conda.sh && cd ~/Projects/pnatl
 ```
 
 Build one h5ad per dataset (raw counts, obs columns dataset, sample, donor,
-author_label, author_label_fine and the authors' metadata as `author_*`):
+author_label, author_label_fine and the authors' metadata as `author_*`),
+then the summary table:
 
 ```bash
 ssh "$REMOTE" 'source ~/miniconda3/etc/profile.d/conda.sh && conda activate pnatlas && cd ~/Projects/pnatlas-dev && \
   for d in nguyen2021_hdrg jung2023_hdrg yu2024_singlesoma zhang_hdrg_glia yang2022_htg \
            yang2025_hsg_multiome heming2025_sural_snrna bhuiyan2025_hdrg; do \
     nice -n 15 python workflow/scripts/build_anndata.py $d --data-root data \
-      --out data/interim/reference/$d.h5ad | tail -1; done' | tee results/reference/anndata_summary.tsv
+      --out data/interim/reference/$d.h5ad | tail -1; done && \
+  mkdir -p results/reference && \
+  python workflow/scripts/anndata_summary.py data/interim/reference > results/reference/anndata_summary.tsv'
+rsync -a "$REMOTE:~/Projects/pnatlas-dev/results/reference/anndata_summary.tsv" results/reference/
 ```
 
-The builder's one-line summaries (cells, genes, samples, donors, labelled
-cells per dataset) are the check; they are kept in
-`results/reference/anndata_summary.tsv`.
+The donor map for Jung 2023 comes from the GEO sample characteristics:
+
+```bash
+python3 -I workflow/scripts/geo_samples.py GSE168243 GSE201586 GSE249746 GSE189501 GSE197289 GSE285983 \
+  > data/metadata/geo_samples.tsv
+```
+
+Check: `results/reference/anndata_summary.tsv` has eight rows and the cell
+counts match the analysis log (2.3).
