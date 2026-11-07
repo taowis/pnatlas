@@ -177,3 +177,88 @@ Check: 56 sections (8 Heming, 4 Yu, 6 Zhang, 2 Vroman, 16 Shiers, 14
 Tavares-Ferreira, 6 DPN nerve); coordinates present for all but Zhang,
 Vroman and Tavares-Ferreira.
 
+
+## 3.4 Reference signatures for cell2location
+
+Parameters are the `cell2location` block of `config/config.yaml`. Probe
+first (20,000 cells, 5 epochs, under the memory guard, peak memory from
+`time -v`), then the full run detached on the GPU:
+
+```bash
+REMOTE=user@host workflow/remote/sync.sh
+ssh "$REMOTE" 'source ~/miniconda3/etc/profile.d/conda.sh && conda activate pnatlas && cd ~/Projects/pnatlas-dev && \
+  nvidia-smi --query-gpu=utilization.gpu,memory.used --format=csv,noheader && who && \
+  ~/bin/memguard.sh start logs/memguard.log "c2l_reference_signatures|c2l_map" && \
+  mkdir -p data/interim/spatial/probe && \
+  nice -n 15 /usr/bin/time -v python workflow/scripts/c2l_reference_signatures.py \
+    --counts data/interim/reference_merged.h5ad --annotation data/interim/reference_annotation.tsv.gz \
+    --out-dir data/interim/spatial/probe --subsample 20000 --max-epochs 5 > logs/c2l_signatures_probe.log 2>&1; \
+  grep -E "^cells|^loaded|^genes|^elbo|^signatures|Maximum resident|Elapsed" logs/c2l_signatures_probe.log'
+ssh "$REMOTE" 'source ~/miniconda3/etc/profile.d/conda.sh && conda activate pnatlas && cd ~/Projects/pnatlas-dev && \
+  setsid -f nohup nice -n 15 /usr/bin/time -v python workflow/scripts/c2l_reference_signatures.py \
+    --counts data/interim/reference_merged.h5ad --annotation data/interim/reference_annotation.tsv.gz \
+    --out-dir data/interim/spatial/signatures > logs/c2l_signatures.log 2>&1 < /dev/null'
+```
+
+When it ends: copy the small outputs back, remove the probe directory.
+
+```bash
+mkdir -p results/spatial/signatures
+rsync -a "$REMOTE:~/Projects/pnatlas-dev/data/interim/spatial/signatures/{signature_cells.tsv,training_history.tsv}" results/spatial/signatures/
+rsync -a "$REMOTE:~/Projects/pnatlas-dev/data/interim/spatial/signatures/reference_signatures.csv.gz" "$DATA_ROOT/interim/spatial/"
+ssh "$REMOTE" 'rm -r ~/Projects/pnatlas-dev/data/interim/spatial/probe'
+```
+
+Check: `logs/c2l_signatures.log` ends with `signatures (<genes>, 31) written`;
+the ELBO in `training_history.tsv` has flattened over the last 50 epochs.
+
+The reference markers for check (a) (parameters: the `spatial_checks`
+block of the config) are computed on the server while the signatures
+train (CPU only, about 10 GB):
+
+```bash
+REMOTE=user@host workflow/remote/sync.sh
+ssh "$REMOTE" 'source ~/miniconda3/etc/profile.d/conda.sh && conda activate pnatlas && cd ~/Projects/pnatlas-dev && \
+  setsid -f nohup nice -n 15 /usr/bin/time -v python workflow/scripts/reference_markers.py \
+    --counts data/interim/reference_merged.h5ad --annotation data/interim/reference_annotation.tsv.gz \
+    --out results/spatial/reference_markers.tsv > logs/reference_markers.log 2>&1 < /dev/null'
+rsync -a "$REMOTE:~/Projects/pnatlas-dev/results/spatial/reference_markers.tsv" results/spatial/
+```
+
+Check: 20 rows per state in `results/spatial/reference_markers.tsv` (a
+state with fewer passes the filters with fewer genes).
+
+## 3.5 Mapping the sections
+
+Visium sections, one cell2location model per section on the GPU, in a
+loop that skips finished sections (`workflow/scripts/run_c2l_sections.sh`),
+after the signatures are in place; then the two targeted panels with the
+scANVI transfer (parameters: `panel_transfer` in the config):
+
+```bash
+REMOTE=user@host workflow/remote/sync.sh
+ssh "$REMOTE" 'source ~/miniconda3/etc/profile.d/conda.sh && conda activate pnatlas && cd ~/Projects/pnatlas-dev && \
+  nvidia-smi --query-gpu=utilization.gpu,memory.used --format=csv,noheader && \
+  setsid -f nohup bash -c "for d in heming2025_sural_xenium yu2024_hdrg_xenium; do \
+      nice -n 15 python workflow/scripts/panel_transfer.py \$d --counts data/interim/reference_merged.h5ad \
+        --annotation data/interim/reference_annotation.tsv.gz --sections-dir data/interim/spatial/\$d \
+        --out-dir data/interim/spatial/transfer/\$d --results-dir results/spatial/\$d > logs/panel_transfer_\$d.log 2>&1; \
+      echo \"EXIT \$d \$?\" >> logs/panel_transfer.log; done; \
+    workflow/scripts/run_c2l_sections.sh data data/interim/spatial/signatures/reference_signatures.csv.gz \
+      results/spatial/reference_markers.tsv shiers2025_dpn_drg utdallas_dpn_nerves tavaresferreira2022_hdrg_visium \
+      zhang2024_hdrg_visium vroman2023_hdrg_visium > logs/c2l_sections.log 2>&1" > /dev/null 2>&1 < /dev/null'
+```
+
+When `logs/c2l_sections.log` ends with `ALLDONE`, collect the checks and
+bring back the small outputs:
+
+```bash
+ssh "$REMOTE" 'source ~/miniconda3/etc/profile.d/conda.sh && conda activate pnatlas && cd ~/Projects/pnatlas-dev && \
+  python workflow/scripts/collect_spatial_checks.py --c2l-dir data/interim/spatial/c2l \
+    --results-dir results/spatial --sections results/spatial/section_summary.tsv'
+rsync -a --include "*/" --include "*.tsv" --exclude "*" "$REMOTE:~/Projects/pnatlas-dev/results/spatial/" results/spatial/
+rsync -a "$REMOTE:~/Projects/pnatlas-dev/data/interim/spatial/c2l" "$REMOTE:~/Projects/pnatlas-dev/data/interim/spatial/transfer" "$DATA_ROOT/interim/spatial/"
+```
+
+Check: 44 `EXIT <dataset> <section> 0` lines; `results/spatial/state_mapping_status.tsv`
+lists every state with the sections checked and its mapped / not mapped status.

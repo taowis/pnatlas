@@ -157,3 +157,22 @@ Each non-obvious choice, with its reason. Newest last.
   donor, so a DRG neuron family passes the rule only through the Jung,
   Nguyen and Yu neurons that the transfer puts into it. The pooled Yang
   2025 library counts as one donor unit.
+- **One cell2location signature per state name across compartments.** The
+  plan says the signatures come from the joint reference, so a state that
+  exists in both compartments (macrophage, endothelial, mural, adipocyte,
+  myelinating and non-myelinating Schwann) gets one signature from all its
+  cells; the compartment of the cells behind each signature is recorded.
+  Splitting them would give a Visium DRG section two macrophage states to
+  divide the same spots between.
+- **Reference markers for check (a) are a one-vs-rest Wilcoxon test on a
+  stratified reference subsample, top 20 by log fold change among genes
+  detected in a quarter of the state's cells.** Stage 2 produced no marker
+  table and the plan does not define one. For a targeted panel the test is
+  run within the panel's genes, since the genome-wide top 20 of a state
+  rarely overlaps a 100-gene panel; the plan's thresholds are kept.
+- **Targeted panels are transferred with scVI and scANVI trained on the
+  shared genes of the compartment's reference cells, then scArches for the
+  query.** The stage 2 models use 3,000 highly variable genes, of which a
+  panel shares few, so a model on the panel's genes is trained for each
+  panel dataset; for the Yu 2024 neurons only the reference neurons are
+  used, because the query holds only hand-segmented neurons.

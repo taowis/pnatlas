@@ -152,3 +152,70 @@ conditions were written, so that dataset is rebuilt with them; the
 sections of all seven datasets are then summarised in
 `results/spatial/section_summary.tsv`.
 
+
+## 3.4 Reference signatures
+
+The signatures are one negative binomial regression over the joint
+reference (642,605 cells with a named state; the 2,076 "unassigned"
+cells are left out), state_final as the label, the donor key (dataset
+and donor) as the batch and the study as a further categorical
+covariate, with cell2location's default gene filter and training
+settings (250 epochs, batches of 2,500, learning rate 0.002). States
+with the same name in both compartments (macrophage, endothelial,
+mural, adipocyte, the two Schwann states) get one signature each,
+which is what "the joint reference" in the plan means; the compartment
+of the cells behind each signature is recorded in signature_cells.tsv.
+
+The probe on 20,000 cells and 5 epochs ran in under a minute and
+peaked at 25 GB of memory, almost all of it the reference counts
+(float64, 1.1e9 non-zeros, read whole by anndata before the subset).
+The reader was changed to take the arrays with h5py as float32 and
+subset before building the object, so the full run stays well under
+the server's memory with the guard running.
+
+The full run loads the reference in about a minute (11.5 GB resident,
+17,661 genes pass the cell2location filter) and trains at about 17 s
+per epoch on the GPU, 5.6 GB of GPU memory.
+
+The plan's check (a) needs "the state's top 20 reference markers" and
+stage 2 did not produce a marker table, so one is made here from the
+reference itself: a one-vs-rest Wilcoxon test on a stratified sample of
+up to 2,000 cells per state, markers being genes with adjusted p below
+0.01 detected in at least a quarter of the state's cells, ranked by log
+fold change, top 20. The markers come from the same cells as the
+signatures but through a different statistic, so the check asks whether
+the spots that the deconvolution gives to a state are the spots that
+express that state's discriminating genes, which is what the plan
+intends. The table is committed with the results.
+
+How the Visium mapping is run per section (workflow/scripts/c2l_map.py):
+the genes shared between the section and the signatures are split with
+the project seed, a tenth held out; the rest is fitted with
+Cell2location at the plan's 30 cells per spot and detection alpha 20,
+one section per model (no batch term, since every section is its own
+model), 30,000 epochs on the whole section; the posterior 5th percentile
+of the abundance is the mapped abundance and the state with the largest
+abundance is the spot's dominant state. Check (a) is the AUROC of the
+marker score of each state in its dominant spots against the other
+spots; check (b) is the Spearman correlation over the held-out genes
+between their mean normalised expression in those spots and the state's
+signature. A state is checked in a section only with at least 20
+dominant spots, and the per-section rows are collected across sections
+for the "not mapped" rule of the plan.
+
+The full signature run took 72 minutes on the GPU (17 s per epoch, 250
+epochs, 5.6 GB of GPU memory) and peaked at 35 GB of system memory
+during the posterior export, which brought free memory down to 23
+percent for a few minutes (guard warnings, no pause). The training ELBO
+is flat from about epoch 100 on (0.11 percent change over the last 50
+epochs), so the default 250 epochs are enough. The signatures cover
+17,661 genes and 31 states, and their most specific genes are the
+expected ones: SLC2A1, SLC22A3 and XACT for the perineurial state, MPZ
+and PRX for myelinating Schwann cells, NPY, TH, DBH, SLC6A2 and TFAP2B
+for the sympathetic neurons, MRGPRX1, SST and NPPB for C-NP, MYH11 and
+ACTA2 for mural cells, PAMR1 and FGFR2 for endoneurial fibroblasts.
+Six state names are shared by the two compartments and carry one
+signature each (signature_cells.tsv gives the cell counts per side;
+the nerve side dominates mural, non-myelinating Schwann and
+endothelial, the ganglion side macrophage). The 20,000-cell probe
+directory was deleted on the server after the full run.

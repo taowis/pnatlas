@@ -71,3 +71,46 @@ transfer:
   sympathetic_markers: [TH, DBH, PRPH]    # tabulated as the check, not used to assign
   state_min_cells: 50
   state_min_donors: 3
+
+# Stage 3 spatial mapping (fixed before the first run; plan section 4)
+cell2location:
+  # reference signatures: NB regression per state, donor and study as batch
+  gene_cell_count_cutoff: 5             # cell2location defaults for the gene filter
+  gene_cell_percentage_cutoff2: 0.03
+  gene_nonz_mean_cutoff: 1.12
+  signature_max_epochs: 250
+  signature_batch_size: 2500
+  signature_lr: 0.002
+  posterior_samples: 1000
+  # mapping of Visium sections
+  n_cells_per_location: 30              # expected cells per spot
+  detection_alpha: 20
+  map_max_epochs: 30000
+  map_batch_size: null                  # whole section per step
+  heldout_gene_fraction: 0.1            # check (b): genes left out of the mapping
+
+# Stage 3 checks (plan section 4)
+spatial_checks:
+  markers_cells_per_state: 2000         # stratified subsample for the one-vs-rest test
+  markers_min_pct: 0.25                 # gene detected in at least this fraction of the state's cells
+  markers_padj: 0.01
+  markers_top_n: 20
+  min_assigned_spots: 20                # a state is checked in a section only with this many spots or cells
+  auroc_min: 0.7                        # check (a)
+  spearman_min: 0.5                     # check (b)
+
+# Stage 3 label transfer for targeted panels (plan section 4)
+panel_transfer:
+  min_shared_genes: 60
+  min_prob: 0.5                         # scANVI probability below which a cell is unassigned
+  n_latent: 10                          # small models for 80 to 100 genes
+  n_layers: 1
+  n_hidden: 64
+  scvi_max_epochs: 30
+  scanvi_max_epochs: 20
+  n_samples_per_label: 100
+  query_max_epochs: 20
+  batch_size: 512
+  datasets:
+    heming2025_sural_xenium: {compartment: nerve}
+    yu2024_hdrg_xenium: {compartment: ganglion, class: neuron}   # hand-segmented neurons only

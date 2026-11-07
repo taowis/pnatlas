@@ -1,0 +1,38 @@
+state_final	ann_compartment	cells
+A-LTMR	ganglion	1616
+A-LTMR (NF)	ganglion	3105
+A-PEP	ganglion	12349
+A-Propr	ganglion	3583
+Ab-LTMR	ganglion	7475
+B	nerve	488
+C-LTMR	ganglion	534
+C-NP	ganglion	18294
+C-PEP	ganglion	8095
+C-Thermo	ganglion	1586
+PEP	ganglion	1301
+T/NK	nerve	3811
+adipocyte	ganglion	1416
+adipocyte	nerve	3793
+damage Schwann	nerve	5738
+endoneurial fibroblast	nerve	34961
+endothelial	ganglion	14800
+endothelial	nerve	41121
+epineurial fibroblast	nerve	34458
+fibroblast	ganglion	52886
+granulocyte	nerve	365
+injured neuron	ganglion	917
+lymphatic endothelial	nerve	1892
+lymphocyte	ganglion	2159
+macrophage	ganglion	25455
+macrophage	nerve	14375
+mast	nerve	1152
+mural	ganglion	3734
+mural	nerve	62747
+myelinating Schwann	ganglion	9440
+myelinating Schwann	nerve	9460
+non-myelinating Schwann	ganglion	709
+non-myelinating Schwann	nerve	60817
+perineurial	nerve	83792
+repair Schwann	nerve	6738
+satellite glia	ganglion	107121
+sympathetic neuron	ganglion	322
