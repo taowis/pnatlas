@@ -8,8 +8,14 @@ row per file. From the Tavares-Ferreira folder only the Space Ranger H5
 files, the sample sheet and the combined Seurat object are taken (the
 H and E images and Loupe files, 37 GB, are not); from the DPN nerve folder
 the annotated Seurat object and the sample sheet (the Loupe files are not).
-With --images the list holds instead the 16 H and E images (TIFF, 26.6 GB)
-of the Tavares-Ferreira folder, fetched later for the anatomy check.
+With --images the list holds instead the files for the anatomy check: the
+16 H and E images (TIFF, 26.5 GB) of the Tavares-Ferreira Box folder, and
+the Space Ranger high-resolution tissue image and scale factors of each
+Shiers 2025 section from the SPARC copy of that dataset (Pennsieve
+discover dataset 490, version 1, DOI 10.26275/vz0c-uet7, CC BY), read
+from the dataset's file list and fetched from its public S3 bucket; the
+Shiers files are renamed <section>_<name> so that the 16 sections do not
+collide.
 
 Usage: python workflow/scripts/stage3_list_files.py > data/metadata/stage3_files.tsv
        python workflow/scripts/stage3_list_files.py --images > data/metadata/stage3_images.tsv
@@ -40,6 +46,22 @@ BOX_FOLDERS = [
 BOX_IMAGES = [
     ("tavaresferreira2022_hdrg_visium", "dgs8a7vo9uu9cx6l81somaxb468hpgnz", "206669782611", r"\.tif$"),
 ]
+# SPARC copy of the Shiers 2025 dataset: discover dataset id, version, S3 bucket,
+# files to take (regex on the path) and the sample folder to config section map
+SPARC_ID, SPARC_VERSION = 490, 1
+SPARC_S3 = "https://sparc-prod-aod-discover-publish50-use1.s3.amazonaws.com"
+SPARC_KEEP = r"/spatial/(tissue_hires_image[^/]*\.png|scalefactors[^/]*\.json)$"
+SPARC_SECTIONS = {
+    "sam-UTD-DN0003-DRG-4": "M2-1", "sam-UTD-DN0003-DRG-8": "M2-2",
+    "sam-UTD-180714DHB-DRGL4-1": "180714-L4-1", "sam-UTD-180714DHB-DRGL4-5": "180714-L4-5",
+    "sam-UTD-181030DHB-1L4-3": "181030-1L4-3", "sam-UTD-181030DHB-1L4-7": "181030-1L4-7",
+    "sam-UTD-181030DHB-2L4-2": "181030-2L4-2", "sam-UTD-181030DHB-2L4-6": "181030-2L4-6",
+    "sam-UTD-DN0134-DRGL3-S1-1": "DN0134-S1-1", "sam-UTD-DN0134-DRGL3-S1-2": "DN0134-S1-2",
+    "sam-UTD-DN0134-DRGL3-S1-3": "DN0134-S1-3",
+    "sam-UTD-DN0095-DRGL3-S2-1": "DN0095-S2-1", "sam-UTD-DN0095-DRGL3-S2-2": "DN0095-S2-2",
+    "sam-UTD-DN0095-DRGL3-S2-3": "DN0095-S2-3",
+    "sam-UTD-DN0106-DRGL-S5-1": "DN0106-S5-1", "sam-UTD-DN0106-DRGL-S5-2": "DN0106-S5-2",
+}
 
 COLS = ["dataset", "accession", "file", "url", "size_bytes", "access"]
 
@@ -75,10 +97,23 @@ def box_rows(folders):
                 yield [ds, f"Box {shared}", name, url, int(m.group(3)), "open"]
 
 
+def sparc_rows():
+    import json
+    meta = json.loads(fetch(f"https://api.pennsieve.io/discover/datasets/{SPARC_ID}/versions/{SPARC_VERSION}/metadata"))
+    for f in meta["files"]:
+        path = f["path"]
+        if not re.search(SPARC_KEEP, path):
+            continue
+        section = SPARC_SECTIONS[path.split("/")[-3]]
+        name = f"{section}_{path.rsplit('/', 1)[1]}"
+        yield ["shiers2025_dpn_drg", f"SPARC {SPARC_ID} v{SPARC_VERSION}", name,
+               f"{SPARC_S3}/{SPARC_ID}/{path}", int(f["size"]), "open"]
+
+
 def main():
     images = "--images" in sys.argv[1:]
     print("\t".join(COLS))
-    rows = list(box_rows(BOX_IMAGES)) if images else list(geo_rows()) + list(box_rows(BOX_FOLDERS))
+    rows = list(box_rows(BOX_IMAGES)) + list(sparc_rows()) if images else list(geo_rows()) + list(box_rows(BOX_FOLDERS))
     for row in rows:
         print("\t".join(str(x) for x in row))
 
