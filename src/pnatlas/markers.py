@@ -2,7 +2,6 @@
 counts (scanpy rank_genes_groups): genes with adjusted p below a cut-off,
 detected in at least a fraction of the label's cells, ranked by log fold
 change."""
-import numpy as np
 import pandas as pd
 import scanpy as sc
 

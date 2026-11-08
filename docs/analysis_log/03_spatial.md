@@ -219,3 +219,143 @@ signature each (signature_cells.tsv gives the cell counts per side;
 the nerve side dominates mural, non-myelinating Schwann and
 endothelial, the ganglion side macrophage). The 20,000-cell probe
 directory was deleted on the server after the full run.
+
+## 3.5 Mapping the sections
+
+The targeted-panel transfer was first run as planned, with scVI and
+scANVI trained on the shared genes of the compartment's reference cells
+and scArches for the query. For the Yu 2024 neurons (85 shared genes,
+1,415 cells) that worked: 90 to 95 percent of the neurons assigned with
+a median probability of 0.85 to 0.95, every checked family passing both
+checks. For the Heming 2025 sural nerve Xenium (96 shared genes, 84,591
+cells) it collapsed: 93 percent of the cells were called "mast" with
+probability 1.0, no cell was called a Schwann cell, and the cells with
+Schwann markers (SCN7A, S100B) sat in the "mast" bucket. The reason is
+the data: 83 percent of the cells have fewer than 50 transcripts over
+the panel (median 8 to 34 per section), so the query batch differs from
+the reference nuclei mostly in depth, and the batch term of the query
+model absorbs the biology while the classifier head defaults to the
+state with the lowest panel expression. That attempt is kept in the log
+and in the history of workflow/scripts/panel_transfer.py; the panel
+transfer was replaced by a classifier on the reference signatures
+themselves (plan amendment 2): the multinomial likelihood of each cell's
+counts under every candidate state's signature over the shared genes,
+flat prior, the posterior as the label probability with the plan's 0.5
+threshold, and a minimum of 20 transcripts over the shared genes below
+which a cell is unassigned for low counts. Because 10 percent of 96
+genes is too few for a stable rank correlation, check (b) for panels
+rotates over ten folds so that every shared gene is held out once and
+the correlation runs over all shared genes; the threshold is unchanged.
+With this the nerve sections show the expected picture (Schwann states,
+perineurial, endoneurial and epineurial fibroblasts, mural and
+endothelial cells), 16 to 63 percent of the cells assigned per section
+and the rest almost all below the count floor. The checks of this run
+are reported with the collected results.
+
+Panel transfer results. The panel markers for check (a) are now the
+reference markers computed within the panel's genes by the same script
+as the genome-wide markers (one-vs-rest against all 31 states, so a
+state's panel markers are the panel genes that single it out in the
+whole reference, not only within its compartment, as the first attempt
+had done); 2 to 20 markers per state for the Heming panel, 1 to 20 for
+the Yu panel. The outputs of the scANVI attempt on the server (the
+per-cell tables under the transfer directory and the three result
+tables per dataset) were deleted and replaced by this run's. Heming
+2025 sural nerve, 84,591 cells in 8 sections, 96 shared genes: 18 to
+69 percent of the cells assigned per section (lowest in the two control
+sections S22 and S30, which have the sparsest cells), 99 percent or
+more of the unassigned cells are below the count floor and the rest
+ambiguous; median posterior 0.90 to 1.00 per section. The
+assigned cells are mural (9,637), damage Schwann (5,505), epineurial
+fibroblast (5,213), non-myelinating Schwann (5,104), myelinating Schwann
+(4,394), perineurial (3,763), endothelial (3,480), endoneurial
+fibroblast (3,425), adipocyte (2,041), mast (700), macrophage (289),
+repair Schwann (185) and lymphatic endothelial (149). Twelve of the
+thirteen states with 20 or more cells in a section pass check (a) in
+every section (median AUROC 0.76 for damage Schwann to 1.00 for
+endothelial and lymphatic endothelial) and pass check (b) in at least
+five of their sections (median Spearman 0.51 for lymphatic endothelial
+to 0.77 for myelinating Schwann; endoneurial fibroblast and macrophage
+each fail (b) in two sections, adipocyte and lymphatic endothelial in
+one). Mast fails (b) in five of its seven sections (median 0.49) and
+(a) in two (median AUROC 0.74 on two panel markers), so by the plan's
+rule mast is not mapped in the sural nerve Xenium: the panel carries
+two genes that mark mast cells, and 700 cells over eight sections is a
+thin signal. Yu 2024 DRG neurons, 1,415 hand-segmented neurons in 4
+sections, 85 shared genes: every neuron assigned (none below the count
+floor, median posterior 1.0), seven neuron families with 20 or more
+cells in a section, all passing both checks in every section (AUROC
+0.81 to 1.00, Spearman 0.80 to 0.89). The run takes seconds on the CPU;
+the same command on the laptop gives identical tables for Yu and tables
+that differ from the server's in the sixth decimal of the AUROC for
+Heming, with the same pass and fail flags.
+
+Running the Visium sections: the single loop took about 17 minutes per
+section with the GPU two thirds busy, so the remaining sections run in
+two loops side by side, with a guard that pauses our jobs when another
+person's compute process appears on the GPU or memory runs low (details
+in the runbook). The guard's first version counted a graphics process
+(someone's browser) as GPU work; it now counts compute processes only.
+
+Outcome of the parallel run: all 44 sections finished with exit 0, the
+guard never had to pause anything (no other compute process appeared on
+the GPU and free memory stayed above 70 percent), and the memory guard
+logged no warning during the mapping. The two loops did not shorten
+the total time: one model alone trained in 13 to 19 minutes per
+section, two side by side took 33 to 44 minutes each and three took 53
+minutes, so the GPU was the bottleneck at about 96 percent utilisation
+and the throughput stayed at one section per 17 to 20 minutes. The
+loops and the guard are kept because they make a relaunch safe, not
+because they are faster here; a second GPU would change that. Nothing
+of ours was left running or paused on the server afterwards; the
+section outputs (40 MB) stay there and are copied to the laptop's data
+root.
+
+Visium mapping results. The ELBO of every section model is flat over
+the last tenth of the epochs (relative change below 0.0003). The
+estimated number of cells per spot, the sum of the state abundances,
+has a median of 42 (Shiers), 44 (Tavares-Ferreira), 35 (Zhang) and 66
+(Vroman) in the DRG sections and 24 in the DPN sural nerve sections;
+the dominant state holds a median of 29 to 40 percent of a spot's
+abundance, so no spot is one cell type and the dominant state is a
+label of convenience for the checks. In the DRG sections the dominant
+states are satellite glia (31 to 48 percent of spots), endothelial (1
+to 29 percent), non-myelinating Schwann (10 to 57 percent), myelinating
+Schwann, macrophage and fibroblast; a neuron family is the dominant
+state in under one percent of the spots (439 of 48,214 Shiers spots,
+mostly A-Propr; 19 Tavares-Ferreira; 7 Zhang; none in Vroman), because
+a 55 micron spot holds a few large neurons among dozens of glia and the
+dominant state is the one with the most cells. The consequence for the
+checks, which run on the spots a state dominates, is that the neuron
+families are checked in the Visium sections only where A-Propr reaches
+20 dominant spots (five sections, passing both checks) and otherwise
+rest on the Yu 2024 Xenium neurons. In the DPN sural nerve sections the
+dominant states are non-myelinating Schwann (37 percent of spots),
+perineurial (22), endothelial (13), mural (11), myelinating Schwann (9)
+and epineurial fibroblast (8), the picture a nerve cross-section should
+give.
+
+Mapping status (results/spatial/state_mapping_status.tsv, 28 state and
+compartment rows). Not mapped by the plan's rule: non-myelinating
+Schwann in the ganglion sections, which is the dominant state in a
+third of the DRG spots but fails check (a) in 31 of 33 sections
+(median AUROC 0.46; (b) passes in 27 of 33), so the spots the model
+gives to this state do not carry its markers above the rest of the
+section, and the abundance it receives in the DRG most likely belongs
+to satellite glia and the nerve root glia whose signatures overlap it
+on a 30 cell spot; mast in the sural nerve Xenium (above); epineurial
+fibroblast in the ganglion sections, which reaches 20 dominant spots
+in one section only and fails (b) there. Every other state is mapped.
+The weaker passes are in the ganglion: endothelial fails (a) in 15 of
+36 sections (median AUROC 0.74), satellite glia in 12 of 36 (0.75),
+fibroblast in 4 of 9, and myelinating Schwann fails (b) in 10 of 30
+sections (median Spearman 0.55); in the nerve every state passes (a) in
+every section (median AUROC 0.89 to 0.99 in the Visium nerve sections)
+and (b) in all but one or two sections. The held-out gene correlation
+sits between 0.5 and 0.8 for every passing state, which is the range
+the plan's threshold was set for. Check (c), anatomy, is open: it needs
+the H&E or DAPI image next to the state map, judged by a reader, and is
+possible where coordinates exist (the Heming and Yu Xenium cells, the
+Shiers spots, the DPN nerve spots); Zhang, Vroman and Tavares-Ferreira
+have no spot positions in the public files, so (c) cannot be done for
+them.

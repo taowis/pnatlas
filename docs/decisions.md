@@ -176,3 +176,32 @@ Each non-obvious choice, with its reason. Newest last.
   panel shares few, so a model on the panel's genes is trained for each
   panel dataset; for the Yu 2024 neurons only the reference neurons are
   used, because the query holds only hand-segmented neurons.
+- **Targeted panels are classified by the multinomial likelihood of each
+  cell under the reference signatures over the shared genes (replaces the
+  entry above; plan amendment 2).** On the Heming 2025 sural nerve Xenium
+  the scANVI transfer put 93 percent of the cells into "mast" with
+  probability 1.0 and no cell into a Schwann state: 83 percent of the
+  cells have fewer than 50 transcripts over the panel, so the query batch
+  differs from the reference nuclei mostly in depth, and the batch term
+  absorbs the biology. The signature classifier has no batch term to
+  misuse, its parameters are the signatures already estimated for the
+  Visium mapping, and a count floor (20 transcripts over the shared
+  genes) states openly which cells are too sparse to call instead of
+  forcing a label on them. The candidate states stay within the
+  compartment and the authors' class, as in the stage 2 transfer. Check
+  (b) rotates over ten folds of the shared genes because a tenth of a
+  96 gene panel gives a rank correlation over 10 genes, which moved by
+  more than 0.3 between seeds; with every gene held out once the
+  correlation runs over all shared genes. The Yu 2024 neurons, which
+  passed under scANVI, pass under the classifier as well.
+- **In a Visium section a state is checked on the spots where it is the
+  dominant state by abundance share, and only when it dominates at least
+  20 spots.** The plan's checks (a) and (b) are written for "spots or
+  cells assigned to that state", and cell2location assigns a spot a
+  mixture, not a label. The dominant state is the nearest thing to an
+  assignment that does not need a threshold on the abundance scale, and
+  20 spots is the floor below which an AUROC or a rank correlation says
+  little. The cost is that states that are present but never the most
+  numerous in a 30 cell spot, the DRG neuron families above all, go
+  unchecked in Visium and are checked in the Yu 2024 Xenium neurons
+  instead; the abundance estimates themselves are kept for every state.

@@ -232,25 +232,52 @@ state with fewer passes the filters with fewer genes).
 
 Visium sections, one cell2location model per section on the GPU, in a
 loop that skips finished sections (`workflow/scripts/run_c2l_sections.sh`),
-after the signatures are in place; then the two targeted panels with the
-scANVI transfer (parameters: `panel_transfer` in the config):
+after the signatures are in place (the memory guard from 3.4 is still
+running):
 
 ```bash
 REMOTE=user@host workflow/remote/sync.sh
 ssh "$REMOTE" 'source ~/miniconda3/etc/profile.d/conda.sh && conda activate pnatlas && cd ~/Projects/pnatlas-dev && \
-  nvidia-smi --query-gpu=utilization.gpu,memory.used --format=csv,noheader && \
-  setsid -f nohup bash -c "for d in heming2025_sural_xenium yu2024_hdrg_xenium; do \
-      nice -n 15 python workflow/scripts/panel_transfer.py \$d --counts data/interim/reference_merged.h5ad \
-        --annotation data/interim/reference_annotation.tsv.gz --sections-dir data/interim/spatial/\$d \
-        --out-dir data/interim/spatial/transfer/\$d --results-dir results/spatial/\$d > logs/panel_transfer_\$d.log 2>&1; \
-      echo \"EXIT \$d \$?\" >> logs/panel_transfer.log; done; \
-    workflow/scripts/run_c2l_sections.sh data data/interim/spatial/signatures/reference_signatures.csv.gz \
-      results/spatial/reference_markers.tsv shiers2025_dpn_drg utdallas_dpn_nerves tavaresferreira2022_hdrg_visium \
-      zhang2024_hdrg_visium vroman2023_hdrg_visium > logs/c2l_sections.log 2>&1" > /dev/null 2>&1 < /dev/null'
+  nvidia-smi --query-gpu=utilization.gpu,memory.used --format=csv,noheader && who && \
+  setsid -f nohup workflow/scripts/run_c2l_sections.sh data data/interim/spatial/signatures/reference_signatures.csv.gz \
+    results/spatial/reference_markers.tsv shiers2025_dpn_drg utdallas_dpn_nerves tavaresferreira2022_hdrg_visium \
+    zhang2024_hdrg_visium vroman2023_hdrg_visium > logs/c2l_sections.log 2>&1 < /dev/null'
 ```
 
-When `logs/c2l_sections.log` ends with `ALLDONE`, collect the checks and
-bring back the small outputs:
+The two targeted panels run on the CPU while the sections map. The panel
+markers for check (a) are the reference markers of 3.4 computed within
+the panel's genes (the gene list is taken from the first section of each
+dataset); then the signature-likelihood transfer of plan amendment 2
+(parameters: `panel_transfer` in the config; check (b) rotates over ten
+folds of the shared genes, `heldout_gene_fraction` in the config). The
+first attempt, a scANVI and scArches transfer, is described in the
+analysis log; its script version is in the history of
+`workflow/scripts/panel_transfer.py` and its outputs were removed.
+
+```bash
+ssh "$REMOTE" 'cd ~/Projects/pnatlas-dev && rm -rf data/interim/spatial/transfer && \
+  setsid -f nohup bash -c "source ~/miniconda3/etc/profile.d/conda.sh && conda activate pnatlas && \
+    for d in heming2025_sural_xenium yu2024_hdrg_xenium; do \
+      python -c \"import anndata as ad, glob; a = ad.read_h5ad(sorted(glob.glob(\\\"data/interim/spatial/\$d/*.h5ad\\\"))[0], backed=\\\"r\\\"); print(chr(10).join(a.var_names))\" > results/spatial/\$d/panel_genes.txt; \
+      nice -n 15 /usr/bin/time -v python workflow/scripts/reference_markers.py --counts data/interim/reference_merged.h5ad \
+        --annotation data/interim/reference_annotation.tsv.gz --genes results/spatial/\$d/panel_genes.txt \
+        --out results/spatial/\$d/panel_markers.tsv > logs/panel_markers_\$d.log 2>&1; echo \"MARKERS \$d \$?\"; \
+      nice -n 15 python workflow/scripts/panel_transfer.py \$d --signatures data/interim/spatial/signatures/reference_signatures.csv.gz \
+        --annotation data/interim/reference_annotation.tsv.gz --markers results/spatial/\$d/panel_markers.tsv \
+        --sections-dir data/interim/spatial/\$d --out-dir data/interim/spatial/transfer/\$d \
+        --results-dir results/spatial/\$d > logs/panel_transfer_\$d.log 2>&1; echo \"TRANSFER \$d \$?\"; \
+    done; echo PANELDONE" > logs/panel_rerun.log 2>&1 < /dev/null'
+```
+
+Check: `logs/panel_rerun.log` has `MARKERS <dataset> 0`, `TRANSFER <dataset> 0`
+for both datasets and ends with `PANELDONE`; `logs/panel_transfer_<dataset>.log`
+reports 96 shared genes for Heming 2025 and 85 for Yu 2024, both in ten
+folds; `results/spatial/<dataset>/transfer_summary.tsv` has one row per
+section. The same two commands run on the laptop against `$DATA_ROOT`
+give the same tables up to the last digits of the AUROC values.
+
+When the section loops end with `ALLDONE`, collect the checks and bring
+back the small outputs:
 
 ```bash
 ssh "$REMOTE" 'source ~/miniconda3/etc/profile.d/conda.sh && conda activate pnatlas && cd ~/Projects/pnatlas-dev && \
@@ -262,3 +289,46 @@ rsync -a "$REMOTE:~/Projects/pnatlas-dev/data/interim/spatial/c2l" "$REMOTE:~/Pr
 
 Check: 44 `EXIT <dataset> <section> 0` lines; `results/spatial/state_mapping_status.tsv`
 lists every state with the sections checked and its mapped / not mapped status.
+
+Running the sections side by side. One loop takes about 17 minutes per
+section (30,000 epochs on the whole section, about 28 epochs per second,
+5 GB of GPU memory) while the GPU is only two thirds busy, so after the
+first 17 sections the single loop was stopped (its running section left
+to finish, with a claim directory so that no loop restarts it) and two
+loops were started on disjoint dataset lists; the loop script skips
+finished and claimed sections. Alongside them runs the GPU yield guard
+(`workflow/remote/gpu_yield.sh`), which pauses our newest mapping job
+whenever another person's compute process uses the GPU or free memory
+falls below 25 percent, down to one running job, and resumes the paused
+jobs once the GPU has been free of others for three checks.
+
+```bash
+REMOTE=user@host workflow/remote/sync.sh
+ssh "$REMOTE" 'cd ~/Projects/pnatlas-dev && \
+  cur=$(ps -eo args | grep "[c]2l_map.py" | sed -E "s/.*--out-dir ([^ ]+).*/\1/"); mkdir -p "$cur/.claim"; \
+  kill $(pgrep -f "run_c2l_sections.sh data")'
+ssh "$REMOTE" 'source ~/miniconda3/etc/profile.d/conda.sh && conda activate pnatlas && cd ~/Projects/pnatlas-dev && \
+  setsid -f nohup workflow/scripts/run_c2l_sections.sh data data/interim/spatial/signatures/reference_signatures.csv.gz \
+    results/spatial/reference_markers.tsv utdallas_dpn_nerves zhang2024_hdrg_visium vroman2023_hdrg_visium \
+    > logs/c2l_sections_A.log 2>&1 < /dev/null; \
+  setsid -f nohup workflow/scripts/run_c2l_sections.sh data data/interim/spatial/signatures/reference_signatures.csv.gz \
+    results/spatial/reference_markers.tsv tavaresferreira2022_hdrg_visium > logs/c2l_sections_B.log 2>&1 < /dev/null; \
+  workflow/remote/gpu_yield.sh start logs/gpu_yield.log "[c]2l_map.py"'
+ssh "$REMOTE" 'cd ~/Projects/pnatlas-dev && workflow/remote/gpu_yield.sh status logs/gpu_yield.log'
+```
+
+Check: both loop logs end with `ALLDONE`; `logs/gpu_yield.log` lists every
+PAUSE and RESUME with the process that caused it. When the loops are
+done, stop both guards (the GPU guard resumes anything still paused),
+confirm nothing of ours is left, then run the collection block above:
+
+```bash
+ssh "$REMOTE" 'cd ~/Projects/pnatlas-dev && workflow/remote/gpu_yield.sh stop logs/gpu_yield.log && \
+  ~/bin/memguard.sh stop logs/memguard.log; pgrep -af "c2l|run_c2l|gpu_yield|memguard" | grep -v pgrep; \
+  grep -c -E "PAUSE|RESUME" logs/gpu_yield.log; grep -E "WARN|PAUSE" logs/memguard.log | tail'
+```
+
+Check: `pgrep` prints nothing; 44 `checks.tsv` files under the c2l
+directory; `results/spatial/section_checks.tsv` has one row per section
+and state (1,540 rows) and `results/spatial/state_mapping_status.tsv`
+28 state and compartment rows.
