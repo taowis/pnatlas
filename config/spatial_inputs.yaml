@@ -12,8 +12,9 @@ heming2025_sural_xenium:
   compartment: nerve
   # one donor per section; condition from the GEO "disease" field
   # (CIDP, CIAP, vasculitic neuropathy VN, control)
-  # anatomy check: the DAPI morphology image from the GEO tar, read at
-  # pyramid level 3; cell centroids are in microns, pixel size from the OME metadata
+  # anatomy check: the DAPI morphology z-stack from the GEO tar (11 planes,
+  # 3 microns apart), maximum projection at pyramid level 3 (1.7 microns per
+  # pixel); cell centroids are in microns, pixel size from the OME metadata
   anatomy: {kind: ome_tiff, image: "raw/heming2025_sural_xenium/extracted/*_{section}_morphology.ome.tif", level: 3, marker_px: 3}
   sections:
     S01: {h5: raw/heming2025_sural_xenium/extracted/GSM8714492_S01_cell_feature_matrix.h5, cells: raw/heming2025_sural_xenium/extracted/GSM8714492_S01_cells.parquet, donor: S01, condition: CIDP, batch: Münster}

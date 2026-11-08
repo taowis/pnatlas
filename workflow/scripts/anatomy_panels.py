@@ -85,9 +85,9 @@ def read_image(spec, root, section, image_name, xy):
             m = re.search(r'PhysicalSizeX="([0-9.]+)"', t.ome_metadata or "")
             px = float(m.group(1)) if m else spec.get("pixel_size_um", 0.2125)
         arr = np.squeeze(arr)
-        if arr.ndim == 3:  # channels first: take the first (DAPI)
-            arr = arr[0]
-        lo, hi = np.percentile(arr, (1, 99.8))
+        if arr.ndim == 3:  # a DAPI z-stack (Xenium morphology.ome.tif): maximum projection
+            arr = arr.max(axis=0)
+        lo, hi = np.percentile(arr[arr > 0], (1, 99.8))
         gray = np.clip((arr.astype(np.float32) - lo) / max(hi - lo, 1), 0, 1)
         return np.dstack([gray] * 3), 1.0 / (px * down)
     raise SystemExit(f"unknown image kind {kind}")
