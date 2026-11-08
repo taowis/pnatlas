@@ -219,3 +219,42 @@ signature each (signature_cells.tsv gives the cell counts per side;
 the nerve side dominates mural, non-myelinating Schwann and
 endothelial, the ganglion side macrophage). The 20,000-cell probe
 directory was deleted on the server after the full run.
+
+## 3.5 Mapping the sections
+
+The targeted-panel transfer was first run as planned, with scVI and
+scANVI trained on the shared genes of the compartment's reference cells
+and scArches for the query. For the Yu 2024 neurons (85 shared genes,
+1,415 cells) that worked: 90 to 95 percent of the neurons assigned with
+a median probability of 0.85 to 0.95, every checked family passing both
+checks. For the Heming 2025 sural nerve Xenium (96 shared genes, 84,591
+cells) it collapsed: 93 percent of the cells were called "mast" with
+probability 1.0, no cell was called a Schwann cell, and the cells with
+Schwann markers (SCN7A, S100B) sat in the "mast" bucket. The reason is
+the data: 83 percent of the cells have fewer than 50 transcripts over
+the panel (median 8 to 34 per section), so the query batch differs from
+the reference nuclei mostly in depth, and the batch term of the query
+model absorbs the biology while the classifier head defaults to the
+state with the lowest panel expression. That attempt is kept in the log
+and in the history of workflow/scripts/panel_transfer.py; the panel
+transfer was replaced by a classifier on the reference signatures
+themselves (plan amendment 2): the multinomial likelihood of each cell's
+counts under every candidate state's signature over the shared genes,
+flat prior, the posterior as the label probability with the plan's 0.5
+threshold, and a minimum of 20 transcripts over the shared genes below
+which a cell is unassigned for low counts. Because 10 percent of 96
+genes is too few for a stable rank correlation, check (b) for panels
+rotates over ten folds so that every shared gene is held out once and
+the correlation runs over all shared genes; the threshold is unchanged.
+With this the nerve sections show the expected picture (Schwann states,
+perineurial, endoneurial and epineurial fibroblasts, mural and
+endothelial cells), 16 to 63 percent of the cells assigned per section
+and the rest almost all below the count floor. The checks of this run
+are reported with the collected results.
+
+Running the Visium sections: the single loop took about 17 minutes per
+section with the GPU two thirds busy, so the remaining sections run in
+two loops side by side, with a guard that pauses our jobs when another
+person's compute process appears on the GPU or memory runs low (details
+in the runbook). The guard's first version counted a graphics process
+(someone's browser) as GPU work; it now counts compute processes only.

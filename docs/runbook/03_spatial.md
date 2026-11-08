@@ -262,3 +262,35 @@ rsync -a "$REMOTE:~/Projects/pnatlas-dev/data/interim/spatial/c2l" "$REMOTE:~/Pr
 
 Check: 44 `EXIT <dataset> <section> 0` lines; `results/spatial/state_mapping_status.tsv`
 lists every state with the sections checked and its mapped / not mapped status.
+
+Running the sections side by side. One loop takes about 17 minutes per
+section (30,000 epochs on the whole section, about 28 epochs per second,
+5 GB of GPU memory) while the GPU is only two thirds busy, so after the
+first 17 sections the single loop was stopped (its running section left
+to finish, with a claim directory so that no loop restarts it) and two
+loops were started on disjoint dataset lists; the loop script skips
+finished and claimed sections. Alongside them runs the GPU yield guard
+(`workflow/remote/gpu_yield.sh`), which pauses our newest mapping job
+whenever another person's compute process uses the GPU or free memory
+falls below 25 percent, down to one running job, and resumes the paused
+jobs once the GPU has been free of others for three checks.
+
+```bash
+REMOTE=user@host workflow/remote/sync.sh
+ssh "$REMOTE" 'cd ~/Projects/pnatlas-dev && \
+  cur=$(ps -eo args | grep "[c]2l_map.py" | sed -E "s/.*--out-dir ([^ ]+).*/\1/"); mkdir -p "$cur/.claim"; \
+  kill $(pgrep -f "run_c2l_sections.sh data")'
+ssh "$REMOTE" 'source ~/miniconda3/etc/profile.d/conda.sh && conda activate pnatlas && cd ~/Projects/pnatlas-dev && \
+  setsid -f nohup workflow/scripts/run_c2l_sections.sh data data/interim/spatial/signatures/reference_signatures.csv.gz \
+    results/spatial/reference_markers.tsv utdallas_dpn_nerves zhang2024_hdrg_visium vroman2023_hdrg_visium \
+    > logs/c2l_sections_A.log 2>&1 < /dev/null; \
+  setsid -f nohup workflow/scripts/run_c2l_sections.sh data data/interim/spatial/signatures/reference_signatures.csv.gz \
+    results/spatial/reference_markers.tsv tavaresferreira2022_hdrg_visium > logs/c2l_sections_B.log 2>&1 < /dev/null; \
+  workflow/remote/gpu_yield.sh start logs/gpu_yield.log "[c]2l_map.py"'
+ssh "$REMOTE" 'cd ~/Projects/pnatlas-dev && workflow/remote/gpu_yield.sh status logs/gpu_yield.log'
+```
+
+Check: both loop logs end with `ALLDONE`; `logs/gpu_yield.log` lists every
+PAUSE and RESUME with the process that caused it. Stop the guard with
+`workflow/remote/gpu_yield.sh stop logs/gpu_yield.log` when the loops are
+done (it resumes anything still paused).
