@@ -359,3 +359,75 @@ possible where coordinates exist (the Heming and Yu Xenium cells, the
 Shiers spots, the DPN nerve spots); Zhang, Vroman and Tavares-Ferreira
 have no spot positions in the public files, so (c) cannot be done for
 them.
+
+## 3.6 Anatomy check inputs
+
+The images for check (c) are fetched after the mapping, once it was
+decided that the check would be done. What each source holds:
+
+- Tavares-Ferreira 2022 (Box): the H and E images are 16 TIFF files of
+  1.65 to 1.70 GB (24.7 GiB), one per section, in a folder next to the
+  H5 and Loupe folders; the listing script now has an `--images` mode
+  for them. The spot positions of these sections are still only in the
+  Loupe files, so the images cannot be overlaid with the mapping; they
+  are kept so that the sections can be looked at, and a panel is drawn
+  only if positions turn up.
+- Shiers 2025: the SPARC portal holds a copy of the dataset (discover
+  dataset 490, version 1, DOI 10.26275/vz0c-uet7, CC BY) with the full
+  Space Ranger spatial folder per section: high-resolution and
+  low-resolution tissue images, scale factors, positions, the aligned
+  fiducials and the Loupe files. The high-resolution image (4 to 7 MB)
+  and the scale factors of each section are taken from the dataset's
+  public S3 bucket, renamed with the config section name (the SPARC
+  sample folders are the GEO sample names; donor DN0003's two sections
+  are M2-1 and M2-2 there as on GEO). The positions already in use
+  come from GEO and are the same files. A CFDE record describing
+  "16 dorsal root ganglia from 8 patients (left and right)" looked like
+  the Tavares-Ferreira data but is SPARC dataset 476, cervical DRG from
+  fusion surgeries, a different study; Tavares-Ferreira is not on SPARC.
+- Heming 2025: the DAPI morphology OME-TIFF of each section is in the
+  GEO tar (0.6 to 2.8 GB gzipped per section, 10.5 GB in all); it is
+  pyramidal and the cell centroids are in microns, so a low pyramid
+  level with the pixel size from the OME metadata is enough for the
+  panels.
+- DPN sural nerve: the Seurat object carries the low-resolution tissue
+  image of each of its six sections, which the R export now writes as
+  PNG next to the coordinates (whose scale factors it already had); the
+  Box folder has no other image.
+
+The `tar -x ... -C` form used first put the image files next to the
+tar instead of in the extracted directory; they were decompressed there
+and moved. Nothing of the mapping results depends on the images.
+
+All 49 image files (16 TIFF, 16 PNG, 17 JSON; DN0134-S1-1 has two scale
+factor files from two Space Ranger runs, and the one whose scaled spot
+positions fit inside the image is used) verify against the manifest.
+The Xenium morphology file is a DAPI z-stack of 11 planes 3 microns
+apart, JPEG 2000 compressed, whose first plane is nearly empty; the
+panels use the maximum projection at pyramid level 3 (1.7 microns per
+pixel). The server environment needed `imagecodecs` for the JPEG 2000
+tiles, now in `environment.yml`.
+
+Panels. For the Visium sections a dominant-state map would be empty
+for the three nerve states in a ganglion (they are never the most
+numerous cells of a 30 cell spot there, and in the sural nerve the
+perineurial state dominates only part of the perineurium), so each
+Visium panel shows the estimated number of cells of the state in every
+spot instead, on the H and E; for the Xenium sections the cells
+assigned to the three states are drawn on the DAPI image. The panels
+are `results/spatial/anatomy/<dataset>/<section>.jpg` (30 sections: 8
+Heming, 16 Shiers, 6 DPN nerve) and the reader's sheet is
+`results/spatial/anatomy/anatomy_check.tsv`, one row per section and
+state, to be filled with yes, no or not present. The judgement is the
+reader's and is not recorded here until it is made. What the panels
+show at first sight, as a note for the reader: in the Heming sural
+nerve sections the perineurial cells form rings around the fascicles
+(S01 most clearly, with 1,240 perineurial cells), the endoneurial
+fibroblasts sit inside the fascicles and the epineurial fibroblasts
+between them; in the DPN sural nerve sections the perineurial abundance
+is highest in bands across the fascicles rather than only at their
+rims, which the low-resolution image (600 pixels across) makes hard to
+place; in the DRG sections the three states together hold 1 to 4
+percent of the estimated cells, spread thinly over the ganglion with no
+concentration at the capsule, so the expected answer there is "not
+present" rather than a yes or a no.

@@ -332,3 +332,81 @@ Check: `pgrep` prints nothing; 44 `checks.tsv` files under the c2l
 directory; `results/spatial/section_checks.tsv` has one row per section
 and state (1,540 rows) and `results/spatial/state_mapping_status.tsv`
 28 state and compartment rows.
+
+## 3.6 Anatomy check inputs and panels
+
+Check (c) needs a tissue image under the state map. Images are taken
+from four places: the Tavares-Ferreira H and E images on Box (16 TIFF
+files), the Space Ranger high-resolution tissue image and scale factors
+of every Shiers 2025 section from the SPARC copy of that dataset
+(discover dataset 490, public S3 bucket), the DAPI morphology images
+inside the Heming 2025 GEO tar, and the low-resolution image kept in the
+DPN nerve Seurat object. List and download the first two (the download
+script appends to the manifest, so nothing else may write it meanwhile;
+`sync.sh` copies the laptop's manifest to the server, so it is not run
+while a download is going):
+
+```bash
+cd "$REPO"
+python3 -I workflow/scripts/stage3_list_files.py --images > data/metadata/stage3_images.tsv
+awk -F'\t' 'NR>1{s+=$5} END{print NR-1, "files, GB", s/1073741824}' data/metadata/stage3_images.tsv
+REMOTE=user@host workflow/remote/sync.sh
+ssh "$REMOTE" 'cd ~/Projects/pnatlas-dev && df -h / | tail -1 && \
+  setsid -f nohup python3 -I workflow/scripts/download_files.py data/metadata/stage3_images.tsv \
+    --data-root data --manifest data/MANIFEST.tsv \
+    --fetch "workflow/scripts/download_files.py data/metadata/stage3_images.tsv" \
+    > logs/stage3_images_download.log 2>&1 < /dev/null'
+```
+
+Meanwhile take the morphology images out of the Heming tar (gzipped
+OME-TIFF, 10.5 GB; they land next to the tar and are moved into the
+extracted directory once decompressed):
+
+```bash
+ssh "$REMOTE" 'cd ~/Projects/pnatlas-dev/data/raw/heming2025_sural_xenium && \
+  setsid -f nohup bash -c "nice -n 15 tar -xf GSE285984_RAW.tar --wildcards \"*morphology.ome.tif.gz\" && \
+    nice -n 15 gunzip -f GSM87144*_morphology.ome.tif.gz && mv GSM87144*_morphology.ome.tif extracted/ && echo MORPHDONE" \
+    > ../../../logs/heming_morphology_extract.log 2>&1 < /dev/null'
+```
+
+When the download has ended (`grep -c ^done logs/stage3_images_download.log`
+equals the number of rows in the list), verify, bring the manifest
+back, and re-export the DPN nerve object with the image export added to
+`rds_spatial_to_mtx.R` (same counts, coordinates and metadata as before,
+plus `images/<section>.png`):
+
+```bash
+ssh "$REMOTE" 'cd ~/Projects/pnatlas-dev && python3 -I workflow/scripts/download_files.py data/metadata/stage3_images.tsv --data-root data --verify | sort | uniq -c -w 2'
+rsync -a "$REMOTE:~/Projects/pnatlas-dev/data/MANIFEST.tsv" data/MANIFEST.tsv
+REMOTE=user@host workflow/remote/sync.sh
+ssh "$REMOTE" 'source ~/miniconda3/etc/profile.d/conda.sh && conda activate pnatlas-r && cd ~/Projects/pnatlas-dev && \
+  nice -n 15 Rscript workflow/scripts/rds_spatial_to_mtx.R \
+    data/raw/utdallas_dpn_nerves/merged_obj_harmony_layerintegration_resol0.5_annotated_final.rds \
+    data/interim/rds/utdallas_dpn_nerves > logs/rds_export_utdallas_dpn_nerves.log 2>&1; \
+  grep -E "^image_|spots_with" logs/rds_export_utdallas_dpn_nerves.log'
+```
+
+Then draw the panels (image sources per dataset in the `anatomy` block
+of `config/spatial_inputs.yaml`: for a Visium section the image and one
+map per state of the estimated cells of that state in each spot; for a
+Xenium section the image and the cells of the three states in colour)
+and bring them back with the reader's sheet. The Xenium image is JPEG
+2000 compressed, so the environment needs `imagecodecs` next to
+`tifffile` (both in `environment.yml`; on the existing server
+environment `pip install imagecodecs`):
+
+```bash
+ssh "$REMOTE" 'source ~/miniconda3/etc/profile.d/conda.sh && conda activate pnatlas && cd ~/Projects/pnatlas-dev && \
+  pip install -q imagecodecs && \
+  for d in heming2025_sural_xenium shiers2025_dpn_drg utdallas_dpn_nerves; do \
+    nice -n 15 python workflow/scripts/anatomy_panels.py $d --data-root data --out-dir results/spatial/anatomy/$d; done'
+rsync -a "$REMOTE:~/Projects/pnatlas-dev/results/spatial/anatomy/" results/spatial/anatomy/
+```
+
+Check: one JPEG per section with coordinates and an image (8 Heming, 16
+Shiers, 6 DPN nerve, 26 MB in all); `results/spatial/anatomy/anatomy_check.tsv`
+has three rows per section (one per state) with the count drawn and an
+empty `placed_correctly` column for the reader to fill with yes, no or
+not present. The Tavares-Ferreira images have no spot positions to
+overlay (the positions are only in the Loupe files, which no open tool
+reads), so they are kept for viewing and no panel is drawn for them.

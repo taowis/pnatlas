@@ -104,6 +104,7 @@ Downloaded on the server with
 ```bash
 python3 -I workflow/scripts/download_files.py data/metadata/stage3_files.tsv --data-root "$DATA_ROOT"
 python3 -I workflow/scripts/download_files.py data/metadata/stage3_files.tsv --data-root "$DATA_ROOT" --verify
+python3 -I workflow/scripts/download_files.py data/metadata/stage3_images.tsv --data-root "$DATA_ROOT"   # images for the anatomy check
 ```
 
 The Box files are fetched through the shared-link download endpoint of
@@ -147,16 +148,49 @@ DRG, Visium. Two sections of one donor, Space Ranger H5, Loupe file and high-res
 
 ### shiers2025_dpn_drg
 
-DRG, Visium, donors with and without diabetes. 16 sections from seven donors in three batches: filtered and raw H5, tissue positions, Loupe files and the authors' neuron selections per section; donor diabetes status in the docx. Source: GSE295206, PMID 40325011. Access: open.
+DRG, Visium, donors with a history of diabetes. 16 sections from six donors in three batches: filtered and raw H5, tissue positions, Loupe files and the authors' neuron selections per section (GEO); donor numbers in the docx, diabetes status from the paper. Source: GSE295206, PMID 40325011. Access: open. The high-resolution tissue image and scale factors of every section for the anatomy check come from the SPARC copy of the dataset (Pennsieve discover dataset 490, version 1, DOI 10.26275/vz0c-uet7, licence CC BY; files under `files/primary/sub-*/sam-*/spatial/` of the dataset, fetched from its public S3 bucket with `data/metadata/stage3_images.tsv` and renamed `<section>_<name>`; DN0134-S1-1 has two scale factor files from two Space Ranger runs, the one whose scaled positions fit the image is used).
 
 | File (under data_root) | Size (bytes) | md5 | Access date |
 |---|---|---|---|
 | `raw/shiers2025_dpn_drg/GSE295206_RAW.tar` | 9698846720 | 121636444c268a13bcf0d8f5bbe877bd | 2026-11-08 |
 | `raw/shiers2025_dpn_drg/GSE295206_metadata_nageotteSamples.docx.gz` | 19532 | c6c9c82ab58f4c8058301cd048c49021 | 2026-11-08 |
+| `raw/shiers2025_dpn_drg/180714-L4-1_scalefactors_json.json` | 164 | c4e0fb6d6427d3b991a0df1eff8132a0 | 2026-11-09 |
+| `raw/shiers2025_dpn_drg/180714-L4-1_tissue_hires_image.png` | 5828914 | 277b301707a30f95a6bbcfd8a7421438 | 2026-11-09 |
+| `raw/shiers2025_dpn_drg/180714-L4-5_scalefactors_json.json` | 162 | 6f9cb573944f2e15abb92337dbf81fd8 | 2026-11-09 |
+| `raw/shiers2025_dpn_drg/180714-L4-5_tissue_hires_image.png` | 5467659 | adb9434fe70c0fc3d3cfeb3b841a9e59 | 2026-11-09 |
+| `raw/shiers2025_dpn_drg/181030-1L4-3_scalefactors_json.json` | 162 | 80e28ca523f26cbe5f44a8642d4358ca | 2026-11-09 |
+| `raw/shiers2025_dpn_drg/181030-1L4-3_tissue_hires_image.png` | 3995605 | 899cfc7a99b030730c32b736b7c320a5 | 2026-11-09 |
+| `raw/shiers2025_dpn_drg/181030-1L4-7_scalefactors_json.json` | 164 | c3d44daed881f4406b9493a14979c147 | 2026-11-09 |
+| `raw/shiers2025_dpn_drg/181030-1L4-7_tissue_hires_image.png` | 4828491 | edbd3cf91ecdd20301519156f97d3c2d | 2026-11-09 |
+| `raw/shiers2025_dpn_drg/181030-2L4-2_scalefactors_json.json` | 162 | f75f323bb210830afe94687024e55993 | 2026-11-09 |
+| `raw/shiers2025_dpn_drg/181030-2L4-2_tissue_hires_image.png` | 6028144 | b3aeebf00db4744fb5af52ad4cd0029a | 2026-11-09 |
+| `raw/shiers2025_dpn_drg/181030-2L4-6_scalefactors_json.json` | 163 | ff6ea22ceb085f63f3b0c323b9d50985 | 2026-11-09 |
+| `raw/shiers2025_dpn_drg/181030-2L4-6_tissue_hires_image.png` | 5525580 | 0099ba99cce983f9c8be7678fdbab6b5 | 2026-11-09 |
+| `raw/shiers2025_dpn_drg/DN0095-S2-1_scalefactors_json_s2-1.json` | 166 | e263f405d771f96c79528602a3bd971e | 2026-11-09 |
+| `raw/shiers2025_dpn_drg/DN0095-S2-1_tissue_hires_image.png` | 5889886 | ea5cb1f8edc70b026212ce2ba84d2496 | 2026-11-09 |
+| `raw/shiers2025_dpn_drg/DN0095-S2-2_scalefactors_json_s2-2.json` | 165 | 616b84d09d56db30c1a33234186c53a6 | 2026-11-09 |
+| `raw/shiers2025_dpn_drg/DN0095-S2-2_tissue_hires_image.png` | 5342641 | eaedf8aa3fc88e682babd85b68d07520 | 2026-11-09 |
+| `raw/shiers2025_dpn_drg/DN0095-S2-3_scalefactors_json_s2-3.json` | 166 | 1eb706dd4cf84f777d55488d54b39b12 | 2026-11-09 |
+| `raw/shiers2025_dpn_drg/DN0095-S2-3_tissue_hires_image.png` | 7208543 | a3e591bd79bba42d34a8621580a79e0c | 2026-11-09 |
+| `raw/shiers2025_dpn_drg/DN0106-S5-1_scalefactors_json_s5-1.json` | 166 | a6451c2d5666e7861c4aa793b8526425 | 2026-11-09 |
+| `raw/shiers2025_dpn_drg/DN0106-S5-1_tissue_hires_image.png` | 5841545 | b7b5b3e1374fdf4c28333cc93db96142 | 2026-11-09 |
+| `raw/shiers2025_dpn_drg/DN0106-S5-2_scalefactors_json_s5-2.json` | 164 | 91ff299920141950fc366c6357c282db | 2026-11-09 |
+| `raw/shiers2025_dpn_drg/DN0106-S5-2_tissue_hires_image.png` | 7031133 | 5d7482710cf39d0756e2d631b3897ece | 2026-11-09 |
+| `raw/shiers2025_dpn_drg/DN0134-S1-1_scalefactors_json.json` | 203 | cdc4d8ccca65c4607853399b37dbb035 | 2026-11-09 |
+| `raw/shiers2025_dpn_drg/DN0134-S1-1_scalefactors_json_s1-1.json` | 165 | 20bae3430e12575f1dee8776498033cc | 2026-11-09 |
+| `raw/shiers2025_dpn_drg/DN0134-S1-1_tissue_hires_image.png` | 5696395 | 59d8a3394d18eabac8b1cf962e1e73ca | 2026-11-09 |
+| `raw/shiers2025_dpn_drg/DN0134-S1-2_scalefactors_json_s1-2.json` | 166 | ff84b108c8ee7ad00db2f4c749205a47 | 2026-11-09 |
+| `raw/shiers2025_dpn_drg/DN0134-S1-2_tissue_hires_image.png` | 5543287 | 419ca0bbba92aaeefcd77569d6b1220b | 2026-11-09 |
+| `raw/shiers2025_dpn_drg/DN0134-S1-3_scalefactors_json_s1-3.json` | 166 | 88b5d3dd88e0fc4156fe24bb08d24bba | 2026-11-09 |
+| `raw/shiers2025_dpn_drg/DN0134-S1-3_tissue_hires_image.png` | 6047416 | 1baf0c2968ec7df9c29ab5c4b2a97916 | 2026-11-09 |
+| `raw/shiers2025_dpn_drg/M2-1_scalefactors_s4r1_json.json` | 164 | 6ab4dbb0871ad9d33de71e145946ec02 | 2026-11-09 |
+| `raw/shiers2025_dpn_drg/M2-1_tissue_hires_image_s4r1.png` | 3512708 | 37d575ea17a8e3752c43d7bd2369af83 | 2026-11-09 |
+| `raw/shiers2025_dpn_drg/M2-2_scalefactors_s8r1_json.json` | 165 | dd43e16e7c92c02ecd409e986ffd47f4 | 2026-11-09 |
+| `raw/shiers2025_dpn_drg/M2-2_tissue_hires_image_s8r1.png` | 5499047 | 9ff922898cf36733828f3c9184fb19f7 | 2026-11-09 |
 
 ### tavaresferreira2022_hdrg_visium
 
-DRG, Visium. 16 Space Ranger H5 files (two sections each of four female and four male donors), the sample sheet and the combined Seurat object; the H and E images (26.6 GB) and Loupe files (10.4 GB) in the same folder are not downloaded. Source: UT Dallas Box folder linked from sensoryomics.shinyapps.io/RNA-Data, PMID 35171654. Access: open, no licence stated.
+DRG, Visium. 16 Space Ranger H5 files (two sections each of four female and four male donors), the sample sheet and the combined Seurat object, and the 16 H and E images (TIFF, 26.6 GB, one per section, `H&E_images` folder, fetched for the anatomy check with `data/metadata/stage3_images.tsv`); the Loupe files (10.4 GB) in the same folder are not downloaded. The H5 files carry no spot positions and the images cannot be overlaid with the mapping. Source: UT Dallas Box folder linked from sensoryomics.shinyapps.io/RNA-Data, PMID 35171654. Access: open, no licence stated.
 
 | File (under data_root) | Size (bytes) | md5 | Access date |
 |---|---|---|---|
@@ -178,6 +212,22 @@ DRG, Visium. 16 Space Ranger H5 files (two sections each of four female and four
 | `raw/tavaresferreira2022_hdrg_visium/VM4-1_filtered_feature_bc_matrix.h5` | 7681706 | 69786d2eb2e9757242443751038ac416 | 2026-11-08 |
 | `raw/tavaresferreira2022_hdrg_visium/VM4-2_filtered_feature_bc_matrix.h5` | 6502306 | 96413f935f76e86e84b606c8e3c95614 | 2026-11-08 |
 | `raw/tavaresferreira2022_hdrg_visium/drg.combined.rds` | 195534826 | 6e40a62c807bd82f46fde8435452df33 | 2026-11-08 |
+| `raw/tavaresferreira2022_hdrg_visium/VF1-1.tif` | 1645510155 | 76781f1a9edee47cac5597940d0c2b82 | 2026-11-09 |
+| `raw/tavaresferreira2022_hdrg_visium/VF1-2.tif` | 1645537217 | 4ff9b76382d8a8cc6103044fbac45b4a | 2026-11-09 |
+| `raw/tavaresferreira2022_hdrg_visium/VF2-1.tif` | 1645510155 | 2854b7281e6de035209926c04bc8de06 | 2026-11-09 |
+| `raw/tavaresferreira2022_hdrg_visium/VF2-2.tif` | 1645510171 | 62a395ac29371310db6e3f0086f533ed | 2026-11-09 |
+| `raw/tavaresferreira2022_hdrg_visium/VF3-1.tif` | 1701196652 | d1d704da15ab9b397cf3e764edde571e | 2026-11-09 |
+| `raw/tavaresferreira2022_hdrg_visium/VF3-2.tif` | 1645509969 | dd41f900132ee6106d6dc029ae4c9c38 | 2026-11-09 |
+| `raw/tavaresferreira2022_hdrg_visium/VF4-1.tif` | 1701196732 | 9ef7a75b2e611cf82714d2175d2f6e9c | 2026-11-09 |
+| `raw/tavaresferreira2022_hdrg_visium/VF4-2.tif` | 1645509885 | 8b0d32cf9b2fdf4f33d1f75381bf1a4f | 2026-11-09 |
+| `raw/tavaresferreira2022_hdrg_visium/VM1-1.tif` | 1645510155 | 9575606f3a7e5d15fea4096eacd89f05 | 2026-11-09 |
+| `raw/tavaresferreira2022_hdrg_visium/VM1-2.tif` | 1645510171 | c1c63486cd5979c5419474473bb9ac97 | 2026-11-09 |
+| `raw/tavaresferreira2022_hdrg_visium/VM2-1.tif` | 1645510085 | 792b4c7598f5c54b489a9fe3db31e955 | 2026-11-09 |
+| `raw/tavaresferreira2022_hdrg_visium/VM2-2.tif` | 1645510171 | 9b12bfbe058553a072daf742c52871f4 | 2026-11-09 |
+| `raw/tavaresferreira2022_hdrg_visium/VM3-1.tif` | 1701196732 | 69afe5ed40ac94f1eb6a9dc18ec1ac34 | 2026-11-09 |
+| `raw/tavaresferreira2022_hdrg_visium/VM3-2.tif` | 1645509885 | 90c5c8b718e51d27a23b5be125b49e89 | 2026-11-09 |
+| `raw/tavaresferreira2022_hdrg_visium/VM4-1.tif` | 1701196764 | 815230874caadc8a8bdb5cb4bddf0449 | 2026-11-09 |
+| `raw/tavaresferreira2022_hdrg_visium/VM4-2.tif` | 1645509885 | cce13080b3ade8b08fdd41dcce7c870b | 2026-11-09 |
 
 ### utdallas_dpn_nerves
 
