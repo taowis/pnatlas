@@ -12,6 +12,9 @@ heming2025_sural_xenium:
   compartment: nerve
   # one donor per section; condition from the GEO "disease" field
   # (CIDP, CIAP, vasculitic neuropathy VN, control)
+  # anatomy check: the DAPI morphology image from the GEO tar, read at
+  # pyramid level 3; cell centroids are in microns, pixel size from the OME metadata
+  anatomy: {kind: ome_tiff, image: "raw/heming2025_sural_xenium/extracted/*_{section}_morphology.ome.tif", level: 3, marker_px: 3}
   sections:
     S01: {h5: raw/heming2025_sural_xenium/extracted/GSM8714492_S01_cell_feature_matrix.h5, cells: raw/heming2025_sural_xenium/extracted/GSM8714492_S01_cells.parquet, donor: S01, condition: CIDP, batch: Münster}
     S04: {h5: raw/heming2025_sural_xenium/extracted/GSM8714493_S04_cell_feature_matrix.h5, cells: raw/heming2025_sural_xenium/extracted/GSM8714493_S04_cells.parquet, donor: S04, condition: CIAP, batch: Münster}
@@ -79,6 +82,9 @@ shiers2025_dpn_drg:
   # analgesics, no non-diabetic donor. M2-1 and M2-2 are the same files as
   # Tavares-Ferreira VM2-1 and VM2-2 (donor 14 is their donor M2); the
   # selections are the authors' Loupe annotations of Nageotte nodules
+  # anatomy check: the Space Ranger high-resolution tissue image and scale
+  # factors of each section from the SPARC copy of the dataset (data/metadata/stage3_images.tsv)
+  anatomy: {kind: spaceranger, image: "raw/shiers2025_dpn_drg/{section}_tissue_hires_image*.png", scale_json: "raw/shiers2025_dpn_drg/{section}_scalefactors*.json", scale_key: tissue_hires_scalef, marker_px: 7}
   sections:
     M2-1: {h5: raw/shiers2025_dpn_drg/extracted/GSM8943583_M2-1_filtered_feature_bc_matrix.h5, positions: raw/shiers2025_dpn_drg/extracted/GSM8943583_tissue_positions_list_s4r1_092d1.csv, selections: raw/shiers2025_dpn_drg/extracted/GSM8943583_sample4.csv, donor: DN0003, batch: shiers1, condition: diabetic}
     M2-2: {h5: raw/shiers2025_dpn_drg/extracted/GSM8943584_M2-2_filtered_feature_bc_matrix.h5, positions: raw/shiers2025_dpn_drg/extracted/GSM8943584_tissue_positions_list_s8r1_090d1.csv, selections: raw/shiers2025_dpn_drg/extracted/GSM8943584_sample8.csv, donor: DN0003, batch: shiers1, condition: diabetic}
@@ -130,6 +136,9 @@ utdallas_dpn_nerves:
   tissue: sural nerve
   compartment: nerve
   dir: interim/rds/utdallas_dpn_nerves
+  # anatomy check: the low-resolution tissue image kept in the Seurat object
+  # (exported by rds_spatial_to_mtx.R), scale factor from the exported coordinates
+  anatomy: {kind: seurat_export, image: "interim/rds/utdallas_dpn_nerves/images/{image}.png", coordinates: interim/rds/utdallas_dpn_nerves/coordinates.csv.gz, scale_column: lowres, marker_px: 5}
   # the authors' annotated object (six images, full-resolution pixel
   # coordinates, CellType labels); donors, diabetes and the axonal loss
   # grade from sample_metadata.csv (sample 24 is the control, with two
