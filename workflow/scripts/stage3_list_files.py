@@ -8,8 +8,11 @@ row per file. From the Tavares-Ferreira folder only the Space Ranger H5
 files, the sample sheet and the combined Seurat object are taken (the
 H and E images and Loupe files, 37 GB, are not); from the DPN nerve folder
 the annotated Seurat object and the sample sheet (the Loupe files are not).
+With --images the list holds instead the 16 H and E images (TIFF, 26.6 GB)
+of the Tavares-Ferreira folder, fetched later for the anatomy check.
 
 Usage: python workflow/scripts/stage3_list_files.py > data/metadata/stage3_files.tsv
+       python workflow/scripts/stage3_list_files.py --images > data/metadata/stage3_images.tsv
 """
 import html
 import re
@@ -33,6 +36,9 @@ BOX_FOLDERS = [
     ("tavaresferreira2022_hdrg_visium", "dgs8a7vo9uu9cx6l81somaxb468hpgnz", None, r"\.rds$|\.xlsx$"),
     ("tavaresferreira2022_hdrg_visium", "dgs8a7vo9uu9cx6l81somaxb468hpgnz", "156483046434", r"\.h5$"),
     ("utdallas_dpn_nerves", "apafnhru6dihoi2va20wxexi40lia9b0", None, r"\.rds$|\.csv$"),
+]
+BOX_IMAGES = [
+    ("tavaresferreira2022_hdrg_visium", "dgs8a7vo9uu9cx6l81somaxb468hpgnz", "206669782611", r"\.tif$"),
 ]
 
 COLS = ["dataset", "accession", "file", "url", "size_bytes", "access"]
@@ -58,8 +64,8 @@ def geo_rows():
                 yield [ds, gse, name, base + name, size_bytes(size), "open"]
 
 
-def box_rows():
-    for ds, shared, folder, keep in BOX_FOLDERS:
+def box_rows(folders):
+    for ds, shared, folder, keep in folders:
         page = f"{BOX}/s/{shared}" + (f"/folder/{folder}" if folder else "")
         items = re.finditer(r'"typedID":"(f_\d+)","type":"file","id":\d+.*?"name":"([^"]*)","itemSize":(\d+)', fetch(page))
         for m in items:
@@ -70,8 +76,10 @@ def box_rows():
 
 
 def main():
+    images = "--images" in sys.argv[1:]
     print("\t".join(COLS))
-    for row in list(geo_rows()) + list(box_rows()):
+    rows = list(box_rows(BOX_IMAGES)) if images else list(geo_rows()) + list(box_rows(BOX_FOLDERS))
+    for row in rows:
         print("\t".join(str(x) for x in row))
 
 
