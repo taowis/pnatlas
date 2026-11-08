@@ -1,0 +1,91 @@
+dataset	section	state	spots_or_cells	placed_correctly	note
+heming2025_sural_xenium	S01	endoneurial fibroblast	479		
+heming2025_sural_xenium	S01	epineurial fibroblast	1172		
+heming2025_sural_xenium	S01	perineurial	1240		
+heming2025_sural_xenium	S04	endoneurial fibroblast	219		
+heming2025_sural_xenium	S04	epineurial fibroblast	1249		
+heming2025_sural_xenium	S04	perineurial	670		
+heming2025_sural_xenium	S11	endoneurial fibroblast	908		
+heming2025_sural_xenium	S11	epineurial fibroblast	1291		
+heming2025_sural_xenium	S11	perineurial	809		
+heming2025_sural_xenium	S14	endoneurial fibroblast	222		
+heming2025_sural_xenium	S14	epineurial fibroblast	274		
+heming2025_sural_xenium	S14	perineurial	336		
+heming2025_sural_xenium	S22	endoneurial fibroblast	295		
+heming2025_sural_xenium	S22	epineurial fibroblast	9		
+heming2025_sural_xenium	S22	perineurial	127		
+heming2025_sural_xenium	S24	endoneurial fibroblast	230		
+heming2025_sural_xenium	S24	epineurial fibroblast	147		
+heming2025_sural_xenium	S24	perineurial	193		
+heming2025_sural_xenium	S29	endoneurial fibroblast	539		
+heming2025_sural_xenium	S29	epineurial fibroblast	527		
+heming2025_sural_xenium	S29	perineurial	326		
+heming2025_sural_xenium	S30	endoneurial fibroblast	533		
+heming2025_sural_xenium	S30	epineurial fibroblast	553		
+heming2025_sural_xenium	S30	perineurial	62		
+shiers2025_dpn_drg	180714-L4-1	endoneurial fibroblast	2737		
+shiers2025_dpn_drg	180714-L4-1	epineurial fibroblast	2789		
+shiers2025_dpn_drg	180714-L4-1	perineurial	646		
+shiers2025_dpn_drg	180714-L4-5	endoneurial fibroblast	3056		
+shiers2025_dpn_drg	180714-L4-5	epineurial fibroblast	2956		
+shiers2025_dpn_drg	180714-L4-5	perineurial	626		
+shiers2025_dpn_drg	181030-1L4-3	endoneurial fibroblast	1499		
+shiers2025_dpn_drg	181030-1L4-3	epineurial fibroblast	1165		
+shiers2025_dpn_drg	181030-1L4-3	perineurial	581		
+shiers2025_dpn_drg	181030-1L4-7	endoneurial fibroblast	2310		
+shiers2025_dpn_drg	181030-1L4-7	epineurial fibroblast	1891		
+shiers2025_dpn_drg	181030-1L4-7	perineurial	1044		
+shiers2025_dpn_drg	181030-2L4-2	endoneurial fibroblast	2654		
+shiers2025_dpn_drg	181030-2L4-2	epineurial fibroblast	2235		
+shiers2025_dpn_drg	181030-2L4-2	perineurial	1793		
+shiers2025_dpn_drg	181030-2L4-6	endoneurial fibroblast	2766		
+shiers2025_dpn_drg	181030-2L4-6	epineurial fibroblast	2374		
+shiers2025_dpn_drg	181030-2L4-6	perineurial	1841		
+shiers2025_dpn_drg	DN0095-S2-1	endoneurial fibroblast	1460		
+shiers2025_dpn_drg	DN0095-S2-1	epineurial fibroblast	1697		
+shiers2025_dpn_drg	DN0095-S2-1	perineurial	871		
+shiers2025_dpn_drg	DN0095-S2-2	endoneurial fibroblast	1353		
+shiers2025_dpn_drg	DN0095-S2-2	epineurial fibroblast	1683		
+shiers2025_dpn_drg	DN0095-S2-2	perineurial	787		
+shiers2025_dpn_drg	DN0095-S2-3	endoneurial fibroblast	1819		
+shiers2025_dpn_drg	DN0095-S2-3	epineurial fibroblast	2570		
+shiers2025_dpn_drg	DN0095-S2-3	perineurial	974		
+shiers2025_dpn_drg	DN0106-S5-1	endoneurial fibroblast	2125		
+shiers2025_dpn_drg	DN0106-S5-1	epineurial fibroblast	1834		
+shiers2025_dpn_drg	DN0106-S5-1	perineurial	1601		
+shiers2025_dpn_drg	DN0106-S5-2	endoneurial fibroblast	1924		
+shiers2025_dpn_drg	DN0106-S5-2	epineurial fibroblast	2000		
+shiers2025_dpn_drg	DN0106-S5-2	perineurial	1643		
+shiers2025_dpn_drg	DN0134-S1-1	endoneurial fibroblast	1356		
+shiers2025_dpn_drg	DN0134-S1-1	epineurial fibroblast	1533		
+shiers2025_dpn_drg	DN0134-S1-1	perineurial	869		
+shiers2025_dpn_drg	DN0134-S1-2	endoneurial fibroblast	418		
+shiers2025_dpn_drg	DN0134-S1-2	epineurial fibroblast	1296		
+shiers2025_dpn_drg	DN0134-S1-2	perineurial	923		
+shiers2025_dpn_drg	DN0134-S1-3	endoneurial fibroblast	891		
+shiers2025_dpn_drg	DN0134-S1-3	epineurial fibroblast	1350		
+shiers2025_dpn_drg	DN0134-S1-3	perineurial	535		
+shiers2025_dpn_drg	M2-1	endoneurial fibroblast	1329		
+shiers2025_dpn_drg	M2-1	epineurial fibroblast	1341		
+shiers2025_dpn_drg	M2-1	perineurial	1307		
+shiers2025_dpn_drg	M2-2	endoneurial fibroblast	1962		
+shiers2025_dpn_drg	M2-2	epineurial fibroblast	1769		
+shiers2025_dpn_drg	M2-2	perineurial	1813		
+utdallas_dpn_nerves	sural11	endoneurial fibroblast	1573		
+utdallas_dpn_nerves	sural11	epineurial fibroblast	1974		
+utdallas_dpn_nerves	sural11	perineurial	2127		
+utdallas_dpn_nerves	sural12	endoneurial fibroblast	1308		
+utdallas_dpn_nerves	sural12	epineurial fibroblast	1656		
+utdallas_dpn_nerves	sural12	perineurial	1685		
+utdallas_dpn_nerves	sural14	endoneurial fibroblast	2006		
+utdallas_dpn_nerves	sural14	epineurial fibroblast	2834		
+utdallas_dpn_nerves	sural14	perineurial	2600		
+utdallas_dpn_nerves	sural24l	endoneurial fibroblast	1192		
+utdallas_dpn_nerves	sural24l	epineurial fibroblast	697		
+utdallas_dpn_nerves	sural24l	perineurial	1439		
+utdallas_dpn_nerves	sural24t	endoneurial fibroblast	1041		
+utdallas_dpn_nerves	sural24t	epineurial fibroblast	763		
+utdallas_dpn_nerves	sural24t	perineurial	1012		
+utdallas_dpn_nerves	sural8	endoneurial fibroblast	2480		
+utdallas_dpn_nerves	sural8	epineurial fibroblast	2644		
+utdallas_dpn_nerves	sural8	perineurial	2170		

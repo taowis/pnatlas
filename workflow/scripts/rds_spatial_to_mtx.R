@@ -2,16 +2,19 @@
 # Write an authors' spatial Seurat object out as matrix market plus CSV so
 # the Python side can read it without R: the raw counts of the Spatial (or
 # RNA) assay, the cell metadata, and the tissue coordinates of every image
-# with its scale factors. The images themselves are not exported.
+# with its scale factors, and the tissue image stored with each image
+# (the low-resolution H and E that Seurat keeps) as PNG for the anatomy check.
 #
 # Usage: Rscript workflow/scripts/rds_spatial_to_mtx.R <input.rds> <outdir>
 # Output: <outdir>/matrix.mtx.gz (genes x spots), features.tsv.gz,
 #         barcodes.tsv.gz, metadata.csv.gz, coordinates.csv.gz
-#         (barcode, image, x, y, plus the image's scale factors), object_info.txt
+#         (barcode, image, x, y, plus the image's scale factors), object_info.txt,
+#         images/<image>.png
 suppressPackageStartupMessages({
   library(Matrix)
   library(data.table)
   library(Seurat)
+  library(png)
 })
 args <- commandArgs(trailingOnly = TRUE)
 if (length(args) != 2) stop("usage: rds_spatial_to_mtx.R <input.rds> <outdir>")
@@ -62,6 +65,12 @@ for (img in Images(obj)) {
     d[, spot := sf$spot]; d[, fiducial := sf$fiducial]; d[, hires := sf$hires]; d[, lowres := sf$lowres]
   }
   coords[[img]] <- d
+  arr <- tryCatch(GetImage(obj[[img]], mode = "raw"), error = function(e) NULL)
+  if (is.array(arr) && length(dim(arr)) == 3) {
+    dir.create(file.path(out, "images"), showWarnings = FALSE)
+    writePNG(arr, file.path(out, "images", paste0(img, ".png")))
+    info <- c(info, paste0("image_", img, " ", dim(arr)[2], "x", dim(arr)[1]))
+  }
 }
 coords <- rbindlist(coords, fill = TRUE)
 fwrite(coords, file.path(out, "coordinates.csv.gz"))
