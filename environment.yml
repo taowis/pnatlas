@@ -15,6 +15,8 @@ dependencies:
   - h5py
   - matplotlib
   - seaborn
+  - tifffile
+  - imagecodecs       # JPEG 2000 tiles of the Xenium morphology OME-TIFF
   # single-cell
   - anndata
   - scanpy
