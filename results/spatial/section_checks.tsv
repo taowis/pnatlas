@@ -1,0 +1,1541 @@
+dataset	section	state	assigned	markers_present	auroc_markers	heldout_genes	spearman_heldout	pass_a	pass_b	method	compartment
+shiers2025_dpn_drg	180714-L4-1	A-LTMR	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	180714-L4-1	A-LTMR (NF)	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	180714-L4-1	A-PEP	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	180714-L4-1	A-Propr	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	180714-L4-1	Ab-LTMR	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	180714-L4-1	B	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	180714-L4-1	C-LTMR	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	180714-L4-1	C-NP	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	180714-L4-1	C-PEP	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	180714-L4-1	C-Thermo	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	180714-L4-1	PEP	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	180714-L4-1	T/NK	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	180714-L4-1	adipocyte	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	180714-L4-1	damage Schwann	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	180714-L4-1	endoneurial fibroblast	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	180714-L4-1	endothelial	2291	20	0.5616261786838359	1766	0.5746479040720622	False	True	cell2location	ganglion
+shiers2025_dpn_drg	180714-L4-1	epineurial fibroblast	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	180714-L4-1	fibroblast	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	180714-L4-1	granulocyte	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	180714-L4-1	injured neuron	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	180714-L4-1	lymphatic endothelial	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	180714-L4-1	lymphocyte	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	180714-L4-1	macrophage	239	20	0.8351832422066992	1766	0.5526176823108464	True	True	cell2location	ganglion
+shiers2025_dpn_drg	180714-L4-1	mast	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	180714-L4-1	mural	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	180714-L4-1	myelinating Schwann	87	20	0.884278483213309	1766	0.546185706005988	True	True	cell2location	ganglion
+shiers2025_dpn_drg	180714-L4-1	non-myelinating Schwann	343	20	0.5632470730951984	1766	0.5731833460571454	False	True	cell2location	ganglion
+shiers2025_dpn_drg	180714-L4-1	perineurial	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	180714-L4-1	repair Schwann	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	180714-L4-1	satellite glia	565	20	0.673287192059316	1766	0.519342995254963	False	True	cell2location	ganglion
+shiers2025_dpn_drg	180714-L4-1	sympathetic neuron	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	180714-L4-5	A-LTMR	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	180714-L4-5	A-LTMR (NF)	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	180714-L4-5	A-PEP	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	180714-L4-5	A-Propr	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	180714-L4-5	Ab-LTMR	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	180714-L4-5	B	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	180714-L4-5	C-LTMR	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	180714-L4-5	C-NP	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	180714-L4-5	C-PEP	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	180714-L4-5	C-Thermo	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	180714-L4-5	PEP	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	180714-L4-5	T/NK	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	180714-L4-5	adipocyte	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	180714-L4-5	damage Schwann	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	180714-L4-5	endoneurial fibroblast	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	180714-L4-5	endothelial	711	20	0.7268594141747691	1766	0.5557182411206115	True	True	cell2location	ganglion
+shiers2025_dpn_drg	180714-L4-5	epineurial fibroblast	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	180714-L4-5	fibroblast	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	180714-L4-5	granulocyte	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	180714-L4-5	injured neuron	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	180714-L4-5	lymphatic endothelial	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	180714-L4-5	lymphocyte	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	180714-L4-5	macrophage	59	20	0.8955370915888569	1766	0.5137260359281395	True	True	cell2location	ganglion
+shiers2025_dpn_drg	180714-L4-5	mast	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	180714-L4-5	mural	1	20		0				cell2location	ganglion
+shiers2025_dpn_drg	180714-L4-5	myelinating Schwann	8	20		0				cell2location	ganglion
+shiers2025_dpn_drg	180714-L4-5	non-myelinating Schwann	2273	20	0.503133911820909	1766	0.555247124994261	False	True	cell2location	ganglion
+shiers2025_dpn_drg	180714-L4-5	perineurial	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	180714-L4-5	repair Schwann	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	180714-L4-5	satellite glia	534	20	0.7060989662332308	1766	0.4960119170649456	True	False	cell2location	ganglion
+shiers2025_dpn_drg	180714-L4-5	sympathetic neuron	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-1L4-3	A-LTMR	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-1L4-3	A-LTMR (NF)	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-1L4-3	A-PEP	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-1L4-3	A-Propr	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-1L4-3	Ab-LTMR	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-1L4-3	B	1	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-1L4-3	C-LTMR	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-1L4-3	C-NP	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-1L4-3	C-PEP	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-1L4-3	C-Thermo	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-1L4-3	PEP	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-1L4-3	T/NK	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-1L4-3	adipocyte	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-1L4-3	damage Schwann	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-1L4-3	endoneurial fibroblast	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-1L4-3	endothelial	140	20	0.6853448275862069	1766	0.5371142281782372	False	True	cell2location	ganglion
+shiers2025_dpn_drg	181030-1L4-3	epineurial fibroblast	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-1L4-3	fibroblast	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-1L4-3	granulocyte	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-1L4-3	injured neuron	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-1L4-3	lymphatic endothelial	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-1L4-3	lymphocyte	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-1L4-3	macrophage	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-1L4-3	mast	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-1L4-3	mural	1	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-1L4-3	myelinating Schwann	256	20	0.9136287258912916	1766	0.6016371629182365	True	True	cell2location	ganglion
+shiers2025_dpn_drg	181030-1L4-3	non-myelinating Schwann	1185	20	0.5718794176999363	1766	0.5682647883982866	False	True	cell2location	ganglion
+shiers2025_dpn_drg	181030-1L4-3	perineurial	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-1L4-3	repair Schwann	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-1L4-3	satellite glia	384	20	0.6434282217308906	1766	0.5053821487484473	False	True	cell2location	ganglion
+shiers2025_dpn_drg	181030-1L4-3	sympathetic neuron	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-1L4-7	A-LTMR	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-1L4-7	A-LTMR (NF)	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-1L4-7	A-PEP	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-1L4-7	A-Propr	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-1L4-7	Ab-LTMR	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-1L4-7	B	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-1L4-7	C-LTMR	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-1L4-7	C-NP	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-1L4-7	C-PEP	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-1L4-7	C-Thermo	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-1L4-7	PEP	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-1L4-7	T/NK	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-1L4-7	adipocyte	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-1L4-7	damage Schwann	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-1L4-7	endoneurial fibroblast	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-1L4-7	endothelial	9	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-1L4-7	epineurial fibroblast	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-1L4-7	fibroblast	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-1L4-7	granulocyte	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-1L4-7	injured neuron	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-1L4-7	lymphatic endothelial	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-1L4-7	lymphocyte	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-1L4-7	macrophage	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-1L4-7	mast	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-1L4-7	mural	2	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-1L4-7	myelinating Schwann	227	20	0.8870086727023248	1766	0.589140619502625	True	True	cell2location	ganglion
+shiers2025_dpn_drg	181030-1L4-7	non-myelinating Schwann	2062	20	0.4859596901244004	1766	0.5609958696221435	False	True	cell2location	ganglion
+shiers2025_dpn_drg	181030-1L4-7	perineurial	1	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-1L4-7	repair Schwann	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-1L4-7	satellite glia	610	20	0.6598064989562628	1766	0.5075104438913941	False	True	cell2location	ganglion
+shiers2025_dpn_drg	181030-1L4-7	sympathetic neuron	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-2L4-2	A-LTMR	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-2L4-2	A-LTMR (NF)	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-2L4-2	A-PEP	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-2L4-2	A-Propr	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-2L4-2	Ab-LTMR	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-2L4-2	B	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-2L4-2	C-LTMR	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-2L4-2	C-NP	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-2L4-2	C-PEP	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-2L4-2	C-Thermo	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-2L4-2	PEP	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-2L4-2	T/NK	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-2L4-2	adipocyte	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-2L4-2	damage Schwann	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-2L4-2	endoneurial fibroblast	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-2L4-2	endothelial	30	20	0.9485401806942464	1766	0.4787425786616751	True	False	cell2location	ganglion
+shiers2025_dpn_drg	181030-2L4-2	epineurial fibroblast	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-2L4-2	fibroblast	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-2L4-2	granulocyte	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-2L4-2	injured neuron	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-2L4-2	lymphatic endothelial	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-2L4-2	lymphocyte	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-2L4-2	macrophage	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-2L4-2	mast	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-2L4-2	mural	3	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-2L4-2	myelinating Schwann	13	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-2L4-2	non-myelinating Schwann	2774	20	0.4278751822583839	1766	0.561888108428722	False	True	cell2location	ganglion
+shiers2025_dpn_drg	181030-2L4-2	perineurial	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-2L4-2	repair Schwann	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-2L4-2	satellite glia	715	20	0.6877654614888656	1766	0.501520911508616	False	True	cell2location	ganglion
+shiers2025_dpn_drg	181030-2L4-2	sympathetic neuron	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-2L4-6	A-LTMR	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-2L4-6	A-LTMR (NF)	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-2L4-6	A-PEP	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-2L4-6	A-Propr	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-2L4-6	Ab-LTMR	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-2L4-6	B	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-2L4-6	C-LTMR	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-2L4-6	C-NP	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-2L4-6	C-PEP	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-2L4-6	C-Thermo	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-2L4-6	PEP	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-2L4-6	T/NK	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-2L4-6	adipocyte	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-2L4-6	damage Schwann	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-2L4-6	endoneurial fibroblast	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-2L4-6	endothelial	67	20	0.8942872002259653	1766	0.5506368002457181	True	True	cell2location	ganglion
+shiers2025_dpn_drg	181030-2L4-6	epineurial fibroblast	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-2L4-6	fibroblast	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-2L4-6	granulocyte	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-2L4-6	injured neuron	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-2L4-6	lymphatic endothelial	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-2L4-6	lymphocyte	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-2L4-6	macrophage	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-2L4-6	mast	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-2L4-6	mural	3	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-2L4-6	myelinating Schwann	4	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-2L4-6	non-myelinating Schwann	2628	20	0.423314327276763	1766	0.5555782448720054	False	True	cell2location	ganglion
+shiers2025_dpn_drg	181030-2L4-6	perineurial	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-2L4-6	repair Schwann	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	181030-2L4-6	satellite glia	694	20	0.7072061574626117	1766	0.5033542253040634	True	True	cell2location	ganglion
+shiers2025_dpn_drg	181030-2L4-6	sympathetic neuron	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-1	A-LTMR	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-1	A-LTMR (NF)	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-1	A-PEP	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-1	A-Propr	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-1	Ab-LTMR	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-1	B	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-1	C-LTMR	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-1	C-NP	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-1	C-PEP	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-1	C-Thermo	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-1	PEP	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-1	T/NK	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-1	adipocyte	1	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-1	damage Schwann	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-1	endoneurial fibroblast	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-1	endothelial	527	20	0.700007184259214	1766	0.599949441435537	True	True	cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-1	epineurial fibroblast	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-1	fibroblast	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-1	granulocyte	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-1	injured neuron	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-1	lymphatic endothelial	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-1	lymphocyte	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-1	macrophage	520	20	0.8078098332185526	1766	0.5671864797873454	True	True	cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-1	mast	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-1	mural	14	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-1	myelinating Schwann	37	20	0.5400224930041444	1766	0.3610090822850721	False	False	cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-1	non-myelinating Schwann	56	20	0.6795163911261834	1766	0.5362012876277227	False	True	cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-1	perineurial	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-1	repair Schwann	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-1	satellite glia	1934	20	0.6351728244179123	1766	0.5461677810305887	False	True	cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-1	sympathetic neuron	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-2	A-LTMR	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-2	A-LTMR (NF)	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-2	A-PEP	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-2	A-Propr	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-2	Ab-LTMR	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-2	B	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-2	C-LTMR	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-2	C-NP	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-2	C-PEP	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-2	C-Thermo	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-2	PEP	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-2	T/NK	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-2	adipocyte	1	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-2	damage Schwann	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-2	endoneurial fibroblast	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-2	endothelial	728	20	0.6688353246992147	1766	0.5956515886547251	False	True	cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-2	epineurial fibroblast	1	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-2	fibroblast	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-2	granulocyte	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-2	injured neuron	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-2	lymphatic endothelial	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-2	lymphocyte	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-2	macrophage	363	20	0.8346599416062312	1766	0.5702166442119818	True	True	cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-2	mast	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-2	mural	1	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-2	myelinating Schwann	197	20	0.6066574271974352	1766	0.5601854495397736	False	True	cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-2	non-myelinating Schwann	6	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-2	perineurial	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-2	repair Schwann	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-2	satellite glia	1940	20	0.6420317703820871	1766	0.5569729956483003	False	True	cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-2	sympathetic neuron	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-3	A-LTMR	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-3	A-LTMR (NF)	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-3	A-PEP	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-3	A-Propr	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-3	Ab-LTMR	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-3	B	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-3	C-LTMR	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-3	C-NP	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-3	C-PEP	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-3	C-Thermo	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-3	PEP	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-3	T/NK	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-3	adipocyte	3	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-3	damage Schwann	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-3	endoneurial fibroblast	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-3	endothelial	878	20	0.6531080787914502	1766	0.5967411065931273	False	True	cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-3	epineurial fibroblast	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-3	fibroblast	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-3	granulocyte	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-3	injured neuron	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-3	lymphatic endothelial	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-3	lymphocyte	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-3	macrophage	155	20	0.9163656419194852	1766	0.5860070962463301	True	True	cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-3	mast	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-3	mural	7	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-3	myelinating Schwann	94	20	0.8706552994686317	1766	0.5047168741004153	True	True	cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-3	non-myelinating Schwann	1022	20	0.607100766933139	1766	0.6004900245722297	False	True	cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-3	perineurial	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-3	repair Schwann	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-3	satellite glia	1827	20	0.6596950482609552	1766	0.5349083992375957	False	True	cell2location	ganglion
+shiers2025_dpn_drg	DN0095-S2-3	sympathetic neuron	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0106-S5-1	A-LTMR	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0106-S5-1	A-LTMR (NF)	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0106-S5-1	A-PEP	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0106-S5-1	A-Propr	202	20	0.954910615616722	1766	0.7723721766615603	True	True	cell2location	ganglion
+shiers2025_dpn_drg	DN0106-S5-1	Ab-LTMR	8	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0106-S5-1	B	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0106-S5-1	C-LTMR	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0106-S5-1	C-NP	2	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0106-S5-1	C-PEP	3	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0106-S5-1	C-Thermo	1	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0106-S5-1	PEP	1	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0106-S5-1	T/NK	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0106-S5-1	adipocyte	3	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0106-S5-1	damage Schwann	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0106-S5-1	endoneurial fibroblast	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0106-S5-1	endothelial	2821	20	0.5349193247976737	1766	0.5932680492215272	False	True	cell2location	ganglion
+shiers2025_dpn_drg	DN0106-S5-1	epineurial fibroblast	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0106-S5-1	fibroblast	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0106-S5-1	granulocyte	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0106-S5-1	injured neuron	2	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0106-S5-1	lymphatic endothelial	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0106-S5-1	lymphocyte	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0106-S5-1	macrophage	3	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0106-S5-1	mast	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0106-S5-1	mural	2	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0106-S5-1	myelinating Schwann	244	20	0.8503345627967245	1766	0.5833092699817168	True	True	cell2location	ganglion
+shiers2025_dpn_drg	DN0106-S5-1	non-myelinating Schwann	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0106-S5-1	perineurial	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0106-S5-1	repair Schwann	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0106-S5-1	satellite glia	1	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0106-S5-1	sympathetic neuron	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0106-S5-2	A-LTMR	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0106-S5-2	A-LTMR (NF)	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0106-S5-2	A-PEP	1	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0106-S5-2	A-Propr	217	20	0.9476227942002924	1766	0.7598576554365515	True	True	cell2location	ganglion
+shiers2025_dpn_drg	DN0106-S5-2	Ab-LTMR	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0106-S5-2	B	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0106-S5-2	C-LTMR	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0106-S5-2	C-NP	1	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0106-S5-2	C-PEP	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0106-S5-2	C-Thermo	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0106-S5-2	PEP	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0106-S5-2	T/NK	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0106-S5-2	adipocyte	1	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0106-S5-2	damage Schwann	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0106-S5-2	endoneurial fibroblast	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0106-S5-2	endothelial	2633	20	0.5695495703905447	1766	0.5903022521474246	False	True	cell2location	ganglion
+shiers2025_dpn_drg	DN0106-S5-2	epineurial fibroblast	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0106-S5-2	fibroblast	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0106-S5-2	granulocyte	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0106-S5-2	injured neuron	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0106-S5-2	lymphatic endothelial	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0106-S5-2	lymphocyte	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0106-S5-2	macrophage	765	20	0.5881425177751983	1766	0.5242892935986441	False	True	cell2location	ganglion
+shiers2025_dpn_drg	DN0106-S5-2	mast	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0106-S5-2	mural	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0106-S5-2	myelinating Schwann	285	20	0.5610809187518769	1766	0.4810798065620684	False	False	cell2location	ganglion
+shiers2025_dpn_drg	DN0106-S5-2	non-myelinating Schwann	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0106-S5-2	perineurial	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0106-S5-2	repair Schwann	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0106-S5-2	satellite glia	4	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0106-S5-2	sympathetic neuron	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-1	A-LTMR	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-1	A-LTMR (NF)	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-1	A-PEP	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-1	A-Propr	1	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-1	Ab-LTMR	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-1	B	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-1	C-LTMR	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-1	C-NP	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-1	C-PEP	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-1	C-Thermo	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-1	PEP	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-1	T/NK	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-1	adipocyte	2	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-1	damage Schwann	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-1	endoneurial fibroblast	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-1	endothelial	546	20	0.7588361035436244	1766	0.5917441754830933	True	True	cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-1	epineurial fibroblast	2	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-1	fibroblast	246	20	0.7887222454131632	1766	0.5727622723915343	True	True	cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-1	granulocyte	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-1	injured neuron	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-1	lymphatic endothelial	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-1	lymphocyte	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-1	macrophage	88	20	0.7783568843101767	1766	0.4900395224444067	True	False	cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-1	mast	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-1	mural	5	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-1	myelinating Schwann	172	20	0.8837370289961731	1766	0.5605886993679626	True	True	cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-1	non-myelinating Schwann	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-1	perineurial	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-1	repair Schwann	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-1	satellite glia	1638	20	0.7470820140311665	1766	0.535597701439148	True	True	cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-1	sympathetic neuron	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-2	A-LTMR	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-2	A-LTMR (NF)	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-2	A-PEP	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-2	A-Propr	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-2	Ab-LTMR	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-2	B	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-2	C-LTMR	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-2	C-NP	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-2	C-PEP	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-2	C-Thermo	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-2	PEP	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-2	T/NK	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-2	adipocyte	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-2	damage Schwann	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-2	endoneurial fibroblast	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-2	endothelial	737	20	0.6720452014014053	1766	0.5705454441376976	False	True	cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-2	epineurial fibroblast	1	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-2	fibroblast	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-2	granulocyte	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-2	injured neuron	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-2	lymphatic endothelial	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-2	lymphocyte	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-2	macrophage	18	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-2	mast	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-2	mural	4	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-2	myelinating Schwann	132	20	0.9007376395534292	1766	0.4919977805241061	True	False	cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-2	non-myelinating Schwann	117	20	0.6192019067836061	1766	0.5293200784293925	False	True	cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-2	perineurial	1	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-2	repair Schwann	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-2	satellite glia	1402	20	0.7393804466038617	1766	0.5220217134660926	True	True	cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-2	sympathetic neuron	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-3	A-LTMR	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-3	A-LTMR (NF)	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-3	A-PEP	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-3	A-Propr	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-3	Ab-LTMR	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-3	B	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-3	C-LTMR	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-3	C-NP	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-3	C-PEP	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-3	C-Thermo	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-3	PEP	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-3	T/NK	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-3	adipocyte	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-3	damage Schwann	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-3	endoneurial fibroblast	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-3	endothelial	586	20	0.6834805594592787	1766	0.5590787980342727	False	True	cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-3	epineurial fibroblast	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-3	fibroblast	130	20	0.6776837606837607	1766	0.4974221709795415	False	False	cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-3	granulocyte	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-3	injured neuron	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-3	lymphatic endothelial	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-3	lymphocyte	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-3	macrophage	54	20	0.7312179795068845	1766	0.4249642326047508	True	False	cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-3	mast	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-3	mural	7	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-3	myelinating Schwann	69	20	0.8046444000020996	1766	0.3444293604269668	True	False	cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-3	non-myelinating Schwann	168	20	0.4597901237880577	1766	0.4951079371652404	False	False	cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-3	perineurial	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-3	repair Schwann	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-3	satellite glia	1816	20	0.7289100717705427	1766	0.5077164812560274	True	True	cell2location	ganglion
+shiers2025_dpn_drg	DN0134-S1-3	sympathetic neuron	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	M2-1	A-LTMR	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	M2-1	A-LTMR (NF)	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	M2-1	A-PEP	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	M2-1	A-Propr	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	M2-1	Ab-LTMR	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	M2-1	B	1	20		0				cell2location	ganglion
+shiers2025_dpn_drg	M2-1	C-LTMR	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	M2-1	C-NP	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	M2-1	C-PEP	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	M2-1	C-Thermo	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	M2-1	PEP	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	M2-1	T/NK	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	M2-1	adipocyte	1	20		0				cell2location	ganglion
+shiers2025_dpn_drg	M2-1	damage Schwann	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	M2-1	endoneurial fibroblast	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	M2-1	endothelial	831	20	0.5886714905857877	1766	0.5439621919322841	False	True	cell2location	ganglion
+shiers2025_dpn_drg	M2-1	epineurial fibroblast	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	M2-1	fibroblast	41	20	0.6371452587189425	1766	0.4851650690879806	False	False	cell2location	ganglion
+shiers2025_dpn_drg	M2-1	granulocyte	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	M2-1	injured neuron	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	M2-1	lymphatic endothelial	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	M2-1	lymphocyte	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	M2-1	macrophage	163	20	0.7221881390593047	1766	0.5246734498217214	True	True	cell2location	ganglion
+shiers2025_dpn_drg	M2-1	mast	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	M2-1	mural	12	20		0				cell2location	ganglion
+shiers2025_dpn_drg	M2-1	myelinating Schwann	228	20	0.8314897900488927	1766	0.5281544501654158	True	True	cell2location	ganglion
+shiers2025_dpn_drg	M2-1	non-myelinating Schwann	106	20	0.7406261813932707	1766	0.5173622358198606	True	True	cell2location	ganglion
+shiers2025_dpn_drg	M2-1	perineurial	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	M2-1	repair Schwann	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	M2-1	satellite glia	370	20	0.7430351175470481	1766	0.4966631829538607	True	False	cell2location	ganglion
+shiers2025_dpn_drg	M2-1	sympathetic neuron	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	M2-2	A-LTMR	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	M2-2	A-LTMR (NF)	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	M2-2	A-PEP	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	M2-2	A-Propr	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	M2-2	Ab-LTMR	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	M2-2	B	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	M2-2	C-LTMR	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	M2-2	C-NP	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	M2-2	C-PEP	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	M2-2	C-Thermo	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	M2-2	PEP	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	M2-2	T/NK	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	M2-2	adipocyte	2	20		0				cell2location	ganglion
+shiers2025_dpn_drg	M2-2	damage Schwann	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	M2-2	endoneurial fibroblast	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	M2-2	endothelial	264	20	0.7975365282002693	1766	0.5801872004625623	True	True	cell2location	ganglion
+shiers2025_dpn_drg	M2-2	epineurial fibroblast	31	20	0.9623289820509602	1766	0.4853683906909211	True	False	cell2location	ganglion
+shiers2025_dpn_drg	M2-2	fibroblast	386	20	0.7906656553749243	1766	0.6057271285546989	True	True	cell2location	ganglion
+shiers2025_dpn_drg	M2-2	granulocyte	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	M2-2	injured neuron	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	M2-2	lymphatic endothelial	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	M2-2	lymphocyte	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	M2-2	macrophage	175	20	0.7552211595935444	1766	0.5538668425647013	True	True	cell2location	ganglion
+shiers2025_dpn_drg	M2-2	mast	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	M2-2	mural	79	20	0.9854442987543496	1766	0.6069564068677179	True	True	cell2location	ganglion
+shiers2025_dpn_drg	M2-2	myelinating Schwann	40	20	0.9579872984855888	1766	0.5624942971536995	True	True	cell2location	ganglion
+shiers2025_dpn_drg	M2-2	non-myelinating Schwann	752	20	0.8052803012192206	1766	0.5530699042194465	True	True	cell2location	ganglion
+shiers2025_dpn_drg	M2-2	perineurial	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	M2-2	repair Schwann	0	20		0				cell2location	ganglion
+shiers2025_dpn_drg	M2-2	satellite glia	358	20	0.7580559693173631	1766	0.5092948789827024	True	True	cell2location	ganglion
+shiers2025_dpn_drg	M2-2	sympathetic neuron	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF1-1	A-LTMR	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF1-1	A-LTMR (NF)	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF1-1	A-PEP	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF1-1	A-Propr	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF1-1	Ab-LTMR	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF1-1	B	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF1-1	C-LTMR	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF1-1	C-NP	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF1-1	C-PEP	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF1-1	C-Thermo	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF1-1	PEP	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF1-1	T/NK	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF1-1	adipocyte	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF1-1	damage Schwann	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF1-1	endoneurial fibroblast	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF1-1	endothelial	105	20	0.9252702151524422	1766	0.5563974000804797	True	True	cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF1-1	epineurial fibroblast	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF1-1	fibroblast	273	20	0.7872559793148028	1766	0.562749845619946	True	True	cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF1-1	granulocyte	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF1-1	injured neuron	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF1-1	lymphatic endothelial	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF1-1	lymphocyte	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF1-1	macrophage	79	20	0.8084657746648309	1766	0.5146332096901337	True	True	cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF1-1	mast	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF1-1	mural	2	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF1-1	myelinating Schwann	16	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF1-1	non-myelinating Schwann	1037	20	0.4889886177253583	1766	0.5105324098982101	False	True	cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF1-1	perineurial	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF1-1	repair Schwann	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF1-1	satellite glia	461	20	0.8632430074946345	1766	0.4921843829441206	True	False	cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF1-1	sympathetic neuron	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF1-2	A-LTMR	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF1-2	A-LTMR (NF)	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF1-2	A-PEP	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF1-2	A-Propr	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF1-2	Ab-LTMR	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF1-2	B	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF1-2	C-LTMR	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF1-2	C-NP	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF1-2	C-PEP	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF1-2	C-Thermo	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF1-2	PEP	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF1-2	T/NK	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF1-2	adipocyte	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF1-2	damage Schwann	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF1-2	endoneurial fibroblast	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF1-2	endothelial	218	20	0.9266709124395408	1766	0.5773317907376051	True	True	cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF1-2	epineurial fibroblast	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF1-2	fibroblast	894	20	0.6942886659625704	1766	0.5753993711379776	False	True	cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF1-2	granulocyte	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF1-2	injured neuron	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF1-2	lymphatic endothelial	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF1-2	lymphocyte	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF1-2	macrophage	342	20	0.8258737983618367	1766	0.5444885710059361	True	True	cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF1-2	mast	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF1-2	mural	2	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF1-2	myelinating Schwann	40	20	0.9539746746394654	1766	0.4549058667777647	True	False	cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF1-2	non-myelinating Schwann	669	20	0.6383504617308255	1766	0.5379568029311996	False	True	cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF1-2	perineurial	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF1-2	repair Schwann	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF1-2	satellite glia	718	20	0.825343042966413	1766	0.4954783385514544	True	False	cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF1-2	sympathetic neuron	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF2-1	A-LTMR	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF2-1	A-LTMR (NF)	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF2-1	A-PEP	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF2-1	A-Propr	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF2-1	Ab-LTMR	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF2-1	B	1	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF2-1	C-LTMR	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF2-1	C-NP	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF2-1	C-PEP	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF2-1	C-Thermo	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF2-1	PEP	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF2-1	T/NK	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF2-1	adipocyte	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF2-1	damage Schwann	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF2-1	endoneurial fibroblast	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF2-1	endothelial	35	20	0.9735729386892178	1766	0.503417474727765	True	True	cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF2-1	epineurial fibroblast	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF2-1	fibroblast	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF2-1	granulocyte	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF2-1	injured neuron	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF2-1	lymphatic endothelial	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF2-1	lymphocyte	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF2-1	macrophage	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF2-1	mast	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF2-1	mural	1	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF2-1	myelinating Schwann	497	20	0.9137332411980298	1766	0.5621207020975816	True	True	cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF2-1	non-myelinating Schwann	1383	20	0.4285795396642839	1766	0.5236793446115615	False	True	cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF2-1	perineurial	1	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF2-1	repair Schwann	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF2-1	satellite glia	955	20	0.7661531154289208	1766	0.5115865315075582	True	True	cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF2-1	sympathetic neuron	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF2-2	A-LTMR	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF2-2	A-LTMR (NF)	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF2-2	A-PEP	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF2-2	A-Propr	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF2-2	Ab-LTMR	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF2-2	B	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF2-2	C-LTMR	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF2-2	C-NP	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF2-2	C-PEP	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF2-2	C-Thermo	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF2-2	PEP	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF2-2	T/NK	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF2-2	adipocyte	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF2-2	damage Schwann	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF2-2	endoneurial fibroblast	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF2-2	endothelial	57	20	0.9344233183307308	1766	0.5282198196389299	True	True	cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF2-2	epineurial fibroblast	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF2-2	fibroblast	1	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF2-2	granulocyte	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF2-2	injured neuron	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF2-2	lymphatic endothelial	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF2-2	lymphocyte	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF2-2	macrophage	1	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF2-2	mast	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF2-2	mural	6	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF2-2	myelinating Schwann	608	20	0.9109329510303416	1766	0.5685665794997874	True	True	cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF2-2	non-myelinating Schwann	1460	20	0.4557233007889362	1766	0.5277344951185461	False	True	cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF2-2	perineurial	9	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF2-2	repair Schwann	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF2-2	satellite glia	780	20	0.8303364935717876	1766	0.5110764383132854	True	True	cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF2-2	sympathetic neuron	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF3-1	A-LTMR	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF3-1	A-LTMR (NF)	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF3-1	A-PEP	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF3-1	A-Propr	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF3-1	Ab-LTMR	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF3-1	B	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF3-1	C-LTMR	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF3-1	C-NP	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF3-1	C-PEP	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF3-1	C-Thermo	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF3-1	PEP	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF3-1	T/NK	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF3-1	adipocyte	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF3-1	damage Schwann	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF3-1	endoneurial fibroblast	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF3-1	endothelial	24	20	0.9550305733198698	1766	0.4507253573961429	True	False	cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF3-1	epineurial fibroblast	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF3-1	fibroblast	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF3-1	granulocyte	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF3-1	injured neuron	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF3-1	lymphatic endothelial	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF3-1	lymphocyte	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF3-1	macrophage	5	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF3-1	mast	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF3-1	mural	5	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF3-1	myelinating Schwann	41	20	0.9708539062370988	1766	0.4059801678927284	True	False	cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF3-1	non-myelinating Schwann	1599	20	0.2977619877036327	1766	0.4999271190109645	False	False	cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF3-1	perineurial	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF3-1	repair Schwann	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF3-1	satellite glia	1321	20	0.757145622093975	1766	0.4940269284171742	True	False	cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF3-1	sympathetic neuron	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF3-2	A-LTMR	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF3-2	A-LTMR (NF)	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF3-2	A-PEP	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF3-2	A-Propr	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF3-2	Ab-LTMR	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF3-2	B	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF3-2	C-LTMR	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF3-2	C-NP	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF3-2	C-PEP	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF3-2	C-Thermo	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF3-2	PEP	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF3-2	T/NK	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF3-2	adipocyte	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF3-2	damage Schwann	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF3-2	endoneurial fibroblast	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF3-2	endothelial	32	20	0.9537236068785372	1766	0.5018944100586804	True	True	cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF3-2	epineurial fibroblast	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF3-2	fibroblast	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF3-2	granulocyte	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF3-2	injured neuron	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF3-2	lymphatic endothelial	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF3-2	lymphocyte	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF3-2	macrophage	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF3-2	mast	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF3-2	mural	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF3-2	myelinating Schwann	55	20	0.9340209482689692	1766	0.4535088337115484	True	False	cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF3-2	non-myelinating Schwann	1067	20	0.3422915085470022	1766	0.497803432855152	False	False	cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF3-2	perineurial	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF3-2	repair Schwann	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF3-2	satellite glia	1175	20	0.7551565323205134	1766	0.503155135974631	True	True	cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF3-2	sympathetic neuron	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF4-1	A-LTMR	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF4-1	A-LTMR (NF)	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF4-1	A-PEP	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF4-1	A-Propr	11	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF4-1	Ab-LTMR	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF4-1	B	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF4-1	C-LTMR	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF4-1	C-NP	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF4-1	C-PEP	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF4-1	C-Thermo	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF4-1	PEP	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF4-1	T/NK	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF4-1	adipocyte	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF4-1	damage Schwann	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF4-1	endoneurial fibroblast	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF4-1	endothelial	169	20	0.7999708801192751	1766	0.5115035907865607	True	True	cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF4-1	epineurial fibroblast	3	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF4-1	fibroblast	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF4-1	granulocyte	1	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF4-1	injured neuron	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF4-1	lymphatic endothelial	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF4-1	lymphocyte	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF4-1	macrophage	10	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF4-1	mast	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF4-1	mural	26	20	0.9550660856102526	1766	0.4054038753474855	True	False	cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF4-1	myelinating Schwann	979	20	0.8822308950385848	1766	0.5667717043259263	True	True	cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF4-1	non-myelinating Schwann	309	20	0.5134466019417476	1766	0.5151318887590204	False	True	cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF4-1	perineurial	1	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF4-1	repair Schwann	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF4-1	satellite glia	1200	20	0.6662983211840071	1766	0.507279665202831	False	True	cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF4-1	sympathetic neuron	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF4-2	A-LTMR	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF4-2	A-LTMR (NF)	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF4-2	A-PEP	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF4-2	A-Propr	5	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF4-2	Ab-LTMR	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF4-2	B	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF4-2	C-LTMR	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF4-2	C-NP	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF4-2	C-PEP	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF4-2	C-Thermo	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF4-2	PEP	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF4-2	T/NK	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF4-2	adipocyte	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF4-2	damage Schwann	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF4-2	endoneurial fibroblast	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF4-2	endothelial	18	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF4-2	epineurial fibroblast	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF4-2	fibroblast	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF4-2	granulocyte	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF4-2	injured neuron	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF4-2	lymphatic endothelial	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF4-2	lymphocyte	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF4-2	macrophage	2	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF4-2	mast	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF4-2	mural	8	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF4-2	myelinating Schwann	622	20	0.8730267273864777	1766	0.5725708646743891	True	True	cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF4-2	non-myelinating Schwann	992	20	0.4415785074135994	1766	0.5086916897122644	False	True	cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF4-2	perineurial	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF4-2	repair Schwann	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF4-2	satellite glia	522	20	0.7496248839757413	1766	0.5042899608952974	True	True	cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VF4-2	sympathetic neuron	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM1-1	A-LTMR	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM1-1	A-LTMR (NF)	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM1-1	A-PEP	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM1-1	A-Propr	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM1-1	Ab-LTMR	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM1-1	B	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM1-1	C-LTMR	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM1-1	C-NP	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM1-1	C-PEP	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM1-1	C-Thermo	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM1-1	PEP	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM1-1	T/NK	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM1-1	adipocyte	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM1-1	damage Schwann	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM1-1	endoneurial fibroblast	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM1-1	endothelial	76	20	0.8246761133603239	1766	0.4987274219093212	True	False	cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM1-1	epineurial fibroblast	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM1-1	fibroblast	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM1-1	granulocyte	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM1-1	injured neuron	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM1-1	lymphatic endothelial	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM1-1	lymphocyte	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM1-1	macrophage	6	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM1-1	mast	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM1-1	mural	8	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM1-1	myelinating Schwann	65	20	0.949954889577531	1766	0.4674970311015585	True	False	cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM1-1	non-myelinating Schwann	1143	20	0.3188624638228262	1766	0.4941635985703347	False	False	cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM1-1	perineurial	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM1-1	repair Schwann	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM1-1	satellite glia	728	20	0.8252356753416076	1766	0.4919934703389289	True	False	cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM1-1	sympathetic neuron	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM1-2	A-LTMR	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM1-2	A-LTMR (NF)	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM1-2	A-PEP	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM1-2	A-Propr	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM1-2	Ab-LTMR	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM1-2	B	1	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM1-2	C-LTMR	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM1-2	C-NP	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM1-2	C-PEP	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM1-2	C-Thermo	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM1-2	PEP	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM1-2	T/NK	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM1-2	adipocyte	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM1-2	damage Schwann	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM1-2	endoneurial fibroblast	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM1-2	endothelial	593	20	0.6599766382100901	1766	0.5376635667081613	False	True	cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM1-2	epineurial fibroblast	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM1-2	fibroblast	17	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM1-2	granulocyte	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM1-2	injured neuron	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM1-2	lymphatic endothelial	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM1-2	lymphocyte	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM1-2	macrophage	230	20	0.7756648166798809	1766	0.5200202763276487	True	True	cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM1-2	mast	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM1-2	mural	2	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM1-2	myelinating Schwann	148	20	0.8722153584185798	1766	0.5036321066838638	True	True	cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM1-2	non-myelinating Schwann	458	20	0.4555826578635353	1766	0.5122227580247142	False	True	cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM1-2	perineurial	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM1-2	repair Schwann	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM1-2	satellite glia	810	20	0.7620832587821315	1766	0.5004476227276248	True	True	cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM1-2	sympathetic neuron	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM3-1	A-LTMR	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM3-1	A-LTMR (NF)	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM3-1	A-PEP	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM3-1	A-Propr	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM3-1	Ab-LTMR	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM3-1	B	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM3-1	C-LTMR	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM3-1	C-NP	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM3-1	C-PEP	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM3-1	C-Thermo	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM3-1	PEP	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM3-1	T/NK	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM3-1	adipocyte	1	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM3-1	damage Schwann	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM3-1	endoneurial fibroblast	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM3-1	endothelial	176	20	0.9054100281162136	1766	0.5496185965426112	True	True	cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM3-1	epineurial fibroblast	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM3-1	fibroblast	22	20	0.6942437167330537	1766	0.4245502130361473	False	False	cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM3-1	granulocyte	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM3-1	injured neuron	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM3-1	lymphatic endothelial	1	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM3-1	lymphocyte	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM3-1	macrophage	11	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM3-1	mast	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM3-1	mural	2	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM3-1	myelinating Schwann	108	20	0.9655034095467308	1766	0.5112875223357483	True	True	cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM3-1	non-myelinating Schwann	1644	20	0.4088319006831465	1766	0.5013395476004211	False	True	cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM3-1	perineurial	6	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM3-1	repair Schwann	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM3-1	satellite glia	630	20	0.7886919861805706	1766	0.4881205740693695	True	False	cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM3-1	sympathetic neuron	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM3-2	A-LTMR	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM3-2	A-LTMR (NF)	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM3-2	A-PEP	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM3-2	A-Propr	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM3-2	Ab-LTMR	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM3-2	B	1	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM3-2	C-LTMR	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM3-2	C-NP	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM3-2	C-PEP	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM3-2	C-Thermo	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM3-2	PEP	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM3-2	T/NK	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM3-2	adipocyte	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM3-2	damage Schwann	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM3-2	endoneurial fibroblast	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM3-2	endothelial	160	20	0.8027620116156284	1766	0.5417790093288624	True	True	cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM3-2	epineurial fibroblast	2	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM3-2	fibroblast	2	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM3-2	granulocyte	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM3-2	injured neuron	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM3-2	lymphatic endothelial	1	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM3-2	lymphocyte	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM3-2	macrophage	2	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM3-2	mast	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM3-2	mural	1	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM3-2	myelinating Schwann	56	20	0.9438333737569732	1766	0.4539255069488492	True	False	cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM3-2	non-myelinating Schwann	1883	20	0.4422155392804654	1766	0.5111512016386827	False	True	cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM3-2	perineurial	1	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM3-2	repair Schwann	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM3-2	satellite glia	892	20	0.6814115567065768	1766	0.5105777821595747	False	True	cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM3-2	sympathetic neuron	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM4-1	A-LTMR	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM4-1	A-LTMR (NF)	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM4-1	A-PEP	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM4-1	A-Propr	3	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM4-1	Ab-LTMR	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM4-1	B	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM4-1	C-LTMR	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM4-1	C-NP	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM4-1	C-PEP	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM4-1	C-Thermo	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM4-1	PEP	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM4-1	T/NK	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM4-1	adipocyte	1	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM4-1	damage Schwann	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM4-1	endoneurial fibroblast	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM4-1	endothelial	245	20	0.8052933673469388	1766	0.5343264715540498	True	True	cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM4-1	epineurial fibroblast	3	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM4-1	fibroblast	17	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM4-1	granulocyte	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM4-1	injured neuron	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM4-1	lymphatic endothelial	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM4-1	lymphocyte	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM4-1	macrophage	4	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM4-1	mast	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM4-1	mural	18	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM4-1	myelinating Schwann	82	20	0.9305206519358908	1766	0.4761575796102459	True	False	cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM4-1	non-myelinating Schwann	1274	20	0.4558489212867093	1766	0.5111528411039576	False	True	cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM4-1	perineurial	1	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM4-1	repair Schwann	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM4-1	satellite glia	773	20	0.7740748125447445	1766	0.5009320858294312	True	True	cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM4-1	sympathetic neuron	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM4-2	A-LTMR	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM4-2	A-LTMR (NF)	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM4-2	A-PEP	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM4-2	A-Propr	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM4-2	Ab-LTMR	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM4-2	B	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM4-2	C-LTMR	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM4-2	C-NP	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM4-2	C-PEP	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM4-2	C-Thermo	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM4-2	PEP	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM4-2	T/NK	1	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM4-2	adipocyte	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM4-2	damage Schwann	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM4-2	endoneurial fibroblast	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM4-2	endothelial	230	20	0.7212008733624454	1766	0.4899938555424265	True	False	cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM4-2	epineurial fibroblast	3	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM4-2	fibroblast	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM4-2	granulocyte	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM4-2	injured neuron	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM4-2	lymphatic endothelial	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM4-2	lymphocyte	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM4-2	macrophage	3	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM4-2	mast	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM4-2	mural	26	20	0.980399111714268	1766	0.409467934344344	True	False	cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM4-2	myelinating Schwann	4	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM4-2	non-myelinating Schwann	1386	20	0.4163059163059163	1766	0.486629696415123	False	False	cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM4-2	perineurial	2	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM4-2	repair Schwann	0	20		0				cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM4-2	satellite glia	865	20	0.7365971045876046	1766	0.4830694731601058	True	False	cell2location	ganglion
+tavaresferreira2022_hdrg_visium	VM4-2	sympathetic neuron	0	20		0				cell2location	ganglion
+utdallas_dpn_nerves	sural11	A-LTMR	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural11	A-LTMR (NF)	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural11	A-PEP	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural11	A-Propr	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural11	Ab-LTMR	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural11	B	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural11	C-LTMR	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural11	C-NP	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural11	C-PEP	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural11	C-Thermo	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural11	PEP	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural11	T/NK	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural11	adipocyte	1	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural11	damage Schwann	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural11	endoneurial fibroblast	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural11	endothelial	686	20	0.7238772890931474	1766	0.6610243606861811	True	True	cell2location	nerve
+utdallas_dpn_nerves	sural11	epineurial fibroblast	73	20	0.9172629339007846	1766	0.5756722714446874	True	True	cell2location	nerve
+utdallas_dpn_nerves	sural11	fibroblast	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural11	granulocyte	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural11	injured neuron	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural11	lymphatic endothelial	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural11	lymphocyte	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural11	macrophage	15	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural11	mast	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural11	mural	104	20	0.977480380634644	1766	0.6321496053639866	True	True	cell2location	nerve
+utdallas_dpn_nerves	sural11	myelinating Schwann	4	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural11	non-myelinating Schwann	900	20	0.8660029737766964	1766	0.6278970672062693	True	True	cell2location	nerve
+utdallas_dpn_nerves	sural11	perineurial	350	20	0.7365355340116978	1766	0.6134276908778468	True	True	cell2location	nerve
+utdallas_dpn_nerves	sural11	repair Schwann	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural11	satellite glia	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural11	sympathetic neuron	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural12	A-LTMR	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural12	A-LTMR (NF)	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural12	A-PEP	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural12	A-Propr	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural12	Ab-LTMR	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural12	B	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural12	C-LTMR	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural12	C-NP	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural12	C-PEP	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural12	C-Thermo	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural12	PEP	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural12	T/NK	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural12	adipocyte	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural12	damage Schwann	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural12	endoneurial fibroblast	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural12	endothelial	307	20	0.7314523647926652	1766	0.6175070731603947	True	True	cell2location	nerve
+utdallas_dpn_nerves	sural12	epineurial fibroblast	213	20	0.778854536174961	1766	0.6025156235678393	True	True	cell2location	nerve
+utdallas_dpn_nerves	sural12	fibroblast	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural12	granulocyte	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural12	injured neuron	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural12	lymphatic endothelial	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural12	lymphocyte	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural12	macrophage	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural12	mast	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural12	mural	25	20	0.9064349910125824	1766	0.5094757726021478	True	True	cell2location	nerve
+utdallas_dpn_nerves	sural12	myelinating Schwann	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural12	non-myelinating Schwann	646	20	0.765418577033063	1766	0.5998953755645787	True	True	cell2location	nerve
+utdallas_dpn_nerves	sural12	perineurial	503	20	0.7312840004473579	1766	0.5958636360109345	True	True	cell2location	nerve
+utdallas_dpn_nerves	sural12	repair Schwann	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural12	satellite glia	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural12	sympathetic neuron	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural14	A-LTMR	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural14	A-LTMR (NF)	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural14	A-PEP	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural14	A-Propr	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural14	Ab-LTMR	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural14	B	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural14	C-LTMR	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural14	C-NP	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural14	C-PEP	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural14	C-Thermo	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural14	PEP	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural14	T/NK	3	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural14	adipocyte	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural14	damage Schwann	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural14	endoneurial fibroblast	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural14	endothelial	33	20	0.8713575092944524	1766	0.5845988316918057	True	True	cell2location	nerve
+utdallas_dpn_nerves	sural14	epineurial fibroblast	555	20	0.787675404954203	1766	0.622199715289794	True	True	cell2location	nerve
+utdallas_dpn_nerves	sural14	fibroblast	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural14	granulocyte	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural14	injured neuron	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural14	lymphatic endothelial	1	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural14	lymphocyte	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural14	macrophage	2	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural14	mast	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural14	mural	860	20	0.8764422274865705	1766	0.6509999642182485	True	True	cell2location	nerve
+utdallas_dpn_nerves	sural14	myelinating Schwann	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural14	non-myelinating Schwann	741	20	0.8555758086479687	1766	0.5956953965993222	True	True	cell2location	nerve
+utdallas_dpn_nerves	sural14	perineurial	756	20	0.8204023092405781	1766	0.6067919344990416	True	True	cell2location	nerve
+utdallas_dpn_nerves	sural14	repair Schwann	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural14	satellite glia	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural14	sympathetic neuron	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural24l	A-LTMR	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural24l	A-LTMR (NF)	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural24l	A-PEP	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural24l	A-Propr	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural24l	Ab-LTMR	1	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural24l	B	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural24l	C-LTMR	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural24l	C-NP	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural24l	C-PEP	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural24l	C-Thermo	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural24l	PEP	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural24l	T/NK	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural24l	adipocyte	11	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural24l	damage Schwann	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural24l	endoneurial fibroblast	3	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural24l	endothelial	195	20	0.7749124180083483	1766	0.5929073012684825	True	True	cell2location	nerve
+utdallas_dpn_nerves	sural24l	epineurial fibroblast	8	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural24l	fibroblast	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural24l	granulocyte	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural24l	injured neuron	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural24l	lymphatic endothelial	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural24l	lymphocyte	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural24l	macrophage	1	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural24l	mast	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural24l	mural	41	20	0.9375976406822892	1766	0.4940748956566391	True	False	cell2location	nerve
+utdallas_dpn_nerves	sural24l	myelinating Schwann	287	20	0.7388279223246171	1766	0.6087053871582754	True	True	cell2location	nerve
+utdallas_dpn_nerves	sural24l	non-myelinating Schwann	548	20	0.7451953607180826	1766	0.61844798889156	True	True	cell2location	nerve
+utdallas_dpn_nerves	sural24l	perineurial	476	20	0.785222171060205	1766	0.578827453623955	True	True	cell2location	nerve
+utdallas_dpn_nerves	sural24l	repair Schwann	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural24l	satellite glia	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural24l	sympathetic neuron	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural24t	A-LTMR	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural24t	A-LTMR (NF)	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural24t	A-PEP	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural24t	A-Propr	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural24t	Ab-LTMR	2	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural24t	B	1	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural24t	C-LTMR	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural24t	C-NP	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural24t	C-PEP	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural24t	C-Thermo	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural24t	PEP	12	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural24t	T/NK	1	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural24t	adipocyte	7	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural24t	damage Schwann	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural24t	endoneurial fibroblast	12	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural24t	endothelial	151	20	0.7519614043707564	1766	0.5986412975355944	True	True	cell2location	nerve
+utdallas_dpn_nerves	sural24t	epineurial fibroblast	60	20	0.939187530682376	1766	0.4648422674419524	True	False	cell2location	nerve
+utdallas_dpn_nerves	sural24t	fibroblast	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural24t	granulocyte	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural24t	injured neuron	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural24t	lymphatic endothelial	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural24t	lymphocyte	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural24t	macrophage	11	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural24t	mast	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural24t	mural	30	20	0.9468780019212296	1766	0.4874023711888056	True	False	cell2location	nerve
+utdallas_dpn_nerves	sural24t	myelinating Schwann	775	20	0.8069693473135002	1766	0.6261762225665354	True	True	cell2location	nerve
+utdallas_dpn_nerves	sural24t	non-myelinating Schwann	26	20	0.6854277188328912	1766	0.4183529891095595	False	False	cell2location	nerve
+utdallas_dpn_nerves	sural24t	perineurial	330	20	0.7702024844028521	1766	0.574101959151676	True	True	cell2location	nerve
+utdallas_dpn_nerves	sural24t	repair Schwann	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural24t	satellite glia	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural24t	sympathetic neuron	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural8	A-LTMR	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural8	A-LTMR (NF)	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural8	A-PEP	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural8	A-Propr	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural8	Ab-LTMR	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural8	B	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural8	C-LTMR	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural8	C-NP	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural8	C-PEP	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural8	C-Thermo	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural8	PEP	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural8	T/NK	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural8	adipocyte	2	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural8	damage Schwann	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural8	endoneurial fibroblast	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural8	endothelial	223	20	0.8097790949669237	1766	0.6510915700245965	True	True	cell2location	nerve
+utdallas_dpn_nerves	sural8	epineurial fibroblast	121	20	0.941885814048058	1766	0.6120472215799889	True	True	cell2location	nerve
+utdallas_dpn_nerves	sural8	fibroblast	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural8	granulocyte	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural8	injured neuron	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural8	lymphatic endothelial	1	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural8	lymphocyte	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural8	macrophage	3	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural8	mast	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural8	mural	367	20	0.9473666408271312	1766	0.6528657356459624	True	True	cell2location	nerve
+utdallas_dpn_nerves	sural8	myelinating Schwann	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural8	non-myelinating Schwann	1742	20	0.8886727495750311	1766	0.6394049236681435	True	True	cell2location	nerve
+utdallas_dpn_nerves	sural8	perineurial	364	20	0.8473655409631019	1766	0.615275541565238	True	True	cell2location	nerve
+utdallas_dpn_nerves	sural8	repair Schwann	1	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural8	satellite glia	0	20		0				cell2location	nerve
+utdallas_dpn_nerves	sural8	sympathetic neuron	0	20		0				cell2location	nerve
+vroman2023_hdrg_visium	DRG2a	A-LTMR	0	20		0				cell2location	ganglion
+vroman2023_hdrg_visium	DRG2a	A-LTMR (NF)	0	20		0				cell2location	ganglion
+vroman2023_hdrg_visium	DRG2a	A-PEP	0	20		0				cell2location	ganglion
+vroman2023_hdrg_visium	DRG2a	A-Propr	0	20		0				cell2location	ganglion
+vroman2023_hdrg_visium	DRG2a	Ab-LTMR	0	20		0				cell2location	ganglion
+vroman2023_hdrg_visium	DRG2a	B	0	20		0				cell2location	ganglion
+vroman2023_hdrg_visium	DRG2a	C-LTMR	0	20		0				cell2location	ganglion
+vroman2023_hdrg_visium	DRG2a	C-NP	0	20		0				cell2location	ganglion
+vroman2023_hdrg_visium	DRG2a	C-PEP	0	20		0				cell2location	ganglion
+vroman2023_hdrg_visium	DRG2a	C-Thermo	0	20		0				cell2location	ganglion
+vroman2023_hdrg_visium	DRG2a	PEP	0	20		0				cell2location	ganglion
+vroman2023_hdrg_visium	DRG2a	T/NK	0	20		0				cell2location	ganglion
+vroman2023_hdrg_visium	DRG2a	adipocyte	0	20		0				cell2location	ganglion
+vroman2023_hdrg_visium	DRG2a	damage Schwann	0	20		0				cell2location	ganglion
+vroman2023_hdrg_visium	DRG2a	endoneurial fibroblast	0	20		0				cell2location	ganglion
+vroman2023_hdrg_visium	DRG2a	endothelial	31	20	0.8110272248913293	1764	0.5612300833955467	True	True	cell2location	ganglion
+vroman2023_hdrg_visium	DRG2a	epineurial fibroblast	0	20		0				cell2location	ganglion
+vroman2023_hdrg_visium	DRG2a	fibroblast	0	20		0				cell2location	ganglion
+vroman2023_hdrg_visium	DRG2a	granulocyte	0	20		0				cell2location	ganglion
+vroman2023_hdrg_visium	DRG2a	injured neuron	0	20		0				cell2location	ganglion
+vroman2023_hdrg_visium	DRG2a	lymphatic endothelial	0	20		0				cell2location	ganglion
+vroman2023_hdrg_visium	DRG2a	lymphocyte	0	20		0				cell2location	ganglion
+vroman2023_hdrg_visium	DRG2a	macrophage	0	20		0				cell2location	ganglion
+vroman2023_hdrg_visium	DRG2a	mast	0	20		0				cell2location	ganglion
+vroman2023_hdrg_visium	DRG2a	mural	30	20	0.982928270042194	1764	0.5054250102594308	True	True	cell2location	ganglion
+vroman2023_hdrg_visium	DRG2a	myelinating Schwann	36	20	0.9712629084137464	1764	0.6071639198288084	True	True	cell2location	ganglion
+vroman2023_hdrg_visium	DRG2a	non-myelinating Schwann	1023	20	0.5290189192363819	1764	0.6057177562990678	False	True	cell2location	ganglion
+vroman2023_hdrg_visium	DRG2a	perineurial	0	20		0				cell2location	ganglion
+vroman2023_hdrg_visium	DRG2a	repair Schwann	0	20		0				cell2location	ganglion
+vroman2023_hdrg_visium	DRG2a	satellite glia	885	20	0.6656638418079096	1764	0.5872204344593838	False	True	cell2location	ganglion
+vroman2023_hdrg_visium	DRG2a	sympathetic neuron	0	20		0				cell2location	ganglion
+vroman2023_hdrg_visium	DRG2b	A-LTMR	0	20		0				cell2location	ganglion
+vroman2023_hdrg_visium	DRG2b	A-LTMR (NF)	0	20		0				cell2location	ganglion
+vroman2023_hdrg_visium	DRG2b	A-PEP	0	20		0				cell2location	ganglion
+vroman2023_hdrg_visium	DRG2b	A-Propr	0	20		0				cell2location	ganglion
+vroman2023_hdrg_visium	DRG2b	Ab-LTMR	0	20		0				cell2location	ganglion
+vroman2023_hdrg_visium	DRG2b	B	0	20		0				cell2location	ganglion
+vroman2023_hdrg_visium	DRG2b	C-LTMR	0	20		0				cell2location	ganglion
+vroman2023_hdrg_visium	DRG2b	C-NP	0	20		0				cell2location	ganglion
+vroman2023_hdrg_visium	DRG2b	C-PEP	0	20		0				cell2location	ganglion
+vroman2023_hdrg_visium	DRG2b	C-Thermo	0	20		0				cell2location	ganglion
+vroman2023_hdrg_visium	DRG2b	PEP	0	20		0				cell2location	ganglion
+vroman2023_hdrg_visium	DRG2b	T/NK	0	20		0				cell2location	ganglion
+vroman2023_hdrg_visium	DRG2b	adipocyte	0	20		0				cell2location	ganglion
+vroman2023_hdrg_visium	DRG2b	damage Schwann	0	20		0				cell2location	ganglion
+vroman2023_hdrg_visium	DRG2b	endoneurial fibroblast	0	20		0				cell2location	ganglion
+vroman2023_hdrg_visium	DRG2b	endothelial	20	20	0.5019658119658119	1764	0.4156839594486296	False	False	cell2location	ganglion
+vroman2023_hdrg_visium	DRG2b	epineurial fibroblast	0	20		0				cell2location	ganglion
+vroman2023_hdrg_visium	DRG2b	fibroblast	0	20		0				cell2location	ganglion
+vroman2023_hdrg_visium	DRG2b	granulocyte	0	20		0				cell2location	ganglion
+vroman2023_hdrg_visium	DRG2b	injured neuron	0	20		0				cell2location	ganglion
+vroman2023_hdrg_visium	DRG2b	lymphatic endothelial	0	20		0				cell2location	ganglion
+vroman2023_hdrg_visium	DRG2b	lymphocyte	0	20		0				cell2location	ganglion
+vroman2023_hdrg_visium	DRG2b	macrophage	0	20		0				cell2location	ganglion
+vroman2023_hdrg_visium	DRG2b	mast	0	20		0				cell2location	ganglion
+vroman2023_hdrg_visium	DRG2b	mural	9	20		0				cell2location	ganglion
+vroman2023_hdrg_visium	DRG2b	myelinating Schwann	0	20		0				cell2location	ganglion
+vroman2023_hdrg_visium	DRG2b	non-myelinating Schwann	1127	20	0.4699402707943081	1764	0.602316454815314	False	True	cell2location	ganglion
+vroman2023_hdrg_visium	DRG2b	perineurial	0	20		0				cell2location	ganglion
+vroman2023_hdrg_visium	DRG2b	repair Schwann	0	20		0				cell2location	ganglion
+vroman2023_hdrg_visium	DRG2b	satellite glia	619	20	0.6430584825396471	1764	0.5983034350609376	False	True	cell2location	ganglion
+vroman2023_hdrg_visium	DRG2b	sympathetic neuron	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG2	A-LTMR	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG2	A-LTMR (NF)	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG2	A-PEP	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG2	A-Propr	6	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG2	Ab-LTMR	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG2	B	1	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG2	C-LTMR	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG2	C-NP	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG2	C-PEP	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG2	C-Thermo	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG2	PEP	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG2	T/NK	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG2	adipocyte	5	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG2	damage Schwann	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG2	endoneurial fibroblast	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG2	endothelial	990	20	0.6253986697238231	1766	0.524224243313043	False	True	cell2location	ganglion
+zhang2024_hdrg_visium	DRG2	epineurial fibroblast	3	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG2	fibroblast	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG2	granulocyte	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG2	injured neuron	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG2	lymphatic endothelial	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG2	lymphocyte	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG2	macrophage	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG2	mast	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG2	mural	4	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG2	myelinating Schwann	374	20	0.8218369774037142	1766	0.569594995872947	True	True	cell2location	ganglion
+zhang2024_hdrg_visium	DRG2	non-myelinating Schwann	1	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG2	perineurial	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG2	repair Schwann	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG2	satellite glia	1562	20	0.6837552178546846	1766	0.5046826862578228	False	True	cell2location	ganglion
+zhang2024_hdrg_visium	DRG2	sympathetic neuron	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG3	A-LTMR	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG3	A-LTMR (NF)	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG3	A-PEP	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG3	A-Propr	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG3	Ab-LTMR	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG3	B	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG3	C-LTMR	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG3	C-NP	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG3	C-PEP	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG3	C-Thermo	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG3	PEP	1	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG3	T/NK	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG3	adipocyte	2	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG3	damage Schwann	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG3	endoneurial fibroblast	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG3	endothelial	153	20	0.6645129162776222	1766	0.4943898070083353	False	False	cell2location	ganglion
+zhang2024_hdrg_visium	DRG3	epineurial fibroblast	2	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG3	fibroblast	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG3	granulocyte	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG3	injured neuron	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG3	lymphatic endothelial	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG3	lymphocyte	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG3	macrophage	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG3	mast	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG3	mural	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG3	myelinating Schwann	237	20	0.9602737811323392	1766	0.5578278981235637	True	True	cell2location	ganglion
+zhang2024_hdrg_visium	DRG3	non-myelinating Schwann	46	20	0.3194261771447897	1766	0.4445151474015749	False	False	cell2location	ganglion
+zhang2024_hdrg_visium	DRG3	perineurial	7	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG3	repair Schwann	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG3	satellite glia	755	20	0.7499926087984863	1766	0.4941568804358352	True	False	cell2location	ganglion
+zhang2024_hdrg_visium	DRG3	sympathetic neuron	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG4	A-LTMR	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG4	A-LTMR (NF)	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG4	A-PEP	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG4	A-Propr	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG4	Ab-LTMR	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG4	B	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG4	C-LTMR	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG4	C-NP	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG4	C-PEP	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG4	C-Thermo	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG4	PEP	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG4	T/NK	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG4	adipocyte	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG4	damage Schwann	17	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG4	endoneurial fibroblast	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG4	endothelial	205	20	0.742809879202893	1766	0.5424930423455188	True	True	cell2location	ganglion
+zhang2024_hdrg_visium	DRG4	epineurial fibroblast	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG4	fibroblast	7	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG4	granulocyte	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG4	injured neuron	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG4	lymphatic endothelial	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG4	lymphocyte	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG4	macrophage	39	20	0.8830448717948718	1766	0.5038662493827603	True	True	cell2location	ganglion
+zhang2024_hdrg_visium	DRG4	mast	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG4	mural	2	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG4	myelinating Schwann	186	20	0.9853200283225476	1766	0.5873576535664581	True	True	cell2location	ganglion
+zhang2024_hdrg_visium	DRG4	non-myelinating Schwann	176	20	0.4615384615384615	1766	0.5243718074934436	False	True	cell2location	ganglion
+zhang2024_hdrg_visium	DRG4	perineurial	2	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG4	repair Schwann	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG4	satellite glia	205	20	0.8058013387704854	1766	0.5010999458063606	True	True	cell2location	ganglion
+zhang2024_hdrg_visium	DRG4	sympathetic neuron	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG5	A-LTMR	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG5	A-LTMR (NF)	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG5	A-PEP	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG5	A-Propr	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG5	Ab-LTMR	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG5	B	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG5	C-LTMR	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG5	C-NP	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG5	C-PEP	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG5	C-Thermo	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG5	PEP	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG5	T/NK	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG5	adipocyte	2	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG5	damage Schwann	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG5	endoneurial fibroblast	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG5	endothelial	395	20	0.68393064673179	1766	0.542710542305572	False	True	cell2location	ganglion
+zhang2024_hdrg_visium	DRG5	epineurial fibroblast	1	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG5	fibroblast	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG5	granulocyte	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG5	injured neuron	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG5	lymphatic endothelial	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG5	lymphocyte	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG5	macrophage	1	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG5	mast	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG5	mural	7	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG5	myelinating Schwann	2	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG5	non-myelinating Schwann	106	20	0.4637287843542689	1766	0.5234287549328134	False	True	cell2location	ganglion
+zhang2024_hdrg_visium	DRG5	perineurial	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG5	repair Schwann	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG5	satellite glia	687	20	0.7521947337717136	1766	0.5190131399668231	True	True	cell2location	ganglion
+zhang2024_hdrg_visium	DRG5	sympathetic neuron	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG6	A-LTMR	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG6	A-LTMR (NF)	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG6	A-PEP	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG6	A-Propr	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG6	Ab-LTMR	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG6	B	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG6	C-LTMR	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG6	C-NP	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG6	C-PEP	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG6	C-Thermo	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG6	PEP	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG6	T/NK	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG6	adipocyte	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG6	damage Schwann	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG6	endoneurial fibroblast	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG6	endothelial	118	20	0.7724237288135593	1766	0.5623398771111641	True	True	cell2location	ganglion
+zhang2024_hdrg_visium	DRG6	epineurial fibroblast	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG6	fibroblast	175	20	0.8209604605362825	1766	0.5796026769101832	True	True	cell2location	ganglion
+zhang2024_hdrg_visium	DRG6	granulocyte	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG6	injured neuron	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG6	lymphatic endothelial	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG6	lymphocyte	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG6	macrophage	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG6	mast	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG6	mural	1	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG6	myelinating Schwann	3	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG6	non-myelinating Schwann	444	20	0.6266657978453232	1766	0.5718220343733624	False	True	cell2location	ganglion
+zhang2024_hdrg_visium	DRG6	perineurial	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG6	repair Schwann	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG6	satellite glia	377	20	0.7908965946799257	1766	0.5156464953091123	True	True	cell2location	ganglion
+zhang2024_hdrg_visium	DRG6	sympathetic neuron	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG7	A-LTMR	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG7	A-LTMR (NF)	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG7	A-PEP	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG7	A-Propr	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG7	Ab-LTMR	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG7	B	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG7	C-LTMR	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG7	C-NP	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG7	C-PEP	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG7	C-Thermo	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG7	PEP	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG7	T/NK	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG7	adipocyte	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG7	damage Schwann	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG7	endoneurial fibroblast	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG7	endothelial	422	20	0.6553538436822235	1766	0.5643743186888348	False	True	cell2location	ganglion
+zhang2024_hdrg_visium	DRG7	epineurial fibroblast	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG7	fibroblast	32	20	0.8354747761707989	1766	0.4815921959097254	True	False	cell2location	ganglion
+zhang2024_hdrg_visium	DRG7	granulocyte	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG7	injured neuron	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG7	lymphatic endothelial	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG7	lymphocyte	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG7	macrophage	5	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG7	mast	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG7	mural	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG7	myelinating Schwann	307	20	0.9647145755094246	1766	0.6252249729804628	True	True	cell2location	ganglion
+zhang2024_hdrg_visium	DRG7	non-myelinating Schwann	117	20	0.5192979823557731	1766	0.5486171766453002	False	True	cell2location	ganglion
+zhang2024_hdrg_visium	DRG7	perineurial	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG7	repair Schwann	0	20		0				cell2location	ganglion
+zhang2024_hdrg_visium	DRG7	satellite glia	601	20	0.7842798808328135	1766	0.5302072303651273	True	True	cell2location	ganglion
+zhang2024_hdrg_visium	DRG7	sympathetic neuron	0	20		0				cell2location	ganglion
+heming2025_sural_xenium	S01	B	17	4		0				scANVI transfer	nerve
+heming2025_sural_xenium	S01	T/NK	9	3		0				scANVI transfer	nerve
+heming2025_sural_xenium	S01	adipocyte	356	3	0.873555994465666	96	0.519628323385784	True	True	scANVI transfer	nerve
+heming2025_sural_xenium	S01	damage Schwann	672	9	0.7658877196263187	96	0.5483198193188723	True	True	scANVI transfer	nerve
+heming2025_sural_xenium	S01	endoneurial fibroblast	479	10	0.7957111253674782	96	0.5822226747336972	True	True	scANVI transfer	nerve
+heming2025_sural_xenium	S01	endothelial	343	13	0.9930412451399154	96	0.7121670868089444	True	True	scANVI transfer	nerve
+heming2025_sural_xenium	S01	epineurial fibroblast	1172	7	0.8776283790758289	96	0.50904269209019	True	True	scANVI transfer	nerve
+heming2025_sural_xenium	S01	granulocyte	2	2		0				scANVI transfer	nerve
+heming2025_sural_xenium	S01	lymphatic endothelial	22	5	0.9954312559588356	77	0.468602120586774	True	False	scANVI transfer	nerve
+heming2025_sural_xenium	S01	macrophage	69	4	0.9666965978598614	96	0.4781968336257641	True	False	scANVI transfer	nerve
+heming2025_sural_xenium	S01	mast	153	2	0.7656093343486262	96	0.3947168551382279	True	False	scANVI transfer	nerve
+heming2025_sural_xenium	S01	mural	395	5	0.9812063234731888	96	0.5984681174853999	True	True	scANVI transfer	nerve
+heming2025_sural_xenium	S01	myelinating Schwann	1209	11	0.9615439493958088	96	0.7723607017701573	True	True	scANVI transfer	nerve
+heming2025_sural_xenium	S01	non-myelinating Schwann	265	11	0.9570300272358676	96	0.6932178117453496	True	True	scANVI transfer	nerve
+heming2025_sural_xenium	S01	perineurial	1240	10	0.9788081284713974	96	0.590580447428826	True	True	scANVI transfer	nerve
+heming2025_sural_xenium	S01	repair Schwann	1	9		0				scANVI transfer	nerve
+heming2025_sural_xenium	S04	B	19	4		0				scANVI transfer	nerve
+heming2025_sural_xenium	S04	T/NK	14	3		0				scANVI transfer	nerve
+heming2025_sural_xenium	S04	adipocyte	472	3	0.7499376197914874	96	0.4803174172544764	True	False	scANVI transfer	nerve
+heming2025_sural_xenium	S04	damage Schwann	849	9	0.8154225210500031	96	0.5912187710925582	True	True	scANVI transfer	nerve
+heming2025_sural_xenium	S04	endoneurial fibroblast	219	10	0.8488390477191596	87	0.4941109265130575	True	False	scANVI transfer	nerve
+heming2025_sural_xenium	S04	endothelial	832	13	0.9921679695296596	96	0.7576744123650475	True	True	scANVI transfer	nerve
+heming2025_sural_xenium	S04	epineurial fibroblast	1249	7	0.9247567665439772	96	0.5990504612045578	True	True	scANVI transfer	nerve
+heming2025_sural_xenium	S04	granulocyte	0	2		0				scANVI transfer	nerve
+heming2025_sural_xenium	S04	lymphatic endothelial	93	5	0.9968663784640062	96	0.6756277748826572	True	True	scANVI transfer	nerve
+heming2025_sural_xenium	S04	macrophage	97	4	0.9633124117941056	96	0.6005250575432615	True	True	scANVI transfer	nerve
+heming2025_sural_xenium	S04	mast	178	2	0.7417029079239004	96	0.4925650646476253	True	False	scANVI transfer	nerve
+heming2025_sural_xenium	S04	mural	2914	5	0.9769834603671328	96	0.5885241454150841	True	True	scANVI transfer	nerve
+heming2025_sural_xenium	S04	myelinating Schwann	656	11	0.9681232128108224	96	0.7826022380421346	True	True	scANVI transfer	nerve
+heming2025_sural_xenium	S04	non-myelinating Schwann	1111	11	0.968804718881084	96	0.7327418983568664	True	True	scANVI transfer	nerve
+heming2025_sural_xenium	S04	perineurial	670	10	0.9843628979253176	96	0.5671301647720193	True	True	scANVI transfer	nerve
+heming2025_sural_xenium	S04	repair Schwann	15	9		0				scANVI transfer	nerve
+heming2025_sural_xenium	S11	B	6	4		0				scANVI transfer	nerve
+heming2025_sural_xenium	S11	T/NK	8	3		0				scANVI transfer	nerve
+heming2025_sural_xenium	S11	adipocyte	615	3	0.7525953562113019	96	0.5961828023174978	True	True	scANVI transfer	nerve
+heming2025_sural_xenium	S11	damage Schwann	1876	9	0.8179130681271999	96	0.6175800325556159	True	True	scANVI transfer	nerve
+heming2025_sural_xenium	S11	endoneurial fibroblast	908	10	0.8347375969751791	96	0.6080793283159607	True	True	scANVI transfer	nerve
+heming2025_sural_xenium	S11	endothelial	1210	13	0.9951022356853576	96	0.7979788388497017	True	True	scANVI transfer	nerve
+heming2025_sural_xenium	S11	epineurial fibroblast	1291	7	0.8751818989423814	96	0.6153366161257413	True	True	scANVI transfer	nerve
+heming2025_sural_xenium	S11	granulocyte	0	2		0				scANVI transfer	nerve
+heming2025_sural_xenium	S11	lymphatic endothelial	34	5	0.987182819997444	87	0.5082926511990746	True	True	scANVI transfer	nerve
+heming2025_sural_xenium	S11	macrophage	68	4	0.9833444135394784	96	0.6680690400663183	True	True	scANVI transfer	nerve
+heming2025_sural_xenium	S11	mast	151	2	0.8063967227834633	96	0.4239244378593661	True	False	scANVI transfer	nerve
+heming2025_sural_xenium	S11	mural	4119	5	0.9702468047414736	96	0.662561041779707	True	True	scANVI transfer	nerve
+heming2025_sural_xenium	S11	myelinating Schwann	1148	11	0.9631173708800524	96	0.7986814797462941	True	True	scANVI transfer	nerve
+heming2025_sural_xenium	S11	non-myelinating Schwann	1775	11	0.957549595558332	96	0.742797069994574	True	True	scANVI transfer	nerve
+heming2025_sural_xenium	S11	perineurial	809	10	0.9785293966266064	96	0.6025366250678241	True	True	scANVI transfer	nerve
+heming2025_sural_xenium	S11	repair Schwann	52	9	0.988563138206066	96	0.7774959477863654	True	True	scANVI transfer	nerve
+heming2025_sural_xenium	S14	B	4	4		0				scANVI transfer	nerve
+heming2025_sural_xenium	S14	T/NK	0	3		0				scANVI transfer	nerve
+heming2025_sural_xenium	S14	adipocyte	159	3	0.8169586990024827	96	0.5910571802060957	True	True	scANVI transfer	nerve
+heming2025_sural_xenium	S14	damage Schwann	741	9	0.769289677184414	96	0.6342925988829919	True	True	scANVI transfer	nerve
+heming2025_sural_xenium	S14	endoneurial fibroblast	222	10	0.8754310539332352	87	0.6065145196967645	True	True	scANVI transfer	nerve
+heming2025_sural_xenium	S14	endothelial	171	13	0.995105150697256	96	0.7730681562391853	True	True	scANVI transfer	nerve
+heming2025_sural_xenium	S14	epineurial fibroblast	274	7	0.8832482524926584	96	0.5700366872170188	True	True	scANVI transfer	nerve
+heming2025_sural_xenium	S14	granulocyte	1	2		0				scANVI transfer	nerve
+heming2025_sural_xenium	S14	lymphatic endothelial	3	5		0				scANVI transfer	nerve
+heming2025_sural_xenium	S14	macrophage	8	4		0				scANVI transfer	nerve
+heming2025_sural_xenium	S14	mast	46	2	0.6960278698042965	86	0.5111184603602689	False	True	scANVI transfer	nerve
+heming2025_sural_xenium	S14	mural	616	5	0.9832393016819246	96	0.6416438397570623	True	True	scANVI transfer	nerve
+heming2025_sural_xenium	S14	myelinating Schwann	523	11	0.9491461714918114	96	0.8048047679041835	True	True	scANVI transfer	nerve
+heming2025_sural_xenium	S14	non-myelinating Schwann	536	11	0.9398518577326136	96	0.722792827774981	True	True	scANVI transfer	nerve
+heming2025_sural_xenium	S14	perineurial	336	10	0.9833061434450324	96	0.5793821368728799	True	True	scANVI transfer	nerve
+heming2025_sural_xenium	S14	repair Schwann	12	9		0				scANVI transfer	nerve
+heming2025_sural_xenium	S22	B	0	4		0				scANVI transfer	nerve
+heming2025_sural_xenium	S22	T/NK	0	3		0				scANVI transfer	nerve
+heming2025_sural_xenium	S22	adipocyte	14	3		0				scANVI transfer	nerve
+heming2025_sural_xenium	S22	damage Schwann	96	9	0.7069290386803186	87	0.5983887801039732	True	True	scANVI transfer	nerve
+heming2025_sural_xenium	S22	endoneurial fibroblast	295	10	0.8015457747941296	87	0.5274785878521103	True	True	scANVI transfer	nerve
+heming2025_sural_xenium	S22	endothelial	139	13	0.997064996011802	96	0.7339618567613387	True	True	scANVI transfer	nerve
+heming2025_sural_xenium	S22	epineurial fibroblast	9	7		0				scANVI transfer	nerve
+heming2025_sural_xenium	S22	granulocyte	0	2		0				scANVI transfer	nerve
+heming2025_sural_xenium	S22	lymphatic endothelial	1	5		0				scANVI transfer	nerve
+heming2025_sural_xenium	S22	macrophage	0	4		0				scANVI transfer	nerve
+heming2025_sural_xenium	S22	mast	2	2		0				scANVI transfer	nerve
+heming2025_sural_xenium	S22	mural	76	5	0.9927586862227789	87	0.6430741522657305	True	True	scANVI transfer	nerve
+heming2025_sural_xenium	S22	myelinating Schwann	94	11	0.9841684434968015	96	0.763219379444478	True	True	scANVI transfer	nerve
+heming2025_sural_xenium	S22	non-myelinating Schwann	20	11	0.997533585222502	10	0.7046939203804071	True	True	scANVI transfer	nerve
+heming2025_sural_xenium	S22	perineurial	127	10	0.9907911044080624	96	0.6774422732623648	True	True	scANVI transfer	nerve
+heming2025_sural_xenium	S22	repair Schwann	0	9		0				scANVI transfer	nerve
+heming2025_sural_xenium	S24	B	14	4		0				scANVI transfer	nerve
+heming2025_sural_xenium	S24	T/NK	0	3		0				scANVI transfer	nerve
+heming2025_sural_xenium	S24	adipocyte	157	3	0.7691981792671302	96	0.5043113403080172	True	True	scANVI transfer	nerve
+heming2025_sural_xenium	S24	damage Schwann	373	9	0.740389080484679	87	0.5400323044879314	True	True	scANVI transfer	nerve
+heming2025_sural_xenium	S24	endoneurial fibroblast	230	10	0.8255547761334969	87	0.4839264030377099	True	False	scANVI transfer	nerve
+heming2025_sural_xenium	S24	endothelial	479	13	0.9964645692326104	96	0.7309503546193528	True	True	scANVI transfer	nerve
+heming2025_sural_xenium	S24	epineurial fibroblast	147	7	0.938809342440832	96	0.5085585568001574	True	True	scANVI transfer	nerve
+heming2025_sural_xenium	S24	granulocyte	2	2		0				scANVI transfer	nerve
+heming2025_sural_xenium	S24	lymphatic endothelial	0	5		0				scANVI transfer	nerve
+heming2025_sural_xenium	S24	macrophage	5	4		0				scANVI transfer	nerve
+heming2025_sural_xenium	S24	mast	41	2	0.5834322996303608	66	0.4926016736459232	False	False	scANVI transfer	nerve
+heming2025_sural_xenium	S24	mural	801	5	0.9827641805184716	96	0.6129052203388221	True	True	scANVI transfer	nerve
+heming2025_sural_xenium	S24	myelinating Schwann	721	11	0.9540210126791164	96	0.7593369363175133	True	True	scANVI transfer	nerve
+heming2025_sural_xenium	S24	non-myelinating Schwann	1233	11	0.96604675186506	96	0.7334215082048481	True	True	scANVI transfer	nerve
+heming2025_sural_xenium	S24	perineurial	193	10	0.9932267738880602	96	0.5203548909810318	True	True	scANVI transfer	nerve
+heming2025_sural_xenium	S24	repair Schwann	2	9		0				scANVI transfer	nerve
+heming2025_sural_xenium	S29	B	8	4		0				scANVI transfer	nerve
+heming2025_sural_xenium	S29	T/NK	2	3		0				scANVI transfer	nerve
+heming2025_sural_xenium	S29	adipocyte	150	3	0.8456037567084079	96	0.547655675370692	True	True	scANVI transfer	nerve
+heming2025_sural_xenium	S29	damage Schwann	618	9	0.7541231018172767	96	0.5719296091260899	True	True	scANVI transfer	nerve
+heming2025_sural_xenium	S29	endoneurial fibroblast	539	10	0.8325889966972417	96	0.5295594456422565	True	True	scANVI transfer	nerve
+heming2025_sural_xenium	S29	endothelial	191	13	0.9947969878992962	96	0.7451414567025149	True	True	scANVI transfer	nerve
+heming2025_sural_xenium	S29	epineurial fibroblast	527	7	0.8778057250893694	96	0.6134208311550159	True	True	scANVI transfer	nerve
+heming2025_sural_xenium	S29	granulocyte	0	2		0				scANVI transfer	nerve
+heming2025_sural_xenium	S29	lymphatic endothelial	7	5		0				scANVI transfer	nerve
+heming2025_sural_xenium	S29	macrophage	22	4	0.985434730570775	39	0.4005365753220622	True	False	scANVI transfer	nerve
+heming2025_sural_xenium	S29	mast	92	2	0.7022564870387744	96	0.5690031269929068	True	True	scANVI transfer	nerve
+heming2025_sural_xenium	S29	mural	437	5	0.9822318572105188	96	0.6836800666985104	True	True	scANVI transfer	nerve
+heming2025_sural_xenium	S29	myelinating Schwann	18	11		0				scANVI transfer	nerve
+heming2025_sural_xenium	S29	non-myelinating Schwann	92	11	0.9746422329036488	96	0.7011247538015396	True	True	scANVI transfer	nerve
+heming2025_sural_xenium	S29	perineurial	326	10	0.9804943290041664	96	0.6156274649879736	True	True	scANVI transfer	nerve
+heming2025_sural_xenium	S29	repair Schwann	104	9	0.9842080761258288	96	0.7410206783054183	True	True	scANVI transfer	nerve
+heming2025_sural_xenium	S30	B	8	4		0				scANVI transfer	nerve
+heming2025_sural_xenium	S30	T/NK	3	3		0				scANVI transfer	nerve
+heming2025_sural_xenium	S30	adipocyte	132	3	0.8617231294174993	96	0.5499182834600223	True	True	scANVI transfer	nerve
+heming2025_sural_xenium	S30	damage Schwann	280	9	0.729580532979056	87	0.5855730603725594	True	True	scANVI transfer	nerve
+heming2025_sural_xenium	S30	endoneurial fibroblast	533	10	0.863791436796319	87	0.5879446891115134	True	True	scANVI transfer	nerve
+heming2025_sural_xenium	S30	endothelial	115	13	0.9937896505806212	96	0.7208880666836599	True	True	scANVI transfer	nerve
+heming2025_sural_xenium	S30	epineurial fibroblast	553	7	0.9010433217976724	96	0.6560116519911777	True	True	scANVI transfer	nerve
+heming2025_sural_xenium	S30	granulocyte	0	2		0				scANVI transfer	nerve
+heming2025_sural_xenium	S30	lymphatic endothelial	12	5		0				scANVI transfer	nerve
+heming2025_sural_xenium	S30	macrophage	33	4	0.9773398758052814	77	0.5705768758696808	True	True	scANVI transfer	nerve
+heming2025_sural_xenium	S30	mast	39	2	0.7368289726955158	58	0.4614632012268382	True	False	scANVI transfer	nerve
+heming2025_sural_xenium	S30	mural	279	5	0.9826522905397026	96	0.6366967151962973	True	True	scANVI transfer	nerve
+heming2025_sural_xenium	S30	myelinating Schwann	43	11	0.9851682187999642	86	0.7231125933735726	True	True	scANVI transfer	nerve
+heming2025_sural_xenium	S30	non-myelinating Schwann	72	11	0.9786624556737588	96	0.7279946455798114	True	True	scANVI transfer	nerve
+heming2025_sural_xenium	S30	perineurial	62	10	0.9729137214582532	96	0.5693164860417929	True	True	scANVI transfer	nerve
+heming2025_sural_xenium	S30	repair Schwann	29	9	0.9933843074496072	86	0.7625100320170654	True	True	scANVI transfer	nerve
+yu2024_hdrg_xenium	Region_1	A-LTMR	0	20		0				scANVI transfer	ganglion
+yu2024_hdrg_xenium	Region_1	A-LTMR (NF)	79	20	0.9951423607417652	85	0.7963455149501661	True	True	scANVI transfer	ganglion
+yu2024_hdrg_xenium	Region_1	A-PEP	93	20	0.9795604877895858	85	0.9117256204807505	True	True	scANVI transfer	ganglion
+yu2024_hdrg_xenium	Region_1	A-Propr	35	20	0.9611685073031706	85	0.8511041625952706	True	True	scANVI transfer	ganglion
+yu2024_hdrg_xenium	Region_1	Ab-LTMR	0	20		0				scANVI transfer	ganglion
+yu2024_hdrg_xenium	Region_1	C-LTMR	3	20		0				scANVI transfer	ganglion
+yu2024_hdrg_xenium	Region_1	C-NP	141	20	0.9998317105421324	85	0.9116474496775456	True	True	scANVI transfer	ganglion
+yu2024_hdrg_xenium	Region_1	C-PEP	14	20		0				scANVI transfer	ganglion
+yu2024_hdrg_xenium	Region_1	C-Thermo	26	20	0.9363039399624764	85	0.8701387531756888	True	True	scANVI transfer	ganglion
+yu2024_hdrg_xenium	Region_1	PEP	35	20	0.991449946562166	76	0.8828434723171564	True	True	scANVI transfer	ganglion
+yu2024_hdrg_xenium	Region_1	injured neuron	8	20		0				scANVI transfer	ganglion
+yu2024_hdrg_xenium	Region_1	sympathetic neuron	2	8		0				scANVI transfer	ganglion
+yu2024_hdrg_xenium	Region_2	A-LTMR	0	20		0				scANVI transfer	ganglion
+yu2024_hdrg_xenium	Region_2	A-LTMR (NF)	78	20	0.9854096520763188	85	0.8369747899159664	True	True	scANVI transfer	ganglion
+yu2024_hdrg_xenium	Region_2	A-PEP	64	20	0.9726185691318328	85	0.8607582567910885	True	True	scANVI transfer	ganglion
+yu2024_hdrg_xenium	Region_2	A-Propr	12	20		0				scANVI transfer	ganglion
+yu2024_hdrg_xenium	Region_2	Ab-LTMR	5	20		0				scANVI transfer	ganglion
+yu2024_hdrg_xenium	Region_2	C-LTMR	5	20		0				scANVI transfer	ganglion
+yu2024_hdrg_xenium	Region_2	C-NP	136	20	0.999876938222988	85	0.8751807699824117	True	True	scANVI transfer	ganglion
+yu2024_hdrg_xenium	Region_2	C-PEP	9	20		0				scANVI transfer	ganglion
+yu2024_hdrg_xenium	Region_2	C-Thermo	13	20		0				scANVI transfer	ganglion
+yu2024_hdrg_xenium	Region_2	PEP	43	20	0.9969179041748388	76	0.8163499658236499	True	True	scANVI transfer	ganglion
+yu2024_hdrg_xenium	Region_2	injured neuron	6	20		0				scANVI transfer	ganglion
+yu2024_hdrg_xenium	Region_2	sympathetic neuron	4	8		0				scANVI transfer	ganglion
+yu2024_hdrg_xenium	Region_3	A-LTMR	0	20		0				scANVI transfer	ganglion
+yu2024_hdrg_xenium	Region_3	A-LTMR (NF)	54	20	0.96448087431694	85	0.8291381668946649	True	True	scANVI transfer	ganglion
+yu2024_hdrg_xenium	Region_3	A-PEP	69	20	0.9590532244794634	85	0.8824897400820794	True	True	scANVI transfer	ganglion
+yu2024_hdrg_xenium	Region_3	A-Propr	25	20	0.9522344322344324	77	0.8603501761396498	True	True	scANVI transfer	ganglion
+yu2024_hdrg_xenium	Region_3	Ab-LTMR	2	20		0				scANVI transfer	ganglion
+yu2024_hdrg_xenium	Region_3	C-LTMR	2	20		0				scANVI transfer	ganglion
+yu2024_hdrg_xenium	Region_3	C-NP	43	20	0.9998176014591884	85	0.890658589017002	True	True	scANVI transfer	ganglion
+yu2024_hdrg_xenium	Region_3	C-PEP	22	20	0.8053359683794467	51	0.8292307692307691	True	True	scANVI transfer	ganglion
+yu2024_hdrg_xenium	Region_3	C-Thermo	10	20		0				scANVI transfer	ganglion
+yu2024_hdrg_xenium	Region_3	PEP	62	20	0.9808638600328048	76	0.8385782638414219	True	True	scANVI transfer	ganglion
+yu2024_hdrg_xenium	Region_3	injured neuron	8	20		0				scANVI transfer	ganglion
+yu2024_hdrg_xenium	Region_3	sympathetic neuron	1	8		0				scANVI transfer	ganglion
+yu2024_hdrg_xenium	Region_4	A-LTMR	1	20		0				scANVI transfer	ganglion
+yu2024_hdrg_xenium	Region_4	A-LTMR (NF)	47	20	0.9958104000657192	85	0.8160250146570256	True	True	scANVI transfer	ganglion
+yu2024_hdrg_xenium	Region_4	A-PEP	79	20	0.9628617632297998	85	0.8828415086965019	True	True	scANVI transfer	ganglion
+yu2024_hdrg_xenium	Region_4	A-Propr	31	20	0.9190615835777126	85	0.8423490326363103	True	True	scANVI transfer	ganglion
+yu2024_hdrg_xenium	Region_4	Ab-LTMR	0	20		0				scANVI transfer	ganglion
+yu2024_hdrg_xenium	Region_4	C-LTMR	4	20		0				scANVI transfer	ganglion
+yu2024_hdrg_xenium	Region_4	C-NP	54	20	1.0	85	0.8901895641977722	True	True	scANVI transfer	ganglion
+yu2024_hdrg_xenium	Region_4	C-PEP	11	20		0				scANVI transfer	ganglion
+yu2024_hdrg_xenium	Region_4	C-Thermo	10	20		0				scANVI transfer	ganglion
+yu2024_hdrg_xenium	Region_4	PEP	62	20	0.9768640930724484	85	0.8589798710181746	True	True	scANVI transfer	ganglion
+yu2024_hdrg_xenium	Region_4	injured neuron	5	20		0				scANVI transfer	ganglion
+yu2024_hdrg_xenium	Region_4	sympathetic neuron	2	8		0				scANVI transfer	ganglion

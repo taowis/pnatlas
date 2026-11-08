@@ -296,3 +296,66 @@ two loops side by side, with a guard that pauses our jobs when another
 person's compute process appears on the GPU or memory runs low (details
 in the runbook). The guard's first version counted a graphics process
 (someone's browser) as GPU work; it now counts compute processes only.
+
+Outcome of the parallel run: all 44 sections finished with exit 0, the
+guard never had to pause anything (no other compute process appeared on
+the GPU and free memory stayed above 70 percent), and the memory guard
+logged no warning during the mapping. The two loops did not shorten
+the total time: one model alone trained in 13 to 19 minutes per
+section, two side by side took 33 to 44 minutes each and three took 53
+minutes, so the GPU was the bottleneck at about 96 percent utilisation
+and the throughput stayed at one section per 17 to 20 minutes. The
+loops and the guard are kept because they make a relaunch safe, not
+because they are faster here; a second GPU would change that. Nothing
+of ours was left running or paused on the server afterwards; the
+section outputs (40 MB) stay there and are copied to the laptop's data
+root.
+
+Visium mapping results. The ELBO of every section model is flat over
+the last tenth of the epochs (relative change below 0.0003). The
+estimated number of cells per spot, the sum of the state abundances,
+has a median of 42 (Shiers), 44 (Tavares-Ferreira), 35 (Zhang) and 66
+(Vroman) in the DRG sections and 24 in the DPN sural nerve sections;
+the dominant state holds a median of 29 to 40 percent of a spot's
+abundance, so no spot is one cell type and the dominant state is a
+label of convenience for the checks. In the DRG sections the dominant
+states are satellite glia (31 to 48 percent of spots), endothelial (1
+to 29 percent), non-myelinating Schwann (10 to 57 percent), myelinating
+Schwann, macrophage and fibroblast; a neuron family is the dominant
+state in under one percent of the spots (439 of 48,214 Shiers spots,
+mostly A-Propr; 19 Tavares-Ferreira; 7 Zhang; none in Vroman), because
+a 55 micron spot holds a few large neurons among dozens of glia and the
+dominant state is the one with the most cells. The consequence for the
+checks, which run on the spots a state dominates, is that the neuron
+families are checked in the Visium sections only where A-Propr reaches
+20 dominant spots (five sections, passing both checks) and otherwise
+rest on the Yu 2024 Xenium neurons. In the DPN sural nerve sections the
+dominant states are non-myelinating Schwann (37 percent of spots),
+perineurial (22), endothelial (13), mural (11), myelinating Schwann (9)
+and epineurial fibroblast (8), the picture a nerve cross-section should
+give.
+
+Mapping status (results/spatial/state_mapping_status.tsv, 28 state and
+compartment rows). Not mapped by the plan's rule: non-myelinating
+Schwann in the ganglion sections, which is the dominant state in a
+third of the DRG spots but fails check (a) in 31 of 33 sections
+(median AUROC 0.46; (b) passes in 27 of 33), so the spots the model
+gives to this state do not carry its markers above the rest of the
+section, and the abundance it receives in the DRG most likely belongs
+to satellite glia and the nerve root glia whose signatures overlap it
+on a 30 cell spot; mast in the sural nerve Xenium (above); epineurial
+fibroblast in the ganglion sections, which reaches 20 dominant spots
+in one section only and fails (b) there. Every other state is mapped.
+The weaker passes are in the ganglion: endothelial fails (a) in 15 of
+36 sections (median AUROC 0.74), satellite glia in 12 of 36 (0.75),
+fibroblast in 4 of 9, and myelinating Schwann fails (b) in 10 of 30
+sections (median Spearman 0.55); in the nerve every state passes (a) in
+every section (median AUROC 0.89 to 0.99 in the Visium nerve sections)
+and (b) in all but one or two sections. The held-out gene correlation
+sits between 0.5 and 0.8 for every passing state, which is the range
+the plan's threshold was set for. Check (c), anatomy, is open: it needs
+the H&E or DAPI image next to the state map, judged by a reader, and is
+possible where coordinates exist (the Heming and Yu Xenium cells, the
+Shiers spots, the DPN nerve spots); Zhang, Vroman and Tavares-Ferreira
+have no spot positions in the public files, so (c) cannot be done for
+them.

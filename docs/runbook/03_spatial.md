@@ -318,6 +318,17 @@ ssh "$REMOTE" 'cd ~/Projects/pnatlas-dev && workflow/remote/gpu_yield.sh status 
 ```
 
 Check: both loop logs end with `ALLDONE`; `logs/gpu_yield.log` lists every
-PAUSE and RESUME with the process that caused it. Stop the guard with
-`workflow/remote/gpu_yield.sh stop logs/gpu_yield.log` when the loops are
-done (it resumes anything still paused).
+PAUSE and RESUME with the process that caused it. When the loops are
+done, stop both guards (the GPU guard resumes anything still paused),
+confirm nothing of ours is left, then run the collection block above:
+
+```bash
+ssh "$REMOTE" 'cd ~/Projects/pnatlas-dev && workflow/remote/gpu_yield.sh stop logs/gpu_yield.log && \
+  ~/bin/memguard.sh stop logs/memguard.log; pgrep -af "c2l|run_c2l|gpu_yield|memguard" | grep -v pgrep; \
+  grep -c -E "PAUSE|RESUME" logs/gpu_yield.log; grep -E "WARN|PAUSE" logs/memguard.log | tail'
+```
+
+Check: `pgrep` prints nothing; 44 `checks.tsv` files under the c2l
+directory; `results/spatial/section_checks.tsv` has one row per section
+and state (1,540 rows) and `results/spatial/state_mapping_status.tsv`
+28 state and compartment rows.

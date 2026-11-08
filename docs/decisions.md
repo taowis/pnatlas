@@ -194,3 +194,14 @@ Each non-obvious choice, with its reason. Newest last.
   more than 0.3 between seeds; with every gene held out once the
   correlation runs over all shared genes. The Yu 2024 neurons, which
   passed under scANVI, pass under the classifier as well.
+- **In a Visium section a state is checked on the spots where it is the
+  dominant state by abundance share, and only when it dominates at least
+  20 spots.** The plan's checks (a) and (b) are written for "spots or
+  cells assigned to that state", and cell2location assigns a spot a
+  mixture, not a label. The dominant state is the nearest thing to an
+  assignment that does not need a threshold on the abundance scale, and
+  20 spots is the floor below which an AUROC or a rank correlation says
+  little. The cost is that states that are present but never the most
+  numerous in a 30 cell spot, the DRG neuron families above all, go
+  unchecked in Visium and are checked in the Yu 2024 Xenium neurons
+  instead; the abundance estimates themselves are kept for every state.
