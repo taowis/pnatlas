@@ -1,0 +1,49 @@
+section	state	assigned_cells	markers_present	auroc_markers	heldout_genes	spearman_heldout	pass_a	pass_b
+Region_1	A-LTMR	0	20		0			
+Region_1	A-LTMR (NF)	79	20	0.9951423607417651	85	0.7963455149501661	True	True
+Region_1	A-PEP	93	20	0.9795604877895858	85	0.9117256204807505	True	True
+Region_1	A-Propr	35	20	0.9611685073031706	85	0.8511041625952706	True	True
+Region_1	Ab-LTMR	0	20		0			
+Region_1	C-LTMR	3	20		0			
+Region_1	C-NP	141	20	0.9998317105421325	85	0.9116474496775455	True	True
+Region_1	C-PEP	14	20		0			
+Region_1	C-Thermo	26	20	0.9363039399624765	85	0.8701387531756888	True	True
+Region_1	PEP	35	20	0.991449946562166	76	0.8828434723171564	True	True
+Region_1	injured neuron	8	20		0			
+Region_1	sympathetic neuron	2	8		0			
+Region_2	A-LTMR	0	20		0			
+Region_2	A-LTMR (NF)	78	20	0.9854096520763188	85	0.8369747899159664	True	True
+Region_2	A-PEP	64	20	0.9726185691318328	85	0.8607582567910885	True	True
+Region_2	A-Propr	12	20		0			
+Region_2	Ab-LTMR	5	20		0			
+Region_2	C-LTMR	5	20		0			
+Region_2	C-NP	136	20	0.999876938222988	85	0.8751807699824117	True	True
+Region_2	C-PEP	9	20		0			
+Region_2	C-Thermo	13	20		0			
+Region_2	PEP	43	20	0.9969179041748388	76	0.8163499658236499	True	True
+Region_2	injured neuron	6	20		0			
+Region_2	sympathetic neuron	4	8		0			
+Region_3	A-LTMR	0	20		0			
+Region_3	A-LTMR (NF)	54	20	0.9644808743169399	85	0.8291381668946649	True	True
+Region_3	A-PEP	69	20	0.9590532244794634	85	0.8824897400820794	True	True
+Region_3	A-Propr	25	20	0.9522344322344323	77	0.8603501761396498	True	True
+Region_3	Ab-LTMR	2	20		0			
+Region_3	C-LTMR	2	20		0			
+Region_3	C-NP	43	20	0.9998176014591883	85	0.890658589017002	True	True
+Region_3	C-PEP	22	20	0.8053359683794467	51	0.8292307692307691	True	True
+Region_3	C-Thermo	10	20		0			
+Region_3	PEP	62	20	0.9808638600328048	76	0.8385782638414219	True	True
+Region_3	injured neuron	8	20		0			
+Region_3	sympathetic neuron	1	8		0			
+Region_4	A-LTMR	1	20		0			
+Region_4	A-LTMR (NF)	47	20	0.9958104000657192	85	0.8160250146570256	True	True
+Region_4	A-PEP	79	20	0.9628617632297998	85	0.8828415086965019	True	True
+Region_4	A-Propr	31	20	0.9190615835777126	85	0.8423490326363103	True	True
+Region_4	Ab-LTMR	0	20		0			
+Region_4	C-LTMR	4	20		0			
+Region_4	C-NP	54	20	1.0	85	0.8901895641977722	True	True
+Region_4	C-PEP	11	20		0			
+Region_4	C-Thermo	10	20		0			
+Region_4	PEP	62	20	0.9768640930724485	85	0.8589798710181746	True	True
+Region_4	injured neuron	5	20		0			
+Region_4	sympathetic neuron	2	8		0			

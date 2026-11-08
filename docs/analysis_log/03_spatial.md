@@ -252,6 +252,44 @@ endothelial cells), 16 to 63 percent of the cells assigned per section
 and the rest almost all below the count floor. The checks of this run
 are reported with the collected results.
 
+Panel transfer results. The panel markers for check (a) are now the
+reference markers computed within the panel's genes by the same script
+as the genome-wide markers (one-vs-rest against all 31 states, so a
+state's panel markers are the panel genes that single it out in the
+whole reference, not only within its compartment, as the first attempt
+had done); 2 to 20 markers per state for the Heming panel, 1 to 20 for
+the Yu panel. The outputs of the scANVI attempt on the server (the
+per-cell tables under the transfer directory and the three result
+tables per dataset) were deleted and replaced by this run's. Heming
+2025 sural nerve, 84,591 cells in 8 sections, 96 shared genes: 18 to
+69 percent of the cells assigned per section (lowest in the two control
+sections S22 and S30, which have the sparsest cells), 99 percent or
+more of the unassigned cells are below the count floor and the rest
+ambiguous; median posterior 0.90 to 1.00 per section. The
+assigned cells are mural (9,637), damage Schwann (5,505), epineurial
+fibroblast (5,213), non-myelinating Schwann (5,104), myelinating Schwann
+(4,394), perineurial (3,763), endothelial (3,480), endoneurial
+fibroblast (3,425), adipocyte (2,041), mast (700), macrophage (289),
+repair Schwann (185) and lymphatic endothelial (149). Twelve of the
+thirteen states with 20 or more cells in a section pass check (a) in
+every section (median AUROC 0.76 for damage Schwann to 1.00 for
+endothelial and lymphatic endothelial) and pass check (b) in at least
+five of their sections (median Spearman 0.51 for lymphatic endothelial
+to 0.77 for myelinating Schwann; endoneurial fibroblast and macrophage
+each fail (b) in two sections, adipocyte and lymphatic endothelial in
+one). Mast fails (b) in five of its seven sections (median 0.49) and
+(a) in two (median AUROC 0.74 on two panel markers), so by the plan's
+rule mast is not mapped in the sural nerve Xenium: the panel carries
+two genes that mark mast cells, and 700 cells over eight sections is a
+thin signal. Yu 2024 DRG neurons, 1,415 hand-segmented neurons in 4
+sections, 85 shared genes: every neuron assigned (none below the count
+floor, median posterior 1.0), seven neuron families with 20 or more
+cells in a section, all passing both checks in every section (AUROC
+0.81 to 1.00, Spearman 0.80 to 0.89). The run takes seconds on the CPU;
+the same command on the laptop gives identical tables for Yu and tables
+that differ from the server's in the sixth decimal of the AUROC for
+Heming, with the same pass and fail flags.
+
 Running the Visium sections: the single loop took about 17 minutes per
 section with the GPU two thirds busy, so the remaining sections run in
 two loops side by side, with a guard that pauses our jobs when another

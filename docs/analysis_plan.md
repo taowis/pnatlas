@@ -173,3 +173,18 @@ baseline) is reported as such and is a finding of the paper.
    unit and donor marked unknown. The DRG non-neuronal backbone is Jung 2023
    (7 donors) with Nguyen 2021 and Zhang. Section 1 is read with this
    change; the donor rule in section 2 is unchanged.
+2. (Stage 3, step 3.5) Targeted panels are not transferred with scANVI.
+   Each cell's counts over the shared genes are scored against every
+   candidate state of the section's compartment (and class, where the
+   authors segmented one class) with a multinomial likelihood whose gene
+   probabilities are the state's cell2location reference signature
+   normalised over the shared genes; with a flat prior the posterior is
+   the label probability, and the 0.5 rule of section 4 is unchanged. A
+   cell with fewer than 20 transcripts over the shared genes is
+   "unassigned" for low counts. Check (b) for a panel rotates over ten
+   folds of the shared genes, so that every shared gene is held out of
+   the classification once and the Spearman correlation runs over all
+   shared genes; the 0.5 threshold is unchanged. The 60 shared gene
+   minimum and checks (a) and (c) are unchanged. Reason: the scANVI
+   transfer collapsed on the Heming 2025 sural nerve Xenium, whose cells
+   carry a median of 8 to 34 transcripts over the panel (analysis log 3.5).

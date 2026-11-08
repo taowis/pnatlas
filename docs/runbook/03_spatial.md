@@ -232,25 +232,52 @@ state with fewer passes the filters with fewer genes).
 
 Visium sections, one cell2location model per section on the GPU, in a
 loop that skips finished sections (`workflow/scripts/run_c2l_sections.sh`),
-after the signatures are in place; then the two targeted panels with the
-scANVI transfer (parameters: `panel_transfer` in the config):
+after the signatures are in place (the memory guard from 3.4 is still
+running):
 
 ```bash
 REMOTE=user@host workflow/remote/sync.sh
 ssh "$REMOTE" 'source ~/miniconda3/etc/profile.d/conda.sh && conda activate pnatlas && cd ~/Projects/pnatlas-dev && \
-  nvidia-smi --query-gpu=utilization.gpu,memory.used --format=csv,noheader && \
-  setsid -f nohup bash -c "for d in heming2025_sural_xenium yu2024_hdrg_xenium; do \
-      nice -n 15 python workflow/scripts/panel_transfer.py \$d --counts data/interim/reference_merged.h5ad \
-        --annotation data/interim/reference_annotation.tsv.gz --sections-dir data/interim/spatial/\$d \
-        --out-dir data/interim/spatial/transfer/\$d --results-dir results/spatial/\$d > logs/panel_transfer_\$d.log 2>&1; \
-      echo \"EXIT \$d \$?\" >> logs/panel_transfer.log; done; \
-    workflow/scripts/run_c2l_sections.sh data data/interim/spatial/signatures/reference_signatures.csv.gz \
-      results/spatial/reference_markers.tsv shiers2025_dpn_drg utdallas_dpn_nerves tavaresferreira2022_hdrg_visium \
-      zhang2024_hdrg_visium vroman2023_hdrg_visium > logs/c2l_sections.log 2>&1" > /dev/null 2>&1 < /dev/null'
+  nvidia-smi --query-gpu=utilization.gpu,memory.used --format=csv,noheader && who && \
+  setsid -f nohup workflow/scripts/run_c2l_sections.sh data data/interim/spatial/signatures/reference_signatures.csv.gz \
+    results/spatial/reference_markers.tsv shiers2025_dpn_drg utdallas_dpn_nerves tavaresferreira2022_hdrg_visium \
+    zhang2024_hdrg_visium vroman2023_hdrg_visium > logs/c2l_sections.log 2>&1 < /dev/null'
 ```
 
-When `logs/c2l_sections.log` ends with `ALLDONE`, collect the checks and
-bring back the small outputs:
+The two targeted panels run on the CPU while the sections map. The panel
+markers for check (a) are the reference markers of 3.4 computed within
+the panel's genes (the gene list is taken from the first section of each
+dataset); then the signature-likelihood transfer of plan amendment 2
+(parameters: `panel_transfer` in the config; check (b) rotates over ten
+folds of the shared genes, `heldout_gene_fraction` in the config). The
+first attempt, a scANVI and scArches transfer, is described in the
+analysis log; its script version is in the history of
+`workflow/scripts/panel_transfer.py` and its outputs were removed.
+
+```bash
+ssh "$REMOTE" 'cd ~/Projects/pnatlas-dev && rm -rf data/interim/spatial/transfer && \
+  setsid -f nohup bash -c "source ~/miniconda3/etc/profile.d/conda.sh && conda activate pnatlas && \
+    for d in heming2025_sural_xenium yu2024_hdrg_xenium; do \
+      python -c \"import anndata as ad, glob; a = ad.read_h5ad(sorted(glob.glob(\\\"data/interim/spatial/\$d/*.h5ad\\\"))[0], backed=\\\"r\\\"); print(chr(10).join(a.var_names))\" > results/spatial/\$d/panel_genes.txt; \
+      nice -n 15 /usr/bin/time -v python workflow/scripts/reference_markers.py --counts data/interim/reference_merged.h5ad \
+        --annotation data/interim/reference_annotation.tsv.gz --genes results/spatial/\$d/panel_genes.txt \
+        --out results/spatial/\$d/panel_markers.tsv > logs/panel_markers_\$d.log 2>&1; echo \"MARKERS \$d \$?\"; \
+      nice -n 15 python workflow/scripts/panel_transfer.py \$d --signatures data/interim/spatial/signatures/reference_signatures.csv.gz \
+        --annotation data/interim/reference_annotation.tsv.gz --markers results/spatial/\$d/panel_markers.tsv \
+        --sections-dir data/interim/spatial/\$d --out-dir data/interim/spatial/transfer/\$d \
+        --results-dir results/spatial/\$d > logs/panel_transfer_\$d.log 2>&1; echo \"TRANSFER \$d \$?\"; \
+    done; echo PANELDONE" > logs/panel_rerun.log 2>&1 < /dev/null'
+```
+
+Check: `logs/panel_rerun.log` has `MARKERS <dataset> 0`, `TRANSFER <dataset> 0`
+for both datasets and ends with `PANELDONE`; `logs/panel_transfer_<dataset>.log`
+reports 96 shared genes for Heming 2025 and 85 for Yu 2024, both in ten
+folds; `results/spatial/<dataset>/transfer_summary.tsv` has one row per
+section. The same two commands run on the laptop against `$DATA_ROOT`
+give the same tables up to the last digits of the AUROC values.
+
+When the section loops end with `ALLDONE`, collect the checks and bring
+back the small outputs:
 
 ```bash
 ssh "$REMOTE" 'source ~/miniconda3/etc/profile.d/conda.sh && conda activate pnatlas && cd ~/Projects/pnatlas-dev && \
