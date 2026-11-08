@@ -24,10 +24,12 @@ ours_pids() { pgrep -u "$USER" -f "$pat" | grep -vx "$$" | grep -vx "${BASHPID:-
 state_of() { awk '{print $3}' "/proc/$1/stat" 2>/dev/null; }
 mem_free_pct() { free | awk '/^Mem:/ {printf "%d", $7 * 100 / $2}'; }
 others_on_gpu() {
-  # pids on the GPU that are not ours and use more than SM_MIN percent of the SMs
+  # compute processes (type C; graphics-only processes such as a browser or
+  # the desktop are not GPU work) that are not ours and use more than
+  # SM_MIN percent of the SMs
   local ours; ours=",$(ours_pids | paste -sd, -),"
   nvidia-smi pmon -c 1 -s u 2>/dev/null | awk -v ours="$ours" -v min="$SM_MIN" \
-    '$1 !~ /^#/ && $2 ~ /^[0-9]+$/ && ($4 + 0) > min && index(ours, "," $2 ",") == 0 {printf "%s(%s,sm%s) ", $NF, $2, $4}'
+    '$1 !~ /^#/ && $2 ~ /^[0-9]+$/ && $3 ~ /C/ && ($4 + 0) > min && index(ours, "," $2 ",") == 0 {printf "%s(%s,sm%s) ", $NF, $2, $4}'
 }
 
 loop() {
