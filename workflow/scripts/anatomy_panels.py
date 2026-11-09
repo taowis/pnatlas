@@ -18,10 +18,14 @@ The image source per dataset is the `anatomy` block of the dataset in
 config/spatial_inputs.yaml: a Space Ranger tissue image with its scale
 factor (Visium from H5), the low-resolution image exported from a Seurat
 object with the scale factor from the exported coordinates (Visium from
-a Seurat export), or the Xenium morphology OME-TIFF read at a pyramid
-level with the pixel size from its metadata (cells in microns). When a
-section has several scale factor files (two Space Ranger runs), the one
-whose scaled spot coordinates fit the image is used.
+a Seurat export), the Xenium morphology OME-TIFF read at a pyramid
+level with the pixel size from its metadata (cells in microns), or an
+H and E image aligned to the Xenium run in Xenium Explorer, whose
+alignment matrix (3 by 3, H and E pixels to morphology pixels) is
+inverted to place the cells (microns over the morphology pixel size)
+on the H and E. When a section has several scale factor files (two
+Space Ranger runs), the one whose scaled spot coordinates fit the image
+is used.
 
 Writes <out-dir>/<section>.jpg per section and the reader's sheet
 <out-dir>/../anatomy_check.tsv (one row per section and state with the
@@ -50,7 +54,8 @@ MIN_CELLS = 1 / 3  # estimated cells of a state below which a spot is left blank
 
 
 def read_image(spec, root, section, image_name, xy):
-    """Return (rgb array, scale from the coordinate units to image pixels)."""
+    """Return (rgb array, scale from the coordinate units to image pixels);
+    the scale is a number or, for an aligned image, a function of the coordinates."""
     kind = spec["kind"]
     if kind == "spaceranger":
         png = glob.glob(str(root / spec["image"].format(section=section)))
@@ -90,6 +95,26 @@ def read_image(spec, root, section, image_name, xy):
         lo, hi = np.percentile(arr[arr > 0], (1, 99.8))
         gray = np.clip((arr.astype(np.float32) - lo) / max(hi - lo, 1), 0, 1)
         return np.dstack([gray] * 3), 1.0 / (px * down)
+    if kind == "he_aligned":
+        import tifffile
+        paths = glob.glob(str(root / spec["image"].format(section=section)))
+        mats = glob.glob(str(root / spec["matrix"].format(section=section)))
+        if not paths or not mats:
+            return None, None
+        with tifffile.TiffFile(paths[0]) as t:
+            series = t.series[0]
+            level = min(spec.get("level", 1), len(series.levels) - 1)
+            arr = np.squeeze(series.levels[level].asarray())
+            down = series.levels[0].shape[1] / series.levels[level].shape[1]
+        # the matrix maps H and E pixels to morphology pixels; cells are in microns
+        inv = np.linalg.inv(np.loadtxt(mats[0], delimiter=","))
+        px = float(spec.get("pixel_size_um", 0.2125))
+
+        def to_image(xy_um):
+            pts = np.c_[xy_um / px, np.ones(len(xy_um))] @ inv.T
+            return pts[:, :2] / down
+
+        return arr, to_image
     raise SystemExit(f"unknown image kind {kind}")
 
 
@@ -148,7 +173,7 @@ def main():
         if abundance is None and labels is None:
             print(f"{section}: no mapping", flush=True)
             continue
-        xy = a.obsm["spatial"] * scale
+        xy = scale(a.obsm["spatial"]) if callable(scale) else a.obsm["spatial"] * scale
         has_xy = ~np.isnan(xy[:, 0])
         h, w = img.shape[:2]
         n_panels = 4 if abundance is not None else 2
@@ -181,7 +206,7 @@ def main():
         fig.tight_layout(pad=0.2)
         fig.savefig(out / f"{section}.jpg", pil_kwargs={"quality": 88})
         plt.close(fig)
-        print(f"{section}: image {w}x{h}, scale {scale:.4g}", flush=True)
+        print(f"{section}: image {w}x{h}, scale {'affine' if callable(scale) else format(scale, '.4g')}", flush=True)
     new = pd.DataFrame(rows, columns=cols)
     keep = ~((sheet["dataset"] == args.dataset) & sheet["section"].isin(new["section"]))
     pd.concat([sheet[keep], new]).sort_values(["dataset", "section", "state"]).to_csv(sheet_path, sep="\t", index=False)

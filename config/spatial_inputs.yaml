@@ -34,10 +34,15 @@ yu2024_hdrg_xenium:
   condition: control
   matrix: raw/yu2024_hdrg_xenium/GSE273557_hDRG_gene_expression_matrix.csv.gz
   metadata: raw/yu2024_hdrg_xenium/GSE273557_hDRG_gene_expression_matrix_metadata.csv.gz
-  position_column: cell_id          # "x-y"
+  # the authors' cell_id is an ImageJ ROI name, row-column of the morphology
+  # image (0.2125 microns per pixel): swapped and scaled, the neurons fall
+  # within 5 microns of a cell centroid of the Dryad cells table (log 3.9)
+  position_column: cell_id          # "y-x" in morphology pixels
+  position_order: yx
+  pixel_size_um: 0.2125
   section_column: Xenium_id
   section_pattern: "(Region_\\d)"
-  spatial_units: image pixels (from the authors' cell_id)
+  spatial_units: microns
   # regions from the GEO sample titles: donor 1 (2103-02139, female, 56),
   # donor 2 (2106-05090, male, 23)
   sections:
@@ -45,6 +50,27 @@ yu2024_hdrg_xenium:
     Region_2: {donor: 2106-05090, batch: slide0018220, level: L3}
     Region_3: {donor: 2106-05090, batch: slide0018220, level: T12}
     Region_4: {donor: 2106-05090, batch: slide0018220, level: T12}
+
+yu2024_hdrg_xenium_cells:
+  format: xenium
+  technology: Xenium
+  tissue: DRG
+  compartment: ganglion
+  condition: control
+  # every segmented cell of the four regions, from the Dryad bundles of the
+  # dataset (runbook 3.9: cells table, cell by gene matrix, post-Xenium H and E
+  # image and its alignment taken out of each rar). Same donors, slide and
+  # levels as yu2024_hdrg_xenium (Dryad README: Region 1 donor N2 L2, Region 2
+  # donor N4 L3, Regions 3 and 4 donor N4 T12)
+  # anatomy check: the post-Xenium H and E image aligned in Xenium Explorer;
+  # matrix.csv maps H and E pixels to morphology pixels (checked against the
+  # keypoints), read at pyramid level 1 (1.1 microns per pixel)
+  anatomy: {kind: he_aligned, image: "raw/yu2024_hdrg_xenium/dryad/extracted/{section}/DRG_area_*.ome.tif", matrix: "raw/yu2024_hdrg_xenium/dryad/extracted/{section}/DRG_area_*_alignment_files/matrix.csv", level: 1, pixel_size_um: 0.2125, marker_px: 5}
+  sections:
+    Region_1: {h5: raw/yu2024_hdrg_xenium/dryad/extracted/Region_1/cell_feature_matrix.h5, cells: raw/yu2024_hdrg_xenium/dryad/extracted/Region_1/cells.parquet, donor: 2103-02139, batch: slide0018220, level: L2}
+    Region_2: {h5: raw/yu2024_hdrg_xenium/dryad/extracted/Region_2/cell_feature_matrix.h5, cells: raw/yu2024_hdrg_xenium/dryad/extracted/Region_2/cells.parquet, donor: 2106-05090, batch: slide0018220, level: L3}
+    Region_3: {h5: raw/yu2024_hdrg_xenium/dryad/extracted/Region_3/cell_feature_matrix.h5, cells: raw/yu2024_hdrg_xenium/dryad/extracted/Region_3/cells.parquet, donor: 2106-05090, batch: slide0018220, level: T12}
+    Region_4: {h5: raw/yu2024_hdrg_xenium/dryad/extracted/Region_4/cell_feature_matrix.h5, cells: raw/yu2024_hdrg_xenium/dryad/extracted/Region_4/cells.parquet, donor: 2106-05090, batch: slide0018220, level: T12}
 
 zhang2024_hdrg_visium:
   format: visium_mtx

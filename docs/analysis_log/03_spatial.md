@@ -497,3 +497,112 @@ The move left both comparisons clean (83 GB raw, 13 GB interim on the
 array), the system disk went from 85 to 169 GB free, and the Dryad
 files verify through the links. The checkout's manifest and the
 small metadata stay on the system disk with the code.
+
+## 3.9 Yu 2024: every segmented cell, and H and E panels
+
+It was decided to use the Dryad bundles for two things: the transfer of
+every segmented cell of the four Yu sections (the GEO table holds only
+the 1,415 hand-segmented neurons, so the non-neuronal states of the
+ganglion were unchecked in this dataset) and the anatomy panels of check
+(c), which the post-Xenium H and E image and its alignment make
+possible. The all-cell data are a second dataset id next to the neuron
+table rather than a replacement: the table is the authors' curated
+neuron set, its checks are recorded, and the two answer different
+questions (decisions).
+
+Nine members are taken out of each bundle (cells table, cell by gene
+matrix, the H and E image, its alignment files, run metadata), 0.1 to
+0.3 GB per region, with libarchive through its Python binding, since the
+server has no rar tool; on the laptop the same nine members taken out
+with bsdtar have identical checksums.
+
+Two things were learnt from the bundles about data already in use. The
+GEO neuron table's cell ids (such as "3312-2030") had been read as x-y
+image pixels. Against the Dryad cells table they are row-column of the
+morphology image, as ImageJ names its ROIs: swapped and scaled by 0.2125
+microns per pixel, the neurons fall a median 5.4 microns (90 percent
+within 12) from a segmented cell centroid, and the cells they fall on
+have a median area of 187 square microns against 126 for all cells, as
+neuron somata should; in the original order the nearest cell is over a
+millimetre away. The config now carries the axis order and the pixel
+size, and the neuron sections have coordinates in microns. Nothing in
+the transfer depends on coordinates, so the recorded neuron checks are
+unchanged. Second, the alignment matrix exported by Xenium Explorer
+(3 by 3) reproduces the keypoints when applied to the H and E side (for
+Region 2, median residual 7.6 morphology pixels, 1.6 microns, largest
+17), so it maps H and E pixels to morphology pixels, and its inverse
+places the cells (microns over 0.2125) on the H and E, whose pixel is
+0.5567 microns (the matrix scale is 2.62). The panels read the H and E
+at pyramid level 1 (1.1 microns per pixel); the grey cells cover the
+tissue outline in all four sections, so the placement is right.
+
+Candidate states. The compartment rule alone would offer only the
+ganglion states, among which none of the three states check (c) asks
+about exists (the ganglion datasets label their sheath cells as
+fibroblast), so the Yu panels would be empty by construction. A DRG
+section carries its capsule and the root entering it, which are nerve
+sheath tissue, so for this dataset the three nerve sheath states are
+added to the ganglion candidates (24 states in all, including the
+sympathetic and injured neuron states the ganglion compartment
+contributes). The panel is the authors' 100 gene DRG panel, 98 of whose
+genes are in the reference signatures; it was designed for neuron
+subtypes, so the neuron families have their full 20 markers within the
+panel but the non-neuronal states only 4 (macrophage, both Schwann
+states) to 13 (satellite glia), and check (a) for them reads the
+panel's coverage as much as the mapping.
+
+Outcome. 151,974 cells in the four sections, 98 shared genes, 24
+candidate states. Between 10 and 19 percent of the cells per section
+are below the count floor (2,495 to 7,947 cells with fewer than 20
+transcripts over the shared genes) and 106 to 232 are ambiguous; the
+rest are assigned with a median posterior of 1.0. The assigned cells
+are, in order, fibroblast (22,063 over the four sections), sympathetic
+neuron (15,593), non-myelinating Schwann (14,008), myelinating Schwann
+(13,075), endothelial (12,714), satellite glia (12,440), macrophage
+(11,254), the ten DRG neuron families (20,167 together, A-PEP 9,086
+and C-NP 4,660 the largest), injured neuron (1,889), mural (1,317),
+epineurial fibroblast (779), adipocyte (250), endoneurial fibroblast
+(232) and perineurial (230). The neuron count is far above the 1,415
+hand-segmented somata, as expected from a nucleus-based segmentation
+that cuts a large soma into several cells and lets the satellite glia
+around it pick up neuron transcripts. Checks: every neuron family and
+the injured neuron state pass (a) and (b) in every section (AUROC 0.85
+to 0.99, Spearman 0.64 to 0.84); endothelial, fibroblast, macrophage,
+both Schwann states, satellite glia, mural, adipocyte and endoneurial
+fibroblast pass both in every section where they reach 20 cells
+(median AUROC 0.86 to 0.96, Spearman 0.58 to 0.72). Epineurial
+fibroblast fails (a) in three of four sections (median AUROC 0.67 on
+six markers) and with the Visium section already counted is now not
+mapped in the ganglion on five sections; perineurial fails (a) once and
+(b) once in four (median AUROC 0.83, Spearman 0.53) and is mapped.
+Sympathetic neuron takes 15,593 cells, fails (a) in two of four
+sections and (b) in one (median AUROC 0.71, Spearman 0.51), and by the
+plan's rule (more than half must fail) counts as mapped; a DRG holds no
+sympathetic neurons, so this state is absorbing cells whose panel
+counts are thin and neuron-like, most likely satellite glia and glial
+cells with neuron transcripts, and whether to drop it from the
+candidates of a DRG section is a decision for the user, not made here.
+The status table gains the ganglion rows of A-LTMR, Ab-LTMR, C-LTMR,
+adipocyte, endoneurial fibroblast, injured neuron, perineurial and
+sympathetic neuron, the other ganglion rows count four sections more,
+and no earlier mapped or not mapped verdict changes. The transfer's
+method label in the collected checks now reads "signature transfer"
+instead of the stale "scANVI transfer".
+
+The first run of the script rebuilt the section summary from the
+per-dataset section files, of which the server only held the two Yu
+ones, so the summary and the collected checks were briefly reduced to
+the Yu datasets; the summary was restored from the repository with the
+four all-cell rows added, the collection was rerun, and the script now
+replaces the Yu rows in the existing summary instead.
+
+Panels. Four JPEGs (3,200 pixels wide) with the H and E on the left
+and the assigned cells on the right, the three sheath states in colour
+and the rest grey, and twelve rows in the reader's sheet (perineurial
+97, 32, 51 and 50 cells in Regions 1 to 4; epineurial fibroblast 154,
+96, 321 and 208; endoneurial fibroblast 34, 11, 124 and 74). The
+coloured cells are a few hundred among 25,000 to 37,000 assigned, so
+they are picked out only on zooming; the H and E shows the ganglion
+with its capsule and the root fascicles attached, and the Region 2
+perineurial cells lie along the capsule edge at first sight. The
+judgement is the reader's and is not recorded here until made.

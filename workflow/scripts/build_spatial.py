@@ -11,7 +11,9 @@ The per-dataset inputs are in config/spatial_inputs.yaml. Formats:
   seurat_export  the directory written by rds_spatial_to_mtx.R; split into
                  sections by the image column of coordinates.csv.gz
   neuron_csv     genes x cells CSV with a metadata CSV whose cell_id holds
-                 the position as "x-y" and whose section column names the slide
+                 the position as "x-y" (or "y-x": position_order) in pixels
+                 (pixel_size_um converts them to microns) and whose section
+                 column names the slide
 
 Obs columns written for every section: dataset, section, donor, condition,
 batch, technology, tissue, compartment, plus the authors' per-cell columns
@@ -113,7 +115,10 @@ def read_neuron_csv(root, ds):
         a.obs["author_" + c] = meta[c].values
     # a cell id that is not "x-y" (a few neurons carry a file name instead) gets no position
     xy = meta[ds["position_column"]].astype(str).str.extract(r"^(\d+)-(\d+)$").apply(pd.to_numeric)
-    a.obsm["spatial"] = xy.values.astype(np.float64)
+    xy = xy.values.astype(np.float64)
+    if ds.get("position_order", "xy") == "yx":  # ImageJ names a ROI row-column
+        xy = xy[:, ::-1]
+    a.obsm["spatial"] = xy * float(ds.get("pixel_size_um", 1.0))
     a.obs["author_has_position"] = ~np.isnan(a.obsm["spatial"][:, 0])
     a.uns["spatial_units"] = ds.get("spatial_units", "image pixels")
     which = meta[ds["section_column"]].astype(str).str.extract(ds["section_pattern"])[0]

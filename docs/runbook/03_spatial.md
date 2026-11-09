@@ -490,3 +490,56 @@ the Dryad files verify through the link. Before this step the Dryad
 bundles were copied into the checkout with `rsync -a --partial` from
 the laptop (section 3.7), resumed after an interrupted connection, and
 verified on the server with the same script.
+
+## 3.9 Yu 2024: every cell of the Dryad bundles, and H and E panels
+
+The Dryad bundles (3.7) hold, per region, the cells table and the cell by
+gene matrix of every segmented cell (27,000 to 46,000 cells per region,
+against the 300 to 440 hand-segmented neurons of the GEO table), the
+post-Xenium H and E image of the section and its alignment to the
+morphology image from Xenium Explorer. The nine members the analysis
+needs (0.1 to 0.3 GB per region) are taken out of each rar with libarchive
+(`workflow/scripts/extract_members.py`; `python-libarchive-c` in
+`environment.yml`, on the existing server environment `pip install
+libarchive-c`) into `data/raw/yu2024_hdrg_xenium/dryad/extracted/Region_<n>/`.
+The all-cell data are a second dataset, `yu2024_hdrg_xenium_cells` in
+`config/spatial_inputs.yaml` (format `xenium`, same donors, slide and
+levels as the neuron table), transferred with the signature classifier of
+3.5 with the ganglion states plus the three nerve sheath states as
+candidates (`extra_states` in `config/config.yaml`), and drawn for check
+(c) on the H and E through the inverse of the alignment matrix (`anatomy`
+block of kind `he_aligned`). The neuron table's coordinates are corrected
+at the same time (`position_order: yx`, `pixel_size_um` in the config):
+its cell ids are ImageJ ROI names, row-column of the morphology image.
+
+All steps run in one script on the server, after the usual checks and
+with the memory guard running:
+
+```bash
+REMOTE=user@host workflow/remote/sync.sh
+ssh "$REMOTE" 'source ~/miniconda3/etc/profile.d/conda.sh && conda activate pnatlas && cd ~/Projects/pnatlas-dev && \
+  pip install -q libarchive-c && nvidia-smi --query-gpu=utilization.gpu,memory.used --format=csv,noheader && who && free -g | sed -n 2p && \
+  ~/bin/memguard.sh start logs/memguard.log "extract_members|build_spatial|reference_markers|panel_transfer|anatomy_panels" && \
+  setsid -f nohup workflow/scripts/run_yu_dryad.sh data > logs/yu_dryad.log 2>&1 < /dev/null'
+```
+
+Check: `logs/yu_dryad.log` has four `EXTRACT Region_<n> 0` lines, two
+`BUILD <dataset> 0` lines, `MARKERS`, `TRANSFER`, `COLLECT` and `PANELS`
+with exit 0, and ends with `YUDONE`; each `logs/extract_dryad_Region_<n>.log`
+lists nine members; `results/spatial/section_summary.tsv` has the rows
+of the two Yu datasets replaced and every other dataset's rows kept (60
+sections). Then stop the guard and bring the
+tables, the panels and the per-cell labels back:
+
+```bash
+ssh "$REMOTE" 'cd ~/Projects/pnatlas-dev && cat logs/yu_dryad.log && ~/bin/memguard.sh stop logs/memguard.log; grep -E "WARN|PAUSE" logs/memguard.log | tail -3'
+rsync -a --include "*/" --include "*.tsv" --include "*.txt" --exclude "*" "$REMOTE:~/Projects/pnatlas-dev/results/spatial/" results/spatial/
+rsync -a "$REMOTE:~/Projects/pnatlas-dev/results/spatial/anatomy/" results/spatial/anatomy/
+rsync -a "$REMOTE:~/Projects/pnatlas-dev/data/interim/spatial/transfer/yu2024_hdrg_xenium_cells" "$DATA_ROOT/interim/spatial/transfer/"
+```
+
+Check: `results/spatial/yu2024_hdrg_xenium_cells/transfer_summary.tsv` has
+four rows; `results/spatial/anatomy/yu2024_hdrg_xenium_cells/` has four
+JPEGs with the H and E under the cells, and `anatomy_check.tsv` twelve
+new rows for the reader. The same script runs on the laptop against a
+data root that holds the bundles, the reference and the signatures.

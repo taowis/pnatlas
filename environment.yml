@@ -17,6 +17,7 @@ dependencies:
   - seaborn
   - tifffile
   - imagecodecs       # JPEG 2000 tiles of the Xenium morphology OME-TIFF
+  - python-libarchive-c   # reads the rar bundles of the Dryad copy of Yu 2024 (extract_members.py)
   # single-cell
   - anndata
   - scanpy

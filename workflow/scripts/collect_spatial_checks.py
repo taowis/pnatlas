@@ -43,7 +43,7 @@ def main():
         df = pd.read_csv(p, sep="\t")
         df.insert(0, "dataset", pathlib.Path(p).parent.name)
         df = df.rename(columns={"assigned_cells": "assigned"})
-        df["method"] = "scANVI transfer"
+        df["method"] = "signature transfer"
         frames.append(df)
     allc = pd.concat(frames, ignore_index=True)
     allc["compartment"] = allc["dataset"].map(comp)
