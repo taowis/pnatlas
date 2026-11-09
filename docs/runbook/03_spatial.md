@@ -410,3 +410,55 @@ empty `placed_correctly` column for the reader to fill with yes, no or
 not present. The Tavares-Ferreira images have no spot positions to
 overlay (the positions are only in the Loupe files, which no open tool
 reads), so they are kept for viewing and no panel is drawn for them.
+
+## 3.7 Yu 2024 full Xenium bundles from Dryad
+
+The four Xenium output bundles of Yu 2024 (all cells, the morphology
+images and the post-Xenium H and E images; 12.4 GB in five files) are on
+Dryad under doi 10.5061/dryad.gf1vhhmxq (version 3, CC0). Dryad serves
+file downloads only to a browser session or with an API token (section
+1.7), so the files are saved by hand and then verified against the
+sha-256 digests that the Dryad API publishes. Manual steps, in a browser
+on the laptop:
+
+1. Open https://datadryad.org/dataset/doi:10.5061/dryad.gf1vhhmxq.
+2. Under "Oct 25, 2024 version files" click each file name in turn
+   (`README.md`, then `output-XETG00171__0018220__Region_1__20240207__003742.rar`
+   to `Region_4`); each click opens a download tab and the browser saves
+   the file to its download folder. With little free space on the laptop
+   system disk, take one bundle at a time and move it on before the next.
+3. Move each finished file into the repo data directory (on the external
+   drive) under `data/raw/yu2024_hdrg_xenium/dryad/`, keeping its name.
+
+Then verify and record (the script reads the file list of the dataset
+version from the Dryad API, compares size and sha-256, computes the md5
+and appends one manifest row per verified file; rerun it as the files
+come in):
+
+```bash
+cd "$REPO"
+mkdir -p data/raw/yu2024_hdrg_xenium/dryad
+mv ~/Downloads/README.md ~/Downloads/output-XETG00171__0018220__Region_*.rar data/raw/yu2024_hdrg_xenium/dryad/
+python3 -I workflow/scripts/dryad_verify.py --list
+python3 -I workflow/scripts/dryad_verify.py --data-root data --dir raw/yu2024_hdrg_xenium/dryad \
+  --dataset yu2024_hdrg_xenium --manifest data/MANIFEST.tsv
+bsdtar -tf data/raw/yu2024_hdrg_xenium/dryad/output-XETG00171__0018220__Region_1__20240207__003742.rar | head -60
+```
+
+Check: five `ok` lines, `data/MANIFEST.tsv` gains five rows with
+`source` Dryad, and the listing shows a Xenium output folder
+(`experiment.xenium`, `cells.csv.gz`, `cell_feature_matrix.h5`,
+`transcripts.parquet`, the `morphology*.ome.tif` images and the
+`DRG_area_<n>` H and E image with its alignment file).
+
+Copy the bundles to the server (the laptop's manifest is now the one
+with the Dryad rows, so `sync.sh` may run again) and keep the laptop
+copy on the external drive until the server copy has verified:
+
+```bash
+rsync -a --partial --info=progress2 data/raw/yu2024_hdrg_xenium/dryad/ "$REMOTE:~/Projects/pnatlas-dev/data/raw/yu2024_hdrg_xenium/dryad/"
+REMOTE=user@host workflow/remote/sync.sh
+ssh "$REMOTE" 'cd ~/Projects/pnatlas-dev && python3 -I workflow/scripts/dryad_verify.py --data-root data --dir raw/yu2024_hdrg_xenium/dryad --dataset yu2024_hdrg_xenium --manifest /dev/null'
+```
+
+Check: five `ok` lines on the server too.
