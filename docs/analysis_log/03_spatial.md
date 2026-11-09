@@ -497,3 +497,57 @@ The move left both comparisons clean (83 GB raw, 13 GB interim on the
 array), the system disk went from 85 to 169 GB free, and the Dryad
 files verify through the links. The checkout's manifest and the
 small metadata stay on the system disk with the code.
+
+## 3.9 Yu 2024: every segmented cell, and H and E panels
+
+It was decided to use the Dryad bundles for two things: the transfer of
+every segmented cell of the four Yu sections (the GEO table holds only
+the 1,415 hand-segmented neurons, so the non-neuronal states of the
+ganglion were unchecked in this dataset) and the anatomy panels of check
+(c), which the post-Xenium H and E image and its alignment make
+possible. The all-cell data are a second dataset id next to the neuron
+table rather than a replacement: the table is the authors' curated
+neuron set, its checks are recorded, and the two answer different
+questions (decisions).
+
+Nine members are taken out of each bundle (cells table, cell by gene
+matrix, the H and E image, its alignment files, run metadata), 0.1 to
+0.3 GB per region, with libarchive through its Python binding, since the
+server has no rar tool; on the laptop the same nine members taken out
+with bsdtar have identical checksums.
+
+Two things were learnt from the bundles about data already in use. The
+GEO neuron table's cell ids (such as "3312-2030") had been read as x-y
+image pixels. Against the Dryad cells table they are row-column of the
+morphology image, as ImageJ names its ROIs: swapped and scaled by 0.2125
+microns per pixel, the neurons fall a median 5.4 microns (90 percent
+within 12) from a segmented cell centroid, and the cells they fall on
+have a median area of 187 square microns against 126 for all cells, as
+neuron somata should; in the original order the nearest cell is over a
+millimetre away. The config now carries the axis order and the pixel
+size, and the neuron sections have coordinates in microns. Nothing in
+the transfer depends on coordinates, so the recorded neuron checks are
+unchanged. Second, the alignment matrix exported by Xenium Explorer
+(3 by 3) reproduces the keypoints when applied to the H and E side (for
+Region 2, median residual 7.6 morphology pixels, 1.6 microns, largest
+17), so it maps H and E pixels to morphology pixels, and its inverse
+places the cells (microns over 0.2125) on the H and E, whose pixel is
+0.5567 microns (the matrix scale is 2.62). The panels read the H and E
+at pyramid level 1 (1.1 microns per pixel); the grey cells cover the
+tissue outline in all four sections, so the placement is right.
+
+Candidate states. The compartment rule alone would offer only the
+ganglion states, among which none of the three states check (c) asks
+about exists (the ganglion datasets label their sheath cells as
+fibroblast), so the Yu panels would be empty by construction. A DRG
+section carries its capsule and the root entering it, which are nerve
+sheath tissue, so for this dataset the three nerve sheath states are
+added to the ganglion candidates (24 states in all, including the
+sympathetic and injured neuron states the ganglion compartment
+contributes). The panel is the authors' 100 gene DRG panel, 98 of whose
+genes are in the reference signatures; it was designed for neuron
+subtypes, so the non-neuronal states have one to ten panel markers for
+check (a) (one for macrophage, two for the Schwann states and the
+endoneurial fibroblast, three for endothelial, perineurial and
+epineurial fibroblast, four for fibroblast), and check (a) for them
+reads the panel's coverage as much as the mapping.

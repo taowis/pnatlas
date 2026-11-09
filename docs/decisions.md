@@ -205,3 +205,21 @@ Each non-obvious choice, with its reason. Newest last.
   numerous in a 30 cell spot, the DRG neuron families above all, go
   unchecked in Visium and are checked in the Yu 2024 Xenium neurons
   instead; the abundance estimates themselves are kept for every state.
+- **Yu 2024: every segmented cell of the Dryad bundles is a second dataset
+  (`yu2024_hdrg_xenium_cells`); the hand-segmented neuron table stays as it
+  is.** The GEO table holds the authors' curated 1,415 neurons, whose checks
+  are recorded; the Dryad bundles hold the 27,000 to 46,000 segmented cells
+  per region that the table leaves out, so the non-neuronal ganglion states
+  can be checked in this dataset and the anatomy panels of check (c) drawn
+  on the post-Xenium H and E image. Keeping both ids leaves the recorded
+  neuron checks untouched and keeps the two questions apart.
+- **For a whole DRG section the three nerve sheath states (perineurial,
+  epineurial fibroblast, endoneurial fibroblast) are candidates besides the
+  ganglion states.** The compartment rule alone would offer none of the
+  states check (c) asks about (the ganglion datasets label their sheath
+  cells as fibroblast), so the Yu panels would be empty by construction,
+  while a DRG section carries its capsule and the root entering it, which
+  are nerve sheath tissue. The addition is per dataset (`extra_states` in
+  the config); the cost, a ganglion fibroblast called a sheath state where
+  the signatures are close over the panel's genes, is what checks (a) and
+  (b) and the panels are there to show.

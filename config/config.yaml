@@ -108,3 +108,6 @@ panel_transfer:
   datasets:
     heming2025_sural_xenium: {compartment: nerve}
     yu2024_hdrg_xenium: {compartment: ganglion, class: neuron}   # hand-segmented neurons only
+    # every segmented cell of the Dryad bundles; a DRG section carries its capsule and
+    # root, which are nerve sheath tissue, so the three nerve sheath states are candidates too
+    yu2024_hdrg_xenium_cells: {compartment: ganglion, extra_states: [perineurial, epineurial fibroblast, endoneurial fibroblast]}
