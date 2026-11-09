@@ -474,3 +474,22 @@ can be unpacked without a separate rar tool.
 All five files verified (sizes and sha-256 as published by Dryad; md5
 and the web download link of each file in the manifest). The copy to
 the server is still to be made.
+The copy to the server went over a VPN at 4 to 6 MB/s and the
+connection dropped once near the end of the last bundle; `rsync
+--partial` resumed it and all five files verified on the server.
+
+## 3.8 Where the project data lives on the server
+
+The server's system disk holds every home directory and was 91 percent
+full, 85 GB of it the project's `data/raw` and `data/interim` in the
+checkout. The server has two arrays besides: the sequencer's output
+array (7.3 TB, 1.7 TB free), which holds the lab's long-read runs and
+is left alone, and a 22 TB data array with 8.3 TB free where the lab
+keeps its analysis data and references. It was decided to move the two
+large project directories to a project directory on the data array
+and leave symbolic links in the checkout, so that no path in the code,
+the config or this runbook changes. The array is a stripe without
+redundancy, which is acceptable because every raw file is listed with
+its source and checksum in the manifest and every intermediate file is
+rebuilt by the workflow. The move script copies, compares the copy by
+checksum, and removes the source only after the comparison is clean.

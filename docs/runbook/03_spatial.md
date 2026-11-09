@@ -462,3 +462,31 @@ ssh "$REMOTE" 'cd ~/Projects/pnatlas-dev && python3 -I workflow/scripts/dryad_ve
 ```
 
 Check: five `ok` lines on the server too.
+
+## 3.8 Project data on the server's data array
+
+The server's system disk (907 GB, shared by all home directories) was
+91 percent full with the project's `data/raw` (72 GB) and `data/interim`
+(13 GB) in the checkout, and the Dryad bundles unpack to a further
+15 GB or so. The two large directories are moved to the server's data
+array and replaced by symbolic links in the checkout, so `--data-root
+data` and every command above are unchanged. The target directory is
+passed at run time as `REMOTE_DATA` (a directory of the array owned by
+the login user); the script copies each directory, compares the copy
+with the source by checksum, and only then removes the source and
+links it, writing a README next to the target. Run with nothing of
+the project running on the server:
+
+```bash
+cd "$REPO"
+REMOTE=user@host workflow/remote/sync.sh
+ssh "$REMOTE" "cd ~/Projects/pnatlas-dev && setsid -f nohup nice -n 15 workflow/remote/relocate_data.sh $REMOTE_DATA raw interim > logs/relocate_data.log 2>&1 < /dev/null"
+ssh "$REMOTE" 'cd ~/Projects/pnatlas-dev && cat logs/relocate_data.log && ls -l data/ && python3 -I workflow/scripts/dryad_verify.py --data-root data --dir raw/yu2024_hdrg_xenium/dryad --dataset yu2024_hdrg_xenium --manifest /dev/null'
+```
+
+Check: the log ends with `done: data/raw -> ...` and `done: data/interim
+-> ...` and no `DIFFERENCES` line; `ls -l data/` shows the two links;
+the Dryad files verify through the link. Before this step the Dryad
+bundles were copied into the checkout with `rsync -a --partial` from
+the laptop (section 3.7), resumed after an interrupted connection, and
+verified on the server with the same script.
