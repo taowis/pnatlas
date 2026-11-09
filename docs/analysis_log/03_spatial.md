@@ -493,3 +493,7 @@ redundancy, which is acceptable because every raw file is listed with
 its source and checksum in the manifest and every intermediate file is
 rebuilt by the workflow. The move script copies, compares the copy by
 checksum, and removes the source only after the comparison is clean.
+The move left both comparisons clean (83 GB raw, 13 GB interim on the
+array), the system disk went from 85 to 169 GB free, and the Dryad
+files verify through the links. The checkout's manifest and the
+small metadata stay on the system disk with the code.
