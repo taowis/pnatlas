@@ -431,3 +431,46 @@ place; in the DRG sections the three states together hold 1 to 4
 percent of the estimated cells, spread thinly over the ganglion with no
 concentration at the capsule, so the expected answer there is "not
 present" rather than a yes or a no.
+
+## 3.7 Yu 2024 full Xenium bundles
+
+It was decided to fetch the Dryad copy of the Yu 2024 Xenium runs (doi
+10.5061/dryad.gf1vhhmxq, CC0, 12.4 GB in four `.rar` bundles and a
+README). The GEO series gives only the per-region transcript tables and
+the 1,415 hand-segmented neurons; the Dryad README says each bundle is
+the complete Xenium onboard-analysis output of one section (cells with
+segmentation, cell by gene matrix, transcripts, DAPI morphology images)
+plus the post-Xenium H and E image of the section (`DRG_area_<n>.ome`)
+and its alignment file to the morphology image. That gives, for this
+dataset, both the non-neuronal cells that the hand-segmented table
+leaves out and an H and E image for check (c). The README also states
+which donor and level each region is: Region 1 donor N2 lumbar 2,
+Region 2 donor N4 lumbar 3, Regions 3 and 4 donor N4 thoracic 12.
+
+Dryad still refuses scripted downloads (API 401 without a token, web
+link 403), so the files were saved from the dataset page in the
+laptop's browser and verified afterwards against the sha-256 digests
+the Dryad API publishes, with a small script that also writes the
+manifest rows; the fetch is recorded as manual with the click sequence
+in the runbook. The laptop system disk had only 14 GB free, so the
+bundles were taken one at a time and moved to the repo data directory
+on the external drive between downloads. The server was not reachable
+over ssh while the downloads ran (connection refused), so the copy to
+the server and anything done with the bundles there wait for it to come
+back. Nothing in the mapping results so far uses these files.
+
+The Region 1 bundle (4.9 GB, 6.2 GB unpacked, 153 entries) holds the
+Xenium output folder as the README describes it: `cells.csv.gz` and the
+cell by gene matrix (`cell_feature_matrix.h5` and the MEX folder), the
+cell and nucleus boundaries, the transcripts in four formats
+(`transcripts.csv` alone is 531 MB), the morphology images
+(`morphology.ome.tif` 2.8 GB, the focus and maximum-projection images
+0.3 GB each, and an unpacked `morphology_mip_extracted.tif` of 1.9 GB
+that the README does not mention), the onboard clustering, and the
+post-Xenium H and E image `DRG_area_1.ome.tif` (279 MB) with its
+alignment to the morphology image (`keypoints.csv` and a 3 by 3
+`matrix.csv`). `bsdtar` on the laptop lists the archive, so the bundles
+can be unpacked without a separate rar tool.
+All five files verified (sizes and sha-256 as published by Dryad; md5
+and the web download link of each file in the manifest). The copy to
+the server is still to be made.

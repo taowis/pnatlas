@@ -122,13 +122,18 @@ sural nerve, Xenium. Eight sural nerve sections (two CIDP, two CIAP, two vasculi
 
 ### yu2024_hdrg_xenium
 
-DRG, Xenium (100-gene panel). Per-region transcript tables (RAW tar) and the matrix of 1,415 hand-segmented neurons by 87 genes with positions and donor metadata. The full Xenium bundles are on Dryad (doi 10.5061/dryad.gf1vhhmxq, browser download) and are not downloaded. Source: GSE273557, PMID 39496796. Access: open.
+DRG, Xenium (100-gene panel). Per-region transcript tables (RAW tar) and the matrix of 1,415 hand-segmented neurons by 87 genes with positions and donor metadata. The full Xenium output bundles (all cells, morphology and post-Xenium H and E images) are the Dryad copy of the dataset, doi 10.5061/dryad.gf1vhhmxq version 3 (CC0), under `raw/yu2024_hdrg_xenium/dryad/`: Dryad serves downloads only to a browser or with an API token, so the five files were saved from https://datadryad.org/dataset/doi:10.5061/dryad.gf1vhhmxq in a browser (runbook 3.7) and verified against the sha-256 digests of the Dryad API with `workflow/scripts/dryad_verify.py`, which also wrote their manifest rows (the `url` column is each file's web download link). Region 1 is donor N2 lumbar 2, Region 2 donor N4 lumbar 3, Regions 3 and 4 donor N4 thoracic 12 (Dryad README). Source: GSE273557, PMID 39496796. Access: open.
 
 | File (under data_root) | Size (bytes) | md5 | Access date |
 |---|---|---|---|
 | `raw/yu2024_hdrg_xenium/GSE273557_RAW.tar` | 862965760 | a116c8fc0aa9ec742100890ea3ec7532 | 2026-11-08 |
 | `raw/yu2024_hdrg_xenium/GSE273557_hDRG_gene_expression_matrix.csv.gz` | 117846 | 6bc079ebb396f3c637c2e7ec0749ed98 | 2026-11-08 |
 | `raw/yu2024_hdrg_xenium/GSE273557_hDRG_gene_expression_matrix_metadata.csv.gz` | 13370 | 0a1929fcfd51ea8c0330943a69f0ebc5 | 2026-11-08 |
+| `raw/yu2024_hdrg_xenium/dryad/README.md` | 9324 | 2c281732b3eadcf6d6ae1727628752fa | 2026-11-09 |
+| `raw/yu2024_hdrg_xenium/dryad/output-XETG00171__0018220__Region_1__20240207__003742.rar` | 4868365120 | 50cb210f14089e4df0fb24000f294529 | 2026-11-09 |
+| `raw/yu2024_hdrg_xenium/dryad/output-XETG00171__0018220__Region_2__20240207__003742.rar` | 1972953030 | ea6b4e1022bded4f1607bf0379d71fda | 2026-11-09 |
+| `raw/yu2024_hdrg_xenium/dryad/output-XETG00171__0018220__Region_3__20240207__003742.rar` | 2676431418 | 7fad9b140e41b13e46ccafcffa283b1f | 2026-11-09 |
+| `raw/yu2024_hdrg_xenium/dryad/output-XETG00171__0018220__Region_4__20240207__003742.rar` | 2894777939 | ab372554ffe0e6725351d3f5003073b5 | 2026-11-09 |
 
 ### zhang2024_hdrg_visium
 

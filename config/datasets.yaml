@@ -112,7 +112,7 @@ datasets:
     access: open
     donors: 4
     pmid: 39496796
-    notes: CC0 on Dryad; browser download needed
+    notes: full Xenium bundles CC0 on Dryad, saved in a browser (Dryad refuses scripted downloads) and verified by sha-256
   - id: zhang2024_hdrg_visium
     layer: spatial
     species: human
