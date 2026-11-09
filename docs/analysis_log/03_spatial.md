@@ -546,8 +546,63 @@ added to the ganglion candidates (24 states in all, including the
 sympathetic and injured neuron states the ganglion compartment
 contributes). The panel is the authors' 100 gene DRG panel, 98 of whose
 genes are in the reference signatures; it was designed for neuron
-subtypes, so the non-neuronal states have one to ten panel markers for
-check (a) (one for macrophage, two for the Schwann states and the
-endoneurial fibroblast, three for endothelial, perineurial and
-epineurial fibroblast, four for fibroblast), and check (a) for them
-reads the panel's coverage as much as the mapping.
+subtypes, so the neuron families have their full 20 markers within the
+panel but the non-neuronal states only 4 (macrophage, both Schwann
+states) to 13 (satellite glia), and check (a) for them reads the
+panel's coverage as much as the mapping.
+
+Outcome. 151,974 cells in the four sections, 98 shared genes, 24
+candidate states. Between 10 and 19 percent of the cells per section
+are below the count floor (2,495 to 7,947 cells with fewer than 20
+transcripts over the shared genes) and 106 to 232 are ambiguous; the
+rest are assigned with a median posterior of 1.0. The assigned cells
+are, in order, fibroblast (22,063 over the four sections), sympathetic
+neuron (15,593), non-myelinating Schwann (14,008), myelinating Schwann
+(13,075), endothelial (12,714), satellite glia (12,440), macrophage
+(11,254), the ten DRG neuron families (20,167 together, A-PEP 9,086
+and C-NP 4,660 the largest), injured neuron (1,889), mural (1,317),
+epineurial fibroblast (779), adipocyte (250), endoneurial fibroblast
+(232) and perineurial (230). The neuron count is far above the 1,415
+hand-segmented somata, as expected from a nucleus-based segmentation
+that cuts a large soma into several cells and lets the satellite glia
+around it pick up neuron transcripts. Checks: every neuron family and
+the injured neuron state pass (a) and (b) in every section (AUROC 0.85
+to 0.99, Spearman 0.64 to 0.84); endothelial, fibroblast, macrophage,
+both Schwann states, satellite glia, mural, adipocyte and endoneurial
+fibroblast pass both in every section where they reach 20 cells
+(median AUROC 0.86 to 0.96, Spearman 0.58 to 0.72). Epineurial
+fibroblast fails (a) in three of four sections (median AUROC 0.67 on
+six markers) and with the Visium section already counted is now not
+mapped in the ganglion on five sections; perineurial fails (a) once and
+(b) once in four (median AUROC 0.83, Spearman 0.53) and is mapped.
+Sympathetic neuron takes 15,593 cells, fails (a) in two of four
+sections and (b) in one (median AUROC 0.71, Spearman 0.51), and by the
+plan's rule (more than half must fail) counts as mapped; a DRG holds no
+sympathetic neurons, so this state is absorbing cells whose panel
+counts are thin and neuron-like, most likely satellite glia and glial
+cells with neuron transcripts, and whether to drop it from the
+candidates of a DRG section is a decision for the user, not made here.
+The status table gains the ganglion rows of A-LTMR, Ab-LTMR, C-LTMR,
+adipocyte, endoneurial fibroblast, injured neuron, perineurial and
+sympathetic neuron, the other ganglion rows count four sections more,
+and no earlier mapped or not mapped verdict changes. The transfer's
+method label in the collected checks now reads "signature transfer"
+instead of the stale "scANVI transfer".
+
+The first run of the script rebuilt the section summary from the
+per-dataset section files, of which the server only held the two Yu
+ones, so the summary and the collected checks were briefly reduced to
+the Yu datasets; the summary was restored from the repository with the
+four all-cell rows added, the collection was rerun, and the script now
+replaces the Yu rows in the existing summary instead.
+
+Panels. Four JPEGs (3,200 pixels wide) with the H and E on the left
+and the assigned cells on the right, the three sheath states in colour
+and the rest grey, and twelve rows in the reader's sheet (perineurial
+97, 32, 51 and 50 cells in Regions 1 to 4; epineurial fibroblast 154,
+96, 321 and 208; endoneurial fibroblast 34, 11, 124 and 74). The
+coloured cells are a few hundred among 25,000 to 37,000 assigned, so
+they are picked out only on zooming; the H and E shows the ganglion
+with its capsule and the root fascicles attached, and the Region 2
+perineurial cells lie along the capsule edge at first sight. The
+judgement is the reader's and is not recorded here until made.

@@ -1,0 +1,5 @@
+dataset	section	donor	condition	technology	cells	genes	median_counts	coordinates
+yu2024_hdrg_xenium_cells	Region_1	2103-02139	control	Xenium	45516	100	56	True
+yu2024_hdrg_xenium_cells	Region_2	2106-05090	control	Xenium	27186	100	84	True
+yu2024_hdrg_xenium_cells	Region_3	2106-05090	control	Xenium	41061	100	53	True
+yu2024_hdrg_xenium_cells	Region_4	2106-05090	control	Xenium	38211	100	58	True

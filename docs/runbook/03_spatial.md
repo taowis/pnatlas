@@ -526,8 +526,9 @@ ssh "$REMOTE" 'source ~/miniconda3/etc/profile.d/conda.sh && conda activate pnat
 Check: `logs/yu_dryad.log` has four `EXTRACT Region_<n> 0` lines, two
 `BUILD <dataset> 0` lines, `MARKERS`, `TRANSFER`, `COLLECT` and `PANELS`
 with exit 0, and ends with `YUDONE`; each `logs/extract_dryad_Region_<n>.log`
-lists nine members; `results/spatial/section_summary.tsv` has the four
-all-cell sections added (60 rows). Then stop the guard and bring the
+lists nine members; `results/spatial/section_summary.tsv` has the rows
+of the two Yu datasets replaced and every other dataset's rows kept (60
+sections). Then stop the guard and bring the
 tables, the panels and the per-cell labels back:
 
 ```bash

@@ -27,7 +27,10 @@ for d in yu2024_hdrg_xenium yu2024_hdrg_xenium_cells; do
     > "$res/sections_$d.tsv" 2> "logs/build_spatial_$d.log"
   echo "BUILD $d $?"
 done
-cat "$res"/sections_*.tsv | awk 'NR==1||!/^dataset/' > "$res/section_summary.tsv"
+# replace the rows of the two Yu datasets in the section summary, keep every other dataset's rows
+awk -F'\t' 'FNR==1{if(NR==1)print;next} FILENAME~/section_summary/ && $1~/^yu2024_hdrg_xenium/{next} {print}' \
+  "$res/section_summary.tsv" "$res/sections_yu2024_hdrg_xenium.tsv" "$res/sections_yu2024_hdrg_xenium_cells.tsv" > "$res/section_summary.new" \
+  && mv "$res/section_summary.new" "$res/section_summary.tsv"
 d=yu2024_hdrg_xenium_cells
 mkdir -p "$res/$d"
 python -c "import anndata as ad, glob, sys; a = ad.read_h5ad(sorted(glob.glob(sys.argv[1] + '/*.h5ad'))[0], backed='r'); print('\n'.join(a.var_names))" \

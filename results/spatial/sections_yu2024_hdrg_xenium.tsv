@@ -1,0 +1,5 @@
+dataset	section	donor	condition	technology	cells	genes	median_counts	coordinates
+yu2024_hdrg_xenium	Region_1	2103-02139	control	Xenium (100-gene panel, hand-segmented neurons)	436	87	4364	True
+yu2024_hdrg_xenium	Region_2	2106-05090	control	Xenium (100-gene panel, hand-segmented neurons)	375	87	3217	True
+yu2024_hdrg_xenium	Region_3	2106-05090	control	Xenium (100-gene panel, hand-segmented neurons)	298	87	3177	True
+yu2024_hdrg_xenium	Region_4	2106-05090	control	Xenium (100-gene panel, hand-segmented neurons)	306	87	4516	True

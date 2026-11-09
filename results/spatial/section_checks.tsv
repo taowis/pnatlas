@@ -1363,179 +1363,275 @@ zhang2024_hdrg_visium	DRG7	perineurial	0	20		0				cell2location	ganglion
 zhang2024_hdrg_visium	DRG7	repair Schwann	0	20		0				cell2location	ganglion
 zhang2024_hdrg_visium	DRG7	satellite glia	601	20	0.7842798808328135	1766	0.5302072303651273	True	True	cell2location	ganglion
 zhang2024_hdrg_visium	DRG7	sympathetic neuron	0	20		0				cell2location	ganglion
-heming2025_sural_xenium	S01	B	17	4		0				scANVI transfer	nerve
-heming2025_sural_xenium	S01	T/NK	9	3		0				scANVI transfer	nerve
-heming2025_sural_xenium	S01	adipocyte	356	3	0.873555994465666	96	0.519628323385784	True	True	scANVI transfer	nerve
-heming2025_sural_xenium	S01	damage Schwann	672	9	0.7658877196263187	96	0.5483198193188723	True	True	scANVI transfer	nerve
-heming2025_sural_xenium	S01	endoneurial fibroblast	479	10	0.7957111253674782	96	0.5822226747336972	True	True	scANVI transfer	nerve
-heming2025_sural_xenium	S01	endothelial	343	13	0.9930412451399154	96	0.7121670868089444	True	True	scANVI transfer	nerve
-heming2025_sural_xenium	S01	epineurial fibroblast	1172	7	0.8776283790758289	96	0.50904269209019	True	True	scANVI transfer	nerve
-heming2025_sural_xenium	S01	granulocyte	2	2		0				scANVI transfer	nerve
-heming2025_sural_xenium	S01	lymphatic endothelial	22	5	0.9954312559588356	77	0.468602120586774	True	False	scANVI transfer	nerve
-heming2025_sural_xenium	S01	macrophage	69	4	0.9666965978598614	96	0.4781968336257641	True	False	scANVI transfer	nerve
-heming2025_sural_xenium	S01	mast	153	2	0.7656093343486262	96	0.3947168551382279	True	False	scANVI transfer	nerve
-heming2025_sural_xenium	S01	mural	395	5	0.9812063234731888	96	0.5984681174853999	True	True	scANVI transfer	nerve
-heming2025_sural_xenium	S01	myelinating Schwann	1209	11	0.9615439493958088	96	0.7723607017701573	True	True	scANVI transfer	nerve
-heming2025_sural_xenium	S01	non-myelinating Schwann	265	11	0.9570300272358676	96	0.6932178117453496	True	True	scANVI transfer	nerve
-heming2025_sural_xenium	S01	perineurial	1240	10	0.9788081284713974	96	0.590580447428826	True	True	scANVI transfer	nerve
-heming2025_sural_xenium	S01	repair Schwann	1	9		0				scANVI transfer	nerve
-heming2025_sural_xenium	S04	B	19	4		0				scANVI transfer	nerve
-heming2025_sural_xenium	S04	T/NK	14	3		0				scANVI transfer	nerve
-heming2025_sural_xenium	S04	adipocyte	472	3	0.7499376197914874	96	0.4803174172544764	True	False	scANVI transfer	nerve
-heming2025_sural_xenium	S04	damage Schwann	849	9	0.8154225210500031	96	0.5912187710925582	True	True	scANVI transfer	nerve
-heming2025_sural_xenium	S04	endoneurial fibroblast	219	10	0.8488390477191596	87	0.4941109265130575	True	False	scANVI transfer	nerve
-heming2025_sural_xenium	S04	endothelial	832	13	0.9921679695296596	96	0.7576744123650475	True	True	scANVI transfer	nerve
-heming2025_sural_xenium	S04	epineurial fibroblast	1249	7	0.9247567665439772	96	0.5990504612045578	True	True	scANVI transfer	nerve
-heming2025_sural_xenium	S04	granulocyte	0	2		0				scANVI transfer	nerve
-heming2025_sural_xenium	S04	lymphatic endothelial	93	5	0.9968663784640062	96	0.6756277748826572	True	True	scANVI transfer	nerve
-heming2025_sural_xenium	S04	macrophage	97	4	0.9633124117941056	96	0.6005250575432615	True	True	scANVI transfer	nerve
-heming2025_sural_xenium	S04	mast	178	2	0.7417029079239004	96	0.4925650646476253	True	False	scANVI transfer	nerve
-heming2025_sural_xenium	S04	mural	2914	5	0.9769834603671328	96	0.5885241454150841	True	True	scANVI transfer	nerve
-heming2025_sural_xenium	S04	myelinating Schwann	656	11	0.9681232128108224	96	0.7826022380421346	True	True	scANVI transfer	nerve
-heming2025_sural_xenium	S04	non-myelinating Schwann	1111	11	0.968804718881084	96	0.7327418983568664	True	True	scANVI transfer	nerve
-heming2025_sural_xenium	S04	perineurial	670	10	0.9843628979253176	96	0.5671301647720193	True	True	scANVI transfer	nerve
-heming2025_sural_xenium	S04	repair Schwann	15	9		0				scANVI transfer	nerve
-heming2025_sural_xenium	S11	B	6	4		0				scANVI transfer	nerve
-heming2025_sural_xenium	S11	T/NK	8	3		0				scANVI transfer	nerve
-heming2025_sural_xenium	S11	adipocyte	615	3	0.7525953562113019	96	0.5961828023174978	True	True	scANVI transfer	nerve
-heming2025_sural_xenium	S11	damage Schwann	1876	9	0.8179130681271999	96	0.6175800325556159	True	True	scANVI transfer	nerve
-heming2025_sural_xenium	S11	endoneurial fibroblast	908	10	0.8347375969751791	96	0.6080793283159607	True	True	scANVI transfer	nerve
-heming2025_sural_xenium	S11	endothelial	1210	13	0.9951022356853576	96	0.7979788388497017	True	True	scANVI transfer	nerve
-heming2025_sural_xenium	S11	epineurial fibroblast	1291	7	0.8751818989423814	96	0.6153366161257413	True	True	scANVI transfer	nerve
-heming2025_sural_xenium	S11	granulocyte	0	2		0				scANVI transfer	nerve
-heming2025_sural_xenium	S11	lymphatic endothelial	34	5	0.987182819997444	87	0.5082926511990746	True	True	scANVI transfer	nerve
-heming2025_sural_xenium	S11	macrophage	68	4	0.9833444135394784	96	0.6680690400663183	True	True	scANVI transfer	nerve
-heming2025_sural_xenium	S11	mast	151	2	0.8063967227834633	96	0.4239244378593661	True	False	scANVI transfer	nerve
-heming2025_sural_xenium	S11	mural	4119	5	0.9702468047414736	96	0.662561041779707	True	True	scANVI transfer	nerve
-heming2025_sural_xenium	S11	myelinating Schwann	1148	11	0.9631173708800524	96	0.7986814797462941	True	True	scANVI transfer	nerve
-heming2025_sural_xenium	S11	non-myelinating Schwann	1775	11	0.957549595558332	96	0.742797069994574	True	True	scANVI transfer	nerve
-heming2025_sural_xenium	S11	perineurial	809	10	0.9785293966266064	96	0.6025366250678241	True	True	scANVI transfer	nerve
-heming2025_sural_xenium	S11	repair Schwann	52	9	0.988563138206066	96	0.7774959477863654	True	True	scANVI transfer	nerve
-heming2025_sural_xenium	S14	B	4	4		0				scANVI transfer	nerve
-heming2025_sural_xenium	S14	T/NK	0	3		0				scANVI transfer	nerve
-heming2025_sural_xenium	S14	adipocyte	159	3	0.8169586990024827	96	0.5910571802060957	True	True	scANVI transfer	nerve
-heming2025_sural_xenium	S14	damage Schwann	741	9	0.769289677184414	96	0.6342925988829919	True	True	scANVI transfer	nerve
-heming2025_sural_xenium	S14	endoneurial fibroblast	222	10	0.8754310539332352	87	0.6065145196967645	True	True	scANVI transfer	nerve
-heming2025_sural_xenium	S14	endothelial	171	13	0.995105150697256	96	0.7730681562391853	True	True	scANVI transfer	nerve
-heming2025_sural_xenium	S14	epineurial fibroblast	274	7	0.8832482524926584	96	0.5700366872170188	True	True	scANVI transfer	nerve
-heming2025_sural_xenium	S14	granulocyte	1	2		0				scANVI transfer	nerve
-heming2025_sural_xenium	S14	lymphatic endothelial	3	5		0				scANVI transfer	nerve
-heming2025_sural_xenium	S14	macrophage	8	4		0				scANVI transfer	nerve
-heming2025_sural_xenium	S14	mast	46	2	0.6960278698042965	86	0.5111184603602689	False	True	scANVI transfer	nerve
-heming2025_sural_xenium	S14	mural	616	5	0.9832393016819246	96	0.6416438397570623	True	True	scANVI transfer	nerve
-heming2025_sural_xenium	S14	myelinating Schwann	523	11	0.9491461714918114	96	0.8048047679041835	True	True	scANVI transfer	nerve
-heming2025_sural_xenium	S14	non-myelinating Schwann	536	11	0.9398518577326136	96	0.722792827774981	True	True	scANVI transfer	nerve
-heming2025_sural_xenium	S14	perineurial	336	10	0.9833061434450324	96	0.5793821368728799	True	True	scANVI transfer	nerve
-heming2025_sural_xenium	S14	repair Schwann	12	9		0				scANVI transfer	nerve
-heming2025_sural_xenium	S22	B	0	4		0				scANVI transfer	nerve
-heming2025_sural_xenium	S22	T/NK	0	3		0				scANVI transfer	nerve
-heming2025_sural_xenium	S22	adipocyte	14	3		0				scANVI transfer	nerve
-heming2025_sural_xenium	S22	damage Schwann	96	9	0.7069290386803186	87	0.5983887801039732	True	True	scANVI transfer	nerve
-heming2025_sural_xenium	S22	endoneurial fibroblast	295	10	0.8015457747941296	87	0.5274785878521103	True	True	scANVI transfer	nerve
-heming2025_sural_xenium	S22	endothelial	139	13	0.997064996011802	96	0.7339618567613387	True	True	scANVI transfer	nerve
-heming2025_sural_xenium	S22	epineurial fibroblast	9	7		0				scANVI transfer	nerve
-heming2025_sural_xenium	S22	granulocyte	0	2		0				scANVI transfer	nerve
-heming2025_sural_xenium	S22	lymphatic endothelial	1	5		0				scANVI transfer	nerve
-heming2025_sural_xenium	S22	macrophage	0	4		0				scANVI transfer	nerve
-heming2025_sural_xenium	S22	mast	2	2		0				scANVI transfer	nerve
-heming2025_sural_xenium	S22	mural	76	5	0.9927586862227789	87	0.6430741522657305	True	True	scANVI transfer	nerve
-heming2025_sural_xenium	S22	myelinating Schwann	94	11	0.9841684434968015	96	0.763219379444478	True	True	scANVI transfer	nerve
-heming2025_sural_xenium	S22	non-myelinating Schwann	20	11	0.997533585222502	10	0.7046939203804071	True	True	scANVI transfer	nerve
-heming2025_sural_xenium	S22	perineurial	127	10	0.9907911044080624	96	0.6774422732623648	True	True	scANVI transfer	nerve
-heming2025_sural_xenium	S22	repair Schwann	0	9		0				scANVI transfer	nerve
-heming2025_sural_xenium	S24	B	14	4		0				scANVI transfer	nerve
-heming2025_sural_xenium	S24	T/NK	0	3		0				scANVI transfer	nerve
-heming2025_sural_xenium	S24	adipocyte	157	3	0.7691981792671302	96	0.5043113403080172	True	True	scANVI transfer	nerve
-heming2025_sural_xenium	S24	damage Schwann	373	9	0.740389080484679	87	0.5400323044879314	True	True	scANVI transfer	nerve
-heming2025_sural_xenium	S24	endoneurial fibroblast	230	10	0.8255547761334969	87	0.4839264030377099	True	False	scANVI transfer	nerve
-heming2025_sural_xenium	S24	endothelial	479	13	0.9964645692326104	96	0.7309503546193528	True	True	scANVI transfer	nerve
-heming2025_sural_xenium	S24	epineurial fibroblast	147	7	0.938809342440832	96	0.5085585568001574	True	True	scANVI transfer	nerve
-heming2025_sural_xenium	S24	granulocyte	2	2		0				scANVI transfer	nerve
-heming2025_sural_xenium	S24	lymphatic endothelial	0	5		0				scANVI transfer	nerve
-heming2025_sural_xenium	S24	macrophage	5	4		0				scANVI transfer	nerve
-heming2025_sural_xenium	S24	mast	41	2	0.5834322996303608	66	0.4926016736459232	False	False	scANVI transfer	nerve
-heming2025_sural_xenium	S24	mural	801	5	0.9827641805184716	96	0.6129052203388221	True	True	scANVI transfer	nerve
-heming2025_sural_xenium	S24	myelinating Schwann	721	11	0.9540210126791164	96	0.7593369363175133	True	True	scANVI transfer	nerve
-heming2025_sural_xenium	S24	non-myelinating Schwann	1233	11	0.96604675186506	96	0.7334215082048481	True	True	scANVI transfer	nerve
-heming2025_sural_xenium	S24	perineurial	193	10	0.9932267738880602	96	0.5203548909810318	True	True	scANVI transfer	nerve
-heming2025_sural_xenium	S24	repair Schwann	2	9		0				scANVI transfer	nerve
-heming2025_sural_xenium	S29	B	8	4		0				scANVI transfer	nerve
-heming2025_sural_xenium	S29	T/NK	2	3		0				scANVI transfer	nerve
-heming2025_sural_xenium	S29	adipocyte	150	3	0.8456037567084079	96	0.547655675370692	True	True	scANVI transfer	nerve
-heming2025_sural_xenium	S29	damage Schwann	618	9	0.7541231018172767	96	0.5719296091260899	True	True	scANVI transfer	nerve
-heming2025_sural_xenium	S29	endoneurial fibroblast	539	10	0.8325889966972417	96	0.5295594456422565	True	True	scANVI transfer	nerve
-heming2025_sural_xenium	S29	endothelial	191	13	0.9947969878992962	96	0.7451414567025149	True	True	scANVI transfer	nerve
-heming2025_sural_xenium	S29	epineurial fibroblast	527	7	0.8778057250893694	96	0.6134208311550159	True	True	scANVI transfer	nerve
-heming2025_sural_xenium	S29	granulocyte	0	2		0				scANVI transfer	nerve
-heming2025_sural_xenium	S29	lymphatic endothelial	7	5		0				scANVI transfer	nerve
-heming2025_sural_xenium	S29	macrophage	22	4	0.985434730570775	39	0.4005365753220622	True	False	scANVI transfer	nerve
-heming2025_sural_xenium	S29	mast	92	2	0.7022564870387744	96	0.5690031269929068	True	True	scANVI transfer	nerve
-heming2025_sural_xenium	S29	mural	437	5	0.9822318572105188	96	0.6836800666985104	True	True	scANVI transfer	nerve
-heming2025_sural_xenium	S29	myelinating Schwann	18	11		0				scANVI transfer	nerve
-heming2025_sural_xenium	S29	non-myelinating Schwann	92	11	0.9746422329036488	96	0.7011247538015396	True	True	scANVI transfer	nerve
-heming2025_sural_xenium	S29	perineurial	326	10	0.9804943290041664	96	0.6156274649879736	True	True	scANVI transfer	nerve
-heming2025_sural_xenium	S29	repair Schwann	104	9	0.9842080761258288	96	0.7410206783054183	True	True	scANVI transfer	nerve
-heming2025_sural_xenium	S30	B	8	4		0				scANVI transfer	nerve
-heming2025_sural_xenium	S30	T/NK	3	3		0				scANVI transfer	nerve
-heming2025_sural_xenium	S30	adipocyte	132	3	0.8617231294174993	96	0.5499182834600223	True	True	scANVI transfer	nerve
-heming2025_sural_xenium	S30	damage Schwann	280	9	0.729580532979056	87	0.5855730603725594	True	True	scANVI transfer	nerve
-heming2025_sural_xenium	S30	endoneurial fibroblast	533	10	0.863791436796319	87	0.5879446891115134	True	True	scANVI transfer	nerve
-heming2025_sural_xenium	S30	endothelial	115	13	0.9937896505806212	96	0.7208880666836599	True	True	scANVI transfer	nerve
-heming2025_sural_xenium	S30	epineurial fibroblast	553	7	0.9010433217976724	96	0.6560116519911777	True	True	scANVI transfer	nerve
-heming2025_sural_xenium	S30	granulocyte	0	2		0				scANVI transfer	nerve
-heming2025_sural_xenium	S30	lymphatic endothelial	12	5		0				scANVI transfer	nerve
-heming2025_sural_xenium	S30	macrophage	33	4	0.9773398758052814	77	0.5705768758696808	True	True	scANVI transfer	nerve
-heming2025_sural_xenium	S30	mast	39	2	0.7368289726955158	58	0.4614632012268382	True	False	scANVI transfer	nerve
-heming2025_sural_xenium	S30	mural	279	5	0.9826522905397026	96	0.6366967151962973	True	True	scANVI transfer	nerve
-heming2025_sural_xenium	S30	myelinating Schwann	43	11	0.9851682187999642	86	0.7231125933735726	True	True	scANVI transfer	nerve
-heming2025_sural_xenium	S30	non-myelinating Schwann	72	11	0.9786624556737588	96	0.7279946455798114	True	True	scANVI transfer	nerve
-heming2025_sural_xenium	S30	perineurial	62	10	0.9729137214582532	96	0.5693164860417929	True	True	scANVI transfer	nerve
-heming2025_sural_xenium	S30	repair Schwann	29	9	0.9933843074496072	86	0.7625100320170654	True	True	scANVI transfer	nerve
-yu2024_hdrg_xenium	Region_1	A-LTMR	0	20		0				scANVI transfer	ganglion
-yu2024_hdrg_xenium	Region_1	A-LTMR (NF)	79	20	0.9951423607417652	85	0.7963455149501661	True	True	scANVI transfer	ganglion
-yu2024_hdrg_xenium	Region_1	A-PEP	93	20	0.9795604877895858	85	0.9117256204807505	True	True	scANVI transfer	ganglion
-yu2024_hdrg_xenium	Region_1	A-Propr	35	20	0.9611685073031706	85	0.8511041625952706	True	True	scANVI transfer	ganglion
-yu2024_hdrg_xenium	Region_1	Ab-LTMR	0	20		0				scANVI transfer	ganglion
-yu2024_hdrg_xenium	Region_1	C-LTMR	3	20		0				scANVI transfer	ganglion
-yu2024_hdrg_xenium	Region_1	C-NP	141	20	0.9998317105421324	85	0.9116474496775456	True	True	scANVI transfer	ganglion
-yu2024_hdrg_xenium	Region_1	C-PEP	14	20		0				scANVI transfer	ganglion
-yu2024_hdrg_xenium	Region_1	C-Thermo	26	20	0.9363039399624764	85	0.8701387531756888	True	True	scANVI transfer	ganglion
-yu2024_hdrg_xenium	Region_1	PEP	35	20	0.991449946562166	76	0.8828434723171564	True	True	scANVI transfer	ganglion
-yu2024_hdrg_xenium	Region_1	injured neuron	8	20		0				scANVI transfer	ganglion
-yu2024_hdrg_xenium	Region_1	sympathetic neuron	2	8		0				scANVI transfer	ganglion
-yu2024_hdrg_xenium	Region_2	A-LTMR	0	20		0				scANVI transfer	ganglion
-yu2024_hdrg_xenium	Region_2	A-LTMR (NF)	78	20	0.9854096520763188	85	0.8369747899159664	True	True	scANVI transfer	ganglion
-yu2024_hdrg_xenium	Region_2	A-PEP	64	20	0.9726185691318328	85	0.8607582567910885	True	True	scANVI transfer	ganglion
-yu2024_hdrg_xenium	Region_2	A-Propr	12	20		0				scANVI transfer	ganglion
-yu2024_hdrg_xenium	Region_2	Ab-LTMR	5	20		0				scANVI transfer	ganglion
-yu2024_hdrg_xenium	Region_2	C-LTMR	5	20		0				scANVI transfer	ganglion
-yu2024_hdrg_xenium	Region_2	C-NP	136	20	0.999876938222988	85	0.8751807699824117	True	True	scANVI transfer	ganglion
-yu2024_hdrg_xenium	Region_2	C-PEP	9	20		0				scANVI transfer	ganglion
-yu2024_hdrg_xenium	Region_2	C-Thermo	13	20		0				scANVI transfer	ganglion
-yu2024_hdrg_xenium	Region_2	PEP	43	20	0.9969179041748388	76	0.8163499658236499	True	True	scANVI transfer	ganglion
-yu2024_hdrg_xenium	Region_2	injured neuron	6	20		0				scANVI transfer	ganglion
-yu2024_hdrg_xenium	Region_2	sympathetic neuron	4	8		0				scANVI transfer	ganglion
-yu2024_hdrg_xenium	Region_3	A-LTMR	0	20		0				scANVI transfer	ganglion
-yu2024_hdrg_xenium	Region_3	A-LTMR (NF)	54	20	0.96448087431694	85	0.8291381668946649	True	True	scANVI transfer	ganglion
-yu2024_hdrg_xenium	Region_3	A-PEP	69	20	0.9590532244794634	85	0.8824897400820794	True	True	scANVI transfer	ganglion
-yu2024_hdrg_xenium	Region_3	A-Propr	25	20	0.9522344322344324	77	0.8603501761396498	True	True	scANVI transfer	ganglion
-yu2024_hdrg_xenium	Region_3	Ab-LTMR	2	20		0				scANVI transfer	ganglion
-yu2024_hdrg_xenium	Region_3	C-LTMR	2	20		0				scANVI transfer	ganglion
-yu2024_hdrg_xenium	Region_3	C-NP	43	20	0.9998176014591884	85	0.890658589017002	True	True	scANVI transfer	ganglion
-yu2024_hdrg_xenium	Region_3	C-PEP	22	20	0.8053359683794467	51	0.8292307692307691	True	True	scANVI transfer	ganglion
-yu2024_hdrg_xenium	Region_3	C-Thermo	10	20		0				scANVI transfer	ganglion
-yu2024_hdrg_xenium	Region_3	PEP	62	20	0.9808638600328048	76	0.8385782638414219	True	True	scANVI transfer	ganglion
-yu2024_hdrg_xenium	Region_3	injured neuron	8	20		0				scANVI transfer	ganglion
-yu2024_hdrg_xenium	Region_3	sympathetic neuron	1	8		0				scANVI transfer	ganglion
-yu2024_hdrg_xenium	Region_4	A-LTMR	1	20		0				scANVI transfer	ganglion
-yu2024_hdrg_xenium	Region_4	A-LTMR (NF)	47	20	0.9958104000657192	85	0.8160250146570256	True	True	scANVI transfer	ganglion
-yu2024_hdrg_xenium	Region_4	A-PEP	79	20	0.9628617632297998	85	0.8828415086965019	True	True	scANVI transfer	ganglion
-yu2024_hdrg_xenium	Region_4	A-Propr	31	20	0.9190615835777126	85	0.8423490326363103	True	True	scANVI transfer	ganglion
-yu2024_hdrg_xenium	Region_4	Ab-LTMR	0	20		0				scANVI transfer	ganglion
-yu2024_hdrg_xenium	Region_4	C-LTMR	4	20		0				scANVI transfer	ganglion
-yu2024_hdrg_xenium	Region_4	C-NP	54	20	1.0	85	0.8901895641977722	True	True	scANVI transfer	ganglion
-yu2024_hdrg_xenium	Region_4	C-PEP	11	20		0				scANVI transfer	ganglion
-yu2024_hdrg_xenium	Region_4	C-Thermo	10	20		0				scANVI transfer	ganglion
-yu2024_hdrg_xenium	Region_4	PEP	62	20	0.9768640930724484	85	0.8589798710181746	True	True	scANVI transfer	ganglion
-yu2024_hdrg_xenium	Region_4	injured neuron	5	20		0				scANVI transfer	ganglion
-yu2024_hdrg_xenium	Region_4	sympathetic neuron	2	8		0				scANVI transfer	ganglion
+heming2025_sural_xenium	S01	B	17	4		0				signature transfer	nerve
+heming2025_sural_xenium	S01	T/NK	9	3		0				signature transfer	nerve
+heming2025_sural_xenium	S01	adipocyte	356	3	0.873555994465666	96	0.519628323385784	True	True	signature transfer	nerve
+heming2025_sural_xenium	S01	damage Schwann	672	9	0.7658877196263187	96	0.5483198193188723	True	True	signature transfer	nerve
+heming2025_sural_xenium	S01	endoneurial fibroblast	479	10	0.7957111253674782	96	0.5822226747336972	True	True	signature transfer	nerve
+heming2025_sural_xenium	S01	endothelial	343	13	0.9930412451399154	96	0.7121670868089444	True	True	signature transfer	nerve
+heming2025_sural_xenium	S01	epineurial fibroblast	1172	7	0.8776283790758289	96	0.50904269209019	True	True	signature transfer	nerve
+heming2025_sural_xenium	S01	granulocyte	2	2		0				signature transfer	nerve
+heming2025_sural_xenium	S01	lymphatic endothelial	22	5	0.9954312559588356	77	0.468602120586774	True	False	signature transfer	nerve
+heming2025_sural_xenium	S01	macrophage	69	4	0.9666965978598614	96	0.4781968336257641	True	False	signature transfer	nerve
+heming2025_sural_xenium	S01	mast	153	2	0.7656093343486262	96	0.3947168551382279	True	False	signature transfer	nerve
+heming2025_sural_xenium	S01	mural	395	5	0.9812063234731888	96	0.5984681174853999	True	True	signature transfer	nerve
+heming2025_sural_xenium	S01	myelinating Schwann	1209	11	0.9615439493958088	96	0.7723607017701573	True	True	signature transfer	nerve
+heming2025_sural_xenium	S01	non-myelinating Schwann	265	11	0.9570300272358676	96	0.6932178117453496	True	True	signature transfer	nerve
+heming2025_sural_xenium	S01	perineurial	1240	10	0.9788081284713974	96	0.590580447428826	True	True	signature transfer	nerve
+heming2025_sural_xenium	S01	repair Schwann	1	9		0				signature transfer	nerve
+heming2025_sural_xenium	S04	B	19	4		0				signature transfer	nerve
+heming2025_sural_xenium	S04	T/NK	14	3		0				signature transfer	nerve
+heming2025_sural_xenium	S04	adipocyte	472	3	0.7499376197914874	96	0.4803174172544764	True	False	signature transfer	nerve
+heming2025_sural_xenium	S04	damage Schwann	849	9	0.8154225210500031	96	0.5912187710925582	True	True	signature transfer	nerve
+heming2025_sural_xenium	S04	endoneurial fibroblast	219	10	0.8488390477191596	87	0.4941109265130575	True	False	signature transfer	nerve
+heming2025_sural_xenium	S04	endothelial	832	13	0.9921679695296596	96	0.7576744123650475	True	True	signature transfer	nerve
+heming2025_sural_xenium	S04	epineurial fibroblast	1249	7	0.9247567665439772	96	0.5990504612045578	True	True	signature transfer	nerve
+heming2025_sural_xenium	S04	granulocyte	0	2		0				signature transfer	nerve
+heming2025_sural_xenium	S04	lymphatic endothelial	93	5	0.9968663784640062	96	0.6756277748826572	True	True	signature transfer	nerve
+heming2025_sural_xenium	S04	macrophage	97	4	0.9633124117941056	96	0.6005250575432615	True	True	signature transfer	nerve
+heming2025_sural_xenium	S04	mast	178	2	0.7417029079239004	96	0.4925650646476253	True	False	signature transfer	nerve
+heming2025_sural_xenium	S04	mural	2914	5	0.9769834603671328	96	0.5885241454150841	True	True	signature transfer	nerve
+heming2025_sural_xenium	S04	myelinating Schwann	656	11	0.9681232128108224	96	0.7826022380421346	True	True	signature transfer	nerve
+heming2025_sural_xenium	S04	non-myelinating Schwann	1111	11	0.968804718881084	96	0.7327418983568664	True	True	signature transfer	nerve
+heming2025_sural_xenium	S04	perineurial	670	10	0.9843628979253176	96	0.5671301647720193	True	True	signature transfer	nerve
+heming2025_sural_xenium	S04	repair Schwann	15	9		0				signature transfer	nerve
+heming2025_sural_xenium	S11	B	6	4		0				signature transfer	nerve
+heming2025_sural_xenium	S11	T/NK	8	3		0				signature transfer	nerve
+heming2025_sural_xenium	S11	adipocyte	615	3	0.7525953562113019	96	0.5961828023174978	True	True	signature transfer	nerve
+heming2025_sural_xenium	S11	damage Schwann	1876	9	0.8179130681271999	96	0.6175800325556159	True	True	signature transfer	nerve
+heming2025_sural_xenium	S11	endoneurial fibroblast	908	10	0.8347375969751791	96	0.6080793283159607	True	True	signature transfer	nerve
+heming2025_sural_xenium	S11	endothelial	1210	13	0.9951022356853576	96	0.7979788388497017	True	True	signature transfer	nerve
+heming2025_sural_xenium	S11	epineurial fibroblast	1291	7	0.8751818989423814	96	0.6153366161257413	True	True	signature transfer	nerve
+heming2025_sural_xenium	S11	granulocyte	0	2		0				signature transfer	nerve
+heming2025_sural_xenium	S11	lymphatic endothelial	34	5	0.987182819997444	87	0.5082926511990746	True	True	signature transfer	nerve
+heming2025_sural_xenium	S11	macrophage	68	4	0.9833444135394784	96	0.6680690400663183	True	True	signature transfer	nerve
+heming2025_sural_xenium	S11	mast	151	2	0.8063967227834633	96	0.4239244378593661	True	False	signature transfer	nerve
+heming2025_sural_xenium	S11	mural	4119	5	0.9702468047414736	96	0.662561041779707	True	True	signature transfer	nerve
+heming2025_sural_xenium	S11	myelinating Schwann	1148	11	0.9631173708800524	96	0.7986814797462941	True	True	signature transfer	nerve
+heming2025_sural_xenium	S11	non-myelinating Schwann	1775	11	0.957549595558332	96	0.742797069994574	True	True	signature transfer	nerve
+heming2025_sural_xenium	S11	perineurial	809	10	0.9785293966266064	96	0.6025366250678241	True	True	signature transfer	nerve
+heming2025_sural_xenium	S11	repair Schwann	52	9	0.988563138206066	96	0.7774959477863654	True	True	signature transfer	nerve
+heming2025_sural_xenium	S14	B	4	4		0				signature transfer	nerve
+heming2025_sural_xenium	S14	T/NK	0	3		0				signature transfer	nerve
+heming2025_sural_xenium	S14	adipocyte	159	3	0.8169586990024827	96	0.5910571802060957	True	True	signature transfer	nerve
+heming2025_sural_xenium	S14	damage Schwann	741	9	0.769289677184414	96	0.6342925988829919	True	True	signature transfer	nerve
+heming2025_sural_xenium	S14	endoneurial fibroblast	222	10	0.8754310539332352	87	0.6065145196967645	True	True	signature transfer	nerve
+heming2025_sural_xenium	S14	endothelial	171	13	0.995105150697256	96	0.7730681562391853	True	True	signature transfer	nerve
+heming2025_sural_xenium	S14	epineurial fibroblast	274	7	0.8832482524926584	96	0.5700366872170188	True	True	signature transfer	nerve
+heming2025_sural_xenium	S14	granulocyte	1	2		0				signature transfer	nerve
+heming2025_sural_xenium	S14	lymphatic endothelial	3	5		0				signature transfer	nerve
+heming2025_sural_xenium	S14	macrophage	8	4		0				signature transfer	nerve
+heming2025_sural_xenium	S14	mast	46	2	0.6960278698042965	86	0.5111184603602689	False	True	signature transfer	nerve
+heming2025_sural_xenium	S14	mural	616	5	0.9832393016819246	96	0.6416438397570623	True	True	signature transfer	nerve
+heming2025_sural_xenium	S14	myelinating Schwann	523	11	0.9491461714918114	96	0.8048047679041835	True	True	signature transfer	nerve
+heming2025_sural_xenium	S14	non-myelinating Schwann	536	11	0.9398518577326136	96	0.722792827774981	True	True	signature transfer	nerve
+heming2025_sural_xenium	S14	perineurial	336	10	0.9833061434450324	96	0.5793821368728799	True	True	signature transfer	nerve
+heming2025_sural_xenium	S14	repair Schwann	12	9		0				signature transfer	nerve
+heming2025_sural_xenium	S22	B	0	4		0				signature transfer	nerve
+heming2025_sural_xenium	S22	T/NK	0	3		0				signature transfer	nerve
+heming2025_sural_xenium	S22	adipocyte	14	3		0				signature transfer	nerve
+heming2025_sural_xenium	S22	damage Schwann	96	9	0.7069290386803186	87	0.5983887801039732	True	True	signature transfer	nerve
+heming2025_sural_xenium	S22	endoneurial fibroblast	295	10	0.8015457747941296	87	0.5274785878521103	True	True	signature transfer	nerve
+heming2025_sural_xenium	S22	endothelial	139	13	0.997064996011802	96	0.7339618567613387	True	True	signature transfer	nerve
+heming2025_sural_xenium	S22	epineurial fibroblast	9	7		0				signature transfer	nerve
+heming2025_sural_xenium	S22	granulocyte	0	2		0				signature transfer	nerve
+heming2025_sural_xenium	S22	lymphatic endothelial	1	5		0				signature transfer	nerve
+heming2025_sural_xenium	S22	macrophage	0	4		0				signature transfer	nerve
+heming2025_sural_xenium	S22	mast	2	2		0				signature transfer	nerve
+heming2025_sural_xenium	S22	mural	76	5	0.9927586862227789	87	0.6430741522657305	True	True	signature transfer	nerve
+heming2025_sural_xenium	S22	myelinating Schwann	94	11	0.9841684434968015	96	0.763219379444478	True	True	signature transfer	nerve
+heming2025_sural_xenium	S22	non-myelinating Schwann	20	11	0.997533585222502	10	0.7046939203804071	True	True	signature transfer	nerve
+heming2025_sural_xenium	S22	perineurial	127	10	0.9907911044080624	96	0.6774422732623648	True	True	signature transfer	nerve
+heming2025_sural_xenium	S22	repair Schwann	0	9		0				signature transfer	nerve
+heming2025_sural_xenium	S24	B	14	4		0				signature transfer	nerve
+heming2025_sural_xenium	S24	T/NK	0	3		0				signature transfer	nerve
+heming2025_sural_xenium	S24	adipocyte	157	3	0.7691981792671302	96	0.5043113403080172	True	True	signature transfer	nerve
+heming2025_sural_xenium	S24	damage Schwann	373	9	0.740389080484679	87	0.5400323044879314	True	True	signature transfer	nerve
+heming2025_sural_xenium	S24	endoneurial fibroblast	230	10	0.8255547761334969	87	0.4839264030377099	True	False	signature transfer	nerve
+heming2025_sural_xenium	S24	endothelial	479	13	0.9964645692326104	96	0.7309503546193528	True	True	signature transfer	nerve
+heming2025_sural_xenium	S24	epineurial fibroblast	147	7	0.938809342440832	96	0.5085585568001574	True	True	signature transfer	nerve
+heming2025_sural_xenium	S24	granulocyte	2	2		0				signature transfer	nerve
+heming2025_sural_xenium	S24	lymphatic endothelial	0	5		0				signature transfer	nerve
+heming2025_sural_xenium	S24	macrophage	5	4		0				signature transfer	nerve
+heming2025_sural_xenium	S24	mast	41	2	0.5834322996303608	66	0.4926016736459232	False	False	signature transfer	nerve
+heming2025_sural_xenium	S24	mural	801	5	0.9827641805184716	96	0.6129052203388221	True	True	signature transfer	nerve
+heming2025_sural_xenium	S24	myelinating Schwann	721	11	0.9540210126791164	96	0.7593369363175133	True	True	signature transfer	nerve
+heming2025_sural_xenium	S24	non-myelinating Schwann	1233	11	0.96604675186506	96	0.7334215082048481	True	True	signature transfer	nerve
+heming2025_sural_xenium	S24	perineurial	193	10	0.9932267738880602	96	0.5203548909810318	True	True	signature transfer	nerve
+heming2025_sural_xenium	S24	repair Schwann	2	9		0				signature transfer	nerve
+heming2025_sural_xenium	S29	B	8	4		0				signature transfer	nerve
+heming2025_sural_xenium	S29	T/NK	2	3		0				signature transfer	nerve
+heming2025_sural_xenium	S29	adipocyte	150	3	0.8456037567084079	96	0.547655675370692	True	True	signature transfer	nerve
+heming2025_sural_xenium	S29	damage Schwann	618	9	0.7541231018172767	96	0.5719296091260899	True	True	signature transfer	nerve
+heming2025_sural_xenium	S29	endoneurial fibroblast	539	10	0.8325889966972417	96	0.5295594456422565	True	True	signature transfer	nerve
+heming2025_sural_xenium	S29	endothelial	191	13	0.9947969878992962	96	0.7451414567025149	True	True	signature transfer	nerve
+heming2025_sural_xenium	S29	epineurial fibroblast	527	7	0.8778057250893694	96	0.6134208311550159	True	True	signature transfer	nerve
+heming2025_sural_xenium	S29	granulocyte	0	2		0				signature transfer	nerve
+heming2025_sural_xenium	S29	lymphatic endothelial	7	5		0				signature transfer	nerve
+heming2025_sural_xenium	S29	macrophage	22	4	0.985434730570775	39	0.4005365753220622	True	False	signature transfer	nerve
+heming2025_sural_xenium	S29	mast	92	2	0.7022564870387744	96	0.5690031269929068	True	True	signature transfer	nerve
+heming2025_sural_xenium	S29	mural	437	5	0.9822318572105188	96	0.6836800666985104	True	True	signature transfer	nerve
+heming2025_sural_xenium	S29	myelinating Schwann	18	11		0				signature transfer	nerve
+heming2025_sural_xenium	S29	non-myelinating Schwann	92	11	0.9746422329036488	96	0.7011247538015396	True	True	signature transfer	nerve
+heming2025_sural_xenium	S29	perineurial	326	10	0.9804943290041664	96	0.6156274649879736	True	True	signature transfer	nerve
+heming2025_sural_xenium	S29	repair Schwann	104	9	0.9842080761258288	96	0.7410206783054183	True	True	signature transfer	nerve
+heming2025_sural_xenium	S30	B	8	4		0				signature transfer	nerve
+heming2025_sural_xenium	S30	T/NK	3	3		0				signature transfer	nerve
+heming2025_sural_xenium	S30	adipocyte	132	3	0.8617231294174993	96	0.5499182834600223	True	True	signature transfer	nerve
+heming2025_sural_xenium	S30	damage Schwann	280	9	0.729580532979056	87	0.5855730603725594	True	True	signature transfer	nerve
+heming2025_sural_xenium	S30	endoneurial fibroblast	533	10	0.863791436796319	87	0.5879446891115134	True	True	signature transfer	nerve
+heming2025_sural_xenium	S30	endothelial	115	13	0.9937896505806212	96	0.7208880666836599	True	True	signature transfer	nerve
+heming2025_sural_xenium	S30	epineurial fibroblast	553	7	0.9010433217976724	96	0.6560116519911777	True	True	signature transfer	nerve
+heming2025_sural_xenium	S30	granulocyte	0	2		0				signature transfer	nerve
+heming2025_sural_xenium	S30	lymphatic endothelial	12	5		0				signature transfer	nerve
+heming2025_sural_xenium	S30	macrophage	33	4	0.9773398758052814	77	0.5705768758696808	True	True	signature transfer	nerve
+heming2025_sural_xenium	S30	mast	39	2	0.7368289726955158	58	0.4614632012268382	True	False	signature transfer	nerve
+heming2025_sural_xenium	S30	mural	279	5	0.9826522905397026	96	0.6366967151962973	True	True	signature transfer	nerve
+heming2025_sural_xenium	S30	myelinating Schwann	43	11	0.9851682187999642	86	0.7231125933735726	True	True	signature transfer	nerve
+heming2025_sural_xenium	S30	non-myelinating Schwann	72	11	0.9786624556737588	96	0.7279946455798114	True	True	signature transfer	nerve
+heming2025_sural_xenium	S30	perineurial	62	10	0.9729137214582532	96	0.5693164860417929	True	True	signature transfer	nerve
+heming2025_sural_xenium	S30	repair Schwann	29	9	0.9933843074496072	86	0.7625100320170654	True	True	signature transfer	nerve
+yu2024_hdrg_xenium	Region_1	A-LTMR	0	20		0				signature transfer	ganglion
+yu2024_hdrg_xenium	Region_1	A-LTMR (NF)	79	20	0.9951423607417652	85	0.7963455149501661	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium	Region_1	A-PEP	93	20	0.9795604877895858	85	0.9117256204807505	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium	Region_1	A-Propr	35	20	0.9611685073031706	85	0.8511041625952706	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium	Region_1	Ab-LTMR	0	20		0				signature transfer	ganglion
+yu2024_hdrg_xenium	Region_1	C-LTMR	3	20		0				signature transfer	ganglion
+yu2024_hdrg_xenium	Region_1	C-NP	141	20	0.9998317105421324	85	0.9116474496775456	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium	Region_1	C-PEP	14	20		0				signature transfer	ganglion
+yu2024_hdrg_xenium	Region_1	C-Thermo	26	20	0.9363039399624764	85	0.8701387531756888	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium	Region_1	PEP	35	20	0.991449946562166	76	0.8828434723171564	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium	Region_1	injured neuron	8	20		0				signature transfer	ganglion
+yu2024_hdrg_xenium	Region_1	sympathetic neuron	2	8		0				signature transfer	ganglion
+yu2024_hdrg_xenium	Region_2	A-LTMR	0	20		0				signature transfer	ganglion
+yu2024_hdrg_xenium	Region_2	A-LTMR (NF)	78	20	0.9854096520763188	85	0.8369747899159664	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium	Region_2	A-PEP	64	20	0.9726185691318328	85	0.8607582567910885	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium	Region_2	A-Propr	12	20		0				signature transfer	ganglion
+yu2024_hdrg_xenium	Region_2	Ab-LTMR	5	20		0				signature transfer	ganglion
+yu2024_hdrg_xenium	Region_2	C-LTMR	5	20		0				signature transfer	ganglion
+yu2024_hdrg_xenium	Region_2	C-NP	136	20	0.999876938222988	85	0.8751807699824117	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium	Region_2	C-PEP	9	20		0				signature transfer	ganglion
+yu2024_hdrg_xenium	Region_2	C-Thermo	13	20		0				signature transfer	ganglion
+yu2024_hdrg_xenium	Region_2	PEP	43	20	0.9969179041748388	76	0.8163499658236499	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium	Region_2	injured neuron	6	20		0				signature transfer	ganglion
+yu2024_hdrg_xenium	Region_2	sympathetic neuron	4	8		0				signature transfer	ganglion
+yu2024_hdrg_xenium	Region_3	A-LTMR	0	20		0				signature transfer	ganglion
+yu2024_hdrg_xenium	Region_3	A-LTMR (NF)	54	20	0.96448087431694	85	0.8291381668946649	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium	Region_3	A-PEP	69	20	0.9590532244794634	85	0.8824897400820794	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium	Region_3	A-Propr	25	20	0.9522344322344324	77	0.8603501761396498	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium	Region_3	Ab-LTMR	2	20		0				signature transfer	ganglion
+yu2024_hdrg_xenium	Region_3	C-LTMR	2	20		0				signature transfer	ganglion
+yu2024_hdrg_xenium	Region_3	C-NP	43	20	0.9998176014591884	85	0.890658589017002	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium	Region_3	C-PEP	22	20	0.8053359683794467	51	0.8292307692307691	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium	Region_3	C-Thermo	10	20		0				signature transfer	ganglion
+yu2024_hdrg_xenium	Region_3	PEP	62	20	0.9808638600328048	76	0.8385782638414219	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium	Region_3	injured neuron	8	20		0				signature transfer	ganglion
+yu2024_hdrg_xenium	Region_3	sympathetic neuron	1	8		0				signature transfer	ganglion
+yu2024_hdrg_xenium	Region_4	A-LTMR	1	20		0				signature transfer	ganglion
+yu2024_hdrg_xenium	Region_4	A-LTMR (NF)	47	20	0.9958104000657192	85	0.8160250146570256	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium	Region_4	A-PEP	79	20	0.9628617632297998	85	0.8828415086965019	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium	Region_4	A-Propr	31	20	0.9190615835777126	85	0.8423490326363103	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium	Region_4	Ab-LTMR	0	20		0				signature transfer	ganglion
+yu2024_hdrg_xenium	Region_4	C-LTMR	4	20		0				signature transfer	ganglion
+yu2024_hdrg_xenium	Region_4	C-NP	54	20	1.0	85	0.8901895641977722	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium	Region_4	C-PEP	11	20		0				signature transfer	ganglion
+yu2024_hdrg_xenium	Region_4	C-Thermo	10	20		0				signature transfer	ganglion
+yu2024_hdrg_xenium	Region_4	PEP	62	20	0.9768640930724484	85	0.8589798710181746	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium	Region_4	injured neuron	5	20		0				signature transfer	ganglion
+yu2024_hdrg_xenium	Region_4	sympathetic neuron	2	8		0				signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_1	A-LTMR	29	20	0.9685351555541069	59	0.721689526027542	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_1	A-LTMR (NF)	135	20	0.9674399548840394	98	0.7198579525530924	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_1	A-PEP	2999	20	0.876113630808391	98	0.7239255589771053	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_1	A-Propr	641	20	0.9488984916499724	98	0.8390043927599155	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_1	Ab-LTMR	568	20	0.9762903643271036	98	0.8097877888576899	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_1	C-LTMR	30	20	0.8904040070937578	98	0.6300229169853435	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_1	C-NP	2053	20	0.9611502923936434	98	0.7887139860630286	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_1	C-PEP	260	20	0.9123619392583728	98	0.755930863441909	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_1	C-Thermo	299	20	0.9275207485153534	98	0.7116972374704332	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_1	PEP	28	20	0.974691127330285	88	0.7872675190729909	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_1	adipocyte	82	7	0.8968454107110072	98	0.6842553207617897	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_1	endoneurial fibroblast	34	6	0.8680858232215977	88	0.5919809665558409	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_1	endothelial	3179	7	0.92426391802268	98	0.5997424274302035	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_1	epineurial fibroblast	154	6	0.7942547455190195	98	0.6892996435320993	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_1	fibroblast	4202	9	0.8908080813713122	98	0.602165139720368	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_1	injured neuron	1115	20	0.7916501193818303	98	0.66116455954453	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_1	lymphocyte	3	2		0				signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_1	macrophage	4487	4	0.8081150893379252	98	0.615502808433589	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_1	mural	312	10	0.9691918005894644	98	0.6981450252986567	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_1	myelinating Schwann	4553	4	0.9231466800923274	98	0.6693635279791391	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_1	non-myelinating Schwann	4342	4	0.852801810505156	98	0.6890512531160542	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_1	perineurial	97	7	0.8611713432068827	98	0.5416288915461636	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_1	satellite glia	2697	13	0.9230963468746608	98	0.7276616363508851	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_1	sympathetic neuron	5038	9	0.6896907849373861	98	0.5090182277222041	False	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_2	A-LTMR	46	20	0.9786413443978084	79	0.7693216232050658	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_2	A-LTMR (NF)	136	20	0.983996140045667	98	0.725707217920991	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_2	A-PEP	1620	20	0.8653818294552083	98	0.6793604039553965	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_2	A-Propr	166	20	0.9467289959244826	98	0.8413761005808134	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_2	Ab-LTMR	394	20	0.9581158592685444	98	0.8118572639927571	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_2	C-LTMR	75	20	0.9090679060160084	98	0.6375249909773097	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_2	C-NP	1430	20	0.9645254632772104	98	0.7750447882995747	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_2	C-PEP	156	20	0.9404420065074892	98	0.7478466550631498	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_2	C-Thermo	253	20	0.9145602709930616	98	0.6677951405491906	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_2	PEP	34	20	0.9967730683905854	88	0.7661337557474107	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_2	adipocyte	11	7		0				signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_2	endoneurial fibroblast	11	6		0				signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_2	endothelial	2878	7	0.863922999466083	98	0.6051489011724651	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_2	epineurial fibroblast	96	6	0.5769652854681924	98	0.6244285651562228	False	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_2	fibroblast	3967	9	0.8515089327166184	98	0.5813808184942205	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_2	injured neuron	233	20	0.832934663407881	98	0.6226179318962823	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_2	lymphocyte	10	2		0				signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_2	macrophage	2966	4	0.8430961438555209	98	0.6169054313384209	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_2	mural	196	10	0.9620471678853092	98	0.6708704193559611	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_2	myelinating Schwann	1453	4	0.9455515690819234	98	0.7025929397063416	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_2	non-myelinating Schwann	2386	4	0.8616107738690748	98	0.6803294888714623	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_2	perineurial	32	7	0.6654130146571408	88	0.4712351828733989	False	False	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_2	satellite glia	2842	13	0.9097442579420518	98	0.7097590676383018	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_2	sympathetic neuron	3194	9	0.6408168199669145	98	0.4984475514666972	False	False	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_3	A-LTMR	106	20	0.9883341817871892	79	0.7511810693181791	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_3	A-LTMR (NF)	134	20	0.9953369833219614	98	0.7293158301357354	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_3	A-PEP	2200	20	0.9284955880048004	98	0.7120287665206662	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_3	A-Propr	453	20	0.9742188872623974	98	0.8389278860560155	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_3	Ab-LTMR	227	20	0.9780482231810366	98	0.7998520827302659	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_3	C-LTMR	16	20		0				signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_3	C-NP	564	20	0.9733093354082616	98	0.7754018195844411	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_3	C-PEP	354	20	0.95642603147559	98	0.7460487475215015	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_3	C-Thermo	287	20	0.9384381725800875	98	0.6768739360786489	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_3	PEP	149	20	0.9875673568805724	98	0.8107418840670583	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_3	adipocyte	47	7	0.8622766590339158	79	0.5960495382963074	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_3	endoneurial fibroblast	124	6	0.8551086957378253	98	0.5635065694554078	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_3	endothelial	3221	7	0.8952041283319758	98	0.6114479531268927	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_3	epineurial fibroblast	321	6	0.6679035583144842	98	0.6488485377299181	False	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_3	fibroblast	7703	9	0.8848542964873525	98	0.6175812405562037	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_3	injured neuron	314	20	0.892186896960411	98	0.6518052394341053	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_3	lymphocyte	8	2		0				signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_3	macrophage	2028	4	0.8805080965981802	98	0.6351267779839207	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_3	mural	200	10	0.9666255108783436	98	0.6945553742513653	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_3	myelinating Schwann	3584	4	0.9248266913230592	98	0.7121562776938328	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_3	non-myelinating Schwann	3749	4	0.866775990893169	98	0.7119140064648165	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_3	perineurial	51	7	0.8416271019502656	88	0.5206781254711548	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_3	satellite glia	3528	13	0.9283551487540548	98	0.7173714846763446	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_3	sympathetic neuron	3743	9	0.7312891526175513	98	0.5123207671072177	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_4	A-LTMR	103	20	0.9822059124756312	79	0.7291581362384211	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_4	A-LTMR (NF)	126	20	0.9917961285428792	98	0.7052102729859169	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_4	A-PEP	2267	20	0.9128443355644827	98	0.7217323667986406	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_4	A-Propr	449	20	0.9764385285451526	98	0.8543694891264846	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_4	Ab-LTMR	183	20	0.9753971907958532	98	0.8078368616891063	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_4	C-LTMR	47	20	0.9834683237182418	98	0.7618431293702986	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_4	C-NP	613	20	0.9853742307107896	98	0.7960203762854718	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_4	C-PEP	232	20	0.9703717844071724	98	0.7541967114868439	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_4	C-Thermo	238	20	0.9457125330315416	98	0.6914867165235352	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_4	PEP	83	20	0.9943901708386208	88	0.7899297301378269	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_4	adipocyte	121	7	0.9228956429856214	98	0.6850166859815484	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_4	endoneurial fibroblast	74	6	0.8884223592184365	98	0.5778290895178797	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_4	endothelial	3436	7	0.9107164090791544	98	0.648528202283725	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_4	epineurial fibroblast	208	6	0.669308116363283	98	0.6958460605564769	False	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_4	fibroblast	6191	9	0.8934101516063041	98	0.6268640539627284	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_4	injured neuron	227	20	0.8705320858492702	98	0.5997679296648368	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_4	lymphocyte	6	2		0				signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_4	macrophage	1773	4	0.890473598665011	98	0.6444478447423955	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_4	mural	609	10	0.8666128841101193	98	0.7605595190278548	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_4	myelinating Schwann	3485	4	0.933411186785403	98	0.7269858271331024	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_4	non-myelinating Schwann	3531	4	0.8799787807904743	98	0.7060484924991551	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_4	perineurial	50	7	0.8198309792720317	88	0.5306384095072619	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_4	satellite glia	3373	13	0.9331326750676082	98	0.7195136723855426	True	True	signature transfer	ganglion
+yu2024_hdrg_xenium_cells	Region_4	sympathetic neuron	3618	9	0.7267413131076774	98	0.510497357330936	True	True	signature transfer	ganglion

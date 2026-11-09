@@ -45,13 +45,17 @@ utdallas_dpn_nerves	sural24l	dpn24	control	Visium	1571	36601	1189	True
 utdallas_dpn_nerves	sural24t	dpn24	control	Visium	1418	36601	1126	True
 vroman2023_hdrg_visium	DRG2a	VromanDRG2	control	Visium	2005	37481	6849	False
 vroman2023_hdrg_visium	DRG2b	VromanDRG2	control	Visium	1775	37481	5786	False
-yu2024_hdrg_xenium	Region_1	2103-02139	control	Xenium (100-gene panel, hand-segmented neurons)	436	87	4364	True
-yu2024_hdrg_xenium	Region_2	2106-05090	control	Xenium (100-gene panel, hand-segmented neurons)	375	87	3217	True
-yu2024_hdrg_xenium	Region_3	2106-05090	control	Xenium (100-gene panel, hand-segmented neurons)	298	87	3177	True
-yu2024_hdrg_xenium	Region_4	2106-05090	control	Xenium (100-gene panel, hand-segmented neurons)	306	87	4516	True
 zhang2024_hdrg_visium	DRG2	DRG2	control	Visium	2946	36601	1919	False
 zhang2024_hdrg_visium	DRG3	DRG3	control	Visium	1203	36601	4021	False
 zhang2024_hdrg_visium	DRG4	DRG4	control	Visium	839	36601	8312	False
 zhang2024_hdrg_visium	DRG5	DRG5	control	Visium	1201	36601	6845	False
 zhang2024_hdrg_visium	DRG6	DRG6	control	Visium	1118	36601	3946	False
 zhang2024_hdrg_visium	DRG7	DRG7	control	Visium	1484	36601	2918	False
+yu2024_hdrg_xenium	Region_1	2103-02139	control	Xenium (100-gene panel, hand-segmented neurons)	436	87	4364	True
+yu2024_hdrg_xenium	Region_2	2106-05090	control	Xenium (100-gene panel, hand-segmented neurons)	375	87	3217	True
+yu2024_hdrg_xenium	Region_3	2106-05090	control	Xenium (100-gene panel, hand-segmented neurons)	298	87	3177	True
+yu2024_hdrg_xenium	Region_4	2106-05090	control	Xenium (100-gene panel, hand-segmented neurons)	306	87	4516	True
+yu2024_hdrg_xenium_cells	Region_1	2103-02139	control	Xenium	45516	100	56	True
+yu2024_hdrg_xenium_cells	Region_2	2106-05090	control	Xenium	27186	100	84	True
+yu2024_hdrg_xenium_cells	Region_3	2106-05090	control	Xenium	41061	100	53	True
+yu2024_hdrg_xenium_cells	Region_4	2106-05090	control	Xenium	38211	100	58	True
