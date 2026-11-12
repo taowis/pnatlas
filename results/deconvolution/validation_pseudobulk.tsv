@@ -1,0 +1,3 @@
+method	mixtures	mean_pearson	median_pearson	rmse	pass
+bayesprism	200	0.728	0.769	0.0501	False
+music	200	0.84	0.894	0.0341	True

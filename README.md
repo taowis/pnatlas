@@ -1,6 +1,6 @@
 # pnatlas
 
-**Status:** Stage 3 (spatial mapping) done; stage 4 (GTEx tibial nerve deconvolution) next.
+**Status:** Stage 4 (GTEx tibial nerve deconvolution) done; stage 5 (genetics) running.
 
 | Stage | Description | Status |
 |---|---|---|
@@ -8,8 +8,8 @@
 | 1 | Data inventory and access; analysis plan frozen | done (dbGaP raw-read request pending, not on the critical path) |
 | 2 | Joint ganglia + nerve single-cell reference | done: reference integrated and annotated, state rule checked |
 | 3 | Spatial mapping (Xenium, Visium) | done: 44 Visium sections and 3 Xenium panels mapped, checks (a), (b) and (c) collected; status per state in `results/spatial/state_mapping_status.tsv` |
-| 4 | GTEx tibial nerve deconvolution | not started |
-| 5 | Genetics: neuropathy gene classes, nerve eQTL colocalisation | not started |
+| 4 | GTEx tibial nerve deconvolution | done: 670 tibial nerve samples deconvolved with MuSiC (primary by the pre-set rule) and BayesPrism, validation and covariate models in `results/deconvolution/` |
+| 5 | Genetics: neuropathy gene classes, nerve eQTL colocalisation | running: gene class enrichment done (`results/genetics/`), colocalisation pending the GWAS and eQTL downloads |
 | 6 | PNPrank v2: temporal back-test with the new features | not started |
 | 7 | Static portal, Zenodo release, public repository | not started |
 

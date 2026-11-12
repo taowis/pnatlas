@@ -30,8 +30,14 @@ for m in bayesprism music; do
   done
 done
 conda activate pnatlas
+# the marker concordance needs the stage 5 specificity (runbook 5.1); it is skipped when that has not been run yet
+markers=()
+if [ -f "$root/interim/genetics/specificity.tsv.gz" ]; then
+  markers=(--gtex-counts "$prep/gtex_counts.tsv.gz" --specificity "$root/interim/genetics/specificity.tsv.gz"
+           --expression "$root/interim/genetics/expression_cpm.tsv.gz" --length-gc data/metadata/ensembl105_gene_length_gc.tsv.gz)
+fi
 python workflow/scripts/deconv_evaluate.py --prep-dir "$prep" --results-dir "$res" \
   --sample-attributes "$gtex/GTEx_Analysis_v10_Annotations_SampleAttributesDS.txt" \
-  --subject-phenotypes "$gtex/GTEx_Analysis_v10_Annotations_SubjectPhenotypesDS.txt" > logs/deconv_evaluate.log 2>&1
+  --subject-phenotypes "$gtex/GTEx_Analysis_v10_Annotations_SubjectPhenotypesDS.txt" "${markers[@]}" > logs/deconv_evaluate.log 2>&1
 echo "EVALUATE $?"
 echo DECONVDONE

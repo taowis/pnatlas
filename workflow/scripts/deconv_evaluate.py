@@ -9,23 +9,42 @@ the Pearson correlation across mixtures. A method passes when the mean
 Pearson is above pass_pearson and the RMSE below pass_rmse; BayesPrism is
 the primary method and is kept unless it fails and MuSiC passes.
 
-Validation (b): among the GTEx tibial nerve samples, those whose
-pathology notes mention adipose tissue (adipos, fat) against the rest on
-the adipocyte fraction, and those whose notes mention fibrosis (fibro)
-against the rest on the fibroblast fraction (endoneurial plus epineurial
-fibroblast), one-sided Mann-Whitney (Wilcoxon rank sum) in the expected
+Validation (b), for every method: among the GTEx tibial nerve samples,
+the fat content the pathologist wrote in the notes (the largest
+percentage near "fat" or "adipose", for example "20-30% fat" gives 30;
+"no fat", "fat free" or "trace fat" give 0; notes that do not mention
+fat are left out) against the adipocyte fraction, Spearman correlation
+one-sided; and those whose
+notes mention fibrosis (fibro) against the rest on the fibroblast
+fraction (endoneurial plus epineurial fibroblast), one-sided Mann-Whitney
+(Wilcoxon rank sum). A test passes at p below 0.05 in the expected
 direction.
 
-GTEx model: for each state, ordinary least squares of the proportion on
-age (bracket midpoint), sex, ischaemic time (SMTSISCH, minutes) and the
-Hardy scale (categorical, 0 to 4) together; coefficients, p values and
-Benjamini-Hochberg q values across states for each term.
+Marker concordance (when --gtex-counts and --specificity are given): for
+each state the ten protein coding genes of highest specificity in the
+reference among those expressed at 50 CPM or more in the state's
+pseudobulk and present in the GTEx table, their mean log2 CPM in each GTEx sample as a marker
+score, and the Spearman correlation of that score with the estimated
+fraction of the state across samples, for every method. This checks that
+a method tracks the signal that is in the bulk RNA, independently of the
+pathology notes. The adipocyte marker score is also tested against the
+fat percentage of the notes and the result added to the histology table
+as method "markers": it is the ceiling of what any deconvolution can
+reach on validation (b).
+
+GTEx model, for every method: for each state, ordinary least squares of
+the proportion on age (bracket midpoint), sex, ischaemic time (SMTSISCH,
+minutes) and the Hardy scale (categorical, 0 to 4) together; coefficients,
+p values and Benjamini-Hochberg q values across states for each term
+within a method. The primary method's rows come first.
 
 Writes to --results-dir: validation_pseudobulk.tsv, validation_per_state.tsv,
 validation_histology.tsv, gtex_proportions.tsv (primary method, with the
-covariates), gtex_covariate_models.tsv, method_choice.tsv.
+covariates), gtex_covariate_models.tsv, method_choice.tsv, marker_concordance.tsv.
 Usage: python workflow/scripts/deconv_evaluate.py --prep-dir <dir> --results-dir results/deconvolution \
-           --sample-attributes <SampleAttributesDS.txt> --subject-phenotypes <SubjectPhenotypesDS.txt>
+           --sample-attributes <SampleAttributesDS.txt> --subject-phenotypes <SubjectPhenotypesDS.txt> \
+           [--gtex-counts <prep dir>/gtex_counts.tsv.gz --specificity <interim>/genetics/specificity.tsv.gz \
+            --expression <interim>/genetics/expression_cpm.tsv.gz --length-gc data/metadata/ensembl105_gene_length_gc.tsv.gz]
 """
 import argparse
 import pathlib
@@ -41,11 +60,28 @@ METHODS = ["bayesprism", "music"]
 
 def bh(p):
     p = np.asarray(p, dtype=float)
-    n = len(p)
-    order = np.argsort(p)
-    q = np.empty(n)
-    q[order] = np.minimum.accumulate((p[order] * n / np.arange(1, n + 1))[::-1])[::-1]
-    return np.minimum(q, 1)
+    q = np.full(len(p), np.nan)
+    ok = np.where(np.isfinite(p))[0]      # a state with no variance has no p value
+    n = len(ok)
+    order = ok[np.argsort(p[ok])]
+    q[order] = np.minimum(np.minimum.accumulate((p[order] * n / np.arange(1, n + 1))[::-1])[::-1], 1)
+    return q
+
+
+def fat_percent(note):
+    """Fat content from a pathology note: the largest percentage within 40 characters before or 25 after each
+    "fat" or "adipos" (a range gives its upper end, "<5%" gives 5); "no fat", "fat free" or "trace fat" without a
+    percentage give 0; a note that does not mention fat gives NaN."""
+    note = note.lower()
+    best = np.nan
+    for m in re.finditer(r"fat|adipos", note):
+        window = note[max(0, m.start() - 40):m.end() + 25]
+        cand = [float(x) for x in re.findall(r"(\d+(?:\.\d+)?)\s*%", window)]
+        if not cand and re.search(r"no (significant )?(adherent |attached |external )?(fat|adipos)|fat[- ]free|trace", window):
+            cand = [0.0]
+        if cand:
+            best = max(cand) if best != best else max(best, max(cand))
+    return best
 
 
 def ols(y, X, names):
@@ -68,6 +104,12 @@ def main():
     ap.add_argument("--sample-attributes", required=True)
     ap.add_argument("--subject-phenotypes", required=True)
     ap.add_argument("--config", default="config/config.yaml")
+    ap.add_argument("--gtex-counts", default=None)
+    ap.add_argument("--specificity", default=None)
+    ap.add_argument("--expression", default=None, help="state pseudobulk CPM, same layout as the specificity")
+    ap.add_argument("--length-gc", default=None, help="Ensembl table with gene_name and gene_biotype")
+    ap.add_argument("--n-markers", type=int, default=10)
+    ap.add_argument("--marker-min-cpm", type=float, default=50.0)
     args = ap.parse_args()
     dc = yaml.safe_load(open(args.config))["deconvolution"]
     prep, res = pathlib.Path(args.prep_dir), pathlib.Path(args.results_dir)
@@ -123,26 +165,73 @@ def main():
     gtex.to_csv(res / "gtex_proportions.tsv", sep="\t")
     print(f"GTEx {primary}: {len(gtex)} tibial nerve samples", flush=True)
 
-    # validation (b): histology notes
-    notes = gtex["pathology_notes"].str.lower()
-    fib_states = [s for s in est.columns if "fibroblast" in s]
-    tests = [("adipose", r"adipos|\bfat", "adipocyte", est["adipocyte"] if "adipocyte" in est else None),
-             ("fibrosis", r"fibro", "+".join(fib_states), est[fib_states].sum(axis=1) if fib_states else None)]
+    # validation (b): histology notes, for every method
+    notes = gtex["pathology_notes"]
+    fat = notes.map(fat_percent)
+    fibro_hit = notes.str.lower().str.contains("fibro", regex=False)
     hrows = []
-    for name, pat, state, frac in tests:
-        if frac is None:
+    for m, path in [(mm, res / f"gtex_{mm}.tsv") for mm in METHODS]:
+        if not path.exists():
             continue
-        hit = notes.str.contains(pat, regex=True)
-        a, b = frac[hit], frac[~hit]
-        u, p = stats.mannwhitneyu(a, b, alternative="greater") if len(a) and len(b) else (np.nan, np.nan)
-        hrows.append([name, state, int(hit.sum()), int((~hit).sum()), round(float(a.median()), 4),
-                      round(float(b.median()), 4), p, bool(p < 0.05) if p == p else False])
-    hist = pd.DataFrame(hrows, columns=["note", "state", "samples_mentioned", "samples_other", "median_mentioned",
-                                        "median_other", "p_greater", "pass"])
+        e = pd.read_csv(path, sep="\t", index_col=0).reindex(gtex.index)
+        fib_states = [s for s in e.columns if "fibroblast" in s]
+        if "adipocyte" in e:
+            ok = fat.notna()
+            rho, p = stats.spearmanr(fat[ok], e.loc[ok, "adipocyte"]) if ok.sum() > 10 else (np.nan, np.nan)
+            p1 = p / 2 if rho > 0 else 1 - p / 2
+            hrows.append([m, "fat percent", "adipocyte", "spearman", int(ok.sum()), int((~ok).sum()),
+                          round(float(rho), 3), p1, bool(p1 < 0.05) if p1 == p1 else False])
+        if fib_states:
+            frac = e[fib_states].sum(axis=1)
+            a, b = frac[fibro_hit], frac[~fibro_hit]
+            u, p = stats.mannwhitneyu(a, b, alternative="greater") if len(a) and len(b) else (np.nan, np.nan)
+            hrows.append([m, "fibrosis mentioned", "+".join(fib_states), "mann-whitney", int(len(a)), int(len(b)),
+                          round(float(a.median() - b.median()), 4), p, bool(p < 0.05) if p == p else False])
+    hist = pd.DataFrame(hrows, columns=["method", "note", "state", "test", "samples_with_note", "samples_other",
+                                        "statistic", "p_one_sided", "pass"])
     hist.to_csv(res / "validation_histology.tsv", sep="\t", index=False)
     print(hist.to_string(index=False), flush=True)
 
-    # covariate models
+    # marker concordance
+    if args.gtex_counts and args.specificity:
+        counts = pd.read_csv(args.gtex_counts, sep="\t", index_col=0)
+        logcpm = np.log2(counts / counts.sum(axis=0) * 1e6 + 1)
+        spec = pd.read_csv(args.specificity, sep="\t", index_col=0)
+        spec = spec.loc[spec.index.intersection(logcpm.index)]
+        if args.length_gc:
+            lg = pd.read_csv(args.length_gc, sep="\t")
+            spec = spec.loc[spec.index.isin(lg.loc[lg["gene_biotype"] == "protein_coding", "gene_name"])]
+        expr = pd.read_csv(args.expression, sep="\t", index_col=0).reindex(spec.index) if args.expression else None
+        crows = []
+        for m in METHODS:
+            path = res / f"gtex_{m}.tsv"
+            if not path.exists():
+                continue
+            e = pd.read_csv(path, sep="\t", index_col=0)
+            common = e.index.intersection(logcpm.columns)
+            for s in e.columns:
+                if s not in spec.columns:
+                    continue
+                cand = spec[s] if expr is None else spec.loc[expr[s] >= args.marker_min_cpm, s]
+                markers = cand.sort_values(ascending=False).head(args.n_markers).index
+                score = logcpm.loc[markers, common].mean(axis=0)
+                frac = e.loc[common, s]
+                rho, pv = stats.spearmanr(score, frac) if frac.std() > 0 else (np.nan, np.nan)
+                crows.append([m, s, ";".join(markers), round(float(rho), 3) if rho == rho else np.nan, pv,
+                              round(float(frac.mean()), 4), round(float((frac == 0).mean()), 3)])
+                if s == "adipocyte" and m == METHODS[0]:
+                    okf = fat.reindex(common).notna()
+                    r2, p2 = stats.spearmanr(fat.reindex(common)[okf], score[okf])
+                    p2 = p2 / 2 if r2 > 0 else 1 - p2 / 2
+                    hist.loc[len(hist)] = ["markers", "fat percent", "adipocyte marker score", "spearman",
+                                           int(okf.sum()), int((~okf).sum()), round(float(r2), 3), p2, bool(p2 < 0.05)]
+                    hist.to_csv(res / "validation_histology.tsv", sep="\t", index=False)
+        conc = pd.DataFrame(crows, columns=["method", "state", "markers", "spearman", "p", "mean_fraction",
+                                            "fraction_zero"])
+        conc.to_csv(res / "marker_concordance.tsv", sep="\t", index=False)
+        print(conc.pivot(index="state", columns="method", values="spearman").to_string(), flush=True)
+
+    # covariate models, for every method
     ok = gtex[["sex", "age", "hardy", "ischaemic_min"]].notna().all(axis=1)
     g = gtex[ok]
     hardy = pd.get_dummies(g["hardy"].astype(int), prefix="hardy", drop_first=True).astype(float)
@@ -151,22 +240,32 @@ def main():
     names = ["age_years", "female", "ischaemic_hours"] + list(hardy.columns)
     varying = X.std(axis=0) > 0           # a Hardy level absent from the samples would make the design singular
     X, names = X[:, varying], [n for n, v in zip(names, varying) if v]
-    mrows = []
-    for s in est.columns:
-        d = ols(g[s].values.astype(float), X, names)
-        d.insert(0, "state", s)
-        mrows.append(d)
-    models = pd.concat(mrows, ignore_index=True)
-    models = models[models["term"] != "intercept"].copy()
-    models["q"] = np.nan
-    for term in names:
-        m = models["term"] == term
-        models.loc[m, "q"] = bh(models.loc[m, "p"])
-    models["samples"] = len(g)
+    tables = []
+    for m in [primary] + [mm for mm in METHODS if mm != primary]:
+        path = res / f"gtex_{m}.tsv"
+        if not path.exists():
+            continue
+        e = pd.read_csv(path, sep="\t", index_col=0).reindex(g.index)
+        mrows = []
+        for s in e.columns:
+            d = ols(e[s].values.astype(float), X, names)
+            d.insert(0, "state", s)
+            mrows.append(d)
+        models = pd.concat(mrows, ignore_index=True)
+        models = models[models["term"] != "intercept"].copy()
+        models.insert(0, "method", m)
+        models["q"] = np.nan
+        for term in names:
+            sel = models["term"] == term
+            models.loc[sel, "q"] = bh(models.loc[sel, "p"])
+        models["samples"] = len(g)
+        tables.append(models)
+    models = pd.concat(tables, ignore_index=True)
     models.to_csv(res / "gtex_covariate_models.tsv", sep="\t", index=False)
-    sig = models[models["q"] < 0.05]
-    print(f"covariate models on {len(g)} samples: {len(sig)} state by term pairs at q < 0.05", flush=True)
-    print(sig.sort_values("q").head(20).to_string(index=False), flush=True)
+    for m in models["method"].unique():
+        sig = models[(models["method"] == m) & (models["q"] < 0.05)]
+        print(f"{m}: covariate models on {len(g)} samples, {len(sig)} state by term pairs at q < 0.05", flush=True)
+        print(sig.sort_values("q").head(25).to_string(index=False), flush=True)
 
 
 if __name__ == "__main__":

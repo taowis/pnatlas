@@ -32,3 +32,6 @@ __pycache__/
 .pytest_cache/
 .ruff_cache/
 .DS_Store
+
+# Run logs (kept on the machine that ran the job)
+logs/

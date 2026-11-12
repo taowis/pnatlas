@@ -1,0 +1,6 @@
+method	note	state	test	samples_with_note	samples_other	statistic	p_one_sided	pass
+bayesprism	fat percent	adipocyte	spearman	393	277	0.054	0.1410497297945009	False
+bayesprism	fibrosis mentioned	endoneurial fibroblast+epineurial fibroblast	mann-whitney	27	643	0.0034	0.5291271615968083	False
+music	fat percent	adipocyte	spearman	393	277	0.042	0.2058268360143287	False
+music	fibrosis mentioned	endoneurial fibroblast+epineurial fibroblast	mann-whitney	27	643	0.0006	0.31522862678511726	False
+markers	fat percent	adipocyte marker score	spearman	393	277	0.147	0.0017781162241625075	True

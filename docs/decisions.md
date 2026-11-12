@@ -248,3 +248,23 @@ Each non-obvious choice, with its reason. Newest last.
   beside the tissue; the orientation was chosen by scoring all eight
   against the tissue mask, not by eye, and is recorded in the config so
   the export itself is unchanged.
+- **MuSiC is the primary deconvolution method by the rule fixed before
+  the run, and BayesPrism's estimates are kept beside it for the rare
+  states.** Only MuSiC meets the pseudobulk thresholds (analysis log
+  4.3), so the rule names it; but it returns exact zeros for adipocyte,
+  granulocyte, mast, lymphatic endothelial and repair Schwann in most
+  GTEx samples, while BayesPrism's fractions for those states follow the
+  marker genes in the bulk (Spearman 0.6 to 0.9). Changing the rule
+  after seeing the result would be an amendment in hindsight, so the
+  rule stands; the rare states are read from BayesPrism, and both tables
+  are released.
+- **Validation (b) reads the fat percentage in the GTEx pathology notes
+  and is reported as uninformative.** A mention of fat is in 579 of 670
+  notes, which leaves no contrast; the percentage gives one, but the
+  adipocyte marker genes themselves follow it at Spearman 0.15 only,
+  because the notes describe the piece before the fat was trimmed. The
+  ceiling is kept in the table and the marker concordance is the
+  evidence that the estimates carry signal.
+- **The damage Schwann state is not interpreted in the bulk.** Neither
+  method recovers it in the mixtures (Pearson about -0.08); it is kept
+  in the tables and left out of the reading.

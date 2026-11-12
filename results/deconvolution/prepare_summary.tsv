@@ -1,0 +1,17 @@
+state	cells_nerve	cells_reference	cells_held_out
+B	488	260	228
+T/NK	3811	1000	1127
+adipocyte	3793	1000	242
+damage Schwann	5738	1000	1502
+endoneurial fibroblast	34961	1000	6058
+endothelial	41121	1000	5622
+epineurial fibroblast	34458	1000	4752
+granulocyte	365	289	76
+lymphatic endothelial	1892	1000	76
+macrophage	14375	1000	4066
+mast	1152	1000	134
+mural	62747	1000	6359
+myelinating Schwann	9460	1000	2011
+non-myelinating Schwann	60817	1000	9583
+perineurial	83792	1000	11301
+repair Schwann	6738	1000	2631

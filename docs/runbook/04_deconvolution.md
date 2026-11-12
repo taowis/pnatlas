@@ -82,3 +82,39 @@ method with the pass column; `method_choice.tsv` names the primary
 method; `gtex_proportions.tsv` has one row per tibial nerve sample with
 the covariates and the state proportions; `validation_histology.tsv`
 and `gtex_covariate_models.tsv` hold validation (b) and the models.
+
+## 4.3 Evaluation rerun with the marker concordance
+
+The evaluation step was rerun on the laptop after the full run, with
+three additions to `deconv_evaluate.py`: the Benjamini-Hochberg step
+skips states without a p value (a state estimated at zero in every
+sample has no variance; before the fix every q value of the term came
+out missing), validation (b) reads the fat percentage written in the
+pathology notes instead of a yes or no mention and runs for both
+methods, and a marker concordance table compares each method's
+estimates with the signal in the bulk RNA. The marker step needs the
+stage 5 specificity (runbook 5.1); `run_deconv.sh` now passes those
+files when they exist, so a replay of 4.2 after 5.1 gives the same
+tables. Inputs brought from the server first:
+
+```bash
+rsync -a --include "GTEx_Analysis_v10_Annotations_S*DS.txt" --exclude "*" \
+  "$REMOTE:~/Projects/pnatlas-dev/data/raw/gtex_v10_tibial/" "$DATA_ROOT/raw/gtex_v10_tibial/"
+rsync -a "$REMOTE:~/Projects/pnatlas-dev/data/interim/deconv/gtex_counts.tsv.gz" "$DATA_ROOT/interim/deconv/"
+conda activate pnatlas
+mkdir -p logs
+python workflow/scripts/deconv_evaluate.py --prep-dir "$DATA_ROOT/interim/deconv" --results-dir results/deconvolution \
+  --sample-attributes "$DATA_ROOT/raw/gtex_v10_tibial/GTEx_Analysis_v10_Annotations_SampleAttributesDS.txt" \
+  --subject-phenotypes "$DATA_ROOT/raw/gtex_v10_tibial/GTEx_Analysis_v10_Annotations_SubjectPhenotypesDS.txt" \
+  --gtex-counts "$DATA_ROOT/interim/deconv/gtex_counts.tsv.gz" --specificity "$DATA_ROOT/interim/genetics/specificity.tsv.gz" \
+  --expression "$DATA_ROOT/interim/genetics/expression_cpm.tsv.gz" --length-gc data/metadata/ensembl105_gene_length_gc.tsv.gz \
+  > logs/deconv_evaluate_local.log 2>&1
+cp "$DATA_ROOT/interim/deconv/prepare_summary.tsv" "$DATA_ROOT/interim/deconv/donors.tsv" results/deconvolution/
+ssh "$REMOTE" 'cd ~/Projects/pnatlas-dev && rm -rf results/deconvolution_probe'    # probe outputs, superseded by the full run
+```
+
+Check: `results/deconvolution/marker_concordance.tsv` has one row per
+method and state with the ten marker genes and the Spearman
+correlation; `validation_histology.tsv` has two rows per method and the
+"markers" ceiling row; `gtex_covariate_models.tsv` has a method column
+and no missing q values.
