@@ -112,3 +112,17 @@ panel_transfer:
     # every segmented cell of the Dryad bundles; a DRG section carries its capsule and
     # root, which are nerve sheath tissue, so the three nerve sheath states are candidates too
     yu2024_hdrg_xenium_cells: {compartment: ganglion, extra_states: [perineurial, epineurial fibroblast, endoneurial fibroblast], exclude_states: [sympathetic neuron]}
+
+# Stage 4 deconvolution of GTEx tibial nerve (plan section 5)
+deconvolution:
+  compartment: nerve                    # the nerve part of the reference (one dataset, 37 donors)
+  min_cells_per_state: 200              # states with fewer nerve cells are not deconvolved
+  holdout_donors: 7                     # donors kept out of the reference for validation (a)
+  max_cells_per_state: 1000             # reference cells per state given to the methods
+  n_mixtures: 200                       # validation (a): pseudo-bulk mixtures from the held-out donors
+  cells_per_mixture: 500
+  dirichlet_alpha: 1.0                  # proportions of a mixture
+  pass_pearson: 0.8                     # validation (a) thresholds of the plan
+  pass_rmse: 0.1
+  tissue: "Nerve - Tibial"              # SMTSD of the GTEx samples used
+  bayesprism_cores: 12
