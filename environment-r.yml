@@ -13,3 +13,18 @@ dependencies:
   - r-data.table
   - r-hdf5r
   - r-optparse
+  # stage 4 deconvolution: BayesPrism and MuSiC are installed from GitHub by
+  # workflow/scripts/deconv_install.R on top of these dependencies
+  - r-remotes
+  - r-nmf
+  - r-snowfall
+  - r-gplots
+  - r-nnls
+  - r-mcmcpack
+  - r-ggplot2
+  - bioconductor-biobase
+  - bioconductor-singlecellexperiment
+  - bioconductor-scran
+  - bioconductor-biocparallel
+  - bioconductor-toast
+  - r-coloc=5.2.3         # stage 5 colocalisation (coloc.abf, coloc.bf_bf with the SuSiE log Bayes factors)

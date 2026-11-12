@@ -112,3 +112,33 @@ panel_transfer:
     # every segmented cell of the Dryad bundles; a DRG section carries its capsule and
     # root, which are nerve sheath tissue, so the three nerve sheath states are candidates too
     yu2024_hdrg_xenium_cells: {compartment: ganglion, extra_states: [perineurial, epineurial fibroblast, endoneurial fibroblast], exclude_states: [sympathetic neuron]}
+
+# Stage 4 deconvolution of GTEx tibial nerve (plan section 5)
+deconvolution:
+  compartment: nerve                    # the nerve part of the reference (one dataset, 37 donors)
+  min_cells_per_state: 200              # states with fewer nerve cells are not deconvolved
+  holdout_donors: 7                     # donors kept out of the reference for validation (a)
+  max_cells_per_state: 1000             # reference cells per state given to the methods
+  n_mixtures: 200                       # validation (a): pseudo-bulk mixtures from the held-out donors
+  cells_per_mixture: 500
+  dirichlet_alpha: 1.0                  # proportions of a mixture
+  pass_pearson: 0.8                     # validation (a) thresholds of the plan
+  pass_rmse: 0.1
+  tissue: "Nerve - Tibial"              # SMTSD of the GTEx samples used
+  bayesprism_cores: 12
+
+# Stage 5 genetics (plan section 6)
+genetics:
+  specificity_min_cells: 20             # donor by state pseudobulks with fewer cells are dropped
+  classes: [CMT, dHMN, HSAN, SYND, HSP]  # disease categories of the PNPrank truth set
+  panels: [ge_846_v8.38, ge_85_v1.513, aus_3070_v3.1, aus_3439_v2.0]   # PanelApp green genes as the broader lists
+  bootstraps: 10000
+  background_bins: 10                   # quantile bins of exon length and of GC for the matched draws
+  enrichment_q: 0.05
+  coloc:
+    p1: 1.0e-4
+    p2: 1.0e-4
+    p12: 5.0e-6
+    pp_h4: 0.8
+    window_bp: 500000                   # around each GWAS lead variant
+    gwas_p: 5.0e-8                      # lead variants below this p are tested

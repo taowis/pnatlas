@@ -1,0 +1,73 @@
+# Stage 5: genetics
+
+Plan section 6; commands in `docs/runbook/05_genetics.md`.
+
+## 5.1 Inputs and design
+
+Gene lists. The PNPrank truth set is read at the tag of the submitted
+version (242 genes; CMT 59, dHMN 19, HSAN 16, SYND 124, HSP 24). The
+four PanelApp panels were fetched at the versions the plan fixes; the
+Genomics England panels and the autonomic panel are still at those
+versions, while PanelApp Australia's hereditary neuropathy panel has
+moved on to version 3.3, so version 3.1 was requested from the API
+explicitly, and the four files are committed as snapshots (376, 288,
+307 and 19 genes; 231, 159, 249 and 18 green).
+
+Background for the enrichment. The plan asks for length and GC matched
+background genes. The Ensembl BioMart archive for release 105 (GENCODE
+v39, the annotation of the GTEx v10 expression files) no longer answers
+BioMart queries, so length and GC are computed from the release 105 GTF
+and cDNA files: the union length of a gene's exons, and the GC fraction
+over its transcripts. The background is the protein-coding genes with a
+specificity, a length and a GC; it is cut into ten quantile bins of
+each, and every bootstrap draw replaces each class gene by a background
+gene from the same length by GC bin.
+
+Specificity. Donor by state pseudobulks of the whole reference (689
+with at least 20 cells, over 31 states), CPM, mean over donors, divided
+by the sum over states, so a gene's specificities sum to one. Cells of
+unknown donor form one pseudobulk per dataset and state.
+
+Colocalisation. The GWAS Catalog harmonised files (GRCh38, tabix
+indexed) of the five studies and the eQTL Catalogue tibial nerve gene
+expression dataset (QTD000286: all nominal associations with index, the
+SuSiE credible sets and the per-variant log Bayes factors) are the
+inputs, 14 GB in all. Lead variants are clumped by distance (500 kb);
+each region is tested against every gene with at least 50 shared
+variants. coloc.abf runs on every pair; where the gene has a SuSiE
+credible set in the region, coloc.bf_bf combines the GWAS single-signal
+log Bayes factors (from coloc.abf's Wakefield approximation) with the
+eQTL SuSiE log Bayes factors, and the largest PP.H4 over signal pairs is
+the reported value; otherwise the abf value is. The GWAS is handled as
+case-control with the study's case fraction when its metadata gives
+one. The colocalised eGenes are assigned to the state of their highest
+specificity, with the compartments where that state is mapped.
+
+## 5.2 Gene class enrichment
+
+Background: 17,227 protein-coding genes with a specificity, a length and
+a GC (of 19,951 protein-coding genes in release 105), in 100 length by
+GC bins. Of the truth set 221 genes are in the background (CMT 53, dHMN
+18, HSAN 14, SYND 113, HSP 23); of the PanelApp green genes 213, 146,
+226 and 16.
+
+The classes land where their biology says. CMT is enriched in
+myelinating Schwann cells (3.2 fold, q 0.003) and in Ab-LTMR neurons
+(1.6 fold). HSAN is enriched in the peptidergic neuron states (C-PEP
+2.5 fold, PEP 2.7, C-NP 2.5, A-PEP 2.1), the nociceptors whose loss
+defines the disease. dHMN is enriched in Ab-LTMR (2.0 fold) and C-LTMR
+(2.4) neurons, the only neuron states of the reference, which stand in
+for the motor neurons the reference does not hold. HSP is enriched in
+Ab-LTMR (2.0 fold). SYND, the syndromic class, is enriched nowhere,
+as expected for genes whose expression is broad. The whole truth set
+and the three hereditary neuropathy panels agree with each other:
+enriched in myelinating Schwann cells, the injured neuron state and the
+Ab-LTMR, C-LTMR, PEP, C-PEP, A-PEP and C-NP families, at folds of 1.2
+to 1.7, and in nothing else. The autonomic neuropathy panel (16 genes)
+is enriched in the sympathetic neuron state alone, 3.8 fold. No class
+is enriched in any nerve or ganglion non-neuronal state other than
+myelinating Schwann cells, and none in the non-myelinating, repair or
+damage Schwann states, fibroblasts, perineurial cells, immune or
+vascular states. Full table: `results/genetics/gene_class_enrichment.tsv`;
+each class gene with its state of highest specificity:
+`results/genetics/gene_classes.tsv`.

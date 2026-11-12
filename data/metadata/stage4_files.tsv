@@ -1,0 +1,6 @@
+dataset	accession	file	url	size_bytes	access
+gtex_v10_tibial	GTEx v10 (gs://adult-gtex)	gene_reads_v10_nerve_tibial.gct.gz	https://storage.googleapis.com/adult-gtex/bulk-gex/v10/rna-seq/counts-by-tissue/gene_reads_v10_nerve_tibial.gct.gz	35680908	open
+gtex_v10_tibial	GTEx v10 (gs://adult-gtex)	gene_tpm_v10_nerve_tibial.gct.gz	https://storage.googleapis.com/adult-gtex/bulk-gex/v10/rna-seq/tpms-by-tissue/gene_tpm_v10_nerve_tibial.gct.gz	85416049	open
+gtex_v10_tibial	GTEx v10 (gs://adult-gtex)	GTEx_Analysis_v10_Annotations_SampleAttributesDS.txt	https://storage.googleapis.com/adult-gtex/annotations/v10/metadata-files/GTEx_Analysis_v10_Annotations_SampleAttributesDS.txt	38497961	open
+gtex_v10_tibial	GTEx v10 (gs://adult-gtex)	GTEx_Analysis_v10_Annotations_SubjectPhenotypesDS.txt	https://storage.googleapis.com/adult-gtex/annotations/v10/metadata-files/GTEx_Analysis_v10_Annotations_SubjectPhenotypesDS.txt	20292	open
+gtex_v10_tibial	GTEx v10 (gs://adult-gtex)	GTEx_Analysis_v10_Annotations_SampleAttributesDD.xlsx	https://storage.googleapis.com/adult-gtex/annotations/v10/metadata-files/GTEx_Analysis_v10_Annotations_SampleAttributesDD.xlsx	38941	open

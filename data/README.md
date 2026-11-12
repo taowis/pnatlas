@@ -242,3 +242,26 @@ sural nerve, Visium. The annotated, Harmony-integrated Seurat object of five sur
 |---|---|---|---|
 | `raw/utdallas_dpn_nerves/merged_obj_harmony_layerintegration_resol0.5_annotated_final.rds` | 708154858 | def955735ff1b683320cb412a85bf8c1 | 2026-11-08 |
 | `raw/utdallas_dpn_nerves/sample_metadata.csv` | 797 | 7364cce3886747ac84132aeff5613ff5 | 2026-11-08 |
+
+## Stage 4: bulk layer
+
+Downloaded on the server with
+
+```bash
+python3 -I workflow/scripts/download_files.py data/metadata/stage4_files.tsv --data-root "$DATA_ROOT"
+python3 -I workflow/scripts/download_files.py data/metadata/stage4_files.tsv --data-root "$DATA_ROOT" --verify
+```
+
+### gtex_v10_tibial
+
+tibial nerve, bulk RNA-seq. The GTEx v10 per-tissue gene read counts and TPM of "Nerve - Tibial" (RNA-SeQC v2.4.2, GENCODE v39), the open sample attributes (tissue, ischaemic time, pathology notes) with their data dictionary, and the open subject phenotypes (sex, age bracket, Hardy scale). Source: the public GTEx bucket `gs://adult-gtex` through its HTTPS front, as listed on the GTEx portal download page for v10. Access: open; the controlled donor phenotypes (dbGaP phs000424) are not part of this.
+
+| File (under data_root) | Size (bytes) | md5 | Access date |
+|---|---|---|---|
+| `raw/gtex_v10_tibial/gene_reads_v10_nerve_tibial.gct.gz` | 35680908 | a5cf6660ea7ab64e450fd776245017bd | 2026-11-13 |
+| `raw/gtex_v10_tibial/gene_tpm_v10_nerve_tibial.gct.gz` | 85416049 | c987aa71b3b071e00b9e1991c5f9d58f | 2026-11-13 |
+| `raw/gtex_v10_tibial/GTEx_Analysis_v10_Annotations_SampleAttributesDS.txt` | 38497961 | 4c45e25c3fc5ec92a97da0d4bcba1207 | 2026-11-13 |
+| `raw/gtex_v10_tibial/GTEx_Analysis_v10_Annotations_SubjectPhenotypesDS.txt` | 20292 | ffa15a680855c6c84f2551bfba8017ba | 2026-11-13 |
+| `raw/gtex_v10_tibial/GTEx_Analysis_v10_Annotations_SampleAttributesDD.xlsx` | 38941 | 372dd58879054739a33ae8935d310400 | 2026-11-13 |
+
+Derived, not in the manifest: `interim/deconv/` holds the nerve reference cells, the validation mixtures and the GTEx counts on the shared genes written by `workflow/scripts/deconv_prepare.py`.

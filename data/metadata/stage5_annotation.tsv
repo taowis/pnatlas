@@ -1,0 +1,3 @@
+dataset	accession	file	url	size_bytes	access
+ensembl105	Ensembl release 105 (GENCODE v39)	Homo_sapiens.GRCh38.105.gtf.gz	https://ftp.ensembl.org/pub/release-105/gtf/homo_sapiens/Homo_sapiens.GRCh38.105.gtf.gz	50829040	open
+ensembl105	Ensembl release 105 (GENCODE v39)	Homo_sapiens.GRCh38.cdna.all.fa.gz	https://ftp.ensembl.org/pub/release-105/fasta/homo_sapiens/cdna/Homo_sapiens.GRCh38.cdna.all.fa.gz	76085001	open
