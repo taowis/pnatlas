@@ -1,0 +1,308 @@
+panel	version	gene_symbol	ensembl_gene_id	confidence	mode_of_inheritance	phenotypes
+aus:3070	3.1	AAAS	ENSG00000094914	green	BIALLELIC, autosomal or pseudoautosomal	HMSN; Glucocorticoid deficiency with achalasia; Achalasia-addisonianism-alacrimia syndrome, MIM# 231550
+aus:3070	3.1	AARS1	ENSG00000090861	green	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	Charcot-Marie-Tooth disease, axonal, type 2N, MIM# 613287
+aus:3070	3.1	ABCA1	ENSG00000165029	green	BIALLELIC, autosomal or pseudoautosomal	Tangier Disease (MONDO:0008783; MIM#205400)
+aus:3070	3.1	ABCD1	ENSG00000101986	green	X-LINKED: hemizygous mutation in males, monoallelic mutations in females may cause disease (may be less severe, later onset than males)	Adrenomyeloneuropathy, adult (MIM#300100); Adrenomyeloneuropathy, spastic paraparesis, adrenal insufficiency, axonal sensory-motor neuropathy, sphincter disturbance
+aus:3070	3.1	ABHD12	ENSG00000100997	green	BIALLELIC, autosomal or pseudoautosomal	Polyneuropathy, hearing loss, ataxia, retinitis pigmentosa, and cataract MIM#612674
+aus:3070	3.1	ACOX1	ENSG00000161533	green	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	Mitchell syndrome, MIM# 618960
+aus:3070	3.1	ADPRS	ENSG00000116863	green	BIALLELIC, autosomal or pseudoautosomal	Neurodegeneration, childhood-onset, stress-induced, with variable ataxia and seizures (MIM#618170)
+aus:3070	3.1	AFG3L2	ENSG00000141385	green	BIALLELIC, autosomal or pseudoautosomal	Spastic ataxia 5, autosomal recessive, MIM# 614487, MONDO:0013776; Early-onset spastic paraplegia, later myoclonic epilepsy, sensory-motor axonal neuropathy, ataxia, dystonia
+aus:3070	3.1	AGTPBP1	ENSG00000135049	green	BIALLELIC, autosomal or pseudoautosomal	Neurodegeneration, childhood-onset, with cerebellar atrophy, MONDO:0032650
+aus:3070	3.1	AGXT	ENSG00000172482	green	BIALLELIC, autosomal or pseudoautosomal	Hyperoxaluria, primary, type 1, MIM#259900
+aus:3070	3.1	AIFM1	ENSG00000156709	green	X-LINKED: hemizygous mutation in males, biallelic mutations in females	Combined oxidative phosphorylation deficiency 6; Cowchock syndrome; HMSN
+aus:3070	3.1	ALDH18A1	ENSG00000059573	green	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	Spastic paraplegia 9A, autosomal dominant MIM#601162
+aus:3070	3.1	AMACR	ENSG00000242110	green	BIALLELIC, autosomal or pseudoautosomal	Alpha-methylacyl-CoA racemase deficiency (MIM#614307); Retinopathy, myelopathy, axonal or SNCV neuropathy, elevated phytanic and pristanic acids
+aus:3070	3.1	AP1S1	ENSG00000106367	green	BIALLELIC, autosomal or pseudoautosomal	MEDNIK Syndrome (MONDO:0012251, MIM#609313); Congenital-onset, Mental retardation, Enteropathy (severe congenital diarrhoea), Deafness, sensory-motor Neuropathy with intermediate conduction velocities, Ichthyosis, Keratoderma
+aus:3070	3.1	AP5Z1	ENSG00000242802	green	BIALLELIC, autosomal or pseudoautosomal	AP5Z1-related neuropathy; hereditary spastic paraplegia 48, MONDO:0013342
+aus:3070	3.1	APOA1	ENSG00000118137	green	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	Amyloidosis, 3 or more types 105200; Renal failure, Axonal sensory-motor neuropathy, amyloid nephropathy
+aus:3070	3.1	APTX	ENSG00000137074	green	BIALLELIC, autosomal or pseudoautosomal	Ataxia, early-onset, with oculomotor apraxia and hypoalbuminemia (MIM#208920)
+aus:3070	3.1	ARHGAP19	ENSG00000213390	green	BIALLELIC, autosomal or pseudoautosomal	Charcot-Marie-Tooth disease, axonal, type 2KK, MIM# 621466
+aus:3070	3.1	ARL6IP1	ENSG00000170540	green	BIALLELIC, autosomal or pseudoautosomal	HSAN/SFN; Childhood-onset spastic paraplegia with mutilating, sensory>motor axonal neuropathy
+aus:3070	3.1	ARSA	ENSG00000100299	green	BIALLELIC, autosomal or pseudoautosomal	Metachromatic leukodystrophy, MIM# 250100; Severe late infantile form with mental retardation and severe course. Regression before 30 months; adult-onset, psychiatric symptoms, leukodystrophy on MRI, progressive neuropathy with SNCV, optic atrophy
+aus:3070	3.1	ASAH1	ENSG00000104763	green	BIALLELIC, autosomal or pseudoautosomal	Spinal muscular atrophy with progressive myoclonic epilepsy (MIM#159950)
+aus:3070	3.1	ASCC1	ENSG00000138303	green	BIALLELIC, autosomal or pseudoautosomal	Spinal muscular atrophy with congenital bone fractures 2
+aus:3070	3.1	ATAD3A	ENSG00000197785	green	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	Harel-Yoon Syndrome (MIM#6173183)
+aus:3070	3.1	ATL1	ENSG00000198513	green	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	Neuropathy, hereditary sensory, type ID , MIM#613708; MONDO:0013381
+aus:3070	3.1	ATL3	ENSG00000184743	green	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	neuropathy, hereditary sensory, type 1F (MONDO:0014286)
+aus:3070	3.1	ATP1A1	ENSG00000163399	green	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	Charcot-Marie-Tooth disease, axonal, type 2DD,MIM# 618036; MONDO:0054833
+aus:3070	3.1	ATP7A	ENSG00000165240	green	X-LINKED: hemizygous mutation in males, biallelic mutations in females	X-linked distal spinal muscular atrophy type 3 (MONDO:0010338)
+aus:3070	3.1	BCKDHB	ENSG00000083123	green	BIALLELIC, autosomal or pseudoautosomal	Maple Syrup Urine Disease, Metabolic encephalopathy, elevated branched chain amino acids in urine, acute axonal neuropathy
+aus:3070	3.1	BICD2	ENSG00000185963	green	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	Spinal muscular atrophy, lower extremity-predominant, 2A, autosomal dominant, MIM# 615290; MONDO:0014121; Spinal muscular atrophy, lower extremity-predominant, 2B, autosomal dominant, MIM# 618291
+aus:3070	3.1	BSCL2	ENSG00000168000	green	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	Neuropathy, distal hereditary motor, type VC, MIM# 619112
+aus:3070	3.1	C19orf12	ENSG00000131943	green	BOTH monoallelic and biallelic, autosomal or pseudoautosomal	Neurodegeneration with brain iron accumulation 4 (NBIA) (MONDO:0013674)
+aus:3070	3.1	CADM3	ENSG00000162706	green	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	Charcot-Marie-Tooth disease, axonal, type 2FF, MIM# 619519
+aus:3070	3.1	CAPRIN1	ENSG00000135387	green	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	Childhood Dementia; Myoclonus-Ataxia; Sensorimotor Neuropathy; cerebellar atrophy; cortical atrophy
+aus:3070	3.1	CASP8	ENSG00000064012	green	BIALLELIC, autosomal or pseudoautosomal	Autoimmune lymphoproliferative syndrome, type IIB MIM#607271
+aus:3070	3.1	CD59	ENSG00000085063	green	BIALLELIC, autosomal or pseudoautosomal	Hemolytic anemia, CD59-mediated, with or without immune-mediated polyneuropathy 612300
+aus:3070	3.1	CHCHD10	ENSG00000250479	green	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	Spinal muscular atrophy, Jokela type, MIM# 615048
+aus:3070	3.1	CLP1	ENSG00000172409	green	BIALLELIC, autosomal or pseudoautosomal	Pontocerebellar hypoplasia, type 10 (MIM#615803)
+aus:3070	3.1	CNTNAP1	ENSG00000108797	green	BIALLELIC, autosomal or pseudoautosomal	Hypomyelinating neuropathy, congenital, 3 (MONDO:0017049; MIM#618186)
+aus:3070	3.1	COA7	ENSG00000162377	green	BIALLELIC, autosomal or pseudoautosomal	Spinocerebellar ataxia, autosomal recessive, with axonal neuropathy 3, MIM#618387
+aus:3070	3.1	COQ7	ENSG00000167186	green	BIALLELIC, autosomal or pseudoautosomal	Neuronopathy, distal hereditary motor, autosomal recessive 9, MIM# 620402
+aus:3070	3.1	COX18	ENSG00000163626	green	BIALLELIC, autosomal or pseudoautosomal	Mitochondrial complex IV deficiency, nuclear type 25, MIM# 621487; Charcot-Marie-Tooth disease, axonal, type 2MM, MIM# 621488
+aus:3070	3.1	COX20	ENSG00000203667	green	BIALLELIC, autosomal or pseudoautosomal	Mitochondrial complex IV deficiency, nuclear type 11, MIM#619054
+aus:3070	3.1	COX6A1	ENSG00000111775	green	BIALLELIC, autosomal or pseudoautosomal	Charcot Marie Tooth disease, recessive intermediate D, MIM#616039; MONDO:0014467
+aus:3070	3.1	CPOX	ENSG00000080819	green	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	Coproporphyria, MIM#121300; Harderoporphyria, MIM#121300
+aus:3070	3.1	CTDP1	ENSG00000060069	green	BIALLELIC, autosomal or pseudoautosomal	Congenital cataracts, facial dysmorphism, and neuropathy (MIM#604168)
+aus:3070	3.1	CYP27A1	ENSG00000135929	green	BIALLELIC, autosomal or pseudoautosomal	Cerebrotendinous xanthomatosis MIM#213700
+aus:3070	3.1	CYP2U1	ENSG00000155016	green	BIALLELIC, autosomal or pseudoautosomal	Spastic paraplegia 56, autosomal recessive, MIM#615030
+aus:3070	3.1	CYP7B1	ENSG00000172817	green	BIALLELIC, autosomal or pseudoautosomal	Spastic paraplegia 5A, autosomal recessive, MIM# 270800
+aus:3070	3.1	DARS2	ENSG00000117593	green	BIALLELIC, autosomal or pseudoautosomal	Charcot-Marie-Tooth disease, axonal, type 2LL, MIM# 621485
+aus:3070	3.1	DCTN1	ENSG00000204843	green	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	Neuronopathy, distal hereditary motor, type 7B, MONDO:0011879
+aus:3070	3.1	DDHD1	ENSG00000100523	green	BIALLELIC, autosomal or pseudoautosomal	Hereditary spastic paraplegia 28, MONDO:0012256
+aus:3070	3.1	DEGS1	ENSG00000143753	green	BIALLELIC, autosomal or pseudoautosomal	
+aus:3070	3.1	DGUOK	ENSG00000114956	green	BIALLELIC, autosomal or pseudoautosomal	Mitochondrial DNA depletion syndrome 3 (hepatocerebral type), MIM# 251880; Portal hypertension, noncirrhotic, 1, MIM# 617068; Progressive external ophthalmoplegia with mitochondrial DNA deletions, autosomal recessive 4, MIM# 617070
+aus:3070	3.1	DHH	ENSG00000139549	green	BIALLELIC, autosomal or pseudoautosomal	46,XY gonadal dysgenesis-motor and sensory neuropathy syndrome, MONDO:0011766
+aus:3070	3.1	DHX9	ENSG00000135829	green	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	Charcot-Marie-Tooth disease, MONDO:0015626, DHX9-related
+aus:3070	3.1	DNAJB2	ENSG00000135924	green	BIALLELIC, autosomal or pseudoautosomal	Neuronopathy, distal hereditary motor, autosomal recessive 5 (MIM#614881)
+aus:3070	3.1	DNAJC3	ENSG00000102580	green	BIALLELIC, autosomal or pseudoautosomal	Ataxia, combined cerebellar and peripheral, with hearing loss and diabetes mellitus, MIM# 616192
+aus:3070	3.1	DNM1L	ENSG00000087470	green	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	encephalopathy due to mitochondrial and peroxisomal fission defect, MONDO:0054865
+aus:3070	3.1	DNM2	ENSG00000079805	green	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	Charcot-Marie-Tooth disease, axonal type 2M, MIM# 606482; Charcot-Marie-Tooth disease, dominant intermediate B, MIM# 606482; MONDO:0011674
+aus:3070	3.1	DNMT1	ENSG00000130816	green	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	Hereditary sensory neuropathy-deafness-dementia syndrome, MONDO:0013584
+aus:3070	3.1	DRP2	ENSG00000102385	green	X-LINKED: hemizygous mutation in males, biallelic mutations in females	Peripheral neuropathy, MONDO:0005244, DRP2-related
+aus:3070	3.1	DST	ENSG00000151914	green	BIALLELIC, autosomal or pseudoautosomal	Neuropathy, hereditary sensory and autonomic, type VI, MIM# 614653; MONDO:0013839
+aus:3070	3.1	DYNC1H1	ENSG00000197102	green	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	Charcot-Marie-Tooth disease, axonal, type 20, MIM# 614228
+aus:3070	3.1	EGR2	ENSG00000122877	green	BOTH monoallelic and biallelic, autosomal or pseudoautosomal	Charcot-Marie-Tooth disease, type 1D 607678 AD; Dejerine-Sottas disease 145900 AD, AR; Hypomyelinating neuropathy, congenital, 1 605253 AD, AR
+aus:3070	3.1	ELP1	ENSG00000070061	green	BIALLELIC, autosomal or pseudoautosomal	Dysautonomia, familial, MIM# 223900; Riley-Day syndrome MONDO:0009131
+aus:3070	3.1	ERBB3	ENSG00000065361	green	BIALLELIC, autosomal or pseudoautosomal	Visceral neuropathy, familial, 1, autosomal recessive, MIM# 243180; Complex neurocristinopathy
+aus:3070	3.1	ERCC4	ENSG00000175595	green	BIALLELIC, autosomal or pseudoautosomal	ERCC4-related neuropathy MONDO:0100545
+aus:3070	3.1	ERCC6	ENSG00000225830	green	BIALLELIC, autosomal or pseudoautosomal	Cockayne syndrome, type B MIM#133540
+aus:3070	3.1	ERCC8	ENSG00000049167	green	BIALLELIC, autosomal or pseudoautosomal	Cockayne syndrome, type A MIM#216400
+aus:3070	3.1	ETFDH	ENSG00000171503	green	BIALLELIC, autosomal or pseudoautosomal	Multiple acyl-CoA dehydrogenase deficiency MONDO:0009282; sensory neuropathy
+aus:3070	3.1	EXOSC8	ENSG00000120699	green	BIALLELIC, autosomal or pseudoautosomal	dHMN/dSMA; Pontocerebellar hypoplasia, type 1c, MIM# 616081
+aus:3070	3.1	EXOSC9	ENSG00000123737	green	BIALLELIC, autosomal or pseudoautosomal	Pontocerebellar hypoplasia, type 1D, MIM# 618065
+aus:3070	3.1	FAH	ENSG00000103876	green	BIALLELIC, autosomal or pseudoautosomal	Tyrosinemia, type I, MIM# 276700
+aus:3070	3.1	FBLN5	ENSG00000140092	green	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	Neuropathy, hereditary, with or without age-related macular degeneration, MIM#608895
+aus:3070	3.1	FDXR	ENSG00000161513	green	BIALLELIC, autosomal or pseudoautosomal	optic atrophy-ataxia-peripheral neuropathy-global developmental delay syndrome, MONDO:0034092
+aus:3070	3.1	FGD4	ENSG00000139132	green	BIALLELIC, autosomal or pseudoautosomal	Charcot Marie Tooth disease, type 4H, 609311; MONDO:0012250
+aus:3070	3.1	FICD	ENSG00000198855	green	BIALLELIC, autosomal or pseudoautosomal	Spastic paraplegia 92, autosomal recessive, MIM# 620911
+aus:3070	3.1	FIG4	ENSG00000112367	green	BIALLELIC, autosomal or pseudoautosomal	Charcot-Marie-Tooth disease, type 4J, MIM# 611228; MONDO:0012640; HMSN
+aus:3070	3.1	FLVCR1	ENSG00000162769	green	BIALLELIC, autosomal or pseudoautosomal	Ataxia, posterior column, with retinitis pigmentosa, MIM# 609033
+aus:3070	3.1	FXN	ENSG00000165060	green	BIALLELIC, autosomal or pseudoautosomal	Friedreich ataxia, MIM# 229300
+aus:3070	3.1	GAA	ENSG00000171298	green	BIALLELIC, autosomal or pseudoautosomal	glycogen storage disease II, MONDO:0009290
+aus:3070	3.1	GAN	ENSG00000261609	green	BIALLELIC, autosomal or pseudoautosomal	Giant axonal neuropathy-1, MIM# 256850
+aus:3070	3.1	GARS1	ENSG00000106105	green	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	HMSN, dHMN/dSMA; Spinal muscular atrophy, infantile, James type, MIM# 619042; Neuropathy, distal hereditary motor, type V, 600794; Charcot Marie Tooth disease, type 2D, 601472
+aus:3070	3.1	GBA2	ENSG00000070610	green	BIALLELIC, autosomal or pseudoautosomal	Spastic paraplegia 46, autosomal recessive, 614409; SPG46, Spastic paraplegia, cognitive decline, thin corpus callosum, ataxia, cataracts, bulbar dysfunction, axonal sensory-motor neuropathy
+aus:3070	3.1	GBE1	ENSG00000114480	green	BIALLELIC, autosomal or pseudoautosomal	Polyglucosan body disease, adult form MIM#263570; Late-onset, cognitive impairment, spasticity, sensory-motor axonal neuropathy, bladder dysfunction, cerebellar and extrapyramidal signs also seen, periventricular white matter abnormalities on MRI
+aus:3070	3.1	GBF1	ENSG00000107862	green	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	Charcot-Marie-Tooth disease, dominant intermediate A, MIM# 606483; Axonal Neuropathy
+aus:3070	3.1	GDAP1	ENSG00000104381	green	BOTH monoallelic and biallelic, autosomal or pseudoautosomal	Charcot-Marie-Tooth disease, axonal, type 2K 607831, MIM# Charcot-Marie-Tooth disease, axonal, with vocal cord paresis, MIM# 607706; Charcot-Marie-Tooth disease, recessive intermediate, A, MIM# 608340; Charcot-Marie-Tooth disease, type 4A, MIM# 214400
+aus:3070	3.1	GJB1	ENSG00000169562	green	X-LINKED: hemizygous mutation in males, monoallelic mutations in females may cause disease (may be less severe, later onset than males)	Charcot-Marie-Tooth neuropathy, X-linked dominant, 1, MIM# 302800; MONDO:0010549; HMSN
+aus:3070	3.1	GJC2	ENSG00000198835	green	BIALLELIC, autosomal or pseudoautosomal	Leukodystrophy, hypomyelinating, 2, MIM# 608804
+aus:3070	3.1	GLA	ENSG00000102393	green	X-LINKED: hemizygous mutation in males, monoallelic mutations in females may cause disease (may be less severe, later onset than males)	Cardiomyopathy; HSAN/SFN; Fabry disease
+aus:3070	3.1	GLDN	ENSG00000186417	green	BIALLELIC, autosomal or pseudoautosomal	lethal congenital contracture syndrome 11, MONDO:0014965
+aus:3070	3.1	GNB4	ENSG00000114450	green	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	Charcot-Marie-Tooth disease, dominant intermediate F, MIM# 615185; MONDO:0014074; HMSN
+aus:3070	3.1	GSN	ENSG00000148180	green	BOTH monoallelic and biallelic (but BIALLELIC mutations cause a more SEVERE disease form), autosomal or pseudoautosomal	Amyloidosis, Finnish type MIM#105120
+aus:3070	3.1	HADHA	ENSG00000084754	green	BIALLELIC, autosomal or pseudoautosomal	LCHAD deficiency MIM#609016; Mitochondrial trifunctional protein deficiency MIM#609015
+aus:3070	3.1	HARS1	ENSG00000170445	green	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	Charcot-Marie-Tooth disease, axonal, type 2W, MIM# 616625; MONDO:0014711; HMSN
+aus:3070	3.1	HEXA	ENSG00000213614	green	BIALLELIC, autosomal or pseudoautosomal	Usually infantile-onset, developmental delay and cognitive decline, visual loss (‘cherry red spot’), motor>sensory neuronopathy, hypometric saccades, adult-onset (second decade) cases described; Tay-Sachs disease
+aus:3070	3.1	HEXB	ENSG00000049860	green	BIALLELIC, autosomal or pseudoautosomal	Sandhoff disease, infantile, juvenile, and adult forms (MIM#268800)
+aus:3070	3.1	HINT1	ENSG00000169567	green	BIALLELIC, autosomal or pseudoautosomal	Neuromyotonia and axonal neuropathy, autosomal recessive, MIM# 137200; Gamstorp-Wohlfart syndrome, MONDO:0007646; HMSN, dHMN/dSMA
+aus:3070	3.1	HK1	ENSG00000156515	green	BIALLELIC, autosomal or pseudoautosomal	Neuropathy, hereditary motor and sensory, Russe type, MIM#605285
+aus:3070	3.1	HMBS	ENSG00000256269	green	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	Porphyria, acute intermittent MIM#176000; MONDO:0008294
+aus:3070	3.1	HSPB1	ENSG00000106211	green	BOTH monoallelic and biallelic, autosomal or pseudoautosomal	Charcot-Marie-Tooth disease axonal type 2F MONDO:0011687
+aus:3070	3.1	HSPB8	ENSG00000152137	green	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	HMSN, dHMN/dSMA; Neuropathy, distal hereditary motor, type IIA, 158590; Charcot Marie Tooth disease, axonal, type 2L, 608673
+aus:3070	3.1	IARS2	ENSG00000067704	green	BIALLELIC, autosomal or pseudoautosomal	Cataracts, growth hormone deficiency, sensory neuropathy, sensorineural hearing loss, and skeletal dysplasia, MIM# 616007
+aus:3070	3.1	IBA57	ENSG00000181873	green	BIALLELIC, autosomal or pseudoautosomal	hereditary spastic paraplegia 74, MONDO:0014644
+aus:3070	3.1	IGHMBP2	ENSG00000132740	green	BIALLELIC, autosomal or pseudoautosomal	Neuronopathy, distal hereditary motor, type VI, MIM# 604320; Charcot-Marie-Tooth disease, axonal, type 2S, MIM# 616155
+aus:3070	3.1	INF2	ENSG00000203485	green	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	Charcot-Marie-Tooth disease, dominant intermediate E, MIM# 614455
+aus:3070	3.1	ITPR3	ENSG00000096433	green	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	Charcot-Marie-Tooth disease, demyelinating, type 1J, MIM# 620111; Immunodeficiency 133 with ectodermal dysplasia with or without peripheral neuropathy, MIM# 621254
+aus:3070	3.1	JAG1	ENSG00000101384	green	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	Charcot-Marie-Tooth disease, axonal, type 2HH 619574
+aus:3070	3.1	KIF1A	ENSG00000130294	green	BIALLELIC, autosomal or pseudoautosomal	Neuropathy, hereditary sensory, type IIC, MIM# 614213
+aus:3070	3.1	KIF21A	ENSG00000139116	green	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	Fibrosis of extraocular muscles, congenital, 1/3B, MIM#135700
+aus:3070	3.1	KIF5A	ENSG00000155980	green	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	Spastic paraplegia 10, autosomal dominant MIM#604187; Neuropathy
+aus:3070	3.1	KLC2	ENSG00000174996	green	BIALLELIC, autosomal or pseudoautosomal	Spastic paraplegia, optic atrophy, and neuropathy MIM#609541
+aus:3070	3.1	LAMA2	ENSG00000196569	green	BIALLELIC, autosomal or pseudoautosomal	LAMA2-related muscular dystrophy MONDO:0100228
+aus:3070	3.1	LITAF	ENSG00000189067	green	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	Charcot-Marie-Tooth disease, type 1C, MIM# 601098; MONDO:0010995
+aus:3070	3.1	LRSAM1	ENSG00000148356	green	BOTH monoallelic and biallelic, autosomal or pseudoautosomal	Charcot-Marie-Tooth disease, axonal, type 2P, MIM# 614436; MONDO:0013753; HMSN
+aus:3070	3.1	LYST	ENSG00000143669	green	BIALLELIC, autosomal or pseudoautosomal	Chediak-Higashi syndrome MIM#214500; MONDO:0008963
+aus:3070	3.1	MADD	ENSG00000110514	green	BIALLELIC, autosomal or pseudoautosomal	hereditary sensory and autonomic neuropathy (HSAN) MONDO:0015364
+aus:3070	3.1	MCM3AP	ENSG00000160294	green	BIALLELIC, autosomal or pseudoautosomal	Peripheral neuropathy, autosomal recessive, with or without impaired intellectual development, 618124
+aus:3070	3.1	MFN2	ENSG00000116688	green	BOTH monoallelic and biallelic, autosomal or pseudoautosomal	Charcot-Marie-Tooth disease, axonal, type 2A2A 609260; Charcot-Marie-Tooth disease, axonal, type 2A2B, MIM# 617087; Hereditary motor and sensory neuropathy VIA, MIM# 601152
+aus:3070	3.1	MMACHC	ENSG00000132763	green	BIALLELIC, autosomal or pseudoautosomal	methylmalonic aciduria and homocystinuria type cblC, MONDO:0010184
+aus:3070	3.1	MME	ENSG00000196549	green	BOTH monoallelic and biallelic (but BIALLELIC mutations cause a more SEVERE disease form), autosomal or pseudoautosomal	Charcot-Marie-Tooth disease, axonal, type 2T, MIM# 617017; MONDO:0014866
+aus:3070	3.1	MORC2	ENSG00000133422	green	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	Developmental delay, impaired growth, dysmorphic facies, and axonal neuropathy, MIM# 619090
+aus:3070	3.1	MPV17	ENSG00000115204	green	BIALLELIC, autosomal or pseudoautosomal	Charcot-Marie-Tooth disease, axonal, type 2EE, MIM# 618400
+aus:3070	3.1	MPZ	ENSG00000158887	green	BOTH monoallelic and biallelic, autosomal or pseudoautosomal	Charcot Marie Tooth disease, dominant intermediate D, 60779; Neuropathy, congenital hypomyelinating, 605253; Charcot Marie Tooth disease, type 2J, 607736; Dejerine Sottas disease, 145900; Charcot Marie Tooth disease, type 1B, 118200; Charcot Marie Tooth disease, type 2I, 607677; HMSN
+aus:3070	3.1	MT-ATP6	ENSG00000198899	green	MITOCHONDRIAL	Mitochondrial complex V (ATP synthase) deficiency, MONDO:0014471, MT-ATP6-related
+aus:3070	3.1	MT-CO2	ENSG00000198712	green	MITOCHONDRIAL	Mitochondrial respiratory chain complex deficiency, MONDO:0000066, MT-CO2-related
+aus:3070	3.1	MTHFR	ENSG00000177000	green	BIALLELIC, autosomal or pseudoautosomal	homocystinuria due to methylene tetrahydrofolate reductase deficiency, MONDO:0009353
+aus:3070	3.1	MTMR2	ENSG00000087053	green	BIALLELIC, autosomal or pseudoautosomal	Charcot-Marie-Tooth disease, type 4B1, 601382; MONDO:0011066
+aus:3070	3.1	MT-ND4	ENSG00000198886	green	MITOCHONDRIAL	Mitochondrial disease (MONDO:0044970), MT-ND4-related
+aus:3070	3.1	MTRFR	ENSG00000130921	green	BIALLELIC, autosomal or pseudoautosomal	Spastic paraplegia 55, autosomal recessive, MIM#615035; HMSN
+aus:3070	3.1	MT-TF	ENSG00000210049	green	MITOCHONDRIAL	Mitochondrial disease (MONDO:0044970), MT-TF-related
+aus:3070	3.1	MT-TG	ENSG00000210164	green	MITOCHONDRIAL	Mitochondrial disease (MONDO:0044970), MT-TG-related
+aus:3070	3.1	MT-TL2	ENSG00000210191	green	MITOCHONDRIAL	Mitochondrial disease (MONDO:0044970), MT-TL2-related
+aus:3070	3.1	MT-TN	ENSG00000210135	green	MITOCHONDRIAL	mitochondrial disease MONDO:0044970, MT-TN related
+aus:3070	3.1	MTTP	ENSG00000138823	green	BIALLELIC, autosomal or pseudoautosomal	Abetalipoproteinemia (MIM#200100); Young onset; Abetalipoproteinaemia; hypocholesterloaemia leading to malabsorption of fat-soluble vitamins (vitamin E), acanthocytes, retinitis pigmentosa, progressive sensory axonal neuropathy
+aus:3070	3.1	MT-TV	ENSG00000210077	green	MITOCHONDRIAL	Mitochondrial disease (MONDO:0044970), MT-TV-related
+aus:3070	3.1	MT-TW	ENSG00000210117	green	MITOCHONDRIAL	Mitochondrial disease (MONDO:0044970), MT-TW-related
+aus:3070	3.1	MT-TY	ENSG00000210144	green	MITOCHONDRIAL	Mitochondrial disease (MONDO:0044970), MT-TY-related
+aus:3070	3.1	MYH14	ENSG00000105357	green	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	Peripheral neuropathy, myopathy, hoarseness, and hearing loss MIM#614369
+aus:3070	3.1	NAGA	ENSG00000198951	green	BIALLELIC, autosomal or pseudoautosomal	Kanzaki disease, MIM#609242
+aus:3070	3.1	NARS1	ENSG00000134440	green	BOTH monoallelic and biallelic, autosomal or pseudoautosomal	Neurodevelopmental disorder with microcephaly, impaired language, and gait abnormalities (NEDMILG), MIM#619091; Neurodevelopmental disorder with microcephaly, impaired language, epilepsy, and gait abnormalities (NEDMILEG), MIM#619092; Abnormal muscle tone; Microcephaly; Global developmental delay; Intellectual disability; Seizures; Ataxia; Abnormality of the face; Demyelinating peripheral neuropathy
+aus:3070	3.1	NDC1	ENSG00000058804	green	BIALLELIC, autosomal or pseudoautosomal	Neurodevelopmental disorder with achalasia, polyneuropathy, and alacrima, MIM# 621328
+aus:3070	3.1	NDRG1	ENSG00000104419	green	BIALLELIC, autosomal or pseudoautosomal	Charcot Marie Tooth disease, type 4D, MIM#601455; MONDO:0011085
+aus:3070	3.1	NDUFS6	ENSG00000145494	green	BIALLELIC, autosomal or pseudoautosomal	peripheral neuropathy MONDO:0020127
+aus:3070	3.1	NEFH	ENSG00000100285	green	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	Charcot-Marie-Tooth disease, axonal, type 2CC, MIM#616924
+aus:3070	3.1	NEFL	ENSG00000277586	green	BOTH monoallelic and biallelic, autosomal or pseudoautosomal	Charcot Marie Tooth disease, type 2E, 607684; Charcot-Marie-Tooth disease, dominant intermediate G, 617882; HMSN; Charcot Marie Tooth disease, type 1F, 607734
+aus:3070	3.1	NEMF	ENSG00000165525	green	BOTH monoallelic and biallelic, autosomal or pseudoautosomal	Intellectual developmental disorder with speech delay and axonal peripheral neuropathy, MIM# 619099; Intellectual disability; neuropathy
+aus:3070	3.1	NGF	ENSG00000134259	green	BIALLELIC, autosomal or pseudoautosomal	Neuropathy, hereditary sensory and autonomic, type V, MIM# 608654; MONDO:0012092
+aus:3070	3.1	NGLY1	ENSG00000151092	green	BIALLELIC, autosomal or pseudoautosomal	Congenital disorder of deglycosylation 1 (CDDG1) (MIM#615273); Developmental delay, choreoathetosis, alacrimia, seizures, microcephaly, transaminitis, neuropathy
+aus:3070	3.1	NIPA1	ENSG00000170113	green	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	Spastic paraplegia 6
+aus:3070	3.1	NRCAM	ENSG00000091129	green	BIALLELIC, autosomal or pseudoautosomal	neurodevelopmental disorder with neuromuscular and skeletal abnormalities, MONDO:0859236
+aus:3070	3.1	NTRK1	ENSG00000198400	green	BIALLELIC, autosomal or pseudoautosomal	hereditary sensory and autonomic neuropathy type 4 MONDO:0009746
+aus:3070	3.1	NUDT2	ENSG00000164978	green	BIALLELIC, autosomal or pseudoautosomal	Muscular hypotonia; Global developmental delay; Intellectual disability; Polyneuropathy
+aus:3070	3.1	OPA1	ENSG00000198836	green	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	Optic atrophy plus syndrome (MIM#125250)
+aus:3070	3.1	OPA3	ENSG00000125741	green	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	Optic atrophy 3 MONDO:0008133
+aus:3070	3.1	PDHA1	ENSG00000131828	green	X-LINKED: hemizygous mutation in males, biallelic mutations in females	Primary Pyruvate Dehydrogenase Complex Deficiency MIM 312170
+aus:3070	3.1	PDK3	ENSG00000067992	green	X-LINKED: hemizygous mutation in males, monoallelic mutations in females may cause disease (may be less severe, later onset than males)	Charcot-Marie-Tooth disease, X-linked dominant, 6 MIM#300905; HMSN
+aus:3070	3.1	PDXK	ENSG00000160209	green	BIALLELIC, autosomal or pseudoautosomal	Axonal polyneuropathy; optic atrophy
+aus:3070	3.1	PDYN	ENSG00000101327	green	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	Spinocerebellar ataxia 23 (MIM#610245); Cerebellar ataxia, sensory-motor axonal neuropathy; Spinocerebellar ataxia 23
+aus:3070	3.1	PEX10	ENSG00000157911	green	BIALLELIC, autosomal or pseudoautosomal	Failure to thrive, facial dimorphism, agenesis of the corpus callosum, death in first year of life, axonal motor neuropathy, progressive ataxia and sensory-motor axonal neuropathy in adulthood described
+aus:3070	3.1	PEX12	ENSG00000108733	green	BIALLELIC, autosomal or pseudoautosomal	Peroxisome biogenesis disorder 3A (Zellweger), 614859; HMSN
+aus:3070	3.1	PHYH	ENSG00000107537	green	BIALLELIC, autosomal or pseudoautosomal	Refsum Disease MIM#266500
+aus:3070	3.1	PIEZO2	ENSG00000154864	green	BIALLELIC, autosomal or pseudoautosomal	arthrogryposis, distal, with impaired proprioception and touch, MONDO:0014941
+aus:3070	3.1	PIGB	ENSG00000069943	green	BIALLELIC, autosomal or pseudoautosomal	Developmental and epileptic encephalopathy 80 MONDO:0032822
+aus:3070	3.1	PIGG	ENSG00000174227	green	BIALLELIC, autosomal or pseudoautosomal	PIGG-related hereditary neuropathy MONDO:0002316
+aus:3070	3.1	PLA2G6	ENSG00000184381	green	BIALLELIC, autosomal or pseudoautosomal	Infantile neuroaxonal dystrophy 1 (MIM#256600); Neurodegeneration with brain iron accumulation 2B (MIM#610217)
+aus:3070	3.1	PLAAT3	ENSG00000176485	green	BIALLELIC, autosomal or pseudoautosomal	Lipodystrophy, familial partial, type 9, MIM# 620683
+aus:3070	3.1	PLEKHG5	ENSG00000171680	green	BIALLELIC, autosomal or pseudoautosomal	hereditary peripheral neuropathy MONDO:0020127, PLEKHG5-related
+aus:3070	3.1	PMM2	ENSG00000140650	green	BIALLELIC, autosomal or pseudoautosomal	Neonatal-onset, leukodystrophy, abnormal serum glycoproteins, mental retardation, hypotonia, ataxia, retinitis pigmentosa, seizures, slowly progressive neuropathy with SNCV, severe infections, hepatic insufficiency and cardiomyopathy
+aus:3070	3.1	PMP2	ENSG00000147588	green	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	HMSN; Charcot-Marie-Tooth disease, demyelinating, type 1G, MIM#618279
+aus:3070	3.1	PMP22	ENSG00000109099	green	BOTH monoallelic and biallelic, autosomal or pseudoautosomal	Charcot-Marie-Tooth disease, type 1A, MIM# 118220; Charcot-Marie-Tooth disease, type 1E, MIM# 118300; Dejerine-Sottas disease, MIM# 145900; Neuropathy, recurrent, with pressure palsies 162500; Roussy-Levy syndrome 180800
+aus:3070	3.1	PNKP	ENSG00000039650	green	BIALLELIC, autosomal or pseudoautosomal	Charcot-Marie-Tooth disease, axonal, type 2B2 (MIM#605589); Ataxia-oculomotor apraxia 4 (MIM#616267)
+aus:3070	3.1	PNPLA6	ENSG00000032444	green	BIALLELIC, autosomal or pseudoautosomal	Laurence-Moon Syndrome (LMS) MIM#245800; Spastic Paraplegia Type 39 MIM#612020
+aus:3070	3.1	PNPT1	ENSG00000138035	green	BOTH monoallelic and biallelic, autosomal or pseudoautosomal	combined oxidative phosphorylation defect type 13, MONDO:0013977; spinocerebellar ataxia type 25, MONDO:0012103
+aus:3070	3.1	POLG	ENSG00000140521	green	BIALLELIC, autosomal or pseudoautosomal	Mitochondrial recessive ataxia syndrome (includes SANDO and SCAE) 607459
+aus:3070	3.1	POLR3A	ENSG00000148606	green	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	peripheral neuropathy, MONDO:0005244, POLR3A-related
+aus:3070	3.1	POLR3B	ENSG00000013503	green	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	Charcot-Marie-Tooth disease, demyelinating, type 1I, MIM# 619742
+aus:3070	3.1	PPOX	ENSG00000143224	green	BOTH monoallelic and biallelic, autosomal or pseudoautosomal	Porphyria variegata, MIM# 176200; Variegate porphyria, childhood-onset, MIM# 620483
+aus:3070	3.1	PRDM12	ENSG00000130711	green	BIALLELIC, autosomal or pseudoautosomal	Neuropathy, hereditary sensory and autonomic, type VIII, MIM# 616488; MONDO:0014662; HSAN/SFN
+aus:3070	3.1	PRNP	ENSG00000171867	green	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	Prion disease, MONDO:0005429, PRNP-related
+aus:3070	3.1	PRPS1	ENSG00000147224	green	X-LINKED: hemizygous mutation in males, biallelic mutations in females	Charcot Marie Tooth disease, X linked recessive, 5, MIM#311070
+aus:3070	3.1	PRX	ENSG00000105227	green	BIALLELIC, autosomal or pseudoautosomal	Charcot-Marie-Tooth disease type 4 MONDO:0018995
+aus:3070	3.1	PTRH2	ENSG00000141378	green	BIALLELIC, autosomal or pseudoautosomal	Infantile multisystem neurologic, endocrine, and pancreatic disease (IMNPED) (MIM#616263); Infantile-onset multisystem disease with intellectual disability, microcephaly, progressive ataxia, sensory neuronal hearing loss, hepatomegaly, pancreatic insufficiency, proximal placement of thumb, SNCV neuropathy
+aus:3070	3.1	RAB7A	ENSG00000075785	green	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	Charcot-Marie-Tooth disease, type 2B, MIM# 600882; MONDO:0010949
+aus:3070	3.1	RCC1	ENSG00000180198	green	BIALLELIC, autosomal or pseudoautosomal	Infection-induced acute-onset axonal neuropathy, MIM# 621333
+aus:3070	3.1	REEP1	ENSG00000068615	green	BOTH monoallelic and biallelic (but BIALLELIC mutations cause a more SEVERE disease form), autosomal or pseudoautosomal	Spinal muscular atrophy, distal, autosomal recessive, 6, MIM#620011; Neuronopathy, distal hereditary motor, type VB MIM#614751; Spastic paraplegia 31, autosomal dominant MIM#610250
+aus:3070	3.1	RETREG1	ENSG00000154153	green	BIALLELIC, autosomal or pseudoautosomal	Neuropathy, hereditary sensory and autonomic, type IIB, 613115; HSAN/SFN
+aus:3070	3.1	RFC1	ENSG00000035928	green	BIALLELIC, autosomal or pseudoautosomal	Cerebellar ataxia, neuropathy, and vestibular areflexia syndrome OMIM 614575
+aus:3070	3.1	RNASEH1	ENSG00000171865	green	BIALLELIC, autosomal or pseudoautosomal	progressive external ophthalmoplegia with mitochondrial DNA deletions, autosomal recessive 2, MONDO:0014656
+aus:3070	3.1	RTN2	ENSG00000125744	green	BIALLELIC, autosomal or pseudoautosomal	Neuronopathy, distal hereditary motor, autosomal recessive 11, with spasticity, MIM# 620854
+aus:3070	3.1	SACS	ENSG00000151835	green	BIALLELIC, autosomal or pseudoautosomal	Charlevoix-Saguenay spastic ataxia (MONDO:0010041; MIM#270550)
+aus:3070	3.1	SARS1	ENSG00000031698	green	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	Genetic peripheral neuropathy MONDO#0020127, SARS1-related
+aus:3070	3.1	SBF1	ENSG00000100241	green	BIALLELIC, autosomal or pseudoautosomal	Charcot-Marie-Tooth disease, type 4B3 , MIM#615284; MONDO:0014117
+aus:3070	3.1	SBF2	ENSG00000133812	green	BIALLELIC, autosomal or pseudoautosomal	Charcot Marie Tooth disease, type 4B2, MIM#604563
+aus:3070	3.1	SCN10A	ENSG00000185313	green	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	Episodic pain syndrome, familial, 2, MIM# 615551
+aus:3070	3.1	SCN11A	ENSG00000168356	green	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	Neuropathy, hereditary sensory and autonomic, type VII, MIM# 615548; MONDO:0014244
+aus:3070	3.1	SCN9A	ENSG00000169432	green	BOTH monoallelic and biallelic, autosomal or pseudoautosomal	Erythermalgia, primary, MIM# 133020; Insensitivity to pain, congenital, MIM# 243000; Neuropathy, hereditary sensory and autonomic, type IID, MIM# 243000; Paroxysmal extreme pain disorder, MIM# 167400; Small fiber neuropathy,MIM# 133020
+aus:3070	3.1	SCO2	ENSG00000284194	green	BIALLELIC, autosomal or pseudoautosomal	autosomal recessive axonal charcot-marie-tooth disease due to copper metabolism defect MONDO:0033850
+aus:3070	3.1	SCYL1	ENSG00000142186	green	BIALLELIC, autosomal or pseudoautosomal	Spinocerebellar ataxia, autosomal recessive 21 (MIM#616719); acute infantile liver failure-cerebellar ataxia-peripheral sensory motor neuropathy syndrome (MONDO:0014744); Spinocerebellar ataxia, autosomal recessive 21; Early-onset ataxia (<1 year) with recurrent episodes of liver failure, sensory-motor axonal neuropathy, cerebellar atrophy
+aus:3070	3.1	SEPTIN9	ENSG00000184640	green	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	Amyotrophy, hereditary neuralgic, MIM# 162100; HMSN
+aus:3070	3.1	SETX	ENSG00000107290	green	BOTH monoallelic and biallelic, autosomal or pseudoautosomal	dHMN/dSMA; Amyotrophic lateral sclerosis 4, juvenile MIM# 602433; Spinocerebellar ataxia, autosomal recessive, with axonal neuropathy 2
+aus:3070	3.1	SH3TC2	ENSG00000169247	green	BOTH monoallelic and biallelic, autosomal or pseudoautosomal	Charcot-Marie-Tooth disease, type 4C MIM#601596, Mononeuropathy of the median nerve, mild MIM#613353
+aus:3070	3.1	SIGMAR1	ENSG00000147955	green	BIALLELIC, autosomal or pseudoautosomal	Neuronopathy, distal hereditary motor, autosomal recessive 2, MIM# 605726
+aus:3070	3.1	SLC12A6	ENSG00000140199	green	BOTH monoallelic and biallelic, autosomal or pseudoautosomal	Andermann syndrome; Hereditary Motor and Sensory Neuropathy with Agenesis of the Corpus Callosum; Charcot-Marie-Tooth disease, axonal, type 2II , MIM#620068
+aus:3070	3.1	SLC25A19	ENSG00000125454	green	BIALLELIC, autosomal or pseudoautosomal	Progressive demyelinating neuropathy with bilateral striatal necrosis MONDO:0013382
+aus:3070	3.1	SLC25A46	ENSG00000164209	green	BIALLELIC, autosomal or pseudoautosomal	Neuropathy, hereditary motor and sensory, type VIB, MIM# 616505; Pontocerebellar hypoplasia, type 1E, MIM# 619303
+aus:3070	3.1	SLC52A2	ENSG00000185803	green	BIALLELIC, autosomal or pseudoautosomal	Brown-Vialetto-van Laere syndrome 2 (BVVLS2) (MONDO:0013867)
+aus:3070	3.1	SLC52A3	ENSG00000101276	green	BIALLELIC, autosomal or pseudoautosomal	Brown-Vialetto-Van Laere syndrome 1 (MIM#211530); dHMN; Brown-Vialetto-Van Laere syndrome 1; Fazio-Londe disease
+aus:3070	3.1	SLC5A6	ENSG00000138074	green	BIALLELIC, autosomal or pseudoautosomal	Peripheral motor neuropathy, childhood-onset, biotin-responsive, MIM# 619903
+aus:3070	3.1	SLC5A7	ENSG00000115665	green	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	Neuronopathy, distal hereditary motor, type VIIA, MIM# 158580; MONDO:0008024
+aus:3070	3.1	SMN1	ENSG00000172062	green	BIALLELIC, autosomal or pseudoautosomal	Spinal muscular atrophy-1, MIM# 253300; Spinal muscular atrophy-2, MIM# 253550; Spinal muscular atrophy-3, MIM# 253400; Spinal muscular atrophy-4, MIM# 271150
+aus:3070	3.1	SNAP29	ENSG00000099940	green	BIALLELIC, autosomal or pseudoautosomal	Cerebral dysgenesis, neuropathy, ichthyosis, and palmoplantar keratoderma syndrome (CEDNIK) Syndrome (MONDO:0012290) (MIM#609528); Cerebral Dysgenesis and severe psychomotor retardation, axonal sensory-motor Neuropathy, Ichthyosis, palmoplantar Keratoderma, fatal by second decade of life
+aus:3070	3.1	SOD1	ENSG00000142168	green	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	Hereditary peripheral neuropathy, MONDO:0020127, SOD1-related
+aus:3070	3.1	SORD	ENSG00000140263	green	BIALLELIC, autosomal or pseudoautosomal	isolated hereditary neuropathy; Sorbitol dehydrogenase deficiency with peripheral neuropathy (SORDDPN), MIM#618912
+aus:3070	3.1	SOX10	ENSG00000100146	green	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	PCWH Syndrome (MIM#609136; MONDO:0012198); Waardenburg syndrome, type 4C, 613266; Hypopigmentation of the hair and skin, sensory hearing loss, demyelinating neuropathy, dysmyelinating leukodystrophy, developmental delay, spasticity, ataxia, Hirschsprung disease; Waardenburg syndrome, type 2E, with or without neurologic involvement, 611584; HMSN
+aus:3070	3.1	SPAST	ENSG00000021574	green	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	Spastic paraplegia 4, autosomal dominant; Spasticity; Hereditary Neuropathies
+aus:3070	3.1	SPG11	ENSG00000104133	green	BIALLELIC, autosomal or pseudoautosomal	HMSN; Hereditary Neuropathies; axonal Charcot-Marie-Tooth disease type 2X; MONDO:0014726
+aus:3070	3.1	SPTAN1	ENSG00000197694	green	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	Neuronopathy, distal hereditary motor, 11, autosomal dominant, MIM# 620528
+aus:3070	3.1	SPTBN4	ENSG00000160460	green	BIALLELIC, autosomal or pseudoautosomal	Neurodevelopmental disorder with hypotonia, neuropathy, and deafness MIM#617519
+aus:3070	3.1	SPTLC1	ENSG00000090054	green	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	Juvenile amyotrophic lateral sclerosis-27, MIM#620285; HSAN/SFN; Hereditary Sensory and Autonomic Neuropathy, Type II; Neuropathy, hereditary sensory and autonomic, type IA, 162400
+aus:3070	3.1	SPTLC2	ENSG00000100596	green	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	Neuropathy, hereditary sensory and autonomic, type IC, 613640; MONDO:0013337; HSAN/SFN
+aus:3070	3.1	STUB1	ENSG00000103266	green	BIALLELIC, autosomal or pseudoautosomal	Spinocerebellar ataxia, autosomal recessive 16, MIM# 615768
+aus:3070	3.1	SURF1	ENSG00000148290	green	BIALLELIC, autosomal or pseudoautosomal	Charcot-Marie-Tooth disease, type 4K (MIM#616684; MONDO:0014733)
+aus:3070	3.1	SYT2	ENSG00000143858	green	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	Myasthenic syndrome, congenital, 7, presynaptic, MIM# 616040; neuropathy
+aus:3070	3.1	TECPR2	ENSG00000196663	green	BIALLELIC, autosomal or pseudoautosomal	Neuropathy, hereditary sensory and autonomic, type IX, with developmental delay, MIM#615031
+aus:3070	3.1	TFG	ENSG00000114354	green	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	Hereditary motor and sensory neuropathy, Okinawa type, MIM# 604484
+aus:3070	3.1	TOP3A	ENSG00000177302	green	BIALLELIC, autosomal or pseudoautosomal	progressive external ophthalmoplegia with mitochondrial DNA deletions, autosomal recessive 5, MONDO:0020845
+aus:3070	3.1	TRIM2	ENSG00000109654	green	BIALLELIC, autosomal or pseudoautosomal	Charcot-Marie-Tooth disease, type 2R, MIM# 615490; MONDO:0014208; HMSN
+aus:3070	3.1	TRIP4	ENSG00000103671	green	BIALLELIC, autosomal or pseudoautosomal	Spinal muscular atrophy with congenital bone fractures 1, MIM# 616866
+aus:3070	3.1	TRPV4	ENSG00000111199	green	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	Hereditary motor and sensory neuropathy, type IIc, MIM# 606071; Neuronopathy, distal hereditary motor, type VIII, MIM# 600175
+aus:3070	3.1	TTC19	ENSG00000011295	green	BIALLELIC, autosomal or pseudoautosomal	Mitochondrial complex III deficiency, nuclear type 2, MIM#615157
+aus:3070	3.1	TTPA	ENSG00000137561	green	BIALLELIC, autosomal or pseudoautosomal	Ataxia with isolated vitamin E deficiency MIM#277460
+aus:3070	3.1	TTR	ENSG00000118271	green	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	Amyloidosis, hereditary, transthyretin-related MIM#105210; Cardiomyopathy; Amyloidogenic transthyretin amyloidosis; HSAN/SFN
+aus:3070	3.1	TUBB3	ENSG00000258947	green	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	Fibrosis of extraocular muscles, congenital, 3A (MIM#600638); Neuropathy; Congenital fibrosis of extraocular muscles 3A2, syndromic, with joint contractures, developmental delay, and peripheral neuropathy, MIM#621666
+aus:3070	3.1	TWNK	ENSG00000107815	green	BOTH monoallelic and biallelic, autosomal or pseudoautosomal	Perrault syndrome (MIM#616138); Progressive external ophthalmoplegia with mitochondrial DNA deletions, autosomal dominant 3, MIM# 609286
+aus:3070	3.1	TYMP	ENSG00000025708	green	BIALLELIC, autosomal or pseudoautosomal	Mitochondrial DNA depletion syndrome 1 (MNGIE type); HMSN
+aus:3070	3.1	UBA1	ENSG00000130985	green	X-LINKED: hemizygous mutation in males, biallelic mutations in females	dHMN/dSMA; Spinal muscular atrophy, X-linked 2, MIM# 301830
+aus:3070	3.1	UCHL1	ENSG00000154277	green	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	Neurodegenerative disease, MONDO:0005559, UCHL1-related
+aus:3070	3.1	VAPB	ENSG00000124164	green	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	Spinal muscular atrophy, late-onset, Finkel type, MIM# 182980
+aus:3070	3.1	VCP	ENSG00000165280	green	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	Charcot-Marie-Tooth disease, type 2Y, MIM# 616687
+aus:3070	3.1	VPS13A	ENSG00000197969	green	BIALLELIC, autosomal or pseudoautosomal	VPS13A-related neurodegenerative disease, MONDO:0008695
+aus:3070	3.1	VRK1	ENSG00000100749	green	BIALLELIC, autosomal or pseudoautosomal	Neuronopathy, distal hereditary motor, autosomal recessive 10, MIM# 620542
+aus:3070	3.1	VWA1	ENSG00000179403	green	BIALLELIC, autosomal or pseudoautosomal	Neuronopathy, distal hereditary motor, autosomal recessive 7, MIM# 619216
+aus:3070	3.1	WNK1	ENSG00000060237	green	BIALLELIC, autosomal or pseudoautosomal	HSAN/SFN; Neuropathy, hereditary sensory and autonomic, type II, MIM# 201300; MONDO:0024309
+aus:3070	3.1	XK	ENSG00000047597	green	X-LINKED: hemizygous mutation in males, biallelic mutations in females	McLeod syndrome with or without chronic granulomatous disease (MIM#300842)
+aus:3070	3.1	XRCC1	ENSG00000073050	green	BIALLELIC, autosomal or pseudoautosomal	Spinocerebellar ataxia, autosomal recessive 26 MIM#617633
+aus:3070	3.1	YARS1	ENSG00000134684	green	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	Charcot-Marie-Tooth disease, dominant intermediate C, MIM# 608323; MONDO:0012012
+aus:3070	3.1	ZC4H2	ENSG00000126970	green	X-LINKED: hemizygous mutation in males, monoallelic mutations in females may cause disease (may be less severe, later onset than males)	Wieacker-Wolff syndrome, MONDO:0010758
+aus:3070	3.1	ZFYVE26	ENSG00000072121	green	BIALLELIC, autosomal or pseudoautosomal	Spastic paraplegia 15 MIM#270700
+aus:3070	3.1	ARHGEF10	ENSG00000104728	amber	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	Slowed nerve conduction velocity, MIM# 608236
+aus:3070	3.1	ARPC3	ENSG00000111229	amber	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	Charcot-Marie-Tooth disease MONDO:0015626
+aus:3070	3.1	ATM	ENSG00000149311	amber	BIALLELIC, autosomal or pseudoautosomal	Ataxia-telangiectasia, MIM#208900; Childhood-onset progressive ataxia, conjunctival telangiectasia, sensory axonal neuropathy, chorea and dystonia, immunodeficiency and increased risk of malignancy, elevated α-fetoprotein; Ataxia-telangiectasia syndrome
+aus:3070	3.1	B4GALNT1	ENSG00000135454	amber	BIALLELIC, autosomal or pseudoautosomal	Spastic paraplegia 26, autosomal recessive (MIM#609195; MONDO:0012213)
+aus:3070	3.1	BAG3	ENSG00000151929	amber	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	Myopathy, myofibrillar, 6 (MIM#612954; MONDO:0013061)
+aus:3070	3.1	CCT5	ENSG00000150753	amber	BIALLELIC, autosomal or pseudoautosomal	Neuropathy, hereditary sensory, with spastic paraplegia, 256840; HMSN
+aus:3070	3.1	CFAP276	ENSG00000179902	amber	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	hereditary peripheral neuropathy, MONDO:0020127, CFAP276-related
+aus:3070	3.1	COX10	ENSG00000006695	amber	BIALLELIC, autosomal or pseudoautosomal	Mitochondrial complex IV deficiency, nuclear type 3 (MIM#619046)
+aus:3070	3.1	DCAF8	ENSG00000132716	amber	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	?Giant axonal neuropathy 2, autosomal dominant, 610100; HMSN
+aus:3070	3.1	DGAT2	ENSG00000062282	amber	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	Charcot-Marie-Tooth disease, MONDO:0015626, DGAT2-related
+aus:3070	3.1	DHTKD1	ENSG00000181192	amber	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	Charcot-Marie-Tooth disease axonal type 2Q MONDO:0014012
+aus:3070	3.1	DNAJA3	ENSG00000103423	amber	BIALLELIC, autosomal or pseudoautosomal	Mitochondrial disease, MONDO:0044970, DNAJA3-related
+aus:3070	3.1	EMILIN1	ENSG00000138080	amber	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	Neuronopathy, distal hereditary motor, type X, MIM# 620080; Peripheral neuropathy; aortic aneurysm
+aus:3070	3.1	EXOSC3	ENSG00000107371	amber	BIALLELIC, autosomal or pseudoautosomal	Pontocerebellar hypoplasia, type 1b; dHMN/dSMA
+aus:3070	3.1	FAT3	ENSG00000165323	amber	BIALLELIC, autosomal or pseudoautosomal	Peripheral neuropathy MONDO:0005244, FAT3-related
+aus:3070	3.1	FBXO38	ENSG00000145868	amber	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	Neuronopathy, distal hereditary motor, type IID, MIM#615575
+aus:3070	3.1	FDX2	ENSG00000267673	amber	BIALLELIC, autosomal or pseudoautosomal	Mitochondrial myopathy, episodic, with optic atrophy and reversible leukoencephalopathy (MIM#251900)
+aus:3070	3.1	GALC	ENSG00000054983	amber	BIALLELIC, autosomal or pseudoautosomal	Krabbe Disease MIM#245200
+aus:3070	3.1	GNE	ENSG00000159921	amber	BIALLELIC, autosomal or pseudoautosomal	GNE-related motor neuropathy MONDO:0100546
+aus:3070	3.1	HADHB	ENSG00000138029	amber	BIALLELIC, autosomal or pseudoautosomal	Mitochondrial Trifunctional Protein Deficiency 2 with Myopathy and Neuropathy MIM#320300
+aus:3070	3.1	HYCC1	ENSG00000122591	amber	BIALLELIC, autosomal or pseudoautosomal	HMSN; Congenital cataracts, global developmental delay from 1 year, diffuse cerebral hypomyelination on MRI, neuropathy with SNCV; Leukodystrophy, hypomyelinating, 5, 610532
+aus:3070	3.1	KARS1	ENSG00000065427	amber	BIALLELIC, autosomal or pseudoautosomal	Charcot-Marie-Tooth disease, recessive intermediate, B (MIM#613641; MONDO:0013338)
+aus:3070	3.1	LMNA	ENSG00000160789	amber	BIALLELIC, autosomal or pseudoautosomal	Charcot-Marie-Tooth disease, type 2B1 , MIM#605588
+aus:3070	3.1	MFF	ENSG00000168958	amber	BIALLELIC, autosomal or pseudoautosomal	Encephalopathy due to defective mitochondrial and peroxisomal fission 2 MIM# 617086
+aus:3070	3.1	MT-ATP8	ENSG00000228253	amber	MITOCHONDRIAL	Mitochondrial disease MONDO:0044970, MT-ATP8 related
+aus:3070	3.1	MT-TC	ENSG00000210140	amber	MITOCHONDRIAL	Mitochondrial disease (MONDO:0044970), MT-TC-related
+aus:3070	3.1	MYO9B	ENSG00000099331	amber	BIALLELIC, autosomal or pseudoautosomal	Charcot-Marie-Tooth disease type 2 (MONDO:0018993), MYO9B-related
+aus:3070	3.1	NAGLU	ENSG00000108784	amber	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	Charcot-Marie-Tooth disease, axonal, type 2V MIM#616491
+aus:3070	3.1	NFASC	ENSG00000163531	amber	BIALLELIC, autosomal or pseudoautosomal	neurodevelopmental disorder with central and peripheral motor dysfunction, MONDO:0032698
+aus:3070	3.1	PCK2	ENSG00000100889	amber	BIALLELIC, autosomal or pseudoautosomal	Peripheral neuropathy (MONDO#0005244), PCK2-related
+aus:3070	3.1	PLP1	ENSG00000123560	amber	X-LINKED: hemizygous mutation in males, monoallelic mutations in females may cause disease (may be less severe, later onset than males)	Pelizaeus-Merzbacher disease (MIM#312080)
+aus:3070	3.1	PRPH	ENSG00000135406	amber	BOTH monoallelic and biallelic, autosomal or pseudoautosomal	Hereditary motor and sensory neuropathy MONDO:0015358, PRPH-related
+aus:3070	3.1	PSMC3	ENSG00000165916	amber	BIALLELIC, autosomal or pseudoautosomal	Deafness, cataract, impaired intellectual development, and polyneuropathy, MIM#619354
+aus:3070	3.1	SGPL1	ENSG00000166224	amber	BIALLELIC, autosomal or pseudoautosomal	RENI syndrome (MIM#617575)
+aus:3070	3.1	SUCLA2	ENSG00000136143	amber	BIALLELIC, autosomal or pseudoautosomal	Mitochondrial DNA depletion syndrome 5 (encephalomyopathic with or without methylmalonic aciduria) (MONDO:0012791; MIM#612073); ‘Leigh’-like syndrome, deafness, progressive dystonia, mild methylmaolnic acidaemia, peripheral neuropathy
+aus:3070	3.1	TDP1	ENSG00000042088	amber	BIALLELIC, autosomal or pseudoautosomal	Spinocerebellar ataxia, autosomal recessive, with axonal neuropathy 1 , MIM# 607250
+aus:3070	3.1	UBA5	ENSG00000081307	amber	BIALLELIC, autosomal or pseudoautosomal	Hereditary peripheral neuropathy, MONDO:0020127, UBA5-related
+aus:3070	3.1	WARS1	ENSG00000140105	amber	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	Neuronopathy, distal hereditary motor, type IX, MIM#617721
+aus:3070	3.1	AMPD2	ENSG00000116337	red	BIALLELIC, autosomal or pseudoautosomal	Global developmental delay, spasticity, seizures, dysmorphic facies, axonal neuropathy, agenesis of the corpus callosum and cerebellar hypoplasia on MRI
+aus:3070	3.1	BANF1	ENSG00000175334	red	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	Hereditary peripheral neuropathy, MONDO:0020127, BANF1-related
+aus:3070	3.1	ERBB2	ENSG00000141736	red	BIALLELIC, autosomal or pseudoautosomal	Visceral neuropathy, familial, 2, autosomal recessive, MIM # 619465, Complex neurocristinopathy
+aus:3070	3.1	GJB3	ENSG00000188910	red		HMSN; erythrokeratodermia variabilis, hearing impairment and peripheral neuropathy
+aus:3070	3.1	HSPB3	ENSG00000169271	red	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	Neuronopathy, distal hereditary motor, type IIC, MIM# 613376
+aus:3070	3.1	IFRD1	ENSG00000006652	red	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	Hereditary spastic paraplegia MONDO:0019064, IFRD1-related
+aus:3070	3.1	IQGAP3	ENSG00000183856	red	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	Hereditary neuropathy, MONDO:0020127, IQGAP3-related
+aus:3070	3.1	KIF1B	ENSG00000054523	red	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	Charcot-Marie-Tooth disease, type 2A1 MIM#118210
+aus:3070	3.1	KLHL13	ENSG00000003096	red	X-LINKED: hemizygous mutation in males, biallelic mutations in females	Hereditary peripheral neuropathy, MONDO:0020127, KLHL13-related
+aus:3070	3.1	LAS1L	ENSG00000001497	red	X-LINKED: hemizygous mutation in males, biallelic mutations in females	congenital lethal motor neuron disease
+aus:3070	3.1	MARS1	ENSG00000166986	red	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	Charcot-Marie-Tooth disease, axonal, type 2U, MIM# 616280
+aus:3070	3.1	MED25	ENSG00000104973	red	BIALLELIC, autosomal or pseudoautosomal	Charcot-Marie-Tooth disease, type 2B2 MIM#605589
+aus:3070	3.1	NAMPT	ENSG00000105835	red	BIALLELIC, autosomal or pseudoautosomal	hereditary motor and sensory neuropathy MONDO:0015358
+aus:3070	3.1	NRG1	ENSG00000157168	red	BIALLELIC, autosomal or pseudoautosomal	Peripheral neuropathy MONDO:0005244
+aus:3070	3.1	PEX7	ENSG00000112357	red	BIALLELIC, autosomal or pseudoautosomal	Refsum disease; Phytanic acid storage disease
+aus:3070	3.1	RBM7	ENSG00000076053	red	BIALLELIC, autosomal or pseudoautosomal	SMA-like spinal motor neuropathy; dHMN/dSMA
+aus:3070	3.1	SH3BP4	ENSG00000130147	red	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	Inherited peripheral neuropathy, MONDO:0020127, SH3BP4-related
+aus:3070	3.1	SPG7	ENSG00000197912	red	BIALLELIC, autosomal or pseudoautosomal	hereditary spastic paraplegia 7, MONDO:0011803
+aus:3070	3.1	TRMT1L	ENSG00000121486	red	BIALLELIC, autosomal or pseudoautosomal	Neurodevelopmental disorder, MONDO:0700092, TRMT1L-related
+aus:3070	3.1	TRPA1	ENSG00000104321	red	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	Episodic pain syndrome, familial, 1, MIM# 615040

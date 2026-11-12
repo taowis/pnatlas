@@ -1,0 +1,62 @@
+# Stage 5: genetics
+
+Plan section 6. Gene classes of inherited neuropathy are scored for
+enrichment in the cell states of the reference, and the GWAS signals of
+acquired neuropathies are colocalised with tibial nerve eQTL. `$REMOTE`
+is `user@host` of the server; downloads run there (the data root) and
+the small snapshots are fetched on the laptop into `data/metadata/`.
+
+## 5.1 Inputs
+
+Summary statistics and QTL. The five GWAS Catalog studies with full
+summary statistics (harmonised files with their tabix index and
+metadata), the eQTL Catalogue GTEx tibial nerve gene expression dataset
+QTD000286 (all nominal associations with index, permutation results,
+SuSiE credible sets and the per-variant log Bayes factors) and the GTEx
+v10 eQTL tar are listed in `data/metadata/stage5_files.tsv` (21 files,
+14 GB, sizes from HEAD requests) and fetched on the server with the stage
+download script, which records them in the manifest; the Ensembl 105
+GTF and cDNA (GENCODE v39, the annotation of the GTEx v10 expression
+files) are a second list, `data/metadata/stage5_annotation.tsv`,
+fetched after the first has finished because both append to the
+manifest:
+
+```bash
+REMOTE=user@host workflow/remote/sync.sh
+ssh "$REMOTE" 'cd ~/Projects/pnatlas-dev && setsid -f nohup nice -n 15 python3 -I workflow/scripts/download_files.py \
+  data/metadata/stage5_files.tsv --data-root data --manifest data/MANIFEST.tsv \
+  --fetch "workflow/scripts/download_files.py data/metadata/stage5_files.tsv" > logs/stage5_download.log 2>&1 < /dev/null'
+ssh "$REMOTE" 'cd ~/Projects/pnatlas-dev && grep -c ^done logs/stage5_download.log'   # 21
+ssh "$REMOTE" 'cd ~/Projects/pnatlas-dev && setsid -f nohup nice -n 15 python3 -I workflow/scripts/download_files.py \
+  data/metadata/stage5_annotation.tsv --data-root data --manifest data/MANIFEST.tsv \
+  --fetch "workflow/scripts/download_files.py data/metadata/stage5_annotation.tsv" > logs/stage5_annotation_download.log 2>&1 < /dev/null'
+ssh "$REMOTE" 'cd ~/Projects/pnatlas-dev && grep -c ^done logs/stage5_annotation_download.log'   # 2
+rsync -a "$REMOTE:~/Projects/pnatlas-dev/data/MANIFEST.tsv" data/MANIFEST.tsv
+```
+
+Gene lists. The four PanelApp panels are fetched at the versions the
+plan fixes (Genomics England 846 v8.38 and 85 v1.513, PanelApp
+Australia 3070 v3.1 and 3439 v2.0; the API serves a version on request)
+into `data/metadata/panelapp_<site>_<id>_v<version>.tsv`, committed as
+snapshots. The PNPrank truth set is read from the sibling repository at
+the tag recorded in stage 1 (runbook 1.16):
+
+```bash
+python3 -I workflow/scripts/panelapp_fetch.py --out-dir data/metadata
+git -C ../pnprank-dev show submitted-human-genetics:data/truth/neuropathy_genes.tsv > data/metadata/pnprank_truth_set.tsv
+```
+
+Check: the four panel files report 376, 288, 307 and 19 genes (231,
+159, 249 and 18 green); the truth set has 242 rows.
+
+Gene length and GC. Per gene, the union length of its exons from the
+GTF and the GC fraction of its transcripts from the cDNA file, for the
+matched background of the enrichment, written as a snapshot of release
+105 (on the server once the two files are there, then brought back):
+
+```bash
+ssh "$REMOTE" 'source ~/miniconda3/etc/profile.d/conda.sh && conda activate pnatlas && cd ~/Projects/pnatlas-dev && \
+  nice -n 15 python workflow/scripts/gene_length_gc.py --gtf data/raw/ensembl105/Homo_sapiens.GRCh38.105.gtf.gz \
+    --cdna data/raw/ensembl105/Homo_sapiens.GRCh38.cdna.all.fa.gz --out data/metadata/ensembl105_gene_length_gc.tsv.gz'
+rsync -a "$REMOTE:~/Projects/pnatlas-dev/data/metadata/ensembl105_gene_length_gc.tsv.gz" data/metadata/
+```
