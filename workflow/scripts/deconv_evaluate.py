@@ -149,6 +149,8 @@ def main():
     X = np.column_stack([g["age"].values, (g["sex"] == 2).astype(float).values, g["ischaemic_min"].values / 60.0,
                          hardy.values])
     names = ["age_years", "female", "ischaemic_hours"] + list(hardy.columns)
+    varying = X.std(axis=0) > 0           # a Hardy level absent from the samples would make the design singular
+    X, names = X[:, varying], [n for n, v in zip(names, varying) if v]
     mrows = []
     for s in est.columns:
         d = ols(g[s].values.astype(float), X, names)

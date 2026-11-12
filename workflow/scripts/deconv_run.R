@@ -38,7 +38,7 @@ if (opt$method == "bayesprism") {
   sc <- select.gene.type(sc, gene.type = "protein_coding")
   prism <- new.prism(reference = sc, mixture = t(bulk), input.type = "count.matrix",
                      cell.type.labels = cells$state, cell.state.labels = cells$state, key = NULL,
-                     outlier.cut = 0.01, outlier.genes.cut = 0.001)
+                     outlier.cut = 0.01, outlier.fraction = 0.1)
   bp <- run.prism(prism = prism, n.cores = opt$cores)
   theta <- get.fraction(bp = bp, which.theta = "final", state.or.type = "type")
 } else if (opt$method == "music") {
