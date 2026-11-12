@@ -10,9 +10,10 @@ colours the spots by the estimated number of cells of that state in the
 spot (the q05 abundance), spots with fewer than a third of a cell left
 blank, so the reader sees the state's abundance over the section and not
 only the spots it dominates (a nerve state rarely dominates a 30 cell
-spot of a ganglion). For a targeted panel section the cells assigned to
-the three states are drawn in colour and the other assigned cells in
-grey.
+spot of a ganglion). For a targeted panel section the panel of each
+state draws the cells assigned to it in colour, at twice the marker
+width, over the other assigned cells in grey, so that a few hundred
+cells among tens of thousands can be seen.
 
 The image source per dataset is the `anatomy` block of the dataset in
 config/spatial_inputs.yaml: a Space Ranger tissue image with its scale
@@ -176,7 +177,7 @@ def main():
         xy = scale(a.obsm["spatial"]) if callable(scale) else a.obsm["spatial"] * scale
         has_xy = ~np.isnan(xy[:, 0])
         h, w = img.shape[:2]
-        n_panels = 4 if abundance is not None else 2
+        n_panels = 4
         fig_w = n_panels * args.width_px / 100
         fig, axes = plt.subplots(1, n_panels, figsize=(fig_w, fig_w / n_panels * h / w + 0.4), dpi=100)
         for ax in axes:
@@ -195,14 +196,13 @@ def main():
                 rows.append([args.dataset, section, state, int(m.sum()), "" if m.sum() else "not present", ""])
         else:
             ok = has_xy & labels.notna().values & (labels.values != UNASSIGNED)
-            other = ok & ~labels.isin(list(STATES)).values
-            axes[1].scatter(xy[other, 0], xy[other, 1], s=size, c="#bbbbbb", alpha=0.5, linewidths=0)
-            for state, (colour, _) in STATES.items():
+            for ax, (state, (colour, _)) in zip(axes[1:], STATES.items()):
                 m = ok & (labels.values == state)
-                axes[1].scatter(xy[m, 0], xy[m, 1], s=size, c=colour, alpha=0.9, linewidths=0, label=f"{state} ({m.sum()})")
+                ax.scatter(xy[ok & ~m, 0], xy[ok & ~m, 1], s=size, c="#bbbbbb", alpha=0.4, linewidths=0)
+                ax.scatter(xy[m, 0], xy[m, 1], s=4 * size, c=colour, alpha=0.9, linewidths=0)
+                ax.set_title(f"{state}: {int(m.sum())} of {int(ok.sum())} assigned cells ({a.n_obs} in all); grey = other states",
+                             fontsize=9, loc="left")
                 rows.append([args.dataset, section, state, int(m.sum()), "" if m.sum() else "not present", ""])
-            axes[1].legend(loc="lower right", fontsize=8, markerscale=2, framealpha=0.8)
-            axes[1].set_title(f"{int(ok.sum())} assigned of {a.n_obs} cells; grey = other states", fontsize=9, loc="left")
         fig.tight_layout(pad=0.2)
         fig.savefig(out / f"{section}.jpg", pil_kwargs={"quality": 88})
         plt.close(fig)
