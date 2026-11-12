@@ -60,3 +60,71 @@ ssh "$REMOTE" 'source ~/miniconda3/etc/profile.d/conda.sh && conda activate pnat
     --cdna data/raw/ensembl105/Homo_sapiens.GRCh38.cdna.all.fa.gz --out data/metadata/ensembl105_gene_length_gc.tsv.gz'
 rsync -a "$REMOTE:~/Projects/pnatlas-dev/data/metadata/ensembl105_gene_length_gc.tsv.gz" data/metadata/
 ```
+
+## 5.2 Specificity and gene class enrichment
+
+Specificity of every gene per state from donor pseudobulk of the whole
+reference (`workflow/scripts/reference_specificity.py`: counts summed per
+donor and state, pseudobulks under `specificity_min_cells` dropped, CPM,
+mean over donors, divided by the sum over states), on the server; the
+two tables come back to the laptop's data root:
+
+```bash
+ssh "$REMOTE" 'source ~/miniconda3/etc/profile.d/conda.sh && conda activate pnatlas && cd ~/Projects/pnatlas-dev && \
+  setsid -f nohup nice -n 15 python workflow/scripts/reference_specificity.py --counts data/interim/reference_merged.h5ad \
+    --annotation data/interim/reference_annotation.tsv.gz --out-dir data/interim/genetics > logs/reference_specificity.log 2>&1 < /dev/null'
+ssh "$REMOTE" 'cd ~/Projects/pnatlas-dev && tail -1 logs/reference_specificity.log'   # pseudobulks kept, 31 states, 19420 genes
+rsync -a "$REMOTE:~/Projects/pnatlas-dev/data/interim/genetics/" "$DATA_ROOT/interim/genetics/"
+```
+
+Enrichment (`workflow/scripts/gene_class_enrichment.py`): for each class
+(the five disease categories of the truth set and the whole set, the
+green genes of each PanelApp panel) and each state, the mean
+specificity of the class genes against 10,000 draws of background genes
+matched on exon length and GC (ten quantile bins of each), p with the
++1 correction, Benjamini-Hochberg across states within a class. Runs on
+the laptop in a minute:
+
+```bash
+python workflow/scripts/gene_class_enrichment.py --specificity "$DATA_ROOT/interim/genetics/specificity.tsv.gz" \
+  --length-gc data/metadata/ensembl105_gene_length_gc.tsv.gz --truth data/metadata/pnprank_truth_set.tsv \
+  --panels-dir data/metadata --results-dir results/genetics
+```
+
+Check: `results/genetics/gene_class_enrichment.tsv` has one row per
+class and state (10 classes by 31 states) with the `enriched` column;
+`gene_classes.tsv` lists each class gene with its state of highest
+specificity.
+
+## 5.3 Colocalisation
+
+For each of the five GWAS (`coloc_prepare.py`): lead variants below
+`gwas_p` clumped at `window_bp`, GWAS and eQTL rows of each region read
+through tabix, variants matched on position and allele pair, genes with
+at least 50 shared variants kept as pairs, genes with a SuSiE credible
+set in the region flagged and their log Bayes factors pulled from the
+lbf file. Then (`coloc_run.R`) coloc.abf on every pair and coloc.bf_bf
+between the GWAS single-signal log Bayes factors and the eQTL SuSiE ones
+where a credible set exists, priors from the config; `coloc_collect.py`
+gathers the pairs of every GWAS, calls a pair colocalised above
+`pp_h4`, and gives each colocalised gene its state of highest
+specificity and the compartments where that state is mapped (stage 3
+status table). All in one script on the server, enrichment included, a
+probe with two regions per GWAS first:
+
+```bash
+REMOTE=user@host workflow/remote/sync.sh
+ssh "$REMOTE" 'cd ~/Projects/pnatlas-dev && free -g | sed -n 2p && \
+  setsid -f nohup workflow/scripts/run_genetics.sh data results/genetics_probe --max-regions 2 > logs/genetics_probe.log 2>&1 < /dev/null'
+ssh "$REMOTE" 'cd ~/Projects/pnatlas-dev && cat logs/genetics_probe.log'   # ENRICHMENT 0, PREPARE and COLOC 0 for each GWAS, COLLECT 0, GENETICSDONE
+ssh "$REMOTE" 'cd ~/Projects/pnatlas-dev && rm -rf data/interim/genetics/coloc results/genetics_probe && \
+  setsid -f nohup workflow/scripts/run_genetics.sh data results/genetics > logs/genetics.log 2>&1 < /dev/null'
+ssh "$REMOTE" 'cd ~/Projects/pnatlas-dev && cat logs/genetics.log'
+rsync -a "$REMOTE:~/Projects/pnatlas-dev/results/genetics/" results/genetics/
+rsync -a --include "*/" --include "regions.tsv" --include "pairs.tsv" --include "study.tsv" --include "coloc.tsv" --exclude "*" \
+  "$REMOTE:~/Projects/pnatlas-dev/data/interim/genetics/coloc/" "$DATA_ROOT/interim/genetics/coloc/"
+```
+
+Check: `results/genetics/coloc_summary.tsv` has one row per GWAS with
+the regions, pairs tested and colocalised genes; `coloc_colocalised.tsv`
+the colocalised pairs with their state assignment.
