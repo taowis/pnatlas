@@ -51,3 +51,15 @@ dependencies are in `environment-r.yml`. A probe with ten mixtures, 100
 cells per state and 20 GTEx samples runs the chain before the full run.
 The prepare step found 19,385 genes shared between the reference and
 the GTEx symbols.
+
+## 4.2 Probe
+
+The probe (ten mixtures of the held-out donors, 100 cells per state,
+20 GTEx samples) ran the whole chain. Two faults were fixed on the way:
+the BayesPrism version installed (2.2.3) names the outlier gene
+fraction argument differently from its documentation, and the covariate
+model has to drop a Hardy level absent from a small sample set. On the
+probe MuSiC reached a mean Pearson of 0.83 (RMSE 0.03) and BayesPrism
+0.73 (RMSE 0.05), with 100 cells per state only; the full run decides.
+BayesPrism took about 13 seconds per bulk sample on 12 cores at that
+reference size.
