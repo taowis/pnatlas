@@ -27,3 +27,4 @@ dependencies:
   - bioconductor-scran
   - bioconductor-biocparallel
   - bioconductor-toast
+  - r-coloc=5.2.3         # stage 5 colocalisation (coloc.abf, coloc.bf_bf with the SuSiE log Bayes factors)

@@ -10,6 +10,7 @@ dependencies:
   - numpy
   - pandas
   - scipy
+  - pysam                 # tabix access to the GWAS and eQTL summary statistics (stage 5)
   - pyyaml
   - pyarrow
   - h5py
