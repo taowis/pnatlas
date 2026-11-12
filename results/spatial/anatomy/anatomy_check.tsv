@@ -1,103 +1,103 @@
 dataset	section	state	spots_or_cells	placed_correctly	note
-heming2025_sural_xenium	S01	endoneurial fibroblast	479		
-heming2025_sural_xenium	S01	epineurial fibroblast	1172		
-heming2025_sural_xenium	S01	perineurial	1240		
-heming2025_sural_xenium	S04	endoneurial fibroblast	219		
-heming2025_sural_xenium	S04	epineurial fibroblast	1249		
-heming2025_sural_xenium	S04	perineurial	670		
-heming2025_sural_xenium	S11	endoneurial fibroblast	908		
-heming2025_sural_xenium	S11	epineurial fibroblast	1291		
-heming2025_sural_xenium	S11	perineurial	809		
-heming2025_sural_xenium	S14	endoneurial fibroblast	222		
-heming2025_sural_xenium	S14	epineurial fibroblast	274		
-heming2025_sural_xenium	S14	perineurial	336		
-heming2025_sural_xenium	S22	endoneurial fibroblast	295		
-heming2025_sural_xenium	S22	epineurial fibroblast	9		
-heming2025_sural_xenium	S22	perineurial	127		
-heming2025_sural_xenium	S24	endoneurial fibroblast	230		
-heming2025_sural_xenium	S24	epineurial fibroblast	147		
-heming2025_sural_xenium	S24	perineurial	193		
-heming2025_sural_xenium	S29	endoneurial fibroblast	539		
-heming2025_sural_xenium	S29	epineurial fibroblast	527		
-heming2025_sural_xenium	S29	perineurial	326		
-heming2025_sural_xenium	S30	endoneurial fibroblast	533		
-heming2025_sural_xenium	S30	epineurial fibroblast	553		
-heming2025_sural_xenium	S30	perineurial	62		
-shiers2025_dpn_drg	180714-L4-1	endoneurial fibroblast	2737		
-shiers2025_dpn_drg	180714-L4-1	epineurial fibroblast	2789		
-shiers2025_dpn_drg	180714-L4-1	perineurial	646		
-shiers2025_dpn_drg	180714-L4-5	endoneurial fibroblast	3056		
-shiers2025_dpn_drg	180714-L4-5	epineurial fibroblast	2956		
-shiers2025_dpn_drg	180714-L4-5	perineurial	626		
-shiers2025_dpn_drg	181030-1L4-3	endoneurial fibroblast	1499		
-shiers2025_dpn_drg	181030-1L4-3	epineurial fibroblast	1165		
-shiers2025_dpn_drg	181030-1L4-3	perineurial	581		
-shiers2025_dpn_drg	181030-1L4-7	endoneurial fibroblast	2310		
-shiers2025_dpn_drg	181030-1L4-7	epineurial fibroblast	1891		
-shiers2025_dpn_drg	181030-1L4-7	perineurial	1044		
-shiers2025_dpn_drg	181030-2L4-2	endoneurial fibroblast	2654		
-shiers2025_dpn_drg	181030-2L4-2	epineurial fibroblast	2235		
-shiers2025_dpn_drg	181030-2L4-2	perineurial	1793		
-shiers2025_dpn_drg	181030-2L4-6	endoneurial fibroblast	2766		
-shiers2025_dpn_drg	181030-2L4-6	epineurial fibroblast	2374		
-shiers2025_dpn_drg	181030-2L4-6	perineurial	1841		
-shiers2025_dpn_drg	DN0095-S2-1	endoneurial fibroblast	1460		
-shiers2025_dpn_drg	DN0095-S2-1	epineurial fibroblast	1697		
-shiers2025_dpn_drg	DN0095-S2-1	perineurial	871		
-shiers2025_dpn_drg	DN0095-S2-2	endoneurial fibroblast	1353		
-shiers2025_dpn_drg	DN0095-S2-2	epineurial fibroblast	1683		
-shiers2025_dpn_drg	DN0095-S2-2	perineurial	787		
-shiers2025_dpn_drg	DN0095-S2-3	endoneurial fibroblast	1819		
-shiers2025_dpn_drg	DN0095-S2-3	epineurial fibroblast	2570		
-shiers2025_dpn_drg	DN0095-S2-3	perineurial	974		
-shiers2025_dpn_drg	DN0106-S5-1	endoneurial fibroblast	2125		
-shiers2025_dpn_drg	DN0106-S5-1	epineurial fibroblast	1834		
-shiers2025_dpn_drg	DN0106-S5-1	perineurial	1601		
-shiers2025_dpn_drg	DN0106-S5-2	endoneurial fibroblast	1924		
-shiers2025_dpn_drg	DN0106-S5-2	epineurial fibroblast	2000		
-shiers2025_dpn_drg	DN0106-S5-2	perineurial	1643		
-shiers2025_dpn_drg	DN0134-S1-1	endoneurial fibroblast	1356		
-shiers2025_dpn_drg	DN0134-S1-1	epineurial fibroblast	1533		
-shiers2025_dpn_drg	DN0134-S1-1	perineurial	869		
-shiers2025_dpn_drg	DN0134-S1-2	endoneurial fibroblast	418		
-shiers2025_dpn_drg	DN0134-S1-2	epineurial fibroblast	1296		
-shiers2025_dpn_drg	DN0134-S1-2	perineurial	923		
-shiers2025_dpn_drg	DN0134-S1-3	endoneurial fibroblast	891		
-shiers2025_dpn_drg	DN0134-S1-3	epineurial fibroblast	1350		
-shiers2025_dpn_drg	DN0134-S1-3	perineurial	535		
-shiers2025_dpn_drg	M2-1	endoneurial fibroblast	1329		
-shiers2025_dpn_drg	M2-1	epineurial fibroblast	1341		
-shiers2025_dpn_drg	M2-1	perineurial	1307		
-shiers2025_dpn_drg	M2-2	endoneurial fibroblast	1962		
-shiers2025_dpn_drg	M2-2	epineurial fibroblast	1769		
-shiers2025_dpn_drg	M2-2	perineurial	1813		
-utdallas_dpn_nerves	sural11	endoneurial fibroblast	1573		
-utdallas_dpn_nerves	sural11	epineurial fibroblast	1974		
-utdallas_dpn_nerves	sural11	perineurial	2127		
-utdallas_dpn_nerves	sural12	endoneurial fibroblast	1308		
-utdallas_dpn_nerves	sural12	epineurial fibroblast	1656		
-utdallas_dpn_nerves	sural12	perineurial	1685		
-utdallas_dpn_nerves	sural14	endoneurial fibroblast	2006		
-utdallas_dpn_nerves	sural14	epineurial fibroblast	2834		
-utdallas_dpn_nerves	sural14	perineurial	2600		
-utdallas_dpn_nerves	sural24l	endoneurial fibroblast	1192		
-utdallas_dpn_nerves	sural24l	epineurial fibroblast	697		
-utdallas_dpn_nerves	sural24l	perineurial	1439		
-utdallas_dpn_nerves	sural24t	endoneurial fibroblast	1041		
-utdallas_dpn_nerves	sural24t	epineurial fibroblast	763		
-utdallas_dpn_nerves	sural24t	perineurial	1012		
-utdallas_dpn_nerves	sural8	endoneurial fibroblast	2480		
-utdallas_dpn_nerves	sural8	epineurial fibroblast	2644		
-utdallas_dpn_nerves	sural8	perineurial	2170		
-yu2024_hdrg_xenium_cells	Region_1	endoneurial fibroblast	34		
-yu2024_hdrg_xenium_cells	Region_1	epineurial fibroblast	154		
-yu2024_hdrg_xenium_cells	Region_1	perineurial	97		
-yu2024_hdrg_xenium_cells	Region_2	endoneurial fibroblast	11		
-yu2024_hdrg_xenium_cells	Region_2	epineurial fibroblast	96		
-yu2024_hdrg_xenium_cells	Region_2	perineurial	32		
-yu2024_hdrg_xenium_cells	Region_3	endoneurial fibroblast	125		
-yu2024_hdrg_xenium_cells	Region_3	epineurial fibroblast	321		
-yu2024_hdrg_xenium_cells	Region_3	perineurial	51		
-yu2024_hdrg_xenium_cells	Region_4	endoneurial fibroblast	74		
-yu2024_hdrg_xenium_cells	Region_4	epineurial fibroblast	210		
-yu2024_hdrg_xenium_cells	Region_4	perineurial	50		
+heming2025_sural_xenium	S01	endoneurial fibroblast	479	no	as many cells in the epineurium as inside the fascicles
+heming2025_sural_xenium	S01	epineurial fibroblast	1172	yes	between the fascicles and in the outer epineurium, few inside fascicles
+heming2025_sural_xenium	S01	perineurial	1240	yes	rings around every fascicle
+heming2025_sural_xenium	S04	endoneurial fibroblast	219	no	sparse, scattered over epineurium and fascicles alike
+heming2025_sural_xenium	S04	epineurial fibroblast	1249	yes	in the epineurium between and around the fascicles
+heming2025_sural_xenium	S04	perineurial	670	yes	rings around the fascicles
+heming2025_sural_xenium	S11	endoneurial fibroblast	908	yes	mostly inside the fascicles of the left piece
+heming2025_sural_xenium	S11	epineurial fibroblast	1291	yes	in the epineurium around the fascicles and the loose tissue of the lower right piece
+heming2025_sural_xenium	S11	perineurial	809	yes	rings around the fascicles of every piece
+heming2025_sural_xenium	S14	endoneurial fibroblast	222	no	scattered over the fascicles and the epineurium alike
+heming2025_sural_xenium	S14	epineurial fibroblast	274	no	mostly along the septa between fascicles, which is interfascicular epineurium, but also inside fascicles
+heming2025_sural_xenium	S14	perineurial	336	yes	rings around the fascicles
+heming2025_sural_xenium	S22	endoneurial fibroblast	295	yes	inside the fascicles, almost none in the epineurium
+heming2025_sural_xenium	S22	epineurial fibroblast	9	not present	nine cells, too few to judge
+heming2025_sural_xenium	S22	perineurial	127	yes	rings around the fascicles of the right half, few cells in this sparse section
+heming2025_sural_xenium	S24	endoneurial fibroblast	230	no	scattered over fascicles and epineurium alike
+heming2025_sural_xenium	S24	epineurial fibroblast	147	yes	in the interfascicular epineurium at the centre and the outer epineurium
+heming2025_sural_xenium	S24	perineurial	193	yes	rings around the fascicles
+heming2025_sural_xenium	S29	endoneurial fibroblast	539	no	inside the fascicles but as many in the interfascicular epineurium
+heming2025_sural_xenium	S29	epineurial fibroblast	527	yes	between and around the fascicles, few inside
+heming2025_sural_xenium	S29	perineurial	326	yes	rings around the fascicles of the right piece; the left piece, which has no fascicle structure, has none
+heming2025_sural_xenium	S30	endoneurial fibroblast	533	yes	mostly inside the fascicles
+heming2025_sural_xenium	S30	epineurial fibroblast	553	yes	between the fascicles and in the outer epineurium, few inside
+heming2025_sural_xenium	S30	perineurial	62	yes	around the fascicles, few cells
+shiers2025_dpn_drg	180714-L4-1	endoneurial fibroblast	2737	no	diffuse over somata and fibre regions alike
+shiers2025_dpn_drg	180714-L4-1	epineurial fibroblast	2789	no	diffuse over the whole section, no enrichment at the capsule
+shiers2025_dpn_drg	180714-L4-1	perineurial	646	no	highest spots follow the neuron somata, none along the capsule or root sheaths
+shiers2025_dpn_drg	180714-L4-5	endoneurial fibroblast	3056	no	diffuse, highest in the fibre band along the top but present over the somata
+shiers2025_dpn_drg	180714-L4-5	epineurial fibroblast	2956	no	diffuse
+shiers2025_dpn_drg	180714-L4-5	perineurial	626	no	follows the neuron soma clusters
+shiers2025_dpn_drg	181030-1L4-3	endoneurial fibroblast	1499	yes	highest inside the fibre bundle region at the upper left and centre
+shiers2025_dpn_drg	181030-1L4-3	epineurial fibroblast	1165	no	diffuse
+shiers2025_dpn_drg	181030-1L4-3	perineurial	581	yes	highest spots along the right margin and around the fibre bundles at the left
+shiers2025_dpn_drg	181030-1L4-7	endoneurial fibroblast	2310	no	diffuse
+shiers2025_dpn_drg	181030-1L4-7	epineurial fibroblast	1891	no	diffuse
+shiers2025_dpn_drg	181030-1L4-7	perineurial	1044	no	follows the somata
+shiers2025_dpn_drg	181030-2L4-2	endoneurial fibroblast	2654	no	diffuse
+shiers2025_dpn_drg	181030-2L4-2	epineurial fibroblast	2235	no	diffuse
+shiers2025_dpn_drg	181030-2L4-2	perineurial	1793	no	follows the somata of the left piece
+shiers2025_dpn_drg	181030-2L4-6	endoneurial fibroblast	2766	yes	dense over the fibre regions of both pieces, sparse over the somata
+shiers2025_dpn_drg	181030-2L4-6	epineurial fibroblast	2374	yes	cluster in the outer sheath at the left margin of the left piece
+shiers2025_dpn_drg	181030-2L4-6	perineurial	1841	yes	dark band along the left margin of the left piece and the sheath facing the right piece
+shiers2025_dpn_drg	DN0095-S2-1	endoneurial fibroblast	1460	no	diffuse
+shiers2025_dpn_drg	DN0095-S2-1	epineurial fibroblast	1697	no	diffuse
+shiers2025_dpn_drg	DN0095-S2-1	perineurial	871	no	follows the somata at the top left and right
+shiers2025_dpn_drg	DN0095-S2-2	endoneurial fibroblast	1353	no	diffuse
+shiers2025_dpn_drg	DN0095-S2-2	epineurial fibroblast	1683	yes	highest spots in the adipose and connective tissue at the top left of the section
+shiers2025_dpn_drg	DN0095-S2-2	perineurial	787	no	follows the somata
+shiers2025_dpn_drg	DN0095-S2-3	endoneurial fibroblast	1819	no	diffuse
+shiers2025_dpn_drg	DN0095-S2-3	epineurial fibroblast	2570	no	diffuse
+shiers2025_dpn_drg	DN0095-S2-3	perineurial	974	no	follows the somata of the upper half
+shiers2025_dpn_drg	DN0106-S5-1	endoneurial fibroblast	2125	no	diffuse
+shiers2025_dpn_drg	DN0106-S5-1	epineurial fibroblast	1834	no	diffuse
+shiers2025_dpn_drg	DN0106-S5-1	perineurial	1601	no	covers the whole ganglion parenchyma
+shiers2025_dpn_drg	DN0106-S5-2	endoneurial fibroblast	1924	no	diffuse
+shiers2025_dpn_drg	DN0106-S5-2	epineurial fibroblast	2000	no	diffuse
+shiers2025_dpn_drg	DN0106-S5-2	perineurial	1643	no	highest in the central soma clusters
+shiers2025_dpn_drg	DN0134-S1-1	endoneurial fibroblast	1356	yes	confined to the parenchyma, absent from the capsule and the root
+shiers2025_dpn_drg	DN0134-S1-1	epineurial fibroblast	1533	yes	highest in the loose connective and adipose tissue at the right and along the capsule
+shiers2025_dpn_drg	DN0134-S1-1	perineurial	869	yes	rim along the capsule and around the root fascicle at the top right
+shiers2025_dpn_drg	DN0134-S1-2	endoneurial fibroblast	418	yes	sparse, inside the parenchyma only
+shiers2025_dpn_drg	DN0134-S1-2	epineurial fibroblast	1296	yes	highest in the outer capsule rim and the adipose tissue at the bottom
+shiers2025_dpn_drg	DN0134-S1-2	perineurial	923	yes	rim along the capsule, few spots inside
+shiers2025_dpn_drg	DN0134-S1-3	endoneurial fibroblast	891	yes	inside the parenchyma, absent from the capsule
+shiers2025_dpn_drg	DN0134-S1-3	epineurial fibroblast	1350	yes	highest in the outer sheath and adipose tissue at the left margin
+shiers2025_dpn_drg	DN0134-S1-3	perineurial	535	yes	band along the capsule on the left and bottom margins
+shiers2025_dpn_drg	M2-1	endoneurial fibroblast	1329	yes	inside the fascicles of the root bundle, absent from the sheath strip at the left
+shiers2025_dpn_drg	M2-1	epineurial fibroblast	1341	no	same lines as the perineurial state, no enrichment in the outer sheath
+shiers2025_dpn_drg	M2-1	perineurial	1307	yes	lines along the fascicle borders of the root bundle
+shiers2025_dpn_drg	M2-2	endoneurial fibroblast	1962	yes	inside the parenchyma, absent from the margin
+shiers2025_dpn_drg	M2-2	epineurial fibroblast	1769	yes	outermost rim and the loose tissue at the lower left
+shiers2025_dpn_drg	M2-2	perineurial	1813	yes	rim along the whole margin of the section
+utdallas_dpn_nerves	sural11	endoneurial fibroblast	1573	yes	clusters inside the fascicles, bands inside the longitudinal fascicles
+utdallas_dpn_nerves	sural11	epineurial fibroblast	1974	no	diffuse over fascicles and epineurium alike
+utdallas_dpn_nerves	sural11	perineurial	2127	yes	highest spots in lines along the fascicle borders of the cross-sections and the longitudinal pieces
+utdallas_dpn_nerves	sural12	endoneurial fibroblast	1308	yes	in the pale fascicle regions, absent from the dense bands
+utdallas_dpn_nerves	sural12	epineurial fibroblast	1656	no	highest spots in the pale fascicle regions, not in the dense epineurial bands
+utdallas_dpn_nerves	sural12	perineurial	1685	yes	rings and lines along the fascicle borders
+utdallas_dpn_nerves	sural14	endoneurial fibroblast	2006	yes	clusters inside the fascicles
+utdallas_dpn_nerves	sural14	epineurial fibroblast	2834	yes	highest along the outer margin and the dense epineurium of the upper right piece, between the fascicles of the left pieces
+utdallas_dpn_nerves	sural14	perineurial	2600	yes	lines tracing the fascicle borders through every piece
+utdallas_dpn_nerves	sural24l	endoneurial fibroblast	1192	yes	fills the fascicle interiors, absent from the margins
+utdallas_dpn_nerves	sural24l	epineurial fibroblast	697	yes	along the outer margins of the pieces
+utdallas_dpn_nerves	sural24l	perineurial	1439	yes	lines along the fascicle borders down the length of the pieces
+utdallas_dpn_nerves	sural24t	endoneurial fibroblast	1041	yes	fills the fascicles, absent from the borders
+utdallas_dpn_nerves	sural24t	epineurial fibroblast	763	yes	outer margins and the interfascicular septa
+utdallas_dpn_nerves	sural24t	perineurial	1012	yes	polygonal network tracing the fascicle outlines
+utdallas_dpn_nerves	sural8	endoneurial fibroblast	2480	yes	inside the pale fascicle regions, absent from the dense epineurial bands
+utdallas_dpn_nerves	sural8	epineurial fibroblast	2644	no	diffuse, some enrichment in the dense epineurium at the upper right but as much inside fascicles
+utdallas_dpn_nerves	sural8	perineurial	2170	yes	bands along the fascicle borders
+yu2024_hdrg_xenium_cells	Region_1	endoneurial fibroblast	34	no	34 cells scattered over the parenchyma and the frayed tissue alike
+yu2024_hdrg_xenium_cells	Region_1	epineurial fibroblast	154	yes	dense along the capsule at the top margin and in the loose tissue of the fragments, few inside the parenchyma
+yu2024_hdrg_xenium_cells	Region_1	perineurial	97	yes	a run of cells along the capsule at the top margin and a cluster in the root fragment at the lower left, few inside the parenchyma
+yu2024_hdrg_xenium_cells	Region_2	endoneurial fibroblast	11	not present	11 cells, too few to judge
+yu2024_hdrg_xenium_cells	Region_2	epineurial fibroblast	96	yes	along the lower margin and the left tip, some inside
+yu2024_hdrg_xenium_cells	Region_2	perineurial	32	yes	along the sheath on the lower margin
+yu2024_hdrg_xenium_cells	Region_3	endoneurial fibroblast	125	no	spread over the parenchyma and the root fascicles alike
+yu2024_hdrg_xenium_cells	Region_3	epineurial fibroblast	321	no	spread over the whole section, parenchyma included
+yu2024_hdrg_xenium_cells	Region_3	perineurial	51	no	scattered over the parenchyma, only a few along the root fascicle at the left
+yu2024_hdrg_xenium_cells	Region_4	endoneurial fibroblast	74	no	scattered over the parenchyma and the root fascicle alike
+yu2024_hdrg_xenium_cells	Region_4	epineurial fibroblast	210	no	spread over the whole section, parenchyma included
+yu2024_hdrg_xenium_cells	Region_4	perineurial	50	yes	ring along the sheath of the root fascicle at the left, few elsewhere
