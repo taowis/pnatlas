@@ -9,7 +9,9 @@ The per-dataset inputs are in config/spatial_inputs.yaml. Formats:
                  CSV (with or without header) and a Loupe selections CSV
   visium_mtx     a filtered_feature_bc_matrix directory, no positions
   seurat_export  the directory written by rds_spatial_to_mtx.R; split into
-                 sections by the image column of coordinates.csv.gz
+                 sections by the image column of coordinates.csv.gz; the
+                 exported x,y are read as row,column when position_order
+                 is "yx" (Seurat 5 objects)
   neuron_csv     genes x cells CSV with a metadata CSV whose cell_id holds
                  the position as "x-y" (or "y-x": position_order) in pixels
                  (pixel_size_um converts them to microns) and whose section
@@ -94,7 +96,10 @@ def read_seurat_export(root, ds):
     coords = pd.read_csv(d / "coordinates.csv.gz").drop_duplicates("barcode").set_index("barcode")
     coords = coords.reindex(cells)
     a.obs["author_image"] = coords["image"].fillna("").values
-    a.obsm["spatial"] = coords[["x", "y"]].values.astype(np.float64)
+    xy = coords[["x", "y"]].values.astype(np.float64)
+    if ds.get("position_order", "xy") == "yx":  # Seurat 5 GetTissueCoordinates: x is the image row
+        xy = xy[:, ::-1]
+    a.obsm["spatial"] = xy
     a.uns["spatial_units"] = ds.get("spatial_units", "pixels of the full-resolution image (x = column, y = row)")
     out = {}
     for img, sec in ds["sections"].items():

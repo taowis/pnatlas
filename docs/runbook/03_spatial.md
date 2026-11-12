@@ -579,3 +579,58 @@ rsync -a "$REMOTE:~/Projects/pnatlas-dev/data/interim/spatial/transfer/yu2024_hd
 Check: `results/spatial/state_mapping_status.tsv` has no sympathetic
 neuron row in the ganglion, and the per-cell files of the transfer
 directories carry no sympathetic neuron label.
+
+## 3.11 Anatomy check (c): the panels read and the sheet filled
+
+Two things had to change before the panels could be read. The DPN nerve
+object is Seurat 5, whose `GetTissueCoordinates` returns `x` as the image
+row and `y` as the image column, so the spots of the six UT Dallas
+sections fell beside the tissue; `position_order: yx` in the dataset's
+config block makes `build_spatial.py` read the exported `x,y` as
+row,column (the eight orientations of the spots were scored against the
+tissue mask of the low-resolution image and only this one puts 92 to 99
+percent of the spots on tissue). For a targeted panel section the single
+cell panel, on which a few hundred coloured cells among tens of thousands
+of grey ones could not be seen, is replaced by one panel per sheath state
+with that state's cells drawn at twice the marker width over the other
+cells in grey, as for the Visium sections. Rebuild the UT Dallas sections
+and redraw the panels of the three datasets concerned:
+
+```bash
+REMOTE=user@host workflow/remote/sync.sh
+ssh "$REMOTE" 'source ~/miniconda3/etc/profile.d/conda.sh && conda activate pnatlas && cd ~/Projects/pnatlas-dev && \
+  d=utdallas_dpn_nerves && nice -n 15 python workflow/scripts/build_spatial.py $d --data-root data \
+    --out-dir data/interim/spatial/$d > results/spatial/sections_$d.tsv 2> logs/build_spatial_$d.log && \
+  for d in heming2025_sural_xenium yu2024_hdrg_xenium_cells utdallas_dpn_nerves; do \
+    nice -n 15 python workflow/scripts/anatomy_panels.py $d --data-root data --out-dir results/spatial/anatomy/$d --width-px 1100; done'
+rsync -a "$REMOTE:~/Projects/pnatlas-dev/results/spatial/anatomy/" results/spatial/anatomy/
+```
+
+Reading. One reader goes through the 34 sections (8 Heming, 16 Shiers,
+6 DPN nerve, 4 Yu) and writes yes, no or not present with a short note
+into the `placed_correctly` and `note` columns of
+`results/spatial/anatomy/anatomy_check.tsv`, one row per section and
+state, against the image in the first panel: perineurial cells or spots
+must lie along the fascicle borders (nerve) or the capsule and root
+sheaths (ganglion); epineurial fibroblasts in the outer and
+interfascicular epineurium, the capsule or the loose connective and
+adipose tissue outside it; endoneurial fibroblasts inside the fascicles
+or the parenchyma and not at the margins. "Yes" needs the highest spots
+or most of the cells in the expected place, "no" is a state spread over
+the section regardless of its structure or concentrated in the wrong
+place, "not present" a state with too few cells to judge (fewer than
+about 20). The reading is done on the panels as drawn; for the Yu
+sections, whose sheath cells are few, the same cells were also viewed
+on the H and E at pyramid level 1 with larger markers. Then collect the
+checks again (the collector now reads the sheet and reports the sections
+read and those read as misplaced per state and compartment, without
+changing the mapped verdict):
+
+```bash
+python workflow/scripts/collect_spatial_checks.py --c2l-dir "$DATA_ROOT/interim/spatial/c2l" \
+  --results-dir results/spatial --sections results/spatial/section_summary.tsv
+```
+
+Check: the sheet has 102 filled rows; `state_mapping_status.tsv` has the
+`read_c` and `misplaced_c` columns filled for the three sheath states in
+both compartments.

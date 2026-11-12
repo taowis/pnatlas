@@ -637,3 +637,77 @@ taken go to the injured neuron, C-LTMR, C-Thermo, A-LTMR, A-LTMR (NF)
 and C-NP families with no change of any check. The H and E panels of
 the all-cell dataset are redrawn; the sheath state counts on the
 reader's sheet change by one or two cells on two rows.
+
+## 3.11 Anatomy check (c): the panels read
+
+Two faults were found when the panels were opened for reading. The six
+UT Dallas sections had their spots beside the tissue: the object is
+Seurat 5, whose `GetTissueCoordinates` names the image row `x` and the
+column `y`, so the export's `x,y` had been read as column,row. Scoring
+the eight orientations of the spots against the tissue mask of the
+exported image put the row,column reading on tissue for 92 to 99 percent
+of the spots and every other reading below 70, and the config now says
+so (`position_order: yx`); the counts, the mapping and checks (a) and
+(b) do not depend on the coordinates and are unchanged. The single cell
+panel of a targeted panel section, with a few hundred coloured cells
+among tens of thousands of grey ones, could not be read at all, so each
+sheath state now has its own panel with its cells enlarged, as the
+Visium panels already had.
+
+The reading was done by the analyst, one pass over the 34 sections,
+with the rule written in runbook 3.11 (perineurial along the fascicle
+borders or the capsule and root sheaths, epineurial fibroblast in the
+outer and interfascicular epineurium or the capsule and the loose tissue
+outside it, endoneurial fibroblast inside the fascicles or the
+parenchyma; "no" for a state spread over the section regardless of its
+structure; "not present" below about 20 cells). The sheet
+(`results/spatial/anatomy/anatomy_check.tsv`) carries a note per row
+saying what was seen.
+
+Nerve. Perineurial is placed correctly in all 14 nerve sections: on the
+Heming Xenium it draws rings around every fascicle, on the UT Dallas
+Visium lines and polygonal networks along the fascicle borders down the
+length of the longitudinal pieces. Epineurial fibroblast is placed
+correctly in 9 of 13 sections read (one Heming section has nine cells):
+between and around the fascicles on six Heming sections and on three UT
+Dallas sections; the misses are one Heming section where the state lies
+along the interfascicular septa but also inside fascicles and three UT
+Dallas sections where it is diffuse, with no enrichment in the dense
+epineurial bands. Endoneurial fibroblast is placed correctly in 9 of 14:
+in every UT Dallas section it fills the pale fascicle interiors and
+stays out of the dense bands, but on five of the eight Heming sections
+it is scattered over the epineurium as much as the fascicles. So the
+sheath states of the nerve compartment sit where they should in the
+Visium data, and on the Xenium panel the perineurial and epineurial
+states do while the endoneurial fibroblast, which has few markers on
+that panel, does not reliably.
+
+Ganglion. Here the three states are read against the capsule and the
+root entering the ganglion. Perineurial is placed correctly in 10 of 20
+sections (7 of 16 Shiers, 3 of 4 Yu), epineurial fibroblast in 8 of 20
+(6 and 2), endoneurial fibroblast in 7 of 19 (7 and 0, one Yu section
+with 11 cells). The yes sections are of one kind: those with a visible
+capsule and root (the three DN0134 sections, the two M2 sections,
+181030-2L4-6 and 181030-1L4-3, Yu Regions 1 and 2), where the
+perineurial spots rim the capsule and line the root fascicles, the
+epineurial spots sit in the outermost rim and the adipose tissue, and
+the endoneurial spots stay inside the parenchyma. The no sections are
+also of one kind: ganglion pieces cut without a capsule, where the
+perineurial map follows the neuron somata (180714-L4-1 and L4-5,
+181030-1L4-7, 181030-2L4-2, the three DN0095 and the two DN0106
+sections) and the two fibroblast states are diffuse. On the Yu H and E
+the perineurial cells of Regions 1, 2 and 4 line the capsule and the
+root sheath while on Region 3 they are scattered; the epineurial
+fibroblasts of Regions 1 and 2 crowd the capsule and the loose tissue
+outside it but on Regions 3 and 4 spread through the parenchyma; the
+endoneurial fibroblasts are scattered everywhere. The reading agrees
+with checks (a) and (b): epineurial fibroblast was already not mapped
+in the ganglion, and the perineurial signature on a capsule-less
+section lands on the somata, whose satellite glia share part of its
+panel markers.
+
+The collector now reports the sections read and those read as
+misplaced per state and compartment next to the verdict (`read_c`,
+`misplaced_c` in `state_mapping_status.tsv`); the verdict itself still
+follows the plan's rule on (a) and (b), so no mapped or not mapped
+status changes. With (c) read, every check of stage 3 is done.

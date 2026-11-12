@@ -233,3 +233,18 @@ Each non-obvious choice, with its reason. Newest last.
   sections of a later dataset keep the state; the cells it held are
   reassigned among the remaining candidates or become unassigned, and
   the checks of those states are recorded again.
+- **Check (c) is read by the analyst, on the panels, with a written
+  rule.** The plan asks for one reader and a yes or no per section; the
+  rule (runbook 3.11: where each sheath state must lie in a nerve and in
+  a ganglion, "no" for a state spread without regard to the structure,
+  "not present" below about 20 cells) is written down so that a second
+  reader can repeat the reading, and every row carries a note of what
+  was seen. The result is reported next to the mapped verdict and does
+  not enter it, because the plan's rule names (a) and (b) only; changing
+  the rule after seeing the result would be an amendment made in
+  hindsight.
+- **The UT Dallas spot coordinates are read as row,column.** The Seurat 5
+  `GetTissueCoordinates` convention (x is the image row) put the spots
+  beside the tissue; the orientation was chosen by scoring all eight
+  against the tissue mask, not by eye, and is recorded in the config so
+  the export itself is unchanged.
