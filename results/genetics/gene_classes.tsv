@@ -1,0 +1,1044 @@
+class	gene	top_state	top_specificity
+truth:CMT	AIFM1	endothelial	0.0592
+truth:CMT	ARHGAP19	myelinating Schwann	0.3261
+truth:CMT	ATP1A1	Ab-LTMR	0.1402
+truth:CMT	CADM3	C-PEP	0.1204
+truth:CMT	COX6A1	C-LTMR	0.18
+truth:CMT	DHTKD1	B	0.0844
+truth:CMT	DHX9	T/NK	0.0558
+truth:CMT	DNM2	granulocyte	0.0937
+truth:CMT	DRP2	myelinating Schwann	0.6488
+truth:CMT	DYNC1H1	Ab-LTMR	0.1166
+truth:CMT	EGR2	myelinating Schwann	0.3663
+truth:CMT	FBLN5	myelinating Schwann	0.1705
+truth:CMT	FGD4	macrophage	0.0992
+truth:CMT	FIG4	B	0.0737
+truth:CMT	GAN	C-PEP	0.0654
+truth:CMT	GBF1	B	0.0673
+truth:CMT	GDAP1	sympathetic neuron	0.0979
+truth:CMT	GJB1	myelinating Schwann	0.4645
+truth:CMT	GNB4	endothelial	0.1078
+truth:CMT	HINT1	Ab-LTMR	0.1476
+truth:CMT	HK1	injured neuron	0.0955
+truth:CMT	HSPB1	injured neuron	0.2059
+truth:CMT	INF2	C-LTMR	0.0993
+truth:CMT	ITPR3	repair Schwann	0.0967
+truth:CMT	LITAF	granulocyte	0.5591
+truth:CMT	LMNA	mast	0.1162
+truth:CMT	LRSAM1	A-LTMR	0.0562
+truth:CMT	MCM3AP	B	0.0574
+truth:CMT	MFN2	C-LTMR	0.1006
+truth:CMT	MME	granulocyte	0.3718
+truth:CMT	MORC2	lymphatic endothelial	0.0634
+truth:CMT	MPZ	myelinating Schwann	0.6079
+truth:CMT	MTMR2	perineurial	0.0679
+truth:CMT	NDRG1	myelinating Schwann	0.1395
+truth:CMT	NDUFS6	Ab-LTMR	0.0795
+truth:CMT	NEFH	injured neuron	0.2518
+truth:CMT	NEFL	Ab-LTMR	0.2412
+truth:CMT	PDK3	granulocyte	0.1006
+truth:CMT	PDXK	adipocyte	0.1238
+truth:CMT	PMP2	myelinating Schwann	0.2737
+truth:CMT	PMP22	myelinating Schwann	0.2418
+truth:CMT	POLR3A	injured neuron	0.0824
+truth:CMT	PRPS1	C-PEP	0.1181
+truth:CMT	PRX	myelinating Schwann	0.7306
+truth:CMT	RAB7A	granulocyte	0.0751
+truth:CMT	RCC1	lymphocyte	0.0909
+truth:CMT	SBF1	injured neuron	0.1026
+truth:CMT	SBF2	lymphatic endothelial	0.0932
+truth:CMT	SH3TC2	myelinating Schwann	0.3638
+truth:CMT	SORD	injured neuron	0.0821
+truth:CMT	TFG	endoneurial fibroblast	0.0507
+truth:CMT	TRIM2	repair Schwann	0.1226
+truth:CMT	TRPV4	macrophage	0.2196
+truth:dHMN	ATP7A	granulocyte	0.1302
+truth:dHMN	BICD2	C-Thermo	0.0692
+truth:dHMN	BSCL2	injured neuron	0.2474
+truth:dHMN	CHCHD10	A-LTMR (NF)	0.1446
+truth:dHMN	DCTN1	injured neuron	0.1687
+truth:dHMN	DNAJB2	C-Thermo	0.1121
+truth:dHMN	FBXO38	granulocyte	0.0528
+truth:dHMN	HSPB8	A-Propr	0.1348
+truth:dHMN	IGHMBP2	mural	0.0551
+truth:dHMN	PLEKHG5	myelinating Schwann	0.2343
+truth:dHMN	RTN2	C-LTMR	0.1159
+truth:dHMN	SIGMAR1	Ab-LTMR	0.1284
+truth:dHMN	SLC5A7	C-LTMR	0.6295
+truth:dHMN	SMN1	T/NK	0.0612
+truth:dHMN	SPTAN1	injured neuron	0.1174
+truth:dHMN	SYT2	Ab-LTMR	0.1835
+truth:dHMN	UBA1	Ab-LTMR	0.0915
+truth:dHMN	VWA1	non-myelinating Schwann	0.2197
+truth:HSAN	ATL3	PEP	0.0756
+truth:HSAN	DNMT1	T/NK	0.0887
+truth:HSAN	DST	satellite glia	0.0783
+truth:HSAN	KIF1A	injured neuron	0.13
+truth:HSAN	NGF	endoneurial fibroblast	0.223
+truth:HSAN	NTRK1	C-PEP	0.2391
+truth:HSAN	PRDM12	C-LTMR	0.227
+truth:HSAN	SCN10A	C-NP	0.2226
+truth:HSAN	SCN11A	C-NP	0.3635
+truth:HSAN	SCN9A	sympathetic neuron	0.09
+truth:HSAN	SPTLC1	lymphatic endothelial	0.0475
+truth:HSAN	SPTLC2	macrophage	0.1008
+truth:HSAN	TECPR2	granulocyte	0.1743
+truth:HSAN	WNK1	endothelial	0.0721
+truth:SYND	AAAS	A-LTMR	0.0952
+truth:SYND	ABCA1	repair Schwann	0.1054
+truth:SYND	ABCD1	A-LTMR	0.091
+truth:SYND	ABHD12	macrophage	0.0654
+truth:SYND	ACOX1	adipocyte	0.1273
+truth:SYND	ADCY6	adipocyte	0.1854
+truth:SYND	ADGRG6	satellite glia	0.1697
+truth:SYND	AGTPBP1	granulocyte	0.1602
+truth:SYND	AGXT	B	0.3745
+truth:SYND	ALDH18A1	B	0.081
+truth:SYND	AMACR	injured neuron	0.1369
+truth:SYND	AP1S1	injured neuron	0.2492
+truth:SYND	APOA1	non-myelinating Schwann	0.1303
+truth:SYND	APTX	damage Schwann	0.0563
+truth:SYND	ARSA	A-LTMR	0.1217
+truth:SYND	ASAH1	mast	0.1049
+truth:SYND	ATAD3A	C-LTMR	0.0683
+truth:SYND	ATM	T/NK	0.1186
+truth:SYND	ATP13A2	injured neuron	0.1563
+truth:SYND	BAG3	Ab-LTMR	0.1737
+truth:SYND	C19orf12	adipocyte	0.1085
+truth:SYND	CD59	C-LTMR	0.165
+truth:SYND	CLP1	B	0.0739
+truth:SYND	CNTNAP1	injured neuron	0.1027
+truth:SYND	COA7	B	0.1614
+truth:SYND	COQ7	perineurial	0.0525
+truth:SYND	COX18	B	0.0726
+truth:SYND	COX20	damage Schwann	0.0539
+truth:SYND	CTDP1	A-LTMR	0.0648
+truth:SYND	CYP27A1	non-myelinating Schwann	0.0733
+truth:SYND	DARS2	damage Schwann	0.0695
+truth:SYND	DEGS1	injured neuron	0.1286
+truth:SYND	DHH	myelinating Schwann	0.2276
+truth:SYND	DMXL2	granulocyte	0.1194
+truth:SYND	DNAJC3	granulocyte	0.0781
+truth:SYND	EMILIN1	mural	0.118
+truth:SYND	ERCC6	lymphocyte	0.0582
+truth:SYND	ERCC8	macrophage	0.0507
+truth:SYND	ETFDH	adipocyte	0.075
+truth:SYND	EXOSC3	T/NK	0.0665
+truth:SYND	FDXR	mast	0.1102
+truth:SYND	FLVCR1	C-PEP	0.0497
+truth:SYND	FXN	B	0.0871
+truth:SYND	GALC	mast	0.0996
+truth:SYND	GJC2	lymphatic endothelial	0.2414
+truth:SYND	GLA	injured neuron	0.1084
+truth:SYND	GSN	epineurial fibroblast	0.0982
+truth:SYND	HADHA	A-LTMR	0.0828
+truth:SYND	HADHB	A-LTMR	0.1145
+truth:SYND	HEXA	macrophage	0.087
+truth:SYND	HEXB	macrophage	0.0863
+truth:SYND	HMBS	A-LTMR	0.0929
+truth:SYND	IARS2	injured neuron	0.0811
+truth:SYND	LYST	granulocyte	0.2222
+truth:SYND	MMACHC	B	0.079
+truth:SYND	MPV17	A-LTMR	0.0784
+truth:SYND	MTTP	granulocyte	0.122
+truth:SYND	MYH14	myelinating Schwann	0.084
+truth:SYND	NAGA	C-NP	0.0818
+truth:SYND	NDC1	T/NK	0.0682
+truth:SYND	NEMF	T/NK	0.0531
+truth:SYND	NFASC	myelinating Schwann	0.179
+truth:SYND	NUDT2	C-Thermo	0.0504
+truth:SYND	OPA1	PEP	0.0463
+truth:SYND	OPA3	A-PEP	0.0658
+truth:SYND	PDHA1	Ab-LTMR	0.1046
+truth:SYND	PDYN	PEP	0.2909
+truth:SYND	PEX10	C-LTMR	0.0635
+truth:SYND	PEX7	mast	0.0561
+truth:SYND	PHYH	Ab-LTMR	0.0722
+truth:SYND	PIEZO2	A-LTMR	0.2042
+truth:SYND	PIGB	granulocyte	0.1414
+truth:SYND	PIGG	lymphatic endothelial	0.0551
+truth:SYND	PLA2G6	adipocyte	0.0734
+truth:SYND	PLP1	non-myelinating Schwann	0.1702
+truth:SYND	PMM2	B	0.0849
+truth:SYND	PNKP	mast	0.0587
+truth:SYND	PNPT1	lymphatic endothelial	0.0684
+truth:SYND	POLG	lymphocyte	0.0644
+truth:SYND	POLR3B	mast	0.0848
+truth:SYND	PPOX	B	0.0912
+truth:SYND	PRNP	C-LTMR	0.1302
+truth:SYND	PTPN11	endoneurial fibroblast	0.0551
+truth:SYND	PTRH2	mast	0.083
+truth:SYND	SACS	Ab-LTMR	0.1543
+truth:SYND	SAMD9L	granulocyte	0.1494
+truth:SYND	SCARB2	C-LTMR	0.0722
+truth:SYND	SCO2	granulocyte	0.2025
+truth:SYND	SETX	granulocyte	0.0994
+truth:SYND	SLC12A6	granulocyte	0.3479
+truth:SYND	SLC25A19	macrophage	0.0698
+truth:SYND	SLC25A46	B	0.0473
+truth:SYND	SLC52A2	injured neuron	0.1237
+truth:SYND	SLC52A3	endothelial	0.3914
+truth:SYND	SLC5A6	A-LTMR	0.1261
+truth:SYND	SOX10	repair Schwann	0.2342
+truth:SYND	SPTBN4	sympathetic neuron	0.1232
+truth:SYND	SURF1	C-LTMR	0.0833
+truth:SYND	TDP1	repair Schwann	0.1224
+truth:SYND	TRMT5	A-LTMR	0.0538
+truth:SYND	TTC19	B	0.0643
+truth:SYND	TTPA	adipocyte	0.3109
+truth:SYND	TTR	repair Schwann	0.2111
+truth:SYND	TUBB3	injured neuron	0.1976
+truth:SYND	TYMP	granulocyte	0.3151
+truth:SYND	UCHL1	injured neuron	0.15
+truth:SYND	VAPB	C-LTMR	0.0602
+truth:SYND	VCP	injured neuron	0.0859
+truth:SYND	VPS13A	A-LTMR	0.0868
+truth:SYND	VPS13D	epineurial fibroblast	0.0608
+truth:SYND	VRK1	B	0.1228
+truth:SYND	XK	C-Thermo	0.1203
+truth:SYND	XPA	mast	0.0548
+truth:HSP	AFG3L2	Ab-LTMR	0.0537
+truth:HSP	AP5Z1	A-LTMR	0.0561
+truth:HSP	ARL6IP1	C-LTMR	0.1597
+truth:HSP	ATL1	injured neuron	0.115
+truth:HSP	B4GALNT1	A-LTMR	0.1432
+truth:HSP	CAPN1	injured neuron	0.0931
+truth:HSP	CYP2U1	C-Thermo	0.1069
+truth:HSP	FA2H	myelinating Schwann	0.4878
+truth:HSP	FICD	B	0.0947
+truth:HSP	GBA2	A-LTMR	0.0918
+truth:HSP	HPDL	damage Schwann	0.1437
+truth:HSP	KCNA2	Ab-LTMR	0.1653
+truth:HSP	KIF5A	injured neuron	0.1731
+truth:HSP	MAG	myelinating Schwann	0.5824
+truth:HSP	NIPA1	injured neuron	0.1028
+truth:HSP	PCYT2	injured neuron	0.1554
+truth:HSP	PNPLA6	injured neuron	0.1045
+truth:HSP	REEP1	injured neuron	0.1234
+truth:HSP	SPAST	granulocyte	0.097
+truth:HSP	SPG11	granulocyte	0.0637
+truth:HSP	SPG21	granulocyte	0.068
+truth:HSP	SPG7	lymphatic endothelial	0.0534
+truth:HSP	ZFYVE26	macrophage	0.0656
+truth:all	AAAS	A-LTMR	0.0952
+truth:all	ABCA1	repair Schwann	0.1054
+truth:all	ABCD1	A-LTMR	0.091
+truth:all	ABHD12	macrophage	0.0654
+truth:all	ACOX1	adipocyte	0.1273
+truth:all	ADCY6	adipocyte	0.1854
+truth:all	ADGRG6	satellite glia	0.1697
+truth:all	AFG3L2	Ab-LTMR	0.0537
+truth:all	AGTPBP1	granulocyte	0.1602
+truth:all	AGXT	B	0.3745
+truth:all	AIFM1	endothelial	0.0592
+truth:all	ALDH18A1	B	0.081
+truth:all	AMACR	injured neuron	0.1369
+truth:all	AP1S1	injured neuron	0.2492
+truth:all	AP5Z1	A-LTMR	0.0561
+truth:all	APOA1	non-myelinating Schwann	0.1303
+truth:all	APTX	damage Schwann	0.0563
+truth:all	ARHGAP19	myelinating Schwann	0.3261
+truth:all	ARL6IP1	C-LTMR	0.1597
+truth:all	ARSA	A-LTMR	0.1217
+truth:all	ASAH1	mast	0.1049
+truth:all	ATAD3A	C-LTMR	0.0683
+truth:all	ATL1	injured neuron	0.115
+truth:all	ATL3	PEP	0.0756
+truth:all	ATM	T/NK	0.1186
+truth:all	ATP13A2	injured neuron	0.1563
+truth:all	ATP1A1	Ab-LTMR	0.1402
+truth:all	ATP7A	granulocyte	0.1302
+truth:all	B4GALNT1	A-LTMR	0.1432
+truth:all	BAG3	Ab-LTMR	0.1737
+truth:all	BICD2	C-Thermo	0.0692
+truth:all	BSCL2	injured neuron	0.2474
+truth:all	C19orf12	adipocyte	0.1085
+truth:all	CADM3	C-PEP	0.1204
+truth:all	CAPN1	injured neuron	0.0931
+truth:all	CD59	C-LTMR	0.165
+truth:all	CHCHD10	A-LTMR (NF)	0.1446
+truth:all	CLP1	B	0.0739
+truth:all	CNTNAP1	injured neuron	0.1027
+truth:all	COA7	B	0.1614
+truth:all	COQ7	perineurial	0.0525
+truth:all	COX18	B	0.0726
+truth:all	COX20	damage Schwann	0.0539
+truth:all	COX6A1	C-LTMR	0.18
+truth:all	CTDP1	A-LTMR	0.0648
+truth:all	CYP27A1	non-myelinating Schwann	0.0733
+truth:all	CYP2U1	C-Thermo	0.1069
+truth:all	DARS2	damage Schwann	0.0695
+truth:all	DCTN1	injured neuron	0.1687
+truth:all	DEGS1	injured neuron	0.1286
+truth:all	DHH	myelinating Schwann	0.2276
+truth:all	DHTKD1	B	0.0844
+truth:all	DHX9	T/NK	0.0558
+truth:all	DMXL2	granulocyte	0.1194
+truth:all	DNAJB2	C-Thermo	0.1121
+truth:all	DNAJC3	granulocyte	0.0781
+truth:all	DNM2	granulocyte	0.0937
+truth:all	DNMT1	T/NK	0.0887
+truth:all	DRP2	myelinating Schwann	0.6488
+truth:all	DST	satellite glia	0.0783
+truth:all	DYNC1H1	Ab-LTMR	0.1166
+truth:all	EGR2	myelinating Schwann	0.3663
+truth:all	EMILIN1	mural	0.118
+truth:all	ERCC6	lymphocyte	0.0582
+truth:all	ERCC8	macrophage	0.0507
+truth:all	ETFDH	adipocyte	0.075
+truth:all	EXOSC3	T/NK	0.0665
+truth:all	FA2H	myelinating Schwann	0.4878
+truth:all	FBLN5	myelinating Schwann	0.1705
+truth:all	FBXO38	granulocyte	0.0528
+truth:all	FDXR	mast	0.1102
+truth:all	FGD4	macrophage	0.0992
+truth:all	FICD	B	0.0947
+truth:all	FIG4	B	0.0737
+truth:all	FLVCR1	C-PEP	0.0497
+truth:all	FXN	B	0.0871
+truth:all	GALC	mast	0.0996
+truth:all	GAN	C-PEP	0.0654
+truth:all	GBA2	A-LTMR	0.0918
+truth:all	GBF1	B	0.0673
+truth:all	GDAP1	sympathetic neuron	0.0979
+truth:all	GJB1	myelinating Schwann	0.4645
+truth:all	GJC2	lymphatic endothelial	0.2414
+truth:all	GLA	injured neuron	0.1084
+truth:all	GNB4	endothelial	0.1078
+truth:all	GSN	epineurial fibroblast	0.0982
+truth:all	HADHA	A-LTMR	0.0828
+truth:all	HADHB	A-LTMR	0.1145
+truth:all	HEXA	macrophage	0.087
+truth:all	HEXB	macrophage	0.0863
+truth:all	HINT1	Ab-LTMR	0.1476
+truth:all	HK1	injured neuron	0.0955
+truth:all	HMBS	A-LTMR	0.0929
+truth:all	HPDL	damage Schwann	0.1437
+truth:all	HSPB1	injured neuron	0.2059
+truth:all	HSPB8	A-Propr	0.1348
+truth:all	IARS2	injured neuron	0.0811
+truth:all	IGHMBP2	mural	0.0551
+truth:all	INF2	C-LTMR	0.0993
+truth:all	ITPR3	repair Schwann	0.0967
+truth:all	KCNA2	Ab-LTMR	0.1653
+truth:all	KIF1A	injured neuron	0.13
+truth:all	KIF5A	injured neuron	0.1731
+truth:all	LITAF	granulocyte	0.5591
+truth:all	LMNA	mast	0.1162
+truth:all	LRSAM1	A-LTMR	0.0562
+truth:all	LYST	granulocyte	0.2222
+truth:all	MAG	myelinating Schwann	0.5824
+truth:all	MCM3AP	B	0.0574
+truth:all	MFN2	C-LTMR	0.1006
+truth:all	MMACHC	B	0.079
+truth:all	MME	granulocyte	0.3718
+truth:all	MORC2	lymphatic endothelial	0.0634
+truth:all	MPV17	A-LTMR	0.0784
+truth:all	MPZ	myelinating Schwann	0.6079
+truth:all	MTMR2	perineurial	0.0679
+truth:all	MTTP	granulocyte	0.122
+truth:all	MYH14	myelinating Schwann	0.084
+truth:all	NAGA	C-NP	0.0818
+truth:all	NDC1	T/NK	0.0682
+truth:all	NDRG1	myelinating Schwann	0.1395
+truth:all	NDUFS6	Ab-LTMR	0.0795
+truth:all	NEFH	injured neuron	0.2518
+truth:all	NEFL	Ab-LTMR	0.2412
+truth:all	NEMF	T/NK	0.0531
+truth:all	NFASC	myelinating Schwann	0.179
+truth:all	NGF	endoneurial fibroblast	0.223
+truth:all	NIPA1	injured neuron	0.1028
+truth:all	NTRK1	C-PEP	0.2391
+truth:all	NUDT2	C-Thermo	0.0504
+truth:all	OPA1	PEP	0.0463
+truth:all	OPA3	A-PEP	0.0658
+truth:all	PCYT2	injured neuron	0.1554
+truth:all	PDHA1	Ab-LTMR	0.1046
+truth:all	PDK3	granulocyte	0.1006
+truth:all	PDXK	adipocyte	0.1238
+truth:all	PDYN	PEP	0.2909
+truth:all	PEX10	C-LTMR	0.0635
+truth:all	PEX7	mast	0.0561
+truth:all	PHYH	Ab-LTMR	0.0722
+truth:all	PIEZO2	A-LTMR	0.2042
+truth:all	PIGB	granulocyte	0.1414
+truth:all	PIGG	lymphatic endothelial	0.0551
+truth:all	PLA2G6	adipocyte	0.0734
+truth:all	PLEKHG5	myelinating Schwann	0.2343
+truth:all	PLP1	non-myelinating Schwann	0.1702
+truth:all	PMM2	B	0.0849
+truth:all	PMP2	myelinating Schwann	0.2737
+truth:all	PMP22	myelinating Schwann	0.2418
+truth:all	PNKP	mast	0.0587
+truth:all	PNPLA6	injured neuron	0.1045
+truth:all	PNPT1	lymphatic endothelial	0.0684
+truth:all	POLG	lymphocyte	0.0644
+truth:all	POLR3A	injured neuron	0.0824
+truth:all	POLR3B	mast	0.0848
+truth:all	PPOX	B	0.0912
+truth:all	PRDM12	C-LTMR	0.227
+truth:all	PRNP	C-LTMR	0.1302
+truth:all	PRPS1	C-PEP	0.1181
+truth:all	PRX	myelinating Schwann	0.7306
+truth:all	PTPN11	endoneurial fibroblast	0.0551
+truth:all	PTRH2	mast	0.083
+truth:all	RAB7A	granulocyte	0.0751
+truth:all	RCC1	lymphocyte	0.0909
+truth:all	REEP1	injured neuron	0.1234
+truth:all	RTN2	C-LTMR	0.1159
+truth:all	SACS	Ab-LTMR	0.1543
+truth:all	SAMD9L	granulocyte	0.1494
+truth:all	SBF1	injured neuron	0.1026
+truth:all	SBF2	lymphatic endothelial	0.0932
+truth:all	SCARB2	C-LTMR	0.0722
+truth:all	SCN10A	C-NP	0.2226
+truth:all	SCN11A	C-NP	0.3635
+truth:all	SCN9A	sympathetic neuron	0.09
+truth:all	SCO2	granulocyte	0.2025
+truth:all	SETX	granulocyte	0.0994
+truth:all	SH3TC2	myelinating Schwann	0.3638
+truth:all	SIGMAR1	Ab-LTMR	0.1284
+truth:all	SLC12A6	granulocyte	0.3479
+truth:all	SLC25A19	macrophage	0.0698
+truth:all	SLC25A46	B	0.0473
+truth:all	SLC52A2	injured neuron	0.1237
+truth:all	SLC52A3	endothelial	0.3914
+truth:all	SLC5A6	A-LTMR	0.1261
+truth:all	SLC5A7	C-LTMR	0.6295
+truth:all	SMN1	T/NK	0.0612
+truth:all	SORD	injured neuron	0.0821
+truth:all	SOX10	repair Schwann	0.2342
+truth:all	SPAST	granulocyte	0.097
+truth:all	SPG11	granulocyte	0.0637
+truth:all	SPG21	granulocyte	0.068
+truth:all	SPG7	lymphatic endothelial	0.0534
+truth:all	SPTAN1	injured neuron	0.1174
+truth:all	SPTBN4	sympathetic neuron	0.1232
+truth:all	SPTLC1	lymphatic endothelial	0.0475
+truth:all	SPTLC2	macrophage	0.1008
+truth:all	SURF1	C-LTMR	0.0833
+truth:all	SYT2	Ab-LTMR	0.1835
+truth:all	TDP1	repair Schwann	0.1224
+truth:all	TECPR2	granulocyte	0.1743
+truth:all	TFG	endoneurial fibroblast	0.0507
+truth:all	TRIM2	repair Schwann	0.1226
+truth:all	TRMT5	A-LTMR	0.0538
+truth:all	TRPV4	macrophage	0.2196
+truth:all	TTC19	B	0.0643
+truth:all	TTPA	adipocyte	0.3109
+truth:all	TTR	repair Schwann	0.2111
+truth:all	TUBB3	injured neuron	0.1976
+truth:all	TYMP	granulocyte	0.3151
+truth:all	UBA1	Ab-LTMR	0.0915
+truth:all	UCHL1	injured neuron	0.15
+truth:all	VAPB	C-LTMR	0.0602
+truth:all	VCP	injured neuron	0.0859
+truth:all	VPS13A	A-LTMR	0.0868
+truth:all	VPS13D	epineurial fibroblast	0.0608
+truth:all	VRK1	B	0.1228
+truth:all	VWA1	non-myelinating Schwann	0.2197
+truth:all	WNK1	endothelial	0.0721
+truth:all	XK	C-Thermo	0.1203
+truth:all	XPA	mast	0.0548
+truth:all	ZFYVE26	macrophage	0.0656
+panelapp:ge_846_v8.38	AAAS	A-LTMR	0.0952
+panelapp:ge_846_v8.38	ABCA1	repair Schwann	0.1054
+panelapp:ge_846_v8.38	ABCD1	A-LTMR	0.091
+panelapp:ge_846_v8.38	ABHD12	macrophage	0.0654
+panelapp:ge_846_v8.38	ACOX1	adipocyte	0.1273
+panelapp:ge_846_v8.38	ADCY6	adipocyte	0.1854
+panelapp:ge_846_v8.38	ADGRG6	satellite glia	0.1697
+panelapp:ge_846_v8.38	AGTPBP1	granulocyte	0.1602
+panelapp:ge_846_v8.38	AGXT	B	0.3745
+panelapp:ge_846_v8.38	AIFM1	endothelial	0.0592
+panelapp:ge_846_v8.38	AMACR	injured neuron	0.1369
+panelapp:ge_846_v8.38	AP1S1	injured neuron	0.2492
+panelapp:ge_846_v8.38	AP5Z1	A-LTMR	0.0561
+panelapp:ge_846_v8.38	APOA1	non-myelinating Schwann	0.1303
+panelapp:ge_846_v8.38	APTX	damage Schwann	0.0563
+panelapp:ge_846_v8.38	ARHGAP19	myelinating Schwann	0.3261
+panelapp:ge_846_v8.38	ARL6IP1	C-LTMR	0.1597
+panelapp:ge_846_v8.38	ARSA	A-LTMR	0.1217
+panelapp:ge_846_v8.38	ASAH1	mast	0.1049
+panelapp:ge_846_v8.38	ATAD3A	C-LTMR	0.0683
+panelapp:ge_846_v8.38	ATL1	injured neuron	0.115
+panelapp:ge_846_v8.38	ATL3	PEP	0.0756
+panelapp:ge_846_v8.38	ATM	T/NK	0.1186
+panelapp:ge_846_v8.38	ATP13A2	injured neuron	0.1563
+panelapp:ge_846_v8.38	ATP1A1	Ab-LTMR	0.1402
+panelapp:ge_846_v8.38	ATP7A	granulocyte	0.1302
+panelapp:ge_846_v8.38	B4GALNT1	A-LTMR	0.1432
+panelapp:ge_846_v8.38	BAG3	Ab-LTMR	0.1737
+panelapp:ge_846_v8.38	BCKDHB	satellite glia	0.0766
+panelapp:ge_846_v8.38	BICD2	C-Thermo	0.0692
+panelapp:ge_846_v8.38	BSCL2	injured neuron	0.2474
+panelapp:ge_846_v8.38	CADM3	C-PEP	0.1204
+panelapp:ge_846_v8.38	CAPN1	injured neuron	0.0931
+panelapp:ge_846_v8.38	CD59	C-LTMR	0.165
+panelapp:ge_846_v8.38	CHCHD10	A-LTMR (NF)	0.1446
+panelapp:ge_846_v8.38	CLP1	B	0.0739
+panelapp:ge_846_v8.38	CNTNAP1	injured neuron	0.1027
+panelapp:ge_846_v8.38	COA7	B	0.1614
+panelapp:ge_846_v8.38	COQ7	perineurial	0.0525
+panelapp:ge_846_v8.38	COX18	B	0.0726
+panelapp:ge_846_v8.38	COX20	damage Schwann	0.0539
+panelapp:ge_846_v8.38	COX6A1	C-LTMR	0.18
+panelapp:ge_846_v8.38	CPOX	A-LTMR	0.0546
+panelapp:ge_846_v8.38	CTDP1	A-LTMR	0.0648
+panelapp:ge_846_v8.38	CYP27A1	non-myelinating Schwann	0.0733
+panelapp:ge_846_v8.38	CYP2U1	C-Thermo	0.1069
+panelapp:ge_846_v8.38	DARS2	damage Schwann	0.0695
+panelapp:ge_846_v8.38	DCTN1	injured neuron	0.1687
+panelapp:ge_846_v8.38	DHH	myelinating Schwann	0.2276
+panelapp:ge_846_v8.38	DHTKD1	B	0.0844
+panelapp:ge_846_v8.38	DHX9	T/NK	0.0558
+panelapp:ge_846_v8.38	DMXL2	granulocyte	0.1194
+panelapp:ge_846_v8.38	DNAJB2	C-Thermo	0.1121
+panelapp:ge_846_v8.38	DNAJC3	granulocyte	0.0781
+panelapp:ge_846_v8.38	DNM2	granulocyte	0.0937
+panelapp:ge_846_v8.38	DNMT1	T/NK	0.0887
+panelapp:ge_846_v8.38	DRP2	myelinating Schwann	0.6488
+panelapp:ge_846_v8.38	DST	satellite glia	0.0783
+panelapp:ge_846_v8.38	DYNC1H1	Ab-LTMR	0.1166
+panelapp:ge_846_v8.38	EGR2	myelinating Schwann	0.3663
+panelapp:ge_846_v8.38	EMILIN1	mural	0.118
+panelapp:ge_846_v8.38	ERCC6	lymphocyte	0.0582
+panelapp:ge_846_v8.38	ERCC8	macrophage	0.0507
+panelapp:ge_846_v8.38	ETFDH	adipocyte	0.075
+panelapp:ge_846_v8.38	EXOSC3	T/NK	0.0665
+panelapp:ge_846_v8.38	FA2H	myelinating Schwann	0.4878
+panelapp:ge_846_v8.38	FAH	adipocyte	0.1992
+panelapp:ge_846_v8.38	FAM126A	lymphatic endothelial	0.1482
+panelapp:ge_846_v8.38	FBLN5	myelinating Schwann	0.1705
+panelapp:ge_846_v8.38	FDXR	mast	0.1102
+panelapp:ge_846_v8.38	FGD4	macrophage	0.0992
+panelapp:ge_846_v8.38	FICD	B	0.0947
+panelapp:ge_846_v8.38	FIG4	B	0.0737
+panelapp:ge_846_v8.38	FLVCR1	C-PEP	0.0497
+panelapp:ge_846_v8.38	FXN	B	0.0871
+panelapp:ge_846_v8.38	GALC	mast	0.0996
+panelapp:ge_846_v8.38	GAN	C-PEP	0.0654
+panelapp:ge_846_v8.38	GBA2	A-LTMR	0.0918
+panelapp:ge_846_v8.38	GBF1	B	0.0673
+panelapp:ge_846_v8.38	GDAP1	sympathetic neuron	0.0979
+panelapp:ge_846_v8.38	GJB1	myelinating Schwann	0.4645
+panelapp:ge_846_v8.38	GLA	injured neuron	0.1084
+panelapp:ge_846_v8.38	GNB4	endothelial	0.1078
+panelapp:ge_846_v8.38	GSN	epineurial fibroblast	0.0982
+panelapp:ge_846_v8.38	HADHA	A-LTMR	0.0828
+panelapp:ge_846_v8.38	HADHB	A-LTMR	0.1145
+panelapp:ge_846_v8.38	HEXA	macrophage	0.087
+panelapp:ge_846_v8.38	HEXB	macrophage	0.0863
+panelapp:ge_846_v8.38	HINT1	Ab-LTMR	0.1476
+panelapp:ge_846_v8.38	HK1	injured neuron	0.0955
+panelapp:ge_846_v8.38	HMBS	A-LTMR	0.0929
+panelapp:ge_846_v8.38	HPDL	damage Schwann	0.1437
+panelapp:ge_846_v8.38	HSPB1	injured neuron	0.2059
+panelapp:ge_846_v8.38	HSPB8	A-Propr	0.1348
+panelapp:ge_846_v8.38	IARS2	injured neuron	0.0811
+panelapp:ge_846_v8.38	IGHMBP2	mural	0.0551
+panelapp:ge_846_v8.38	INF2	C-LTMR	0.0993
+panelapp:ge_846_v8.38	ITPR3	repair Schwann	0.0967
+panelapp:ge_846_v8.38	KIF1A	injured neuron	0.13
+panelapp:ge_846_v8.38	KIF5A	injured neuron	0.1731
+panelapp:ge_846_v8.38	LITAF	granulocyte	0.5591
+panelapp:ge_846_v8.38	LMNA	mast	0.1162
+panelapp:ge_846_v8.38	LRSAM1	A-LTMR	0.0562
+panelapp:ge_846_v8.38	LYST	granulocyte	0.2222
+panelapp:ge_846_v8.38	MAG	myelinating Schwann	0.5824
+panelapp:ge_846_v8.38	MCM3AP	B	0.0574
+panelapp:ge_846_v8.38	MFN2	C-LTMR	0.1006
+panelapp:ge_846_v8.38	MMACHC	B	0.079
+panelapp:ge_846_v8.38	MME	granulocyte	0.3718
+panelapp:ge_846_v8.38	MORC2	lymphatic endothelial	0.0634
+panelapp:ge_846_v8.38	MPV17	A-LTMR	0.0784
+panelapp:ge_846_v8.38	MPZ	myelinating Schwann	0.6079
+panelapp:ge_846_v8.38	MTMR2	perineurial	0.0679
+panelapp:ge_846_v8.38	MTTP	granulocyte	0.122
+panelapp:ge_846_v8.38	MYH14	myelinating Schwann	0.084
+panelapp:ge_846_v8.38	NAGA	C-NP	0.0818
+panelapp:ge_846_v8.38	NDC1	T/NK	0.0682
+panelapp:ge_846_v8.38	NDRG1	myelinating Schwann	0.1395
+panelapp:ge_846_v8.38	NDUFS6	Ab-LTMR	0.0795
+panelapp:ge_846_v8.38	NEFH	injured neuron	0.2518
+panelapp:ge_846_v8.38	NEFL	Ab-LTMR	0.2412
+panelapp:ge_846_v8.38	NEMF	T/NK	0.0531
+panelapp:ge_846_v8.38	NFASC	myelinating Schwann	0.179
+panelapp:ge_846_v8.38	NGF	endoneurial fibroblast	0.223
+panelapp:ge_846_v8.38	NTRK1	C-PEP	0.2391
+panelapp:ge_846_v8.38	NUDT2	C-Thermo	0.0504
+panelapp:ge_846_v8.38	OPA1	PEP	0.0463
+panelapp:ge_846_v8.38	OPA3	A-PEP	0.0658
+panelapp:ge_846_v8.38	PDHA1	Ab-LTMR	0.1046
+panelapp:ge_846_v8.38	PDK3	granulocyte	0.1006
+panelapp:ge_846_v8.38	PDXK	adipocyte	0.1238
+panelapp:ge_846_v8.38	PDYN	PEP	0.2909
+panelapp:ge_846_v8.38	PEX10	C-LTMR	0.0635
+panelapp:ge_846_v8.38	PEX7	mast	0.0561
+panelapp:ge_846_v8.38	PHYH	Ab-LTMR	0.0722
+panelapp:ge_846_v8.38	PIEZO2	A-LTMR	0.2042
+panelapp:ge_846_v8.38	PIGB	granulocyte	0.1414
+panelapp:ge_846_v8.38	PIGG	lymphatic endothelial	0.0551
+panelapp:ge_846_v8.38	PLA2G6	adipocyte	0.0734
+panelapp:ge_846_v8.38	PLEKHG5	myelinating Schwann	0.2343
+panelapp:ge_846_v8.38	PLP1	non-myelinating Schwann	0.1702
+panelapp:ge_846_v8.38	PMM2	B	0.0849
+panelapp:ge_846_v8.38	PMP2	myelinating Schwann	0.2737
+panelapp:ge_846_v8.38	PMP22	myelinating Schwann	0.2418
+panelapp:ge_846_v8.38	PNKP	mast	0.0587
+panelapp:ge_846_v8.38	PNPLA6	injured neuron	0.1045
+panelapp:ge_846_v8.38	PNPT1	lymphatic endothelial	0.0684
+panelapp:ge_846_v8.38	POLG	lymphocyte	0.0644
+panelapp:ge_846_v8.38	POLR3A	injured neuron	0.0824
+panelapp:ge_846_v8.38	POLR3B	mast	0.0848
+panelapp:ge_846_v8.38	PPOX	B	0.0912
+panelapp:ge_846_v8.38	PRDM12	C-LTMR	0.227
+panelapp:ge_846_v8.38	PRNP	C-LTMR	0.1302
+panelapp:ge_846_v8.38	PRPS1	C-PEP	0.1181
+panelapp:ge_846_v8.38	PRX	myelinating Schwann	0.7306
+panelapp:ge_846_v8.38	PTRH2	mast	0.083
+panelapp:ge_846_v8.38	RAB7A	granulocyte	0.0751
+panelapp:ge_846_v8.38	RCC1	lymphocyte	0.0909
+panelapp:ge_846_v8.38	REEP1	injured neuron	0.1234
+panelapp:ge_846_v8.38	RTN2	C-LTMR	0.1159
+panelapp:ge_846_v8.38	SACS	Ab-LTMR	0.1543
+panelapp:ge_846_v8.38	SAMD9L	granulocyte	0.1494
+panelapp:ge_846_v8.38	SBF1	injured neuron	0.1026
+panelapp:ge_846_v8.38	SBF2	lymphatic endothelial	0.0932
+panelapp:ge_846_v8.38	SCARB2	C-LTMR	0.0722
+panelapp:ge_846_v8.38	SCN10A	C-NP	0.2226
+panelapp:ge_846_v8.38	SCN11A	C-NP	0.3635
+panelapp:ge_846_v8.38	SCN9A	sympathetic neuron	0.09
+panelapp:ge_846_v8.38	SCO2	granulocyte	0.2025
+panelapp:ge_846_v8.38	SETX	granulocyte	0.0994
+panelapp:ge_846_v8.38	SH3TC2	myelinating Schwann	0.3638
+panelapp:ge_846_v8.38	SIGMAR1	Ab-LTMR	0.1284
+panelapp:ge_846_v8.38	SLC12A6	granulocyte	0.3479
+panelapp:ge_846_v8.38	SLC25A19	macrophage	0.0698
+panelapp:ge_846_v8.38	SLC25A46	B	0.0473
+panelapp:ge_846_v8.38	SLC52A2	injured neuron	0.1237
+panelapp:ge_846_v8.38	SLC52A3	endothelial	0.3914
+panelapp:ge_846_v8.38	SLC5A6	A-LTMR	0.1261
+panelapp:ge_846_v8.38	SLC5A7	C-LTMR	0.6295
+panelapp:ge_846_v8.38	SMN1	T/NK	0.0612
+panelapp:ge_846_v8.38	SORD	injured neuron	0.0821
+panelapp:ge_846_v8.38	SOX10	repair Schwann	0.2342
+panelapp:ge_846_v8.38	SPAST	granulocyte	0.097
+panelapp:ge_846_v8.38	SPG11	granulocyte	0.0637
+panelapp:ge_846_v8.38	SPG7	lymphatic endothelial	0.0534
+panelapp:ge_846_v8.38	SPTAN1	injured neuron	0.1174
+panelapp:ge_846_v8.38	SPTBN4	sympathetic neuron	0.1232
+panelapp:ge_846_v8.38	SPTLC1	lymphatic endothelial	0.0475
+panelapp:ge_846_v8.38	SPTLC2	macrophage	0.1008
+panelapp:ge_846_v8.38	SURF1	C-LTMR	0.0833
+panelapp:ge_846_v8.38	SYT2	Ab-LTMR	0.1835
+panelapp:ge_846_v8.38	TDP1	repair Schwann	0.1224
+panelapp:ge_846_v8.38	TECPR2	granulocyte	0.1743
+panelapp:ge_846_v8.38	TFG	endoneurial fibroblast	0.0507
+panelapp:ge_846_v8.38	TRIM2	repair Schwann	0.1226
+panelapp:ge_846_v8.38	TRMT5	A-LTMR	0.0538
+panelapp:ge_846_v8.38	TRPV4	macrophage	0.2196
+panelapp:ge_846_v8.38	TTC19	B	0.0643
+panelapp:ge_846_v8.38	TTPA	adipocyte	0.3109
+panelapp:ge_846_v8.38	TTR	repair Schwann	0.2111
+panelapp:ge_846_v8.38	TUBB3	injured neuron	0.1976
+panelapp:ge_846_v8.38	TYMP	granulocyte	0.3151
+panelapp:ge_846_v8.38	UBA1	Ab-LTMR	0.0915
+panelapp:ge_846_v8.38	UCHL1	injured neuron	0.15
+panelapp:ge_846_v8.38	VAPB	C-LTMR	0.0602
+panelapp:ge_846_v8.38	VCP	injured neuron	0.0859
+panelapp:ge_846_v8.38	VPS13D	epineurial fibroblast	0.0608
+panelapp:ge_846_v8.38	VRK1	B	0.1228
+panelapp:ge_846_v8.38	VWA1	non-myelinating Schwann	0.2197
+panelapp:ge_846_v8.38	WNK1	endothelial	0.0721
+panelapp:ge_846_v8.38	XK	C-Thermo	0.1203
+panelapp:ge_846_v8.38	XPA	mast	0.0548
+panelapp:ge_846_v8.38	ZFYVE26	macrophage	0.0656
+panelapp:ge_85_v1.513	ABCA1	repair Schwann	0.1054
+panelapp:ge_85_v1.513	ABHD12	macrophage	0.0654
+panelapp:ge_85_v1.513	AGTPBP1	granulocyte	0.1602
+panelapp:ge_85_v1.513	AIFM1	endothelial	0.0592
+panelapp:ge_85_v1.513	APTX	damage Schwann	0.0563
+panelapp:ge_85_v1.513	ARHGAP19	myelinating Schwann	0.3261
+panelapp:ge_85_v1.513	ARSA	A-LTMR	0.1217
+panelapp:ge_85_v1.513	ATL1	injured neuron	0.115
+panelapp:ge_85_v1.513	ATM	T/NK	0.1186
+panelapp:ge_85_v1.513	ATP1A1	Ab-LTMR	0.1402
+panelapp:ge_85_v1.513	ATP7A	granulocyte	0.1302
+panelapp:ge_85_v1.513	B4GALNT1	A-LTMR	0.1432
+panelapp:ge_85_v1.513	BAG3	Ab-LTMR	0.1737
+panelapp:ge_85_v1.513	BCKDHB	satellite glia	0.0766
+panelapp:ge_85_v1.513	BICD2	C-Thermo	0.0692
+panelapp:ge_85_v1.513	BSCL2	injured neuron	0.2474
+panelapp:ge_85_v1.513	CD59	C-LTMR	0.165
+panelapp:ge_85_v1.513	CHCHD10	A-LTMR (NF)	0.1446
+panelapp:ge_85_v1.513	CNTNAP1	injured neuron	0.1027
+panelapp:ge_85_v1.513	COA7	B	0.1614
+panelapp:ge_85_v1.513	COX6A1	C-LTMR	0.18
+panelapp:ge_85_v1.513	CPOX	A-LTMR	0.0546
+panelapp:ge_85_v1.513	CTDP1	A-LTMR	0.0648
+panelapp:ge_85_v1.513	CYP27A1	non-myelinating Schwann	0.0733
+panelapp:ge_85_v1.513	DARS2	damage Schwann	0.0695
+panelapp:ge_85_v1.513	DCTN1	injured neuron	0.1687
+panelapp:ge_85_v1.513	DEGS1	injured neuron	0.1286
+panelapp:ge_85_v1.513	DNAJB2	C-Thermo	0.1121
+panelapp:ge_85_v1.513	DNAJC3	granulocyte	0.0781
+panelapp:ge_85_v1.513	DNM2	granulocyte	0.0937
+panelapp:ge_85_v1.513	DNMT1	T/NK	0.0887
+panelapp:ge_85_v1.513	DST	satellite glia	0.0783
+panelapp:ge_85_v1.513	DYNC1H1	Ab-LTMR	0.1166
+panelapp:ge_85_v1.513	EGR2	myelinating Schwann	0.3663
+panelapp:ge_85_v1.513	ERCC6	lymphocyte	0.0582
+panelapp:ge_85_v1.513	ERCC8	macrophage	0.0507
+panelapp:ge_85_v1.513	FAH	adipocyte	0.1992
+panelapp:ge_85_v1.513	FAM126A	lymphatic endothelial	0.1482
+panelapp:ge_85_v1.513	FBLN5	myelinating Schwann	0.1705
+panelapp:ge_85_v1.513	FGD4	macrophage	0.0992
+panelapp:ge_85_v1.513	FIG4	B	0.0737
+panelapp:ge_85_v1.513	FLVCR1	C-PEP	0.0497
+panelapp:ge_85_v1.513	FXN	B	0.0871
+panelapp:ge_85_v1.513	GALC	mast	0.0996
+panelapp:ge_85_v1.513	GAN	C-PEP	0.0654
+panelapp:ge_85_v1.513	GBA2	A-LTMR	0.0918
+panelapp:ge_85_v1.513	GDAP1	sympathetic neuron	0.0979
+panelapp:ge_85_v1.513	GJB1	myelinating Schwann	0.4645
+panelapp:ge_85_v1.513	GJC2	lymphatic endothelial	0.2414
+panelapp:ge_85_v1.513	GLA	injured neuron	0.1084
+panelapp:ge_85_v1.513	GNB4	endothelial	0.1078
+panelapp:ge_85_v1.513	HADHA	A-LTMR	0.0828
+panelapp:ge_85_v1.513	HADHB	A-LTMR	0.1145
+panelapp:ge_85_v1.513	HINT1	Ab-LTMR	0.1476
+panelapp:ge_85_v1.513	HK1	injured neuron	0.0955
+panelapp:ge_85_v1.513	HMBS	A-LTMR	0.0929
+panelapp:ge_85_v1.513	HSPB1	injured neuron	0.2059
+panelapp:ge_85_v1.513	HSPB8	A-Propr	0.1348
+panelapp:ge_85_v1.513	IARS2	injured neuron	0.0811
+panelapp:ge_85_v1.513	IGHMBP2	mural	0.0551
+panelapp:ge_85_v1.513	INF2	C-LTMR	0.0993
+panelapp:ge_85_v1.513	KCNA2	Ab-LTMR	0.1653
+panelapp:ge_85_v1.513	KIF1A	injured neuron	0.13
+panelapp:ge_85_v1.513	KIF5A	injured neuron	0.1731
+panelapp:ge_85_v1.513	LITAF	granulocyte	0.5591
+panelapp:ge_85_v1.513	LMNA	mast	0.1162
+panelapp:ge_85_v1.513	LRSAM1	A-LTMR	0.0562
+panelapp:ge_85_v1.513	LYST	granulocyte	0.2222
+panelapp:ge_85_v1.513	MCM3AP	B	0.0574
+panelapp:ge_85_v1.513	MFN2	C-LTMR	0.1006
+panelapp:ge_85_v1.513	MMACHC	B	0.079
+panelapp:ge_85_v1.513	MME	granulocyte	0.3718
+panelapp:ge_85_v1.513	MORC2	lymphatic endothelial	0.0634
+panelapp:ge_85_v1.513	MPV17	A-LTMR	0.0784
+panelapp:ge_85_v1.513	MPZ	myelinating Schwann	0.6079
+panelapp:ge_85_v1.513	MTMR2	perineurial	0.0679
+panelapp:ge_85_v1.513	MTTP	granulocyte	0.122
+panelapp:ge_85_v1.513	NAGA	C-NP	0.0818
+panelapp:ge_85_v1.513	NDC1	T/NK	0.0682
+panelapp:ge_85_v1.513	NDRG1	myelinating Schwann	0.1395
+panelapp:ge_85_v1.513	NEFH	injured neuron	0.2518
+panelapp:ge_85_v1.513	NEFL	Ab-LTMR	0.2412
+panelapp:ge_85_v1.513	NGF	endoneurial fibroblast	0.223
+panelapp:ge_85_v1.513	NTRK1	C-PEP	0.2391
+panelapp:ge_85_v1.513	OPA1	PEP	0.0463
+panelapp:ge_85_v1.513	OPA3	A-PEP	0.0658
+panelapp:ge_85_v1.513	PDHA1	Ab-LTMR	0.1046
+panelapp:ge_85_v1.513	PEX10	C-LTMR	0.0635
+panelapp:ge_85_v1.513	PEX7	mast	0.0561
+panelapp:ge_85_v1.513	PHYH	Ab-LTMR	0.0722
+panelapp:ge_85_v1.513	PLEKHG5	myelinating Schwann	0.2343
+panelapp:ge_85_v1.513	PMM2	B	0.0849
+panelapp:ge_85_v1.513	PMP2	myelinating Schwann	0.2737
+panelapp:ge_85_v1.513	PMP22	myelinating Schwann	0.2418
+panelapp:ge_85_v1.513	PNKP	mast	0.0587
+panelapp:ge_85_v1.513	POLG	lymphocyte	0.0644
+panelapp:ge_85_v1.513	POLR3A	injured neuron	0.0824
+panelapp:ge_85_v1.513	PPOX	B	0.0912
+panelapp:ge_85_v1.513	PRDM12	C-LTMR	0.227
+panelapp:ge_85_v1.513	PRNP	C-LTMR	0.1302
+panelapp:ge_85_v1.513	PRPS1	C-PEP	0.1181
+panelapp:ge_85_v1.513	PRX	myelinating Schwann	0.7306
+panelapp:ge_85_v1.513	PTPN11	endoneurial fibroblast	0.0551
+panelapp:ge_85_v1.513	RAB7A	granulocyte	0.0751
+panelapp:ge_85_v1.513	RCC1	lymphocyte	0.0909
+panelapp:ge_85_v1.513	REEP1	injured neuron	0.1234
+panelapp:ge_85_v1.513	SACS	Ab-LTMR	0.1543
+panelapp:ge_85_v1.513	SBF1	injured neuron	0.1026
+panelapp:ge_85_v1.513	SBF2	lymphatic endothelial	0.0932
+panelapp:ge_85_v1.513	SCN10A	C-NP	0.2226
+panelapp:ge_85_v1.513	SCN11A	C-NP	0.3635
+panelapp:ge_85_v1.513	SCN9A	sympathetic neuron	0.09
+panelapp:ge_85_v1.513	SETX	granulocyte	0.0994
+panelapp:ge_85_v1.513	SH3TC2	myelinating Schwann	0.3638
+panelapp:ge_85_v1.513	SIGMAR1	Ab-LTMR	0.1284
+panelapp:ge_85_v1.513	SLC12A6	granulocyte	0.3479
+panelapp:ge_85_v1.513	SLC25A19	macrophage	0.0698
+panelapp:ge_85_v1.513	SLC25A46	B	0.0473
+panelapp:ge_85_v1.513	SLC52A2	injured neuron	0.1237
+panelapp:ge_85_v1.513	SLC52A3	endothelial	0.3914
+panelapp:ge_85_v1.513	SLC5A7	C-LTMR	0.6295
+panelapp:ge_85_v1.513	SMN1	T/NK	0.0612
+panelapp:ge_85_v1.513	SORD	injured neuron	0.0821
+panelapp:ge_85_v1.513	SOX10	repair Schwann	0.2342
+panelapp:ge_85_v1.513	SPAST	granulocyte	0.097
+panelapp:ge_85_v1.513	SPG11	granulocyte	0.0637
+panelapp:ge_85_v1.513	SPTBN4	sympathetic neuron	0.1232
+panelapp:ge_85_v1.513	SPTLC1	lymphatic endothelial	0.0475
+panelapp:ge_85_v1.513	SPTLC2	macrophage	0.1008
+panelapp:ge_85_v1.513	SURF1	C-LTMR	0.0833
+panelapp:ge_85_v1.513	SYT2	Ab-LTMR	0.1835
+panelapp:ge_85_v1.513	TFG	endoneurial fibroblast	0.0507
+panelapp:ge_85_v1.513	TRIM2	repair Schwann	0.1226
+panelapp:ge_85_v1.513	TRPA1	PEP	0.2496
+panelapp:ge_85_v1.513	TRPV4	macrophage	0.2196
+panelapp:ge_85_v1.513	TTPA	adipocyte	0.3109
+panelapp:ge_85_v1.513	TTR	repair Schwann	0.2111
+panelapp:ge_85_v1.513	TUBB3	injured neuron	0.1976
+panelapp:ge_85_v1.513	TYMP	granulocyte	0.3151
+panelapp:ge_85_v1.513	VPS13A	A-LTMR	0.0868
+panelapp:ge_85_v1.513	VRK1	B	0.1228
+panelapp:ge_85_v1.513	VWA1	non-myelinating Schwann	0.2197
+panelapp:ge_85_v1.513	WNK1	endothelial	0.0721
+panelapp:ge_85_v1.513	XK	C-Thermo	0.1203
+panelapp:ge_85_v1.513	XPA	mast	0.0548
+panelapp:ge_85_v1.513	ZFYVE26	macrophage	0.0656
+panelapp:aus_3070_v3.1	AAAS	A-LTMR	0.0952
+panelapp:aus_3070_v3.1	ABCA1	repair Schwann	0.1054
+panelapp:aus_3070_v3.1	ABCD1	A-LTMR	0.091
+panelapp:aus_3070_v3.1	ABHD12	macrophage	0.0654
+panelapp:aus_3070_v3.1	ACOX1	adipocyte	0.1273
+panelapp:aus_3070_v3.1	AFG3L2	Ab-LTMR	0.0537
+panelapp:aus_3070_v3.1	AGTPBP1	granulocyte	0.1602
+panelapp:aus_3070_v3.1	AGXT	B	0.3745
+panelapp:aus_3070_v3.1	AIFM1	endothelial	0.0592
+panelapp:aus_3070_v3.1	ALDH18A1	B	0.081
+panelapp:aus_3070_v3.1	AMACR	injured neuron	0.1369
+panelapp:aus_3070_v3.1	AP1S1	injured neuron	0.2492
+panelapp:aus_3070_v3.1	AP5Z1	A-LTMR	0.0561
+panelapp:aus_3070_v3.1	APOA1	non-myelinating Schwann	0.1303
+panelapp:aus_3070_v3.1	APTX	damage Schwann	0.0563
+panelapp:aus_3070_v3.1	ARHGAP19	myelinating Schwann	0.3261
+panelapp:aus_3070_v3.1	ARL6IP1	C-LTMR	0.1597
+panelapp:aus_3070_v3.1	ARSA	A-LTMR	0.1217
+panelapp:aus_3070_v3.1	ASAH1	mast	0.1049
+panelapp:aus_3070_v3.1	ASCC1	B	0.0557
+panelapp:aus_3070_v3.1	ATAD3A	C-LTMR	0.0683
+panelapp:aus_3070_v3.1	ATL1	injured neuron	0.115
+panelapp:aus_3070_v3.1	ATL3	PEP	0.0756
+panelapp:aus_3070_v3.1	ATP1A1	Ab-LTMR	0.1402
+panelapp:aus_3070_v3.1	ATP7A	granulocyte	0.1302
+panelapp:aus_3070_v3.1	BCKDHB	satellite glia	0.0766
+panelapp:aus_3070_v3.1	BICD2	C-Thermo	0.0692
+panelapp:aus_3070_v3.1	BSCL2	injured neuron	0.2474
+panelapp:aus_3070_v3.1	C19orf12	adipocyte	0.1085
+panelapp:aus_3070_v3.1	CADM3	C-PEP	0.1204
+panelapp:aus_3070_v3.1	CAPRIN1	PEP	0.0568
+panelapp:aus_3070_v3.1	CASP8	granulocyte	0.2365
+panelapp:aus_3070_v3.1	CD59	C-LTMR	0.165
+panelapp:aus_3070_v3.1	CHCHD10	A-LTMR (NF)	0.1446
+panelapp:aus_3070_v3.1	CLP1	B	0.0739
+panelapp:aus_3070_v3.1	CNTNAP1	injured neuron	0.1027
+panelapp:aus_3070_v3.1	COA7	B	0.1614
+panelapp:aus_3070_v3.1	COQ7	perineurial	0.0525
+panelapp:aus_3070_v3.1	COX18	B	0.0726
+panelapp:aus_3070_v3.1	COX20	damage Schwann	0.0539
+panelapp:aus_3070_v3.1	COX6A1	C-LTMR	0.18
+panelapp:aus_3070_v3.1	CPOX	A-LTMR	0.0546
+panelapp:aus_3070_v3.1	CTDP1	A-LTMR	0.0648
+panelapp:aus_3070_v3.1	CYP27A1	non-myelinating Schwann	0.0733
+panelapp:aus_3070_v3.1	CYP2U1	C-Thermo	0.1069
+panelapp:aus_3070_v3.1	CYP7B1	non-myelinating Schwann	0.1701
+panelapp:aus_3070_v3.1	DARS2	damage Schwann	0.0695
+panelapp:aus_3070_v3.1	DCTN1	injured neuron	0.1687
+panelapp:aus_3070_v3.1	DDHD1	T/NK	0.0609
+panelapp:aus_3070_v3.1	DEGS1	injured neuron	0.1286
+panelapp:aus_3070_v3.1	DGUOK	C-LTMR	0.0551
+panelapp:aus_3070_v3.1	DHH	myelinating Schwann	0.2276
+panelapp:aus_3070_v3.1	DHX9	T/NK	0.0558
+panelapp:aus_3070_v3.1	DNAJB2	C-Thermo	0.1121
+panelapp:aus_3070_v3.1	DNAJC3	granulocyte	0.0781
+panelapp:aus_3070_v3.1	DNM1L	injured neuron	0.0535
+panelapp:aus_3070_v3.1	DNM2	granulocyte	0.0937
+panelapp:aus_3070_v3.1	DNMT1	T/NK	0.0887
+panelapp:aus_3070_v3.1	DRP2	myelinating Schwann	0.6488
+panelapp:aus_3070_v3.1	DST	satellite glia	0.0783
+panelapp:aus_3070_v3.1	DYNC1H1	Ab-LTMR	0.1166
+panelapp:aus_3070_v3.1	EGR2	myelinating Schwann	0.3663
+panelapp:aus_3070_v3.1	ERBB3	non-myelinating Schwann	0.2037
+panelapp:aus_3070_v3.1	ERCC4	sympathetic neuron	0.0496
+panelapp:aus_3070_v3.1	ERCC6	lymphocyte	0.0582
+panelapp:aus_3070_v3.1	ERCC8	macrophage	0.0507
+panelapp:aus_3070_v3.1	ETFDH	adipocyte	0.075
+panelapp:aus_3070_v3.1	EXOSC8	mast	0.1031
+panelapp:aus_3070_v3.1	EXOSC9	T/NK	0.0681
+panelapp:aus_3070_v3.1	FAH	adipocyte	0.1992
+panelapp:aus_3070_v3.1	FBLN5	myelinating Schwann	0.1705
+panelapp:aus_3070_v3.1	FDXR	mast	0.1102
+panelapp:aus_3070_v3.1	FGD4	macrophage	0.0992
+panelapp:aus_3070_v3.1	FICD	B	0.0947
+panelapp:aus_3070_v3.1	FIG4	B	0.0737
+panelapp:aus_3070_v3.1	FLVCR1	C-PEP	0.0497
+panelapp:aus_3070_v3.1	FXN	B	0.0871
+panelapp:aus_3070_v3.1	GAA	A-LTMR	0.0766
+panelapp:aus_3070_v3.1	GAN	C-PEP	0.0654
+panelapp:aus_3070_v3.1	GBA2	A-LTMR	0.0918
+panelapp:aus_3070_v3.1	GBE1	A-LTMR	0.2355
+panelapp:aus_3070_v3.1	GBF1	B	0.0673
+panelapp:aus_3070_v3.1	GDAP1	sympathetic neuron	0.0979
+panelapp:aus_3070_v3.1	GJB1	myelinating Schwann	0.4645
+panelapp:aus_3070_v3.1	GJC2	lymphatic endothelial	0.2414
+panelapp:aus_3070_v3.1	GLA	injured neuron	0.1084
+panelapp:aus_3070_v3.1	GLDN	myelinating Schwann	0.5766
+panelapp:aus_3070_v3.1	GNB4	endothelial	0.1078
+panelapp:aus_3070_v3.1	GSN	epineurial fibroblast	0.0982
+panelapp:aus_3070_v3.1	HADHA	A-LTMR	0.0828
+panelapp:aus_3070_v3.1	HEXA	macrophage	0.087
+panelapp:aus_3070_v3.1	HEXB	macrophage	0.0863
+panelapp:aus_3070_v3.1	HINT1	Ab-LTMR	0.1476
+panelapp:aus_3070_v3.1	HK1	injured neuron	0.0955
+panelapp:aus_3070_v3.1	HMBS	A-LTMR	0.0929
+panelapp:aus_3070_v3.1	HSPB1	injured neuron	0.2059
+panelapp:aus_3070_v3.1	HSPB8	A-Propr	0.1348
+panelapp:aus_3070_v3.1	IARS2	injured neuron	0.0811
+panelapp:aus_3070_v3.1	IBA57	lymphatic endothelial	0.096
+panelapp:aus_3070_v3.1	IGHMBP2	mural	0.0551
+panelapp:aus_3070_v3.1	INF2	C-LTMR	0.0993
+panelapp:aus_3070_v3.1	ITPR3	repair Schwann	0.0967
+panelapp:aus_3070_v3.1	JAG1	mural	0.2112
+panelapp:aus_3070_v3.1	KIF1A	injured neuron	0.13
+panelapp:aus_3070_v3.1	KIF21A	injured neuron	0.1108
+panelapp:aus_3070_v3.1	KIF5A	injured neuron	0.1731
+panelapp:aus_3070_v3.1	KLC2	C-LTMR	0.1581
+panelapp:aus_3070_v3.1	LAMA2	endoneurial fibroblast	0.2697
+panelapp:aus_3070_v3.1	LITAF	granulocyte	0.5591
+panelapp:aus_3070_v3.1	LRSAM1	A-LTMR	0.0562
+panelapp:aus_3070_v3.1	LYST	granulocyte	0.2222
+panelapp:aus_3070_v3.1	MADD	A-Propr	0.0824
+panelapp:aus_3070_v3.1	MCM3AP	B	0.0574
+panelapp:aus_3070_v3.1	MFN2	C-LTMR	0.1006
+panelapp:aus_3070_v3.1	MMACHC	B	0.079
+panelapp:aus_3070_v3.1	MME	granulocyte	0.3718
+panelapp:aus_3070_v3.1	MORC2	lymphatic endothelial	0.0634
+panelapp:aus_3070_v3.1	MPV17	A-LTMR	0.0784
+panelapp:aus_3070_v3.1	MPZ	myelinating Schwann	0.6079
+panelapp:aus_3070_v3.1	MTHFR	macrophage	0.0571
+panelapp:aus_3070_v3.1	MTMR2	perineurial	0.0679
+panelapp:aus_3070_v3.1	MTTP	granulocyte	0.122
+panelapp:aus_3070_v3.1	MYH14	myelinating Schwann	0.084
+panelapp:aus_3070_v3.1	NAGA	C-NP	0.0818
+panelapp:aus_3070_v3.1	NDC1	T/NK	0.0682
+panelapp:aus_3070_v3.1	NDRG1	myelinating Schwann	0.1395
+panelapp:aus_3070_v3.1	NDUFS6	Ab-LTMR	0.0795
+panelapp:aus_3070_v3.1	NEFH	injured neuron	0.2518
+panelapp:aus_3070_v3.1	NEFL	Ab-LTMR	0.2412
+panelapp:aus_3070_v3.1	NEMF	T/NK	0.0531
+panelapp:aus_3070_v3.1	NGF	endoneurial fibroblast	0.223
+panelapp:aus_3070_v3.1	NGLY1	B	0.1392
+panelapp:aus_3070_v3.1	NIPA1	injured neuron	0.1028
+panelapp:aus_3070_v3.1	NRCAM	sympathetic neuron	0.1177
+panelapp:aus_3070_v3.1	NTRK1	C-PEP	0.2391
+panelapp:aus_3070_v3.1	NUDT2	C-Thermo	0.0504
+panelapp:aus_3070_v3.1	OPA1	PEP	0.0463
+panelapp:aus_3070_v3.1	OPA3	A-PEP	0.0658
+panelapp:aus_3070_v3.1	PDHA1	Ab-LTMR	0.1046
+panelapp:aus_3070_v3.1	PDK3	granulocyte	0.1006
+panelapp:aus_3070_v3.1	PDXK	adipocyte	0.1238
+panelapp:aus_3070_v3.1	PDYN	PEP	0.2909
+panelapp:aus_3070_v3.1	PEX10	C-LTMR	0.0635
+panelapp:aus_3070_v3.1	PEX12	C-Thermo	0.0925
+panelapp:aus_3070_v3.1	PHYH	Ab-LTMR	0.0722
+panelapp:aus_3070_v3.1	PIEZO2	A-LTMR	0.2042
+panelapp:aus_3070_v3.1	PIGB	granulocyte	0.1414
+panelapp:aus_3070_v3.1	PIGG	lymphatic endothelial	0.0551
+panelapp:aus_3070_v3.1	PLA2G6	adipocyte	0.0734
+panelapp:aus_3070_v3.1	PLEKHG5	myelinating Schwann	0.2343
+panelapp:aus_3070_v3.1	PMM2	B	0.0849
+panelapp:aus_3070_v3.1	PMP2	myelinating Schwann	0.2737
+panelapp:aus_3070_v3.1	PMP22	myelinating Schwann	0.2418
+panelapp:aus_3070_v3.1	PNKP	mast	0.0587
+panelapp:aus_3070_v3.1	PNPLA6	injured neuron	0.1045
+panelapp:aus_3070_v3.1	PNPT1	lymphatic endothelial	0.0684
+panelapp:aus_3070_v3.1	POLG	lymphocyte	0.0644
+panelapp:aus_3070_v3.1	POLR3A	injured neuron	0.0824
+panelapp:aus_3070_v3.1	POLR3B	mast	0.0848
+panelapp:aus_3070_v3.1	PPOX	B	0.0912
+panelapp:aus_3070_v3.1	PRDM12	C-LTMR	0.227
+panelapp:aus_3070_v3.1	PRNP	C-LTMR	0.1302
+panelapp:aus_3070_v3.1	PRPS1	C-PEP	0.1181
+panelapp:aus_3070_v3.1	PRX	myelinating Schwann	0.7306
+panelapp:aus_3070_v3.1	PTRH2	mast	0.083
+panelapp:aus_3070_v3.1	RAB7A	granulocyte	0.0751
+panelapp:aus_3070_v3.1	RCC1	lymphocyte	0.0909
+panelapp:aus_3070_v3.1	REEP1	injured neuron	0.1234
+panelapp:aus_3070_v3.1	RFC1	lymphatic endothelial	0.0788
+panelapp:aus_3070_v3.1	RNASEH1	C-LTMR	0.074
+panelapp:aus_3070_v3.1	RTN2	C-LTMR	0.1159
+panelapp:aus_3070_v3.1	SACS	Ab-LTMR	0.1543
+panelapp:aus_3070_v3.1	SBF1	injured neuron	0.1026
+panelapp:aus_3070_v3.1	SBF2	lymphatic endothelial	0.0932
+panelapp:aus_3070_v3.1	SCN10A	C-NP	0.2226
+panelapp:aus_3070_v3.1	SCN11A	C-NP	0.3635
+panelapp:aus_3070_v3.1	SCN9A	sympathetic neuron	0.09
+panelapp:aus_3070_v3.1	SCO2	granulocyte	0.2025
+panelapp:aus_3070_v3.1	SCYL1	injured neuron	0.0954
+panelapp:aus_3070_v3.1	SETX	granulocyte	0.0994
+panelapp:aus_3070_v3.1	SH3TC2	myelinating Schwann	0.3638
+panelapp:aus_3070_v3.1	SIGMAR1	Ab-LTMR	0.1284
+panelapp:aus_3070_v3.1	SLC12A6	granulocyte	0.3479
+panelapp:aus_3070_v3.1	SLC25A19	macrophage	0.0698
+panelapp:aus_3070_v3.1	SLC25A46	B	0.0473
+panelapp:aus_3070_v3.1	SLC52A2	injured neuron	0.1237
+panelapp:aus_3070_v3.1	SLC52A3	endothelial	0.3914
+panelapp:aus_3070_v3.1	SLC5A6	A-LTMR	0.1261
+panelapp:aus_3070_v3.1	SLC5A7	C-LTMR	0.6295
+panelapp:aus_3070_v3.1	SMN1	T/NK	0.0612
+panelapp:aus_3070_v3.1	SNAP29	mast	0.0593
+panelapp:aus_3070_v3.1	SOD1	Ab-LTMR	0.1567
+panelapp:aus_3070_v3.1	SORD	injured neuron	0.0821
+panelapp:aus_3070_v3.1	SOX10	repair Schwann	0.2342
+panelapp:aus_3070_v3.1	SPAST	granulocyte	0.097
+panelapp:aus_3070_v3.1	SPG11	granulocyte	0.0637
+panelapp:aus_3070_v3.1	SPTAN1	injured neuron	0.1174
+panelapp:aus_3070_v3.1	SPTBN4	sympathetic neuron	0.1232
+panelapp:aus_3070_v3.1	SPTLC1	lymphatic endothelial	0.0475
+panelapp:aus_3070_v3.1	SPTLC2	macrophage	0.1008
+panelapp:aus_3070_v3.1	STUB1	injured neuron	0.1235
+panelapp:aus_3070_v3.1	SURF1	C-LTMR	0.0833
+panelapp:aus_3070_v3.1	SYT2	Ab-LTMR	0.1835
+panelapp:aus_3070_v3.1	TECPR2	granulocyte	0.1743
+panelapp:aus_3070_v3.1	TFG	endoneurial fibroblast	0.0507
+panelapp:aus_3070_v3.1	TOP3A	T/NK	0.0584
+panelapp:aus_3070_v3.1	TRIM2	repair Schwann	0.1226
+panelapp:aus_3070_v3.1	TRIP4	T/NK	0.0532
+panelapp:aus_3070_v3.1	TRPV4	macrophage	0.2196
+panelapp:aus_3070_v3.1	TTC19	B	0.0643
+panelapp:aus_3070_v3.1	TTPA	adipocyte	0.3109
+panelapp:aus_3070_v3.1	TTR	repair Schwann	0.2111
+panelapp:aus_3070_v3.1	TUBB3	injured neuron	0.1976
+panelapp:aus_3070_v3.1	TYMP	granulocyte	0.3151
+panelapp:aus_3070_v3.1	UBA1	Ab-LTMR	0.0915
+panelapp:aus_3070_v3.1	UCHL1	injured neuron	0.15
+panelapp:aus_3070_v3.1	VAPB	C-LTMR	0.0602
+panelapp:aus_3070_v3.1	VCP	injured neuron	0.0859
+panelapp:aus_3070_v3.1	VPS13A	A-LTMR	0.0868
+panelapp:aus_3070_v3.1	VRK1	B	0.1228
+panelapp:aus_3070_v3.1	VWA1	non-myelinating Schwann	0.2197
+panelapp:aus_3070_v3.1	WNK1	endothelial	0.0721
+panelapp:aus_3070_v3.1	XK	C-Thermo	0.1203
+panelapp:aus_3070_v3.1	XRCC1	mast	0.0922
+panelapp:aus_3070_v3.1	ZC4H2	mast	0.1137
+panelapp:aus_3070_v3.1	ZFYVE26	macrophage	0.0656
+panelapp:aus_3439_v2.0	AAAS	A-LTMR	0.0952
+panelapp:aus_3439_v2.0	DBH	sympathetic neuron	0.8005
+panelapp:aus_3439_v2.0	DST	satellite glia	0.0783
+panelapp:aus_3439_v2.0	GMPPA	A-LTMR	0.1273
+panelapp:aus_3439_v2.0	LIFR	endothelial	0.2204
+panelapp:aus_3439_v2.0	LMNB1	granulocyte	0.3668
+panelapp:aus_3439_v2.0	MADD	A-Propr	0.0824
+panelapp:aus_3439_v2.0	NGF	endoneurial fibroblast	0.223
+panelapp:aus_3439_v2.0	NTRK1	C-PEP	0.2391
+panelapp:aus_3439_v2.0	PHOX2B	sympathetic neuron	0.8012
+panelapp:aus_3439_v2.0	PRDM12	C-LTMR	0.227
+panelapp:aus_3439_v2.0	SCN11A	C-NP	0.3635
+panelapp:aus_3439_v2.0	SCN9A	sympathetic neuron	0.09
+panelapp:aus_3439_v2.0	SPTLC1	lymphatic endothelial	0.0475
+panelapp:aus_3439_v2.0	SPTLC2	macrophage	0.1008
+panelapp:aus_3439_v2.0	WNK1	endothelial	0.0721

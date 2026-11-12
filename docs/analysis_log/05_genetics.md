@@ -42,3 +42,32 @@ the reported value; otherwise the abf value is. The GWAS is handled as
 case-control with the study's case fraction when its metadata gives
 one. The colocalised eGenes are assigned to the state of their highest
 specificity, with the compartments where that state is mapped.
+
+## 5.2 Gene class enrichment
+
+Background: 17,227 protein-coding genes with a specificity, a length and
+a GC (of 19,951 protein-coding genes in release 105), in 100 length by
+GC bins. Of the truth set 221 genes are in the background (CMT 53, dHMN
+18, HSAN 14, SYND 113, HSP 23); of the PanelApp green genes 213, 146,
+226 and 16.
+
+The classes land where their biology says. CMT is enriched in
+myelinating Schwann cells (3.2 fold, q 0.003) and in Ab-LTMR neurons
+(1.6 fold). HSAN is enriched in the peptidergic neuron states (C-PEP
+2.5 fold, PEP 2.7, C-NP 2.5, A-PEP 2.1), the nociceptors whose loss
+defines the disease. dHMN is enriched in Ab-LTMR (2.0 fold) and C-LTMR
+(2.4) neurons, the only neuron states of the reference, which stand in
+for the motor neurons the reference does not hold. HSP is enriched in
+Ab-LTMR (2.0 fold). SYND, the syndromic class, is enriched nowhere,
+as expected for genes whose expression is broad. The whole truth set
+and the three hereditary neuropathy panels agree with each other:
+enriched in myelinating Schwann cells, the injured neuron state and the
+Ab-LTMR, C-LTMR, PEP, C-PEP, A-PEP and C-NP families, at folds of 1.2
+to 1.7, and in nothing else. The autonomic neuropathy panel (16 genes)
+is enriched in the sympathetic neuron state alone, 3.8 fold. No class
+is enriched in any nerve or ganglion non-neuronal state other than
+myelinating Schwann cells, and none in the non-myelinating, repair or
+damage Schwann states, fibroblasts, perineurial cells, immune or
+vascular states. Full table: `results/genetics/gene_class_enrichment.tsv`;
+each class gene with its state of highest specificity:
+`results/genetics/gene_classes.tsv`.
