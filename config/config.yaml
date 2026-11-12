@@ -107,7 +107,8 @@ panel_transfer:
   pseudocount: 0.01                     # added to the signatures before normalising to gene probabilities
   datasets:
     heming2025_sural_xenium: {compartment: nerve}
-    yu2024_hdrg_xenium: {compartment: ganglion, class: neuron}   # hand-segmented neurons only
+    # a DRG holds no sympathetic neurons, so that ganglion state is not a candidate on a DRG section
+    yu2024_hdrg_xenium: {compartment: ganglion, class: neuron, exclude_states: [sympathetic neuron]}   # hand-segmented neurons only
     # every segmented cell of the Dryad bundles; a DRG section carries its capsule and
     # root, which are nerve sheath tissue, so the three nerve sheath states are candidates too
-    yu2024_hdrg_xenium_cells: {compartment: ganglion, extra_states: [perineurial, epineurial fibroblast, endoneurial fibroblast]}
+    yu2024_hdrg_xenium_cells: {compartment: ganglion, extra_states: [perineurial, epineurial fibroblast, endoneurial fibroblast], exclude_states: [sympathetic neuron]}

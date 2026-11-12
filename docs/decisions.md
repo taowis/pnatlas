@@ -223,3 +223,13 @@ Each non-obvious choice, with its reason. Newest last.
   the config); the cost, a ganglion fibroblast called a sheath state where
   the signatures are close over the panel's genes, is what checks (a) and
   (b) and the panels are there to show.
+- **The sympathetic neuron state is not a candidate on a DRG section.** A
+  DRG holds no sympathetic neurons, yet the state took 15,593 of the
+  152,000 segmented cells of the Yu 2024 sections (analysis log 3.9), most
+  likely satellite glia and other cells with thin, neuron-like panel
+  counts, and it fell inside the plan's mapped rule only because it
+  failed (a) in two sections of four. The removal is per dataset
+  (`exclude_states` in the config) so that the sympathetic ganglion
+  sections of a later dataset keep the state; the cells it held are
+  reassigned among the remaining candidates or become unassigned, and
+  the checks of those states are recorded again.

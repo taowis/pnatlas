@@ -12,7 +12,9 @@ transcripts over the shared genes, is "unassigned" (the reason is kept).
 Candidate states are those of the dataset's compartment (and class, for
 the Yu 2024 neurons), plus any `extra_states` the config names for the
 dataset (the nerve sheath states for a whole DRG section, whose capsule
-and root are nerve sheath tissue). The scANVI and scArches transfer
+and root are nerve sheath tissue), minus any `exclude_states` (the
+sympathetic neuron state on a DRG section, which holds no sympathetic
+neurons). The scANVI and scArches transfer
 tried first is recorded in the analysis log (3.5).
 
 Check (a): the AUROC of the marker score (markers computed within the
@@ -77,7 +79,7 @@ def main():
     ann = ann[(ann["compartment"] == dcfg["compartment"]) & ~ann["state_final"].str.endswith(UNASSIGNED)]
     if dcfg.get("class"):
         ann = ann[ann["class_final"] == dcfg["class"]]
-    states = sorted(set(ann["state_final"]) | set(dcfg.get("extra_states", [])))
+    states = sorted((set(ann["state_final"]) | set(dcfg.get("extra_states", []))) - set(dcfg.get("exclude_states", [])))
     sig = pd.read_csv(args.signatures, index_col=0)[states]
     markers = pd.read_csv(args.markers, sep="\t")
 

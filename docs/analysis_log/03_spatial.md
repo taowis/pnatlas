@@ -606,3 +606,34 @@ they are picked out only on zooming; the H and E shows the ganglion
 with its capsule and the root fascicles attached, and the Region 2
 perineurial cells lie along the capsule edge at first sight. The
 judgement is the reader's and is not recorded here until made.
+
+## 3.10 The sympathetic neuron state is dropped from the DRG candidates
+
+Decision (docs/decisions.md): a DRG holds no sympathetic neurons, so the
+state is not a candidate on the Yu 2024 sections. The removal is a per
+dataset `exclude_states` list in the config, so a sympathetic ganglion
+dataset keeps the state, and both Yu transfers are rerun on the section
+objects, panel genes and markers of 3.9 (runbook 3.10). The all-cell
+dataset now has 23 candidates, the neuron table 11.
+
+Outcome. The 15,593 cells the state held go mostly to A-PEP (2,961
+more cells than before), satellite glia (2,429), fibroblast (1,994),
+macrophage (1,822), non-myelinating Schwann (1,565), injured neuron
+(1,283), C-NP (899) and endothelial (883); the rest spread over the
+other states in the hundreds or less, and the ambiguous cells rise by
+22 to 32 per section (128 to 240), the low-count cells not at all. So
+the state had been absorbing a mixture of thin neuron-like cells (the
+nucleus-cut somata and their satellite glia) and non-neuronal cells
+whose panel counts were scarce, as suspected. The checks of the
+receiving states barely move: every neuron family, the injured neuron
+state and every non-neuronal state keep passing (a) and (b) in every
+section (A-PEP median AUROC 0.94, satellite glia 0.75 over its 40
+sections, both as before); adipocyte now reaches 20 cells in a fourth
+section where it fails both checks once (median AUROC 0.82, Spearman
+0.59) and stays mapped; epineurial fibroblast and perineurial are
+unchanged. The status table loses its sympathetic neuron row and
+changes no verdict. In the neuron table the nine somata the state had
+taken go to the injured neuron, C-LTMR, C-Thermo, A-LTMR, A-LTMR (NF)
+and C-NP families with no change of any check. The H and E panels of
+the all-cell dataset are redrawn; the sheath state counts on the
+reader's sheet change by one or two cells on two rows.
