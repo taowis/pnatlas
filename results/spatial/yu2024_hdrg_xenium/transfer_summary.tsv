@@ -1,5 +1,5 @@
 section	cells	assigned	unassigned_fraction	low_counts	ambiguous	states	median_prob
-Region_1	436	436	0.0	0	0	10	1.0
-Region_2	375	375	0.0	0	0	11	1.0
-Region_3	298	298	0.0	0	0	11	1.0
-Region_4	306	306	0.0	0	0	11	1.0
+Region_1	436	436	0.0	0	0	9	1.0
+Region_2	375	375	0.0	0	0	10	1.0
+Region_3	298	298	0.0	0	0	10	1.0
+Region_4	306	306	0.0	0	0	10	1.0

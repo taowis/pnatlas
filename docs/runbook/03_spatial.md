@@ -543,3 +543,39 @@ four rows; `results/spatial/anatomy/yu2024_hdrg_xenium_cells/` has four
 JPEGs with the H and E under the cells, and `anatomy_check.tsv` twelve
 new rows for the reader. The same script runs on the laptop against a
 data root that holds the bundles, the reference and the signatures.
+
+## 3.10 Yu 2024: the sympathetic neuron state is not a DRG candidate
+
+A DRG holds no sympathetic neurons, and in 3.9 the sympathetic neuron
+state of the ganglion compartment took 15,593 of the all-cell dataset's
+cells. The state is removed from the candidates of both Yu datasets
+(`exclude_states` under `panel_transfer.datasets` in `config/config.yaml`,
+read by `workflow/scripts/panel_transfer.py`), the two transfers are
+rerun on the section objects, panel genes and panel markers of 3.9, the
+checks are collected again and the H and E panels of the all-cell
+dataset redrawn, all in one script on the server:
+
+```bash
+REMOTE=user@host workflow/remote/sync.sh
+ssh "$REMOTE" 'source ~/miniconda3/etc/profile.d/conda.sh && conda activate pnatlas && cd ~/Projects/pnatlas-dev && \
+  nvidia-smi --query-gpu=utilization.gpu,memory.used --format=csv,noheader && who && free -g | sed -n 2p && \
+  ~/bin/memguard.sh start logs/memguard.log "panel_transfer|anatomy_panels" && \
+  setsid -f nohup workflow/scripts/run_yu_transfer.sh data > logs/yu_transfer.log 2>&1 < /dev/null'
+```
+
+Check: `logs/yu_transfer.log` has two `TRANSFER <dataset> 0` lines,
+`COLLECT 0`, `PANELS 0` and ends with `YUTRANSFERDONE`; the transfer logs
+report 23 candidate states for the all-cell dataset and 11 for the
+neurons. Then stop the guard and bring the tables, panels and per-cell
+labels back as in 3.9:
+
+```bash
+ssh "$REMOTE" 'cd ~/Projects/pnatlas-dev && cat logs/yu_transfer.log && ~/bin/memguard.sh stop logs/memguard.log; grep -E "WARN|PAUSE" logs/memguard.log | tail -3'
+rsync -a --include "*/" --include "*.tsv" --include "*.txt" --exclude "*" "$REMOTE:~/Projects/pnatlas-dev/results/spatial/" results/spatial/
+rsync -a "$REMOTE:~/Projects/pnatlas-dev/results/spatial/anatomy/yu2024_hdrg_xenium_cells/" results/spatial/anatomy/yu2024_hdrg_xenium_cells/
+rsync -a "$REMOTE:~/Projects/pnatlas-dev/data/interim/spatial/transfer/yu2024_hdrg_xenium" "$REMOTE:~/Projects/pnatlas-dev/data/interim/spatial/transfer/yu2024_hdrg_xenium_cells" "$DATA_ROOT/interim/spatial/transfer/"
+```
+
+Check: `results/spatial/state_mapping_status.tsv` has no sympathetic
+neuron row in the ganglion, and the per-cell files of the transfer
+directories carry no sympathetic neuron label.
