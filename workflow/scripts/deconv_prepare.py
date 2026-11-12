@@ -62,14 +62,14 @@ def main():
     n_mix = args.n_mixtures or dc["n_mixtures"]
     max_cells = args.max_cells_per_state or dc["max_cells_per_state"]
 
-    ann = pd.read_csv(args.annotation, sep="\t", index_col=0)
+    ann = pd.read_csv(args.annotation, sep="\t", index_col=0, low_memory=False)
     ann = ann[(ann["compartment"] == dc["compartment"]) & ~ann["state_final"].str.endswith(UNASSIGNED)]
     sizes = ann["state_final"].value_counts()
     states = sorted(sizes[sizes >= dc["min_cells_per_state"]].index)
     ann = ann[ann["state_final"].isin(states)]
     ann["donor"] = ann["donor"].astype(str)
     donors = sorted(ann["donor"].unique())
-    held = sorted(rng.choice(donors, size=dc["holdout_donors"], replace=False))
+    held = sorted(str(d) for d in rng.choice(donors, size=dc["holdout_donors"], replace=False))
     print(f"nerve cells {len(ann)}, states {len(states)}, donors {len(donors)}, held out {held}", flush=True)
 
     # reference cells: up to max_cells per state from the reference donors
