@@ -126,3 +126,19 @@ deconvolution:
   pass_rmse: 0.1
   tissue: "Nerve - Tibial"              # SMTSD of the GTEx samples used
   bayesprism_cores: 12
+
+# Stage 5 genetics (plan section 6)
+genetics:
+  specificity_min_cells: 20             # donor by state pseudobulks with fewer cells are dropped
+  classes: [CMT, dHMN, HSAN, SYND, HSP]  # disease categories of the PNPrank truth set
+  panels: [ge_846_v8.38, ge_85_v1.513, aus_3070_v3.1, aus_3439_v2.0]   # PanelApp green genes as the broader lists
+  bootstraps: 10000
+  background_bins: 10                   # quantile bins of exon length and of GC for the matched draws
+  enrichment_q: 0.05
+  coloc:
+    p1: 1.0e-4
+    p2: 1.0e-4
+    p12: 5.0e-6
+    pp_h4: 0.8
+    window_bp: 500000                   # around each GWAS lead variant
+    gwas_p: 5.0e-8                      # lead variants below this p are tested
