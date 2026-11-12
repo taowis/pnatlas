@@ -163,6 +163,9 @@ utdallas_dpn_nerves:
   tissue: sural nerve
   compartment: nerve
   dir: interim/rds/utdallas_dpn_nerves
+  # the object is Seurat 5, whose GetTissueCoordinates returns x as the image row and
+  # y as the image column; the exported x,y are read as row,column (runbook 3.11)
+  position_order: yx
   # anatomy check: the low-resolution tissue image kept in the Seurat object
   # (exported by rds_spatial_to_mtx.R), scale factor from the exported coordinates
   anatomy: {kind: seurat_export, image: "interim/rds/utdallas_dpn_nerves/images/{image}.png", coordinates: interim/rds/utdallas_dpn_nerves/coordinates.csv.gz, scale_column: lowres, marker_px: 5}
