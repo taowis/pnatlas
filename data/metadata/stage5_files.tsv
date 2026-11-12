@@ -1,0 +1,22 @@
+dataset	accession	file	url	size_bytes	access
+gwas_diabetic_neuropathy	GCST90129436	GCST90129436.h.tsv.gz	https://ftp.ebi.ac.uk/pub/databases/gwas/summary_statistics/GCST90129001-GCST90130000/GCST90129436/harmonised/GCST90129436.h.tsv.gz	431440451	open
+gwas_diabetic_neuropathy	GCST90129436	GCST90129436.h.tsv.gz.tbi	https://ftp.ebi.ac.uk/pub/databases/gwas/summary_statistics/GCST90129001-GCST90130000/GCST90129436/harmonised/GCST90129436.h.tsv.gz.tbi	1532338	open
+gwas_diabetic_neuropathy	GCST90129436	GCST90129436.h.tsv.gz-meta.yaml	https://ftp.ebi.ac.uk/pub/databases/gwas/summary_statistics/GCST90129001-GCST90130000/GCST90129436/harmonised/GCST90129436.h.tsv.gz-meta.yaml	2098	open
+gwas_mvp_t2d_neurological	GCST90475676	GCST90475676.h.tsv.gz	https://ftp.ebi.ac.uk/pub/databases/gwas/summary_statistics/GCST90475001-GCST90476000/GCST90475676/harmonised/GCST90475676.h.tsv.gz	1022430333	open
+gwas_mvp_t2d_neurological	GCST90475676	GCST90475676.h.tsv.gz.tbi	https://ftp.ebi.ac.uk/pub/databases/gwas/summary_statistics/GCST90475001-GCST90476000/GCST90475676/harmonised/GCST90475676.h.tsv.gz.tbi	1747906	open
+gwas_mvp_t2d_neurological	GCST90475676	GCST90475676.h.tsv.gz-meta.yaml	https://ftp.ebi.ac.uk/pub/databases/gwas/summary_statistics/GCST90475001-GCST90476000/GCST90475676/harmonised/GCST90475676.h.tsv.gz-meta.yaml	861	open
+gwas_mvp_hereditary_idiopathic_pn	GCST90475844	GCST90475844.h.tsv.gz	https://ftp.ebi.ac.uk/pub/databases/gwas/summary_statistics/GCST90475001-GCST90476000/GCST90475844/harmonised/GCST90475844.h.tsv.gz	1026569446	open
+gwas_mvp_hereditary_idiopathic_pn	GCST90475844	GCST90475844.h.tsv.gz.tbi	https://ftp.ebi.ac.uk/pub/databases/gwas/summary_statistics/GCST90475001-GCST90476000/GCST90475844/harmonised/GCST90475844.h.tsv.gz.tbi	1747191	open
+gwas_mvp_hereditary_idiopathic_pn	GCST90475844	GCST90475844.h.tsv.gz-meta.yaml	https://ftp.ebi.ac.uk/pub/databases/gwas/summary_statistics/GCST90475001-GCST90476000/GCST90475844/harmonised/GCST90475844.h.tsv.gz-meta.yaml	857	open
+gwas_neuropathic_pain	GCST90859373	GCST90859373.h.tsv.gz	https://ftp.ebi.ac.uk/pub/databases/gwas/summary_statistics/GCST90859001-GCST90860000/GCST90859373/harmonised/GCST90859373.h.tsv.gz	1792823418	open
+gwas_neuropathic_pain	GCST90859373	GCST90859373.h.tsv.gz.tbi	https://ftp.ebi.ac.uk/pub/databases/gwas/summary_statistics/GCST90859001-GCST90860000/GCST90859373/harmonised/GCST90859373.h.tsv.gz.tbi	1981081	open
+gwas_neuropathic_pain	GCST90859373	GCST90859373.h.tsv.gz-meta.yaml	https://ftp.ebi.ac.uk/pub/databases/gwas/summary_statistics/GCST90859001-GCST90860000/GCST90859373/harmonised/GCST90859373.h.tsv.gz-meta.yaml	815	open
+gwas_carpal_tunnel	GCST90018813	GCST90018813.h.tsv.gz	https://ftp.ebi.ac.uk/pub/databases/gwas/summary_statistics/GCST90018001-GCST90019000/GCST90018813/harmonised/GCST90018813.h.tsv.gz	639939629	open
+gwas_carpal_tunnel	GCST90018813	GCST90018813.h.tsv.gz.tbi	https://ftp.ebi.ac.uk/pub/databases/gwas/summary_statistics/GCST90018001-GCST90019000/GCST90018813/harmonised/GCST90018813.h.tsv.gz.tbi	1604520	open
+gwas_carpal_tunnel	GCST90018813	GCST90018813.h.tsv.gz-meta.yaml	https://ftp.ebi.ac.uk/pub/databases/gwas/summary_statistics/GCST90018001-GCST90019000/GCST90018813/harmonised/GCST90018813.h.tsv.gz-meta.yaml	1005	open
+eqtl_catalogue_gtex_tibial	QTD000286	QTD000286.all.tsv.gz	https://ftp.ebi.ac.uk/pub/databases/spot/eQTL/sumstats/QTS000015/QTD000286/QTD000286.all.tsv.gz	3968983596	open
+eqtl_catalogue_gtex_tibial	QTD000286	QTD000286.all.tsv.gz.tbi	https://ftp.ebi.ac.uk/pub/databases/spot/eQTL/sumstats/QTS000015/QTD000286/QTD000286.all.tsv.gz.tbi	2231506	open
+eqtl_catalogue_gtex_tibial	QTD000286	QTD000286.permuted.tsv.gz	https://ftp.ebi.ac.uk/pub/databases/spot/eQTL/sumstats/QTS000015/QTD000286/QTD000286.permuted.tsv.gz	853906	open
+eqtl_catalogue_gtex_tibial	QTD000286	QTD000286.credible_sets.tsv.gz	https://ftp.ebi.ac.uk/pub/databases/spot/eQTL/susie/QTS000015/QTD000286/QTD000286.credible_sets.tsv.gz	5264471	open
+eqtl_catalogue_gtex_tibial	QTD000286	QTD000286.lbf_variable.txt.gz	https://ftp.ebi.ac.uk/pub/databases/spot/eQTL/susie/QTS000015/QTD000286/QTD000286.lbf_variable.txt.gz	2533988094	open
+gtex_v10_tibial_cis_qtl	GTEx v10 (gs://adult-gtex)	GTEx_Analysis_v10_eQTL.tar	https://storage.googleapis.com/adult-gtex/bulk-qtl/v10/single-tissue-cis-qtl/GTEx_Analysis_v10_eQTL.tar	2561047718	open
