@@ -116,3 +116,59 @@ reference's (ILRUN was C6orf106 in the reference's annotation) had an
 empty state; the collector now says "not in reference" so that the
 case is visible, and such genes are looked up by hand in the reading of
 the results.
+
+## 5.4 Colocalisation results
+
+Lead regions after clumping at 500 kb: 1 for the diabetic neuropathy
+scan, 1 for neuropathic pain, 17 for carpal tunnel syndrome, 22 for the
+hereditary and idiopathic neuropathy PheCode scan and 241 for the type
+2 diabetes with neurological manifestations scan. They gave 9,858
+region by gene pairs with at least 50 shared variants, 1,112 of them
+with a SuSiE credible set for the eGene in the region (tested with
+coloc.bf_bf), the rest with coloc.abf. 81 pairs reach PP.H4 above 0.5
+and 27 pass the 0.8 threshold, in 21 regions, all from the two MVP
+scans; the three smaller scans (one or 17 regions) give none. The full
+table is `results/genetics/coloc_all_pairs.tsv`, the colocalised pairs
+with their state assignment `coloc_colocalised.tsv`, and the
+specificity of those genes across all states `coloc_gene_specificity.tsv`.
+
+Hereditary and idiopathic neuropathy: one eGene, ILRUN, colocalises in
+two neighbouring regions of chromosome 6p21 (PP.H4 0.81 with the SuSiE
+signal at the 34.76 Mb lead, 0.98 with coloc.abf at the 35.42 Mb lead).
+ILRUN is not in the reference specificity (it was C6orf106 in older
+annotations and is below the expression filter of the pseudobulk
+table under either name), so it has no state in this reference.
+
+Type 2 diabetes with neurological manifestations: 25 pairs in 19
+regions, and they are the diabetes loci rather than nerve loci: WFS1
+(Wolfram syndrome gene, PP.H4 0.83, highest specificity in Ab-LTMR
+neurons at 0.17), JAZF1 (0.96), TFAP2B (0.81, the one clearly
+state-specific gene, sympathetic neuron at 0.78), SCN2A (0.98, highest
+in the sympathetic neuron state at 0.22), CCND2-AS1 (1.00), CBFA2T3
+(0.95, granulocyte 0.19), CEP68 (0.97), NLRC3 (0.94, T/NK 0.40), PGAP3
+and PNMT at the ERBB2 locus, DVL3, CLUAP1, PLEKHH3 and CNTNAP1 at
+17q21, RALY-AS1 in two regions, DNAH10OS, H1-7, RMC1, NIPSNAP2,
+RCCD1-AS1 and four unnamed genes (ENSG00000286176 next to WFS1,
+ENSG00000236283 next to SCN2A, ENSG00000234936, ENSG00000275228). Most
+of these have a flat specificity (highest state below 0.2), which is
+expected for broadly expressed genes whose eQTL is shared across
+tissues; the state column is the one of highest specificity as the plan
+says and is not a claim of specificity. CNTNAP1 (a paranodal protein,
+the gene of a congenital hypomyelinating neuropathy) at 17q21 is the
+one colocalised gene with a direct nerve role; its top state in the
+reference is injured neuron at 0.10.
+
+The reading: the nerve eQTL colocalisation of these GWAS is thin, which
+follows from the scans themselves (the two non-MVP neuropathy scans
+have one lead each), not from the eQTL dataset (1,112 pairs had a
+credible set). The gene class enrichment (5.2) is the stronger genetic
+link between the reference and neuropathy; the colocalised genes go to
+PNPrank v2 as a feature in stage 6 as the plan says, with their PP.H4
+and state.
+
+The per-region GWAS and eQTL extracts on the server
+(`data/interim/genetics/coloc`, 2 GB) were deleted after the small
+tables of each GWAS (regions, pairs, study, coloc) had been copied to
+the local data directory; `coloc_prepare.py` rebuilds them from the raw
+files, which stay on the server and are in the manifest. The memory
+guard recorded no warning during the run.
