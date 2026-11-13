@@ -1,6 +1,6 @@
 # pnatlas
 
-**Status:** Stage 7 (portal and release) prepared: the gene lookup site builds from the result tables and the data archive is staged; the public copy and the Zenodo upload wait for the manuscript.
+**Status:** Stage 7 (portal and release) under way: the public copy is pushed to `taowis/pnatlas` and serves the gene lookup site through GitHub Pages; the data archive is bundled for Zenodo (record DOI to be added).
 
 | Stage | Description | Status |
 |---|---|---|
@@ -11,7 +11,7 @@
 | 4 | GTEx tibial nerve deconvolution | done: 670 tibial nerve samples deconvolved with MuSiC (primary by the pre-set rule) and BayesPrism, validation and covariate models in `results/deconvolution/` |
 | 5 | Genetics: neuropathy gene classes, nerve eQTL colocalisation | done: gene class enrichment and the colocalisation of five GWAS with the tibial nerve eQTL in `results/genetics/` (27 colocalised pairs, all from the two MVP scans) |
 | 6 | PNPrank v2: temporal back-test with the new features | done: tier-1 AUROC over the six cutoffs 0.771 without and 0.778 with the pnatlas features, an improvement by the pre-set rule (p 0.031); top one percent recall not improved; tables in `results/backtest/` |
-| 7 | Static portal, Zenodo release, public repository | prepared: `portal/` builds the static gene lookup site (deployed by the pages workflow), `workflow/release/` stages the data archive and builds the public copy; upload and publication at manuscript submission |
+| 7 | Static portal, Zenodo release, public repository | under way: `portal/` builds the static gene lookup site (deployed by the pages workflow from the public copy), `workflow/release/` stages and bundles the data archive, uploads the Zenodo record and builds the public copy |
 
 ## What this is
 

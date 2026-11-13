@@ -300,3 +300,14 @@ Each non-obvious choice, with its reason. Newest last.
   a preprint, and the archive version cited in the paper should be the
   one the final tables come from; the build and staging scripts are
   rehearsed now so that the release is a single command then.
+- **Reversed: the repository, the Zenodo record and the site are
+  released before the manuscript.** The public copy is rebuilt from
+  `main` after every merge, so it can go out now and follow the paper;
+  the archive content is fixed by its MD5 list and a new version of the
+  record can be added if the final tables change. The Zenodo record is
+  uploaded as nine files (the reference object, four component bundles,
+  the record files) because of the 100 file limit per record, and
+  published by hand after the draft is checked.
+- **Pages is served from the public repository only.** The deploy job of
+  the pages workflow runs only in `taowis/pnatlas`; the private
+  repository keeps the build job as a check of the result tables.

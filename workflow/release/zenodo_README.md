@@ -12,7 +12,14 @@ layers can be fetched again.
 
 ## Contents
 
-- `reference/pnatlas_reference_v0.1.0.h5ad`: the reference object, raw counts
+Zenodo takes at most 100 files per record, so the archive is uploaded as
+the reference object on its own, one `tar.gz` per component
+(`reference_tables`, `spatial`, `deconvolution`, `results`, each unpacking
+into the directory of that name) and the four record files (`README.md`,
+`data_README.md`, `MANIFEST.tsv`, `MD5SUMS`). `MD5SUMS` lists every file
+inside the bundles by its unpacked path.
+
+- `pnatlas_reference_v0.1.0.h5ad`: the reference object, raw counts
   after quality control for 597,455 cells by 19,420 genes, with per cell the
   dataset, sample, donor, batch, tissue, compartment, protocol, the authors'
   label, the final class and state, how the state was assigned
@@ -21,7 +28,7 @@ layers can be fetched again.
   included, because that portal does not allow cell-level derivatives to be
   redistributed; they are 47,226 neurons of the full reference, and the
   runbook rebuilds the full object from the portal download.
-- `reference/pnatlas_reference_cells.tsv.gz`: the cell table of the object.
+- `reference/pnatlas_reference_cells.tsv.gz` (in `reference_tables.tar.gz`): the cell table of the object.
 - `reference/state_specificity.tsv.gz`, `state_expression_cpm.tsv.gz`,
   `state_pseudobulk_cells.tsv`: per gene, the specificity and log CPM in each
   of the 31 states, computed over every dataset, and the cells behind each
@@ -36,7 +43,7 @@ layers can be fetched again.
   true fractions.
 - `results/`: every result table of the repository at the snapshot commit
   (reference, spatial, deconvolution, genetics, back-test).
-- `MD5SUMS`: checksums of every file here.
+- `MD5SUMS`: checksums of every file in the bundles, by unpacked path.
 
 ## Terms
 

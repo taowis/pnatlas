@@ -397,5 +397,13 @@ specificity and expression tables, the cell2location, panel transfer and
 signature outputs, the deconvolution reference and mixtures, every result
 table, this README (as `data_README.md`), the manifest and a deposit README.
 Its MD5 list is `data/metadata/zenodo_v0.1.0_md5sums.txt`, so the content
-of the archive is fixed here before the upload; the upload is done by hand
-and the DOI is added to this section and to `CITATION.cff` when it exists.
+of the archive is fixed here before the upload. Zenodo takes at most 100
+files per record, so `workflow/release/bundle_zenodo.sh` packs the staged
+directory into nine upload files (the reference object, four component
+`tar.gz` bundles, the two READMEs, the manifest and the MD5 list; their
+checksums are `data/metadata/zenodo_v0.1.0_bundles_md5sums.txt`) and
+`workflow/release/zenodo_upload.py` creates the draft record and uploads
+them (runbook 7.5). The local copy of the staged archive is
+`$DATA_ROOT/release/zenodo_v0.1.0/` and the bundles
+`$DATA_ROOT/release/zenodo_v0.1.0_upload/`. Record: DOI to be filled in
+when the draft is created.
