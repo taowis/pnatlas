@@ -35,3 +35,6 @@ __pycache__/
 
 # Run logs (kept on the machine that ran the job)
 logs/
+
+# Built portal (rebuilt by portal/build_portal.py; deployed by the pages workflow)
+portal/site/

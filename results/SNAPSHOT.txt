@@ -1,0 +1,2 @@
+results snapshot: commit 7794966 (main after stage 6)
+Tables under results/ were last changed by the stage 4 to 6 pull requests (#20 to #22); the portal and the data archive are built from this snapshot.

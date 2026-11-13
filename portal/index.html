@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pnatlas gene lookup</title>
+<meta name="description" content="Human peripheral nervous system cell states: gene specificity and expression across ganglion and nerve states, spatial mapping, GTEx tibial nerve deconvolution and neuropathy genetics.">
+<style>
+:root { --bg:#ffffff; --fg:#1b1b1b; --muted:#5c5c5c; --line:#dcdcdc; --panel:#f5f5f3; --accent:#1f4e79; --bar:#9bbfe0; --bar2:#e0a89b; --link:#1f4e79; }
+@media (prefers-color-scheme: dark) { :root { --bg:#141517; --fg:#e8e8e6; --muted:#a3a3a0; --line:#34363a; --panel:#1d1f23; --accent:#8fb8de; --bar:#355d85; --bar2:#86423a; --link:#8fb8de; } }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--bg); color:var(--fg); font:15px/1.5 -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
+header { border-bottom:1px solid var(--line); padding:14px 16px; display:flex; flex-wrap:wrap; gap:8px 20px; align-items:baseline; }
+header h1 { font-size:20px; margin:0; }
+header h1 span { color:var(--muted); font-weight:normal; font-size:14px; margin-left:8px; }
+nav a { margin-right:14px; color:var(--link); text-decoration:none; }
+nav a.on { font-weight:600; text-decoration:underline; }
+main { max-width:1100px; margin:0 auto; padding:16px; }
+.search { position:relative; max-width:520px; }
+.search input { width:100%; font-size:16px; padding:8px 10px; border:1px solid var(--line); border-radius:4px; background:var(--panel); color:var(--fg); }
+.sugg { position:absolute; left:0; right:0; top:100%; background:var(--bg); border:1px solid var(--line); border-top:none; z-index:5; max-height:320px; overflow:auto; }
+.sugg div { padding:6px 10px; cursor:pointer; display:flex; justify-content:space-between; }
+.sugg div:hover, .sugg div.sel { background:var(--panel); }
+.sugg small { color:var(--muted); }
+.hint { color:var(--muted); font-size:13px; margin:6px 0 0; }
+h2 { font-size:18px; margin:24px 0 8px; }
+h3 { font-size:15px; margin:18px 0 6px; }
+.badge { display:inline-block; font-size:12px; padding:1px 7px; border:1px solid var(--line); border-radius:10px; margin:0 6px 4px 0; background:var(--panel); }
+table { border-collapse:collapse; width:100%; font-size:14px; }
+th, td { text-align:left; padding:4px 8px; border-bottom:1px solid var(--line); vertical-align:top; }
+th { color:var(--muted); font-weight:600; }
+td.num, th.num { text-align:right; font-variant-numeric:tabular-nums; white-space:nowrap; }
+.bar { display:inline-block; height:10px; background:var(--bar); vertical-align:middle; }
+.bar.neg { background:var(--bar2); }
+.barwrap { display:inline-block; width:120px; position:relative; height:10px; vertical-align:middle; margin-right:6px; }
+.barwrap .mid { position:absolute; left:50%; top:0; width:1px; height:10px; background:var(--line); }
+.barwrap .bar { position:absolute; top:0; }
+.two { display:grid; grid-template-columns:1fr 1fr; gap:16px 32px; }
+@media (max-width:760px) { .two { grid-template-columns:1fr; } }
+.muted { color:var(--muted); }
+.panel { background:var(--panel); border:1px solid var(--line); border-radius:4px; padding:10px 12px; margin:8px 0; }
+a { color:var(--link); }
+code { font-size:13px; }
+.state-row td:first-child { white-space:nowrap; }
+footer { border-top:1px solid var(--line); margin-top:32px; padding:12px 16px; color:var(--muted); font-size:13px; }
+.hidden { display:none; }
+</style>
+</head>
+<body>
+<header>
+  <h1>pnatlas <span>human peripheral nervous system cell states</span></h1>
+  <nav><a href="#gene" id="nav-gene">Gene</a><a href="#states" id="nav-states">States</a><a href="#about" id="nav-about">About and downloads</a></nav>
+</header>
+<main>
+<section id="view-gene">
+  <div class="search">
+    <input id="q" type="text" placeholder="Gene symbol or Ensembl id, for example MPZ or ENSG00000158887" autocomplete="off" spellcheck="false">
+    <div id="sugg" class="sugg hidden"></div>
+  </div>
+  <p class="hint">Specificity is the share of a gene's expression that falls in one state across the 31 reference states (the values sum to 1 over the states). Log CPM is the gene's expression in the state's pseudobulk. The GTEx column is the Spearman correlation across 670 tibial nerve samples between the gene's expression and the estimated fraction of each nerve state.</p>
+  <div id="gene"></div>
+</section>
+<section id="view-states" class="hidden">
+  <h2>Reference states</h2>
+  <p class="muted">Cells and known donors per state in the joint ganglion and nerve reference; whether the state was placed in tissue in the spatial sections of each compartment; its mean fraction in GTEx tibial nerve (MuSiC is the primary estimate; BayesPrism is kept for the rare states that MuSiC sets to zero); and the neuropathy gene classes enriched among its specific genes.</p>
+  <div id="states"></div>
+</section>
+<section id="view-about" class="hidden">
+  <h2>About</h2>
+  <div id="about"></div>
+  <h2>Downloads</h2>
+  <div id="downloads"></div>
+</section>
+</main>
+<footer id="foot"></footer>
+<script>
+(function () {
+  const $ = (id) => document.getElementById(id);
+  let index = null, states = null, meta = null;
+  const shardCache = {};
+  const fmt = (x, d) => (x === null || x === undefined) ? "" : Number(x).toFixed(d);
+  const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+  async function load() {
+    const [i, s, m] = await Promise.all([
+      fetch("data/index.json").then(r => r.json()),
+      fetch("data/states.json").then(r => r.json()),
+      fetch("data/meta.json").then(r => r.json()),
+    ]);
+    index = i; states = s; meta = m;
+    $("foot").textContent = `pnatlas, build ${meta.commit}. ${meta.genes.toLocaleString()} genes, ${meta.states} states, ${meta.cells.toLocaleString()} reference cells, ${meta.gtex_samples} GTEx tibial nerve samples. Code and data terms in the repository.`;
+    renderStates(); renderAbout(); route();
+  }
+
+  function bar(v, max, width) {
+    const w = Math.max(0, Math.min(1, v / max)) * (width || 120);
+    return `<span class="bar" style="width:${w}px"></span>`;
+  }
+  function midbar(v) {
+    const half = 60, w = Math.min(1, Math.abs(v)) * half;
+    const left = v >= 0 ? half : half - w;
+    return `<span class="barwrap"><span class="mid"></span><span class="bar${v < 0 ? " neg" : ""}" style="left:${left}px;width:${w}px"></span></span>`;
+  }
+
+  async function showGene(key) {
+    const q = key.trim().toUpperCase();
+    const hit = index.find(r => r.s.toUpperCase() === q || r.e.toUpperCase() === q);
+    if (!hit) { $("gene").innerHTML = `<p class="panel">No gene named <b>${esc(key)}</b> in the reference universe (${meta.genes.toLocaleString()} genes with pnatlas features).</p>`; return; }
+    if (!shardCache[hit.k]) shardCache[hit.k] = await fetch(`data/genes/${hit.k}.json`).then(r => r.json());
+    const g = shardCache[hit.k][hit.e];
+    const st = states.states;
+    const order = st.map((s, i) => i).sort((a, b) => g.spec[b] - g.spec[a]);
+    const maxSpec = Math.max(...g.spec.filter(x => x !== null), 0.0001);
+    const maxCpm = Math.max(...g.logcpm.filter(x => x !== null), 0.01);
+    let h = `<h2>${esc(g.symbol)} <span class="muted" style="font-weight:normal;font-size:14px">${esc(g.id)} · ${esc(g.biotype)} · chr${esc(g.chromosome)}</span></h2>`;
+    h += `<p><a href="https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=${esc(g.id)}" target="_blank" rel="noopener">Ensembl</a> · <a href="https://gtexportal.org/home/gene/${esc(g.symbol)}" target="_blank" rel="noopener">GTEx</a></p>`;
+    if (g.truth) h += `<p class="panel">PNPrank truth set: ${esc(g.truth.category)}, tier ${g.truth.tier}, ${esc(g.truth.inheritance)}, first reported ${g.truth.year}${g.truth.pmid ? ` (<a href="https://pubmed.ncbi.nlm.nih.gov/${g.truth.pmid}/" target="_blank" rel="noopener">PMID ${g.truth.pmid}</a>)` : ""}.</p>`;
+    if (g.classes.length) h += `<p>${g.classes.map(c => `<span class="badge" title="${esc(states.labels[c] || c)}">${esc(c)}</span>`).join("")}</p>`;
+    h += `<div class="two"><div><h3>Cell states, ordered by specificity</h3><table><tr><th>State</th><th>Class</th><th class="num">Specificity</th><th class="num">log CPM</th></tr>`;
+    for (const i of order) {
+      h += `<tr class="state-row"><td>${esc(st[i].state)}</td><td class="muted">${esc(st[i].class)}</td><td class="num">${bar(g.spec[i], maxSpec, 90)} ${fmt(g.spec[i], 3)}</td><td class="num">${bar(g.logcpm[i], maxCpm, 60)} ${fmt(g.logcpm[i], 2)}</td></tr>`;
+    }
+    h += `</table><p class="muted">Compartment sums of specificity over the states mapped in tissue: ganglion ${fmt(g.compartment.ganglion, 3)}, nerve ${fmt(g.compartment.nerve, 3)}.</p></div>`;
+    h += `<div><h3>GTEx tibial nerve: correlation with state fraction</h3><table><tr><th>Nerve state</th><th class="num">Spearman</th></tr>`;
+    const dOrder = states.deconv_states.map((s, i) => i).sort((a, b) => Math.abs(g.deconv[b]) - Math.abs(g.deconv[a]));
+    for (const i of dOrder) h += `<tr><td>${esc(states.deconv_states[i])}</td><td class="num">${midbar(g.deconv[i] || 0)} ${fmt(g.deconv[i], 2)}</td></tr>`;
+    h += `</table><p class="muted">Correlation of the gene's log CPM with the BayesPrism fraction of the state across 670 samples; a positive value means the gene is higher where the state is more abundant.</p>`;
+    h += `<h3>Colocalisation with neuropathy GWAS</h3>`;
+    if (g.coloc.tested === 0) h += `<p class="muted">Not within 500 kb of a lead variant in the five GWAS tested.</p>`;
+    else {
+      h += `<p class="muted">${g.coloc.tested} region by gene test${g.coloc.tested > 1 ? "s" : ""}, largest PP.H4 ${fmt(g.coloc.max_pp_h4, 2)}.</p>`;
+      if (g.coloc.pairs.length) {
+        h += `<table><tr><th>GWAS</th><th>Region</th><th class="num">PP.H4</th><th>Method</th><th>Lead variant</th><th class="num">Lead p</th></tr>`;
+        for (const p of g.coloc.pairs) h += `<tr><td>${esc(p.gwas)}</td><td><code>${esc(p.region)}</code></td><td class="num">${fmt(p.pp_h4, 2)}</td><td>${esc(p.method)}</td><td><code>${esc(p.lead)}</code></td><td class="num">${esc(p.lead_p)}</td></tr>`;
+        h += `</table>`;
+      }
+    }
+    h += `</div></div>`;
+    $("gene").innerHTML = h;
+    document.title = `${g.symbol} · pnatlas`;
+  }
+
+  function renderStates() {
+    const st = states.states;
+    let h = `<table><tr><th>State</th><th>Class</th><th class="num">Cells</th><th class="num">Donors</th><th class="num">Datasets</th><th>Ganglion sections</th><th>Nerve sections</th><th class="num">GTEx MuSiC</th><th class="num">GTEx BayesPrism</th><th>Enriched gene classes</th></tr>`;
+    const mapCell = (m) => m ? `${esc(m.status)} (${m.sections}; AUROC ${fmt(m.auroc, 2)})` : `<span class="muted">no sections</span>`;
+    for (const s of st) {
+      h += `<tr class="state-row"><td>${esc(s.state)}</td><td class="muted">${esc(s.class)}</td><td class="num">${s.cells.toLocaleString()}</td><td class="num">${s.donors}</td><td class="num">${s.datasets.length}</td><td>${mapCell(s.mapping.ganglion)}</td><td>${mapCell(s.mapping.nerve)}</td>`;
+      h += s.gtex ? `<td class="num">${fmt(s.gtex.music_mean, 3)}${s.gtex.music_zero > 0.5 ? ` <span class="muted" title="fraction of samples where MuSiC returns zero">(zero in ${Math.round(s.gtex.music_zero * 100)}%)</span>` : ""}</td><td class="num">${fmt(s.gtex.bayesprism_mean, 3)}</td>` : `<td class="muted" colspan="2">ganglion only</td>`;
+      h += `<td>${s.enriched.map(e => `<span class="badge" title="fold ${e.fold}, q ${e.q}">${esc(e.class)} ×${e.fold}</span>`).join("") || `<span class="muted">none</span>`}</td></tr>`;
+    }
+    $("states").innerHTML = h + `</table>`;
+  }
+
+  function renderAbout() {
+    const b = meta.backtest;
+    $("about").innerHTML = `
+<p>pnatlas joins public single-nucleus and single-cell data from human sensory and autonomic ganglia and peripheral nerve into one reference of ${meta.states} cell states (${meta.cells.toLocaleString()} cells), places those states in tissue with Xenium and Visium sections, estimates them in ${meta.gtex_samples} GTEx tibial nerve samples, and links them to inherited and acquired neuropathy genetics (gene class enrichment and the colocalisation of five neuropathy GWAS with the tibial nerve eQTL: ${meta.coloc_pairs.toLocaleString()} region by gene tests, ${meta.coloc_colocalised} colocalised). Every number on this site is read from the result tables of the analysis repository at build ${esc(meta.commit)}; nothing is computed in the browser.</p>
+<p>Adding these gene features to PNPrank's published feature set raised its tier-1 temporal back-test AUROC from ${fmt(b.mean_A, 3)} to ${fmt(b.mean_B, 3)} over six cutoff years (sign-flip p ${fmt(b.p, 3)}), an improvement by the rule fixed before the run; the recall of later discoveries in the top one percent did not improve.</p>
+<p>Only public data are used. The cell-level data stay with their original providers under their own terms; this site carries state-level summaries only. Code is MIT licensed. The analysis plan, decisions, runbook and analysis log are in the repository.</p>`;
+    $("downloads").innerHTML = `<table><tr><th>File</th><th>Content</th><th class="num">Size</th></tr>` +
+      meta.tables.map(t => `<tr><td><a href="tables/${esc(t.file)}">${esc(t.file)}</a></td><td>${esc(t.description)}</td><td class="num">${(t.bytes / 1024).toFixed(0)} KB</td></tr>`).join("") + `</table>`;
+  }
+
+  function show(view) {
+    document.title = view === "gene" ? "pnatlas gene lookup" : `${view === "states" ? "States" : "About"} · pnatlas`;
+    for (const v of ["gene", "states", "about"]) {
+      $("view-" + v).classList.toggle("hidden", v !== view);
+      $("nav-" + v).classList.toggle("on", v === view);
+    }
+  }
+  function route() {
+    const h = location.hash.replace(/^#/, "");
+    if (h.startsWith("gene/")) { show("gene"); const g = decodeURIComponent(h.slice(5)); $("q").value = g; showGene(g); }
+    else if (h === "states") show("states");
+    else if (h === "about") show("about");
+    else { show("gene"); document.title = "pnatlas gene lookup"; }
+  }
+  window.addEventListener("hashchange", route);
+
+  let sel = -1, hits = [];
+  function suggest() {
+    const q = $("q").value.trim().toUpperCase();
+    const box = $("sugg");
+    if (!q || !index) { box.classList.add("hidden"); return; }
+    hits = index.filter(r => r.s.toUpperCase().startsWith(q) || r.e.toUpperCase().startsWith(q)).slice(0, 15);
+    sel = -1;
+    box.innerHTML = hits.map((r, i) => `<div data-i="${i}"><span>${esc(r.s)}${r.t ? ' <span class="badge">truth set</span>' : ""}${r.c ? ` <small>${r.c} panel${r.c > 1 ? "s" : ""}</small>` : ""}</span><small>${esc(r.e)}</small></div>`).join("");
+    box.classList.toggle("hidden", hits.length === 0);
+  }
+  function go(i) { const r = hits[i]; $("sugg").classList.add("hidden"); if (r) location.hash = "gene/" + encodeURIComponent(r.s); }
+  $("q").addEventListener("input", suggest);
+  $("q").addEventListener("keydown", (e) => {
+    if (e.key === "ArrowDown") { sel = Math.min(sel + 1, hits.length - 1); } else if (e.key === "ArrowUp") { sel = Math.max(sel - 1, 0); }
+    else if (e.key === "Enter") { e.preventDefault(); if (sel >= 0) go(sel); else { $("sugg").classList.add("hidden"); location.hash = "gene/" + encodeURIComponent($("q").value.trim()); showGene($("q").value); } return; }
+    else if (e.key === "Escape") { $("sugg").classList.add("hidden"); return; } else return;
+    e.preventDefault();
+    [...$("sugg").children].forEach((d, i) => d.classList.toggle("sel", i === sel));
+  });
+  $("sugg").addEventListener("mousedown", (e) => { const d = e.target.closest("div[data-i]"); if (d) go(Number(d.dataset.i)); });
+  document.addEventListener("click", (e) => { if (!e.target.closest(".search")) $("sugg").classList.add("hidden"); });
+  load();
+})();
+</script>
+</body>
+</html>

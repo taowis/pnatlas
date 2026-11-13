@@ -1,0 +1,14 @@
+{
+  "title": "pnatlas: a multiscale reference of human peripheral nervous system cell states",
+  "upload_type": "software",
+  "creators": [
+    {
+      "name": "Lai, Kaitao",
+      "affiliation": "The University of Sydney; ANZAC Research Institute",
+      "orcid": "0000-0002-9420-9352"
+    }
+  ],
+  "description": "Code, configuration, metadata, result tables and the static gene lookup site for pnatlas, which joins public single-cell data from human sensory and autonomic ganglia and peripheral nerve into one reference of cell states, places the states in tissue with Xenium and Visium sections, estimates them in GTEx tibial nerve, links them to inherited and acquired neuropathy genetics, and tests whether these features improve the PNPrank temporal back-test.",
+  "license": "MIT",
+  "keywords": ["peripheral nervous system", "dorsal root ganglion", "peripheral nerve", "single-cell RNA-seq", "spatial transcriptomics", "deconvolution", "colocalisation", "peripheral neuropathy", "Charcot-Marie-Tooth disease"]
+}
