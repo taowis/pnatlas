@@ -268,3 +268,19 @@ Each non-obvious choice, with its reason. Newest last.
 - **The damage Schwann state is not interpreted in the bulk.** Neither
   method recovers it in the mixtures (Pearson about -0.08); it is kept
   in the tables and left out of the reading.
+- **The back-test's ten seeds are PNPrank's global seed and the next
+  nine, applied to its cutoff scoring; the published numbers are the
+  first seed.** PNPrank's own back-test runs one seed per cutoff and
+  the ten seeds of its config serve its repeated cross-validation; the
+  plan names ten fold seeds and a noise baseline over them, so the same
+  scoring function is run with those ten seeds for both feature sets.
+  Nothing in the scoring, transform or evaluation code is changed.
+- **The gene by state correlation feature uses the BayesPrism
+  fractions.** MuSiC is the primary deconvolution method by the
+  pre-set rule, but its exact zeros for the rare states in most samples
+  leave nothing to correlate with; BayesPrism's fractions vary in every
+  state and follow the marker genes (analysis log 4.3).
+- **The gene class enrichment is not a PNPrank feature.** It is
+  computed from the truth set and would leak the labels into the
+  back-test; the colocalisation, specificity, compartment and
+  deconvolution columns do not use the truth set.

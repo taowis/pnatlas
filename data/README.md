@@ -358,3 +358,26 @@ Ensembl 105. Ensembl release 105 (GENCODE 39 equivalent) gene annotation and cDN
 | `raw/ensembl105/Homo_sapiens.GRCh38.cdna.all.fa.gz` | 76085001 | e53e34be0598aefb07afa4a3206305ba | 2026-11-13 |
 
 Derived, not in the manifest: `interim/genetics/` holds the donor by state pseudobulk CPM and the specificity (`reference_specificity.py`) and `interim/genetics/coloc/` the per-region GWAS and eQTL extracts of the colocalisation (`coloc_prepare.py`).
+
+## Stage 6: PNPrank feature matrix
+
+### pnprank_features
+
+The static feature matrix of PNPrank at its submission tag
+(`submitted-human-genetics`, commit 8cba969 of pnprank-dev): 19,229
+Ensembl genes by 239 features (the harmonised cell-type expression and
+specificity of 11 atlases, gnomAD v4.1 constraint, GTEx v10 tissue
+expression). It is not committed in either repository; it was copied
+from the PNPrank analysis directory and is rebuilt there with
+`snakemake stage4_model` from the atlas downloads that
+`config/atlases.yaml` of pnprank-dev lists with their checksums (about
+19 GB). The truth set of the same tag is committed here as
+`data/metadata/pnprank_truth_set.tsv`.
+
+| File (under data_root) | Size (bytes) | md5 | Access date |
+|---|---|---|---|
+| `external/pnprank/features_static.tsv.gz` | 32235621 | 6fa97af70aabe56790fa0dea20fccc63 | 2026-11-13 |
+
+Derived, not in the manifest: `processed/pnatlas_gene_features.tsv.gz`
+(`workflow/scripts/pnatlas_features.py`), also committed as
+`results/backtest/pnatlas_gene_features.tsv.gz`.
