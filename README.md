@@ -1,6 +1,6 @@
 # pnatlas
 
-**Status:** Stage 5 (genetics) done; stage 6 (PNPrank v2 back-test) next.
+**Status:** Stage 6 (PNPrank v2 back-test) done; stage 7 (portal, release, public repository) next.
 
 | Stage | Description | Status |
 |---|---|---|
@@ -10,7 +10,7 @@
 | 3 | Spatial mapping (Xenium, Visium) | done: 44 Visium sections and 3 Xenium panels mapped, checks (a), (b) and (c) collected; status per state in `results/spatial/state_mapping_status.tsv` |
 | 4 | GTEx tibial nerve deconvolution | done: 670 tibial nerve samples deconvolved with MuSiC (primary by the pre-set rule) and BayesPrism, validation and covariate models in `results/deconvolution/` |
 | 5 | Genetics: neuropathy gene classes, nerve eQTL colocalisation | done: gene class enrichment and the colocalisation of five GWAS with the tibial nerve eQTL in `results/genetics/` (27 colocalised pairs, all from the two MVP scans) |
-| 6 | PNPrank v2: temporal back-test with the new features | not started |
+| 6 | PNPrank v2: temporal back-test with the new features | done: tier-1 AUROC over the six cutoffs 0.771 without and 0.778 with the pnatlas features, an improvement by the pre-set rule (p 0.031); top one percent recall not improved; tables in `results/backtest/` |
 | 7 | Static portal, Zenodo release, public repository | not started |
 
 ## What this is

@@ -380,4 +380,9 @@ from the PNPrank analysis directory and is rebuilt there with
 
 Derived, not in the manifest: `processed/pnatlas_gene_features.tsv.gz`
 (`workflow/scripts/pnatlas_features.py`), also committed as
-`results/backtest/pnatlas_gene_features.tsv.gz`.
+`results/backtest/pnatlas_gene_features.tsv.gz`; the per-gene score
+cache of the back-test, `interim/backtest/scores/` (240 files, one per
+positive set, cutoff, seed and feature set, 58 MB, rebuilt by
+`workflow/scripts/run_backtest.sh`); and
+`external/pnprank/backtest_performance.tsv`, PNPrank's published
+back-test table read from its repository at the tag (runbook 6.3).

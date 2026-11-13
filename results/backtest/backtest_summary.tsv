@@ -1,0 +1,7 @@
+positives	metric	cutoffs	seeds	mean_A	min_A	max_A	range_A	mean_B	diff	cutoffs_B_better	p_sign_flip	improvement	primary
+tier1	auroc	6	10	0.7714	0.7708	0.7721	0.0013	0.7784	0.007	5	0.0312	True	True
+tier1	top_recall	6	10	0.1462	0.1418	0.1496	0.0078	0.1268	-0.0194	0	1.0	False	False
+tier1	avg_precision	6	10	0.0142	0.0137	0.015	0.0013	0.0137	-0.0005	3	0.7812	False	False
+tier1+2	auroc	6	10	0.7786	0.7776	0.7791	0.0015	0.7808	0.0022	3	0.2031	False	False
+tier1+2	top_recall	6	10	0.0911	0.0739	0.0999	0.0261	0.0827	-0.0084	2	0.7969	False	False
+tier1+2	avg_precision	6	10	0.0192	0.0188	0.0195	0.0007	0.0191	-0.0001	4	0.6406	False	False

@@ -81,3 +81,23 @@ Check: `results/backtest/backtest_summary.tsv` has the row with
 by two feature sets) with A's means equal to PNPrank's published
 `backtest_performance.tsv` (fold_rank, all_after, full) at the seed
 20261006 row of `backtest_seeds.tsv`.
+
+## 6.3 Checks against PNPrank and clean-up
+
+The published back-test table is read from the PNPrank checkout at the
+tag; the check script compares it with feature set A at the global
+seed. The per-gene score cache is kept on the laptop data root and
+removed from the server once the checksums agree.
+
+```bash
+git -C "$PNPRANK" show 'submitted-human-genetics^{commit}:results/backtest/backtest_performance.tsv' > "$DATA_ROOT/external/pnprank/backtest_performance.tsv"
+python workflow/scripts/backtest_check_published.py --published "$DATA_ROOT/external/pnprank/backtest_performance.tsv" \
+  --seeds results/backtest/backtest_seeds.tsv          # 12 of 12 rows equal the published values
+rsync -a "$REMOTE:~/Projects/pnatlas-dev/results/backtest/scores/" "$DATA_ROOT/interim/backtest/scores/"
+ssh "$REMOTE" 'cd ~/Projects/pnatlas-dev/results/backtest/scores && md5sum *' | sort > /tmp/scores_server.md5
+(cd "$DATA_ROOT/interim/backtest/scores" && md5sum *) | sort | diff - /tmp/scores_server.md5 && \
+  ssh "$REMOTE" 'rm -rf ~/Projects/pnatlas-dev/results/backtest/scores'
+```
+
+Check: the script prints `12 of 12 rows equal the published values`
+and exits 0; `diff` prints nothing before the cache is removed.
