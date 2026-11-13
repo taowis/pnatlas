@@ -13,9 +13,9 @@ cd portal/site && python -m http.server 8000   # then open http://localhost:8000
 ```
 
 The pages workflow (`.github/workflows/pages.yml`) rebuilds and deploys the
-site to GitHub Pages on every push to `main` that touches the portal, the
-results or the metadata, once Pages is set to "GitHub Actions" in the
-repository settings.
+site to GitHub Pages. It is started by hand until Pages is set to "GitHub
+Actions" in the repository settings, after which a push trigger on `main`
+(portal, results, metadata) can be added.
 
 What the page shows per gene: specificity and log CPM in each of the 31
 reference states, the compartment sums over the states mapped in tissue, the

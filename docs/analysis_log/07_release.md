@@ -21,9 +21,12 @@ the 31 states (cells, donors, datasets, spatial mapping per compartment,
 GTEx mean fractions by both methods, enriched gene classes) and an
 about page with the downloads. Deep links of the form `#gene/MPZ` work.
 The built site is not committed; the pages workflow rebuilds it from
-the tables on every push to `main` that touches them, and a test builds
-it in the test suite and reads MPZ back (myelinating Schwann first,
-CMT tier 1).
+the tables, and a test builds it in the test suite and reads MPZ back
+(myelinating Schwann first, CMT tier 1). The workflow's first run on
+`main` built the site on a plain runner and failed only at the deploy
+step, because Pages is not enabled for this private repository; it is
+now started by hand, so that pushes to `main` do not show a failed run,
+until Pages is switched on.
 
 Checked in a browser: the MPZ page lists myelinating Schwann at
 specificity 0.608 and log CPM 8.34, then non-myelinating, damage and

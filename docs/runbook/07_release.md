@@ -6,8 +6,9 @@
 (no other input); `portal/index.html` is the page. The build is checked by
 `tests/test_portal.py`, which builds into a temporary directory and reads
 MPZ back. The site itself is not committed: the pages workflow
-(`.github/workflows/pages.yml`) rebuilds and deploys it on pushes to
-`main` once Pages is set to "GitHub Actions" in the repository settings.
+(`.github/workflows/pages.yml`) rebuilds and deploys it; it is run by
+hand (`gh workflow run pages`) until Pages is set to "GitHub Actions" in
+the repository settings, after which a push trigger on `main` is added.
 
 ```bash
 conda activate pnatlas

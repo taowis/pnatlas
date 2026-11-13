@@ -1,8 +1,8 @@
 name: pages
+# Run by hand until Pages is set to "GitHub Actions" in the repository
+# settings; then add a push trigger on main for portal/**, results/**,
+# data/metadata/** and config/datasets.yaml.
 on:
-  push:
-    branches: [main]
-    paths: [portal/**, results/**, data/metadata/**, config/datasets.yaml]
   workflow_dispatch:
 permissions:
   contents: read
