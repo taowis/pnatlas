@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use pnatlas, please cite it as below."
+title: "pnatlas: a multiscale reference of human peripheral nervous system cell states"
+authors:
+  - family-names: Lai
+    given-names: Kaitao
+    orcid: "https://orcid.org/0000-0002-9420-9352"
+    affiliation: "The University of Sydney; ANZAC Research Institute"
+license: MIT
+repository-code: "https://github.com/taowis/pnatlas"
+version: 0.1.0
