@@ -39,8 +39,8 @@ cells (their portal forbids redistributing cell-level derivatives,
 staging script collects the reference, the spatial outputs (cell2location
 abundances per section, panel transfers, the signature model's tables),
 the deconvolution reference and mixtures, the result tables and the data
-records into one directory with an MD5 list, on the server, for upload
-to Zenodo by hand (the upload needs the account login).
+records into one directory with an MD5 list, on the server, for the
+Zenodo record (7.5).
 
 ```bash
 REMOTE=user@host workflow/remote/sync.sh
@@ -58,10 +58,9 @@ kept cells (644,681 minus the 47,226 Bhuiyan cells); the MD5 list is
 copied into `data/metadata/` so the archive's content is recorded in the
 repository before the upload.
 
-## 7.4 Public copy (built, not pushed)
+## 7.4 Public copy
 
-The public repository is opened at publication, as for PNPrank. The
-build is rehearsed now so that the rewrite is known to be clean:
+The build is rehearsed first so that the rewrite is known to be clean:
 
 ```bash
 PRIVATE_PATTERN='<regex of the server name and address>' workflow/release/build_public.sh /tmp/pnatlas_public
@@ -70,4 +69,67 @@ PRIVATE_PATTERN='<regex of the server name and address>' workflow/release/build_
 Check: `attribution lines in history: 0`, `private names in any tree: 0`,
 `manuscript files in any tree: 0`, and `built in ... (not pushed)`. The
 same command with `--push` creates `taowis/pnatlas` and pushes `main`
-and the tags; it is run only on the decision to publish.
+and the tags; rerun after every merge to `main` that should reach the
+public copy (the rewrite is deterministic, so the push is a fast
+forward):
+
+```bash
+PRIVATE_PATTERN='<regex of the server name and address>' workflow/release/build_public.sh /tmp/pnatlas_public --push
+gh repo view taowis/pnatlas --json visibility,url
+```
+
+## 7.5 Zenodo record
+
+The staged archive (7.3) is copied from the server to the local data
+root, verified against the MD5 list, and packed into the nine upload
+files, because Zenodo takes at most 100 files per record:
+
+```bash
+rsync -a --stats "$REMOTE:~/Projects/pnatlas-dev/data/release/zenodo_v0.1.0/" "$DATA_ROOT/release/zenodo_v0.1.0/"
+(cd "$DATA_ROOT/release/zenodo_v0.1.0" && md5sum -c MD5SUMS | grep -vc ': OK$')   # 0
+workflow/release/bundle_zenodo.sh "$DATA_ROOT/release/zenodo_v0.1.0" "$DATA_ROOT/release/zenodo_v0.1.0_upload" 0.1.0
+cp "$DATA_ROOT/release/zenodo_v0.1.0_upload/MD5SUMS_bundles" data/metadata/zenodo_v0.1.0_bundles_md5sums.txt
+```
+
+The draft record is created and filled with a personal access token
+(scope `deposit:write`, made at
+https://zenodo.org/account/settings/applications/tokens/new/ and saved
+in `~/.config/zenodo/token`, which is outside the repository). The
+metadata is `workflow/release/zenodo_metadata.json`; the DOI is reserved
+with the draft and printed:
+
+```bash
+python workflow/release/zenodo_upload.py --dir "$DATA_ROOT/release/zenodo_v0.1.0_upload"
+```
+
+Check: every file line says `uploaded` or `present`, the last line is
+`DRAFT READY <record id> <DOI>`, and the draft page lists the nine files
+with the sizes of `MD5SUMS_bundles`. The reserved DOI is then written
+into `CITATION.cff` (`identifiers`), `data/README.md` (stage 7 section)
+and the README data availability line, and the record is published from
+its draft page in the browser (the publish step registers the DOI and
+cannot be undone, so it is the last step). The server copy of the
+staged archive is deleted once the record is published and the local
+copy verified:
+
+```bash
+ssh "$REMOTE" 'rm -rf ~/Projects/pnatlas-dev/data/release/zenodo_v0.1.0'
+```
+
+## 7.6 GitHub Pages
+
+Pages is enabled on the public repository with the "GitHub Actions"
+source, then the pages workflow is run there once by hand; after that
+every push to `main` of the public copy that touches the site's inputs
+redeploys it (the deploy job runs only in `taowis/pnatlas`, the build job
+also runs in the private repository as a check):
+
+```bash
+gh api -X POST repos/taowis/pnatlas/pages -f build_type=workflow
+gh workflow run pages -R taowis/pnatlas
+gh run list -R taowis/pnatlas --workflow pages --limit 1
+gh api repos/taowis/pnatlas/pages --jq '.html_url+" "+.status'
+```
+
+Check: the run ends with both jobs green and the site answers at the
+`html_url` with the gene page for `#gene/MPZ`.

@@ -1,0 +1,20 @@
+{
+  "upload_type": "dataset",
+  "title": "pnatlas data archive: a multiscale reference of human peripheral nervous system cell states",
+  "version": "0.1.0",
+  "creators": [
+    {
+      "name": "Lai, Kaitao",
+      "affiliation": "The University of Sydney; ANZAC Research Institute",
+      "orcid": "0000-0002-9420-9352"
+    }
+  ],
+  "description": "<p>Processed data and result tables of pnatlas, a reference of human peripheral nervous system cell states built from public single-nucleus and single-cell data of sensory and autonomic ganglia and peripheral nerve, placed in tissue with Xenium and Visium sections, estimated in GTEx tibial nerve by deconvolution, and linked to inherited and acquired neuropathy genetics.</p><p>Contents: the reference object (raw counts after quality control for 597,455 cells by 19,420 genes with the final class and state of every cell and the scANVI and scVI embeddings; the cells of the humanDRG portal release are left out because that portal does not allow cell-level derivatives to be redistributed), the cell table and the state-level specificity and expression tables (reference_tables.tar.gz), the cell2location abundances per Visium spot, the Xenium panel transfers and the reference signatures (spatial.tar.gz), the single-cell reference and held-out mixtures used for GTEx deconvolution (deconvolution.tar.gz), every result table of the repository (results.tar.gz), the data manifest and README with the source, version, access date and checksum of every downloaded file, and the MD5 list of every file inside the bundles. README.md describes each file.</p><p>The code, configuration, runbook and analysis log are in the repository linked below; the data derive from public datasets that remain under the terms of their providers, listed in data_README.md.</p>",
+  "access_right": "open",
+  "license": "cc-by-4.0",
+  "keywords": ["peripheral nervous system", "dorsal root ganglion", "peripheral nerve", "single-cell RNA-seq", "spatial transcriptomics", "deconvolution", "colocalisation", "peripheral neuropathy", "Charcot-Marie-Tooth disease"],
+  "related_identifiers": [
+    {"identifier": "https://github.com/taowis/pnatlas", "relation": "isSupplementTo", "resource_type": "software"}
+  ],
+  "prereserve_doi": true
+}

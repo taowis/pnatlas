@@ -1,9 +1,12 @@
 name: pages
-# Run by hand until Pages is set to "GitHub Actions" in the repository
-# settings; then add a push trigger on main for portal/**, results/**,
-# data/metadata/** and config/datasets.yaml.
+# The site is built on every push to main that touches its inputs, as a
+# check; it is deployed only from the public repository, where Pages is
+# set to "GitHub Actions".
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [portal/**, results/**, data/metadata/**, config/datasets.yaml, .github/workflows/pages.yml]
 permissions:
   contents: read
   pages: write
@@ -26,6 +29,7 @@ jobs:
           path: site
   deploy:
     needs: build
+    if: github.repository == 'taowis/pnatlas'
     runs-on: ubuntu-latest
     environment:
       name: github-pages

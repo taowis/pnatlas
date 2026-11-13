@@ -91,3 +91,34 @@ the wrong place and left an empty directory, and the second carried a
 machine-local README from the server's results directory; the script
 now excludes such files. The MD5 list of the final run is committed as
 `data/metadata/zenodo_v0.1.0_md5sums.txt`.
+
+## 7.5 Publication steps
+
+The decision to open the repository, archive the data and serve the
+site came before the manuscript, reversing the earlier plan to wait for
+submission (`docs/decisions.md`): the public copy can be pushed again
+after every merge, and the archive version is fixed by its MD5 list, so
+nothing is lost by releasing first and the resource is usable while the
+paper is written.
+
+Zenodo takes at most 100 files per record and the staged archive has
+263, so the upload is the reference object on its own, one `tar.gz` per
+component (tables, spatial, deconvolution, results) and the four record
+files, nine files in all; `MD5SUMS` inside the record still lists every
+file by its unpacked path, so a reader can verify the bundles after
+unpacking. The staged directory was copied from the server to the local
+data root first and verified against the committed MD5 list, which also
+makes the server copy disposable. The upload script creates the draft
+through the deposit API with a reserved DOI and leaves publishing to the
+browser, because publishing registers the DOI and cannot be undone; the
+token lives outside the repository and the script skips files the draft
+already holds with the same checksum, so an interrupted upload is
+resumed by rerunning it.
+
+The pages workflow builds on every push to `main` in both repositories
+and deploys only in the public one, where Pages is set to the "GitHub
+Actions" source; the private repository cannot serve Pages on this
+account, which is why the first automatic run had failed at the deploy
+job. Keeping the build job in the private repository means a broken
+result table is caught before the public push.
+
