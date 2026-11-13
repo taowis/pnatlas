@@ -28,7 +28,8 @@ if (nrow(pairs) == 0) {
   write.table(data.frame(), opt$out, sep = "\t", quote = FALSE, row.names = FALSE)
   cat("no pairs\n"); quit(status = 0)
 }
-gwas_type <- if (isTRUE(study$case_control) && !is.na(study$case_count) && !is.na(study$sample_size)) "cc" else "quant"
+is_cc <- tolower(as.character(study$case_control)) %in% c("true", "t", "1")   # written by pandas as True/False
+gwas_type <- if (is_cc && !is.na(study$case_count) && !is.na(study$sample_size)) "cc" else "quant"
 s_case <- if (gwas_type == "cc") study$case_count / study$sample_size else NA
 rows <- list()
 for (i in seq_len(nrow(pairs))) {
