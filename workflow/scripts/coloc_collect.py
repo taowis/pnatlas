@@ -6,7 +6,9 @@ the state of highest specificity in the reference and that specificity
 are given, with the gene's specificity across all states kept in a
 second table, and the spatial compartment where the top state is mapped
 (from the stage 3 status table: the compartments in which the state is
-"mapped"). Gene ids are mapped to symbols with the Ensembl table.
+"mapped"). Gene ids are mapped to symbols with the Ensembl table; a
+symbol absent from the specificity (an older symbol in the reference,
+or a gene not expressed there) is reported as "not in reference".
 
 Writes to --results-dir: coloc_all_pairs.tsv (every pair of every GWAS),
 coloc_colocalised.tsv (PP.H4 above the threshold, with the state
@@ -69,8 +71,8 @@ def main():
                 tops.append(s.idxmax())
                 specs.append(round(float(s.max()), 4))
                 comps.append(mapped.get(s.idxmax(), "not mapped"))
-            else:
-                tops.append("")
+            else:                     # the reference symbol differs from the Ensembl 105 one, or the gene is not expressed
+                tops.append("not in reference")
                 specs.append(float("nan"))
                 comps.append("")
         col["top_state"] = tops

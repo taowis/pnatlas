@@ -265,3 +265,96 @@ tibial nerve, bulk RNA-seq. The GTEx v10 per-tissue gene read counts and TPM of 
 | `raw/gtex_v10_tibial/GTEx_Analysis_v10_Annotations_SampleAttributesDD.xlsx` | 38941 | 372dd58879054739a33ae8935d310400 | 2026-11-13 |
 
 Derived, not in the manifest: `interim/deconv/` holds the nerve reference cells, the validation mixtures and the GTEx counts on the shared genes written by `workflow/scripts/deconv_prepare.py`.
+
+## Stage 5: genetics
+
+Downloaded on the server with
+
+```bash
+python3 -I workflow/scripts/download_files.py data/metadata/stage5_files.tsv --data-root "$DATA_ROOT"
+python3 -I workflow/scripts/download_files.py data/metadata/stage5_annotation.tsv --data-root "$DATA_ROOT"
+python3 -I workflow/scripts/download_files.py data/metadata/stage5_files.tsv --data-root "$DATA_ROOT" --verify
+```
+
+The exact URL of every file is in the two lists; the GWAS files came with their tabix index and the GWAS Catalog metadata yaml, whose md5 matches the one recorded here. Access: all open.
+
+### gwas_diabetic_neuropathy
+
+GCST90129436. diabetic neuropathy, UK Biobank, European, 435,971 participants; one of the 33 chronic pain phenotypes of Zorina-Lichtenwalter et al. (Regenie, additive model), beta and standard error given, no case count in the metadata. Source: GWAS Catalog harmonised summary statistics (GWAS-SSF layout, GRCh38) on the EBI FTP.
+
+| File (under data_root) | Size (bytes) | md5 | Access date |
+|---|---|---|---|
+| `raw/gwas_diabetic_neuropathy/GCST90129436.h.tsv.gz` | 431440451 | bbc00b0593c86e9c702c07431ac3b9e4 | 2026-11-13 |
+| `raw/gwas_diabetic_neuropathy/GCST90129436.h.tsv.gz-meta.yaml` | 2098 | 4bde8de4808e99fa28e2bd8ade67fcf9 | 2026-11-13 |
+| `raw/gwas_diabetic_neuropathy/GCST90129436.h.tsv.gz.tbi` | 1532338 | 589af7bb686fe0399ea4e2be665c51aa | 2026-11-13 |
+
+### gwas_mvp_t2d_neurological
+
+GCST90475676. type 2 diabetes with neurological manifestations (PheCode 250.24), Million Veteran Program, European, 59,205 cases and 375,439 controls; odds ratios with 95 percent intervals and per-variant case and control counts. Source: GWAS Catalog harmonised summary statistics.
+
+| File (under data_root) | Size (bytes) | md5 | Access date |
+|---|---|---|---|
+| `raw/gwas_mvp_t2d_neurological/GCST90475676.h.tsv.gz` | 1022430333 | f01eb3f79f728ccb471523b57da394a1 | 2026-11-13 |
+| `raw/gwas_mvp_t2d_neurological/GCST90475676.h.tsv.gz-meta.yaml` | 861 | 0b7325a5b6bd49852bc48174fe315f49 | 2026-11-13 |
+| `raw/gwas_mvp_t2d_neurological/GCST90475676.h.tsv.gz.tbi` | 1747906 | 51cbbdd8e4b011b9077fb7b705e0861e | 2026-11-13 |
+
+### gwas_mvp_hereditary_idiopathic_pn
+
+GCST90475844. hereditary and idiopathic peripheral neuropathy PheCode, Million Veteran Program, European, 36,894 cases and 386,060 controls; same layout as the other MVP scan. Source: GWAS Catalog harmonised summary statistics.
+
+| File (under data_root) | Size (bytes) | md5 | Access date |
+|---|---|---|---|
+| `raw/gwas_mvp_hereditary_idiopathic_pn/GCST90475844.h.tsv.gz` | 1026569446 | b49d44b4450c8440462ea0ba51dea017 | 2026-11-13 |
+| `raw/gwas_mvp_hereditary_idiopathic_pn/GCST90475844.h.tsv.gz-meta.yaml` | 857 | 2603681568e2ad60a7000b51aeeafa5c | 2026-11-13 |
+| `raw/gwas_mvp_hereditary_idiopathic_pn/GCST90475844.h.tsv.gz.tbi` | 1747191 | 34ba46a1c794b9770120d205123bb273 | 2026-11-13 |
+
+### gwas_neuropathic_pain
+
+GCST90859373. neuropathic pain, case-control, European, 174,412 participants, beta and standard error and per-variant n given. Source: GWAS Catalog harmonised summary statistics.
+
+| File (under data_root) | Size (bytes) | md5 | Access date |
+|---|---|---|---|
+| `raw/gwas_neuropathic_pain/GCST90859373.h.tsv.gz` | 1792823418 | 10e5c430084af3aca6e1d4747f80307f | 2026-11-13 |
+| `raw/gwas_neuropathic_pain/GCST90859373.h.tsv.gz-meta.yaml` | 815 | b7365406cfa4b7dc349eb7385353236b | 2026-11-13 |
+| `raw/gwas_neuropathic_pain/GCST90859373.h.tsv.gz.tbi` | 1981081 | d90b919e9643554c281bd357084c9d8a | 2026-11-13 |
+
+### gwas_carpal_tunnel
+
+GCST90018813. carpal tunnel syndrome, Sakaue et al. 2021 cross-population meta-analysis (UK Biobank and FinnGen European, 480,201; Biobank Japan, 178,726); the metadata lists each sample set twice. Source: GWAS Catalog harmonised summary statistics.
+
+| File (under data_root) | Size (bytes) | md5 | Access date |
+|---|---|---|---|
+| `raw/gwas_carpal_tunnel/GCST90018813.h.tsv.gz` | 639939629 | 20693256cba2138921079ff4b494dc0d | 2026-11-13 |
+| `raw/gwas_carpal_tunnel/GCST90018813.h.tsv.gz-meta.yaml` | 1005 | e1e3e48b40cbec53bd40ce622f654db8 | 2026-11-13 |
+| `raw/gwas_carpal_tunnel/GCST90018813.h.tsv.gz.tbi` | 1604520 | 8331da8752bb1e90304c9c86db769ea7 | 2026-11-13 |
+
+### eqtl_catalogue_gtex_tibial
+
+QTD000286. eQTL Catalogue tibial nerve gene expression dataset (GTEx study, GRCh38): all nominal associations with the tabix index, the permutation results, the SuSiE credible sets and the per-variant SuSiE log Bayes factors. Source: eQTL Catalogue release on the EBI FTP.
+
+| File (under data_root) | Size (bytes) | md5 | Access date |
+|---|---|---|---|
+| `raw/eqtl_catalogue_gtex_tibial/QTD000286.all.tsv.gz` | 3968983596 | 39eb95320b5e1e5fe646018673dd2000 | 2026-11-13 |
+| `raw/eqtl_catalogue_gtex_tibial/QTD000286.all.tsv.gz.tbi` | 2231506 | d098ec9b731ce926ed7be8033343efb9 | 2026-11-13 |
+| `raw/eqtl_catalogue_gtex_tibial/QTD000286.credible_sets.tsv.gz` | 5264471 | ead0075eaf82f36e65e273c4c2d62119 | 2026-11-13 |
+| `raw/eqtl_catalogue_gtex_tibial/QTD000286.lbf_variable.txt.gz` | 2533988094 | ac3d328553d61ff6d3fdef196407c03c | 2026-11-13 |
+| `raw/eqtl_catalogue_gtex_tibial/QTD000286.permuted.tsv.gz` | 853906 | 912e77cec2af7125c377727bb1995f09 | 2026-11-13 |
+
+### gtex_v10_tibial_cis_qtl
+
+GTEx v10. GTEx v10 cis-eQTL release (all tissues in one tar; the tibial nerve files are read from it). Source: the public GTEx bucket through its HTTPS front, as listed on the portal download page. Kept as the GTEx-side cross-check of the eQTL Catalogue dataset.
+
+| File (under data_root) | Size (bytes) | md5 | Access date |
+|---|---|---|---|
+| `raw/gtex_v10_tibial_cis_qtl/GTEx_Analysis_v10_eQTL.tar` | 2561047718 | caaa29126856c94ff40943b86a4a83aa | 2026-11-13 |
+
+### ensembl105
+
+Ensembl 105. Ensembl release 105 (GENCODE 39 equivalent) gene annotation and cDNA sequences, used by `workflow/scripts/gene_length_gc.py` for the exon length and GC content of every gene (`data/metadata/ensembl105_gene_length_gc.tsv.gz`), the background matching of the gene class enrichment. Source: Ensembl FTP, release 105 archive.
+
+| File (under data_root) | Size (bytes) | md5 | Access date |
+|---|---|---|---|
+| `raw/ensembl105/Homo_sapiens.GRCh38.105.gtf.gz` | 50829040 | 1f8687d6d809e03bb7e9b0cbbe6d2313 | 2026-11-13 |
+| `raw/ensembl105/Homo_sapiens.GRCh38.cdna.all.fa.gz` | 76085001 | e53e34be0598aefb07afa4a3206305ba | 2026-11-13 |
+
+Derived, not in the manifest: `interim/genetics/` holds the donor by state pseudobulk CPM and the specificity (`reference_specificity.py`) and `interim/genetics/coloc/` the per-region GWAS and eQTL extracts of the colocalisation (`coloc_prepare.py`).

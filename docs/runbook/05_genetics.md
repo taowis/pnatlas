@@ -34,6 +34,25 @@ ssh "$REMOTE" 'cd ~/Projects/pnatlas-dev && grep -c ^done logs/stage5_annotation
 rsync -a "$REMOTE:~/Projects/pnatlas-dev/data/MANIFEST.tsv" data/MANIFEST.tsv
 ```
 
+A file that fails part way (one GWAS file did, the connection dropped)
+is finished by rerunning the same list: `curl -C -` resumes the partial
+file and the files already in the manifest are skipped. The rerun and
+the annotation list were chained in one detached shell so that only one
+run appends to the manifest at a time:
+
+```bash
+ssh "$REMOTE" 'cd ~/Projects/pnatlas-dev && setsid -f nohup bash -c "python3 -I workflow/scripts/download_files.py data/metadata/stage5_files.tsv \
+  --data-root data --manifest data/MANIFEST.tsv --fetch \"workflow/scripts/download_files.py data/metadata/stage5_files.tsv\" && \
+  python3 -I workflow/scripts/download_files.py data/metadata/stage5_annotation.tsv --data-root data --manifest data/MANIFEST.tsv \
+  --fetch \"workflow/scripts/download_files.py data/metadata/stage5_annotation.tsv\"; echo STAGE5DOWNLOADDONE" \
+  > logs/stage5_download_resume.log 2>&1 < /dev/null'
+rsync -a "$REMOTE:~/Projects/pnatlas-dev/data/MANIFEST.tsv" data/MANIFEST.tsv
+```
+
+The md5 of every GWAS file equals the `data_file_md5sum` of its
+metadata yaml. The `data/README.md` section "Stage 5: genetics" lists
+all 23 files with their md5.
+
 Gene lists. The four PanelApp panels are fetched at the versions the
 plan fixes (Genomics England 846 v8.38 and 85 v1.513, PanelApp
 Australia 3070 v3.1 and 3439 v2.0; the API serves a version on request)
@@ -123,6 +142,16 @@ ssh "$REMOTE" 'cd ~/Projects/pnatlas-dev && cat logs/genetics.log'
 rsync -a "$REMOTE:~/Projects/pnatlas-dev/results/genetics/" results/genetics/
 rsync -a --include "*/" --include "regions.tsv" --include "pairs.tsv" --include "study.tsv" --include "coloc.tsv" --exclude "*" \
   "$REMOTE:~/Projects/pnatlas-dev/data/interim/genetics/coloc/" "$DATA_ROOT/interim/genetics/coloc/"
+```
+
+After the probe, `coloc_run.R` was corrected to read the case-control
+flag (pandas writes "True") and `coloc_collect.py` to label genes
+absent from the reference; the probe's run step was repeated by hand on
+one GWAS directory before the full run:
+
+```bash
+REMOTE=user@host workflow/remote/sync.sh
+ssh "$REMOTE" 'cd ~/Projects/pnatlas-dev && source ~/miniconda3/etc/profile.d/conda.sh && conda activate pnatlas-r &&   Rscript workflow/scripts/coloc_run.R --dir data/interim/genetics/coloc/gwas_mvp_hereditary_idiopathic_pn --out /tmp/cc_probe.tsv   --p1 1e-4 --p2 1e-4 --p12 5e-6 && cut -f1-5,11,12 /tmp/cc_probe.tsv | head'   # gwas_type cc
 ```
 
 Check: `results/genetics/coloc_summary.tsv` has one row per GWAS with

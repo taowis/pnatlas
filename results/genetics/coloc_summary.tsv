@@ -1,0 +1,6 @@
+gwas	regions	pairs	tested	colocalised
+gwas_carpal_tunnel	17	734	709	0
+gwas_diabetic_neuropathy	1	140	140	0
+gwas_mvp_hereditary_idiopathic_pn	22	952	952	2
+gwas_mvp_t2d_neurological	241	7988	7988	25
+gwas_neuropathic_pain	1	44	44	0
