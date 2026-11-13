@@ -43,6 +43,26 @@ case-control with the study's case fraction when its metadata gives
 one. The colocalised eGenes are assigned to the state of their highest
 specificity, with the compartments where that state is mapped.
 
+The harmonised files turned out to be in the GWAS-SSF layout
+(chromosome, base_pair_location, effect_allele, other_allele, beta or
+odds_ratio, standard_error, effect_allele_frequency, p_value, rsid),
+not the older hm_ columns the preparation script was first written
+for, and the script was rewritten before any run. Two of the five
+studies (the MVP PheCode scans) give odds ratios with no standard
+error, only the 95 percent interval, so the effect is the log odds
+ratio and the standard error comes from the interval; they also give
+the case and control counts per variant, and the case count for the
+case-control model is the median over variants. The carpal tunnel
+study's metadata lists each sample set twice, and identical entries
+are counted once (480,201 European plus 178,726 East Asian). The
+diabetic neuropathy study (a UK Biobank chronic pain scan run in
+Regenie) and the carpal tunnel meta-analysis give no case count, so
+they are treated as quantitative in coloc, which is the usual fallback
+when the case fraction is unknown. The harmonisation code is not used
+as a filter: alleles are matched as an unordered pair and coloc works
+on squared effects, so strand and orientation do not matter for the
+posterior.
+
 ## 5.2 Gene class enrichment
 
 Background: 17,227 protein-coding genes with a specificity, a length and
