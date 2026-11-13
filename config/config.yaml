@@ -142,3 +142,10 @@ genetics:
     pp_h4: 0.8
     window_bp: 500000                   # around each GWAS lead variant
     gwas_p: 5.0e-8                      # lead variants below this p are tested
+
+backtest:                       # stage 6, plan section 7
+  pnprank_tag: submitted-human-genetics
+  pnprank_commit: 8cba969
+  features_static_md5: 6fa97af70aabe56790fa0dea20fccc63   # PNPrank's static feature matrix at that tag
+  fractions_method: bayesprism  # deconvolution fractions behind the gene by state correlations (decisions.md)
+  top_fraction: 0.01            # recall of post-cutoff genes in the top 1 percent
