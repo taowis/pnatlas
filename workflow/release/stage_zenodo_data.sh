@@ -28,7 +28,7 @@ done
 gzip -f "$out/deconvolution/reference_counts.mtx"
 
 echo "RESULTS"
-rsync -a --exclude 'anatomy' results/ "$out/results/"
+rsync -a --exclude anatomy --exclude README.md results/ "$out/results/"
 cp data/MANIFEST.tsv "$out/"
 cp data/README.md "$out/data_README.md"
 cp workflow/release/zenodo_README.md "$out/README.md"
