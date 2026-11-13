@@ -386,3 +386,16 @@ positive set, cutoff, seed and feature set, 58 MB, rebuilt by
 `workflow/scripts/run_backtest.sh`); and
 `external/pnprank/backtest_performance.tsv`, PNPrank's published
 back-test table read from its repository at the tag (runbook 6.3).
+
+## Stage 7: data archive
+
+The archive for Zenodo is staged by `workflow/release/stage_zenodo_data.sh`
+on the server into `data/release/zenodo_v0.1.0/` (2.4 GB, 262 files):
+the reference object without the Bhuiyan 2025 cells (597,455 cells by
+19,420 genes, `reference_for_release.py`), the cell table, the state
+specificity and expression tables, the cell2location, panel transfer and
+signature outputs, the deconvolution reference and mixtures, every result
+table, this README (as `data_README.md`), the manifest and a deposit README.
+Its MD5 list is `data/metadata/zenodo_v0.1.0_md5sums.txt`, so the content
+of the archive is fixed here before the upload; the upload is done by hand
+and the DOI is added to this section and to `CITATION.cff` when it exists.

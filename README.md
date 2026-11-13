@@ -1,6 +1,6 @@
 # pnatlas
 
-**Status:** Stage 6 (PNPrank v2 back-test) done; stage 7 (portal, release, public repository) next.
+**Status:** Stage 7 (portal and release) prepared: the gene lookup site builds from the result tables and the data archive is staged; the public copy and the Zenodo upload wait for the manuscript.
 
 | Stage | Description | Status |
 |---|---|---|
@@ -11,7 +11,7 @@
 | 4 | GTEx tibial nerve deconvolution | done: 670 tibial nerve samples deconvolved with MuSiC (primary by the pre-set rule) and BayesPrism, validation and covariate models in `results/deconvolution/` |
 | 5 | Genetics: neuropathy gene classes, nerve eQTL colocalisation | done: gene class enrichment and the colocalisation of five GWAS with the tibial nerve eQTL in `results/genetics/` (27 colocalised pairs, all from the two MVP scans) |
 | 6 | PNPrank v2: temporal back-test with the new features | done: tier-1 AUROC over the six cutoffs 0.771 without and 0.778 with the pnatlas features, an improvement by the pre-set rule (p 0.031); top one percent recall not improved; tables in `results/backtest/` |
-| 7 | Static portal, Zenodo release, public repository | not started |
+| 7 | Static portal, Zenodo release, public repository | prepared: `portal/` builds the static gene lookup site (deployed by the pages workflow), `workflow/release/` stages the data archive and builds the public copy; upload and publication at manuscript submission |
 
 ## What this is
 
@@ -54,7 +54,7 @@ tests/
 data/        see data/README.md; only README and small metadata are committed
 results/     tables and figures; snapshot commit in results/SNAPSHOT.txt
 docs/        novelty check, analysis plan, decisions, stage reports
-portal/      static gene lookup site
+portal/      static gene lookup site (build_portal.py writes portal/site from results/)
 manuscript/
 ```
 

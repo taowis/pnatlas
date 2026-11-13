@@ -284,3 +284,19 @@ Each non-obvious choice, with its reason. Newest last.
   computed from the truth set and would leak the labels into the
   back-test; the colocalisation, specificity, compartment and
   deconvolution columns do not use the truth set.
+- **The portal is a static site built from the result tables and is not
+  committed.** Every value on it is read from `results/` at build time,
+  so the page needs no server and can stay on GitHub Pages without
+  maintenance; the pages workflow rebuilds it on pushes to `main`, and
+  committing the built JSON (20 MB per build) would only duplicate the
+  tables in the history.
+- **The Bhuiyan 2025 cells are left out of the archived reference
+  object.** The humanDRG portal states that cell-level derivatives are
+  not to be redistributed; the state-level tables, which aggregate over
+  many cells, keep every dataset. A user who needs the full object
+  rebuilds it from the runbook with the portal download.
+- **The public repository and the Zenodo upload wait for the
+  manuscript.** Opening the repository before submission would amount to
+  a preprint, and the archive version cited in the paper should be the
+  one the final tables come from; the build and staging scripts are
+  rehearsed now so that the release is a single command then.
