@@ -5,7 +5,7 @@
 # Run from the repository root on the machine that holds the data (the server).
 set -euo pipefail
 root=${1:?data root}; out=${2:?output directory}; version=${3:-0.1.0}
-mkdir -p "$out/reference" "$out/spatial" "$out/deconvolution" "$out/genetics" "$out/results"
+mkdir -p "$out/reference" "$out/spatial" "$out/deconvolution" "$out/results"
 
 echo "REFERENCE"
 python workflow/release/reference_for_release.py \
@@ -29,7 +29,9 @@ gzip -f "$out/deconvolution/reference_counts.mtx"
 
 echo "RESULTS"
 rsync -a --exclude 'anatomy' results/ "$out/results/"
-cp data/MANIFEST.tsv data/README.md "$out/"
+cp data/MANIFEST.tsv "$out/"
+cp data/README.md "$out/data_README.md"
+cp workflow/release/zenodo_README.md "$out/README.md"
 
 echo "CHECKSUMS"
 (cd "$out" && find . -type f ! -name MD5SUMS -print0 | sort -z | xargs -0 md5sum > MD5SUMS)
