@@ -122,3 +122,14 @@ account, which is why the first automatic run had failed at the deploy
 job. Keeping the build job in the private repository means a broken
 result table is caught before the public push.
 
+## 7.6 Public copy and site
+
+The push rewrote the 119 commits of `main` with no attribution line,
+private name or manuscript file, created `taowis/pnatlas` and pushed
+`main` (the repository has no tags yet). Pages was enabled there with
+the "GitHub Actions" source and the first run of the pages workflow
+built and deployed the site at https://taowis.github.io/pnatlas/, whose
+metadata file reports the 17,154 genes, 31 states and the back-test
+summary of the result tables at that commit. The same push to the
+private repository ran only the build job, as intended.
+

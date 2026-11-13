@@ -1,6 +1,6 @@
 # pnatlas
 
-**Status:** Stage 7 (portal and release) under way: the public copy is pushed to `taowis/pnatlas` and serves the gene lookup site through GitHub Pages; the data archive is bundled for Zenodo (record DOI to be added).
+**Status:** Stage 7 (portal and release) under way: the public copy is at https://github.com/taowis/pnatlas and the gene lookup site at https://taowis.github.io/pnatlas/; the data archive is bundled for Zenodo (record DOI to be added).
 
 | Stage | Description | Status |
 |---|---|---|
