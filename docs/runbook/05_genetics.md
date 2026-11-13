@@ -144,6 +144,16 @@ rsync -a --include "*/" --include "regions.tsv" --include "pairs.tsv" --include 
   "$REMOTE:~/Projects/pnatlas-dev/data/interim/genetics/coloc/" "$DATA_ROOT/interim/genetics/coloc/"
 ```
 
+After the probe, `coloc_run.R` was corrected to read the case-control
+flag (pandas writes "True") and `coloc_collect.py` to label genes
+absent from the reference; the probe's run step was repeated by hand on
+one GWAS directory before the full run:
+
+```bash
+REMOTE=user@host workflow/remote/sync.sh
+ssh "$REMOTE" 'cd ~/Projects/pnatlas-dev && source ~/miniconda3/etc/profile.d/conda.sh && conda activate pnatlas-r &&   Rscript workflow/scripts/coloc_run.R --dir data/interim/genetics/coloc/gwas_mvp_hereditary_idiopathic_pn --out /tmp/cc_probe.tsv   --p1 1e-4 --p2 1e-4 --p12 5e-6 && cut -f1-5,11,12 /tmp/cc_probe.tsv | head'   # gwas_type cc
+```
+
 Check: `results/genetics/coloc_summary.tsv` has one row per GWAS with
 the regions, pairs tested and colocalised genes; `coloc_colocalised.tsv`
 the colocalised pairs with their state assignment.

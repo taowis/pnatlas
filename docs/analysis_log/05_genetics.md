@@ -91,3 +91,28 @@ damage Schwann states, fibroblasts, perineurial cells, immune or
 vascular states. Full table: `results/genetics/gene_class_enrichment.tsv`;
 each class gene with its state of highest specificity:
 `results/genetics/gene_classes.tsv`.
+
+## 5.3 Colocalisation probe
+
+The probe (two lead regions per GWAS, the whole chain from enrichment
+to the collector) ran through. The lead regions of the full scans are
+few for the smaller studies: the diabetic neuropathy scan has one
+region (the HLA, chromosome 6 at 32.6 Mb) and the neuropathic pain scan
+one (chromosome 11 at 113.0 Mb, near DRD2), the hereditary and
+idiopathic neuropathy scan 22, the type 2 diabetes with neurological
+manifestations scan 241 (the diabetes loci, TCF7L2 first). In the probe
+regions 38 to 140 genes shared at least 50 variants with the GWAS, and
+3 to 24 of them had a SuSiE credible set, for which the log Bayes
+factors were written and coloc.bf_bf ran.
+
+Two faults were found and fixed before the full run. The case-control
+flag written by pandas is the text "True", which R does not read as a
+logical, so every study had been run as quantitative; with the flag
+read, the two MVP scans run as case-control with their case fraction
+(the probe's one colocalised pair, ILRUN at the chromosome 6 region of
+the hereditary and idiopathic neuropathy scan, kept PP.H4 0.81 under
+both). And a colocalised gene whose Ensembl 105 symbol differs from the
+reference's (ILRUN was C6orf106 in the reference's annotation) had an
+empty state; the collector now says "not in reference" so that the
+case is visible, and such genes are looked up by hand in the reading of
+the results.
